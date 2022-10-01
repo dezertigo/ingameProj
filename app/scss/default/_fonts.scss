@@ -1,0 +1,175 @@
+// Подключение локальных шрифтов
+@include ff("Montserrat", "Regular");
+@include ff("Montserrat", "Meidum");
+@include ff("Montserrat", "SemiBold");
+@include ff("Montserrat", "Bold");
+@include ff("PTSans", "Regular");
+@include ff("PTSans", "Bold");
+
+@font-face {
+   font-family: "ingame";
+   src: url("../fonts/ingame.ttf?geesjz") format("truetype"), url("../fonts/ingame.woff?geesjz") format("woff"),
+      url("../fonts/ingame.svg?geesjz#ingame") format("svg");
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+}
+
+i {
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: "ingame" !important;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+.calendar:before {
+   content: "\e900";
+}
+.cart:before {
+   content: "\e901";
+}
+.eye:before {
+   content: "\e902";
+}
+.facebook:before {
+   content: "\e903";
+   color: #90c75e;
+}
+.genre:before {
+   content: "\e904";
+   color: #fff;
+}
+.genre-ask:before {
+   content: "\e905";
+   color: #fff;
+}
+.heart:before {
+   content: "\e906";
+   color: #9acf16;
+}
+.instagram:before {
+   content: "\e907";
+   color: #90c75e;
+}
+.lightning:before {
+   content: "\e908";
+   color: #fff;
+}
+.location:before {
+   content: "\e909";
+   color: #9acf16;
+}
+.lock:before {
+   content: "\e90a";
+   color: #9acf16;
+}
+// <i class="logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span></i>
+.logo .path1:before {
+   content: "\e90b";
+   color: rgb(16, 16, 16);
+}
+.logo .path2:before {
+   content: "\e90c";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path3:before {
+   content: "\e90d";
+   margin-left: -3.9375em;
+   color: rgb(154, 207, 22);
+}
+.logo .path4:before {
+   content: "\e90e";
+   margin-left: -3.9375em;
+   color: rgb(154, 207, 22);
+}
+.logo .path5:before {
+   content: "\e90f";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path6:before {
+   content: "\e910";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path7:before {
+   content: "\e911";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path8:before {
+   content: "\e912";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path9:before {
+   content: "\e913";
+   margin-left: -3.9375em;
+   color: rgb(154, 207, 22);
+}
+.logo .path10:before {
+   content: "\e914";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path11:before {
+   content: "\e915";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.logo .path12:before {
+   content: "\e916";
+   margin-left: -3.9375em;
+   color: rgb(16, 16, 16);
+}
+.phone:before {
+   content: "\e917";
+   color: #fff;
+}
+.phone-stroke:before {
+   content: "\e918";
+}
+.play:before {
+   content: "\e919";
+   color: #9acf16;
+}
+.pulse:before {
+   content: "\e91a";
+   color: #fff;
+}
+.puzzle-fill:before {
+   content: "\e91b";
+   color: #fff;
+}
+.puzzle-stroke:before {
+   content: "\e91c";
+   color: #fff;
+}
+.telegram:before {
+   content: "\e91d";
+   color: #fff;
+}
+.trash:before {
+   content: "\e91e";
+}
+.triangle:before {
+   content: "\e91f";
+   color: #9acf16;
+}
+.wallet:before {
+   content: "\e920";
+}
+.watch:before {
+   content: "\e921";
+}
+.youtube:before {
+   content: "\e922";
+   color: #90c75e;
+}

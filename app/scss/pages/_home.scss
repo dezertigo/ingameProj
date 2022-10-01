@@ -1,0 +1,7 @@
+body.home {
+   .hero {
+      &__container {
+         @extend %container;
+      }
+   }
+}

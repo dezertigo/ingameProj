@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- ! Изменить все "Start" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+@@include('./components/structure/_head.html', {
+'lang':'en',
+'css': './css/start.min.css',
+'title': 'Start',
+'swiper': 'true',
+})
+<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+
+<body class="start">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section class="hero">
+				<div class="hero__container"></div>
+			</section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'true',
+	})
+	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+
+</body>
+
+</html>
