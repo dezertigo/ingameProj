@@ -1,7 +1,209 @@
 body.home {
+   // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    .hero {
+      position: relative;
+
+      .banner-slide {
+         &__image {
+            position: relative;
+            @media (max-width: 768px) {
+               padding-bottom: percent(140, 375);
+            }
+            @media (min-width: 769px) {
+               padding-bottom: percent(660, 1920);
+            }
+            img {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: center;
+            }
+            &:last-child {
+               img {
+                  object-position: center 90%;
+               }
+            }
+         }
+      }
+      .hero__swiper-cards {
+         pointer-events: none;
+         @media (max-width: 768px) {
+            // padding-top: calc(39px * 1.316);
+            // margin-top: calc(-39px * 1.316);
+            // padding-bottom: calc(11px * 1.196);
+            padding-top: 50px;
+            margin-top: -50px;
+            padding-bottom: 13px;
+         }
+         @media (min-width: 769px) {
+            padding-bottom: 13px;
+            padding-top: 95px;
+         }
+         @media (min-width: 769px) and (max-width: 999px) {
+            margin-top: -95px;
+         }
+         @media (min-width: 1000px) {
+            position: absolute;
+            bottom: -51px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+         }
+         @media (min-width: 1400px) {
+            padding-left: percent(270, 1920);
+            padding-right: percent(270, 1920);
+         }
+         .swiper-slide {
+            pointer-events: all;
+            transition: transform 0.3s ease;
+            @media (max-width: 468px) {
+               &-prev {
+                  .card-slide__title {
+                     margin-left: -40px; //Для пиксель перфект текста на неактивных слайдах
+                  }
+               }
+               &-next {
+                  .card-slide__title {
+                     margin-right: -40px; //Для пиксель перфект текста на неактивных слайдах
+                  }
+               }
+            }
+            &-active {
+               position: relative;
+               z-index: 1;
+               box-shadow: 0px 4px 14px rgba(69, 95, 46, 0.4);
+               @media (max-width: 768px) {
+                  transform: scale(1.196, 1.316);
+                  img {
+                     transform: scale(1.1148, 1.0132);
+                  }
+                  .card-slide__title {
+                     letter-spacing: -0.03em;
+                  }
+               }
+               @media (min-width: 769px) {
+                  transform: scale(1.13, 1.3);
+                  img {
+                     transform: scale(0.885, 0.7692);
+                  }
+                  .card-slide__title {
+                     // margin-left: -30px;
+                     transform: scale(0.885, 0.7692);
+                  }
+               }
+            }
+         }
+      }
+      .card-slide {
+         color: $light;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         @media (max-width: 768px) {
+            height: 76px;
+         }
+         @media (min-width: 769px) and (max-width: 999px) {
+            height: 90px;
+         }
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            height: 110px;
+         }
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            height: 120px;
+         }
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            height: 140px;
+         }
+         @media (min-width: 1600px) {
+            height: 164px;
+         }
+         &_green {
+            background-color: $green;
+         }
+         &_orange {
+            background-color: $orange;
+         }
+
+         &__image {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            img {
+               transition: all 0.3s ease;
+               @media (max-width: 768px) {
+                  width: 48px;
+                  height: 48px;
+               }
+               @media (min-width: 769px) and (max-width: 999px) {
+                  width: 60px;
+                  height: 60px;
+               }
+               @media (min-width: 1000px) and (max-width: 1199px) {
+                  width: 75px;
+                  height: 75px;
+               }
+               @media (min-width: 1200px) and (max-width: 1399px) {
+                  width: 90px;
+                  height: 90px;
+               }
+               @media (min-width: 1400px) and (max-width: 1599px) {
+                  width: 110px;
+                  height: 110px;
+               }
+               @media (min-width: 1600px) {
+                  width: 130px;
+                  height: 130px;
+               }
+            }
+         }
+         &__title {
+            padding: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            pointer-events: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            @media (max-width: 374px) {
+               @include fl(12);
+            }
+            @media (max-width: 768px) and (min-width: 375px) {
+               @include fl(14);
+            }
+            @media (min-width: 769px) and (max-width: 999px) {
+               @include fl(17);
+            }
+            @media (min-width: 1000px) and (max-width: 1199px) {
+               @include fl(20);
+            }
+            @media (min-width: 1200px) and (max-width: 1599px) {
+               @include fl(22);
+            }
+            // @media (min-width: 1400px) and (max-width: 1599px) {
+            //    @include fl(24);
+            // }
+            @media (min-width: 1600px) {
+               @include fl(26);
+            }
+         }
+      }
+   }
+   // ! Cards === Cards === Cards === Cards === Cards === Cards === Cards
+   .cards {
       &__container {
-         @extend %container;
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+         @media (max-width: 768px) {
+            padding-top: 13px;
+         }
+         @media (min-width: 769px) {
+            padding-top: 24px;
+         }
       }
    }
 }

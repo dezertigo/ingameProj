@@ -1,0 +1,58 @@
+<div class="cards__card card">
+	<div class="card__wrapper">
+		<div class='card__image'>
+			<picture>
+				<source type='image/webp' srcset='@img/gallery/card@@img.webp'>
+				<img src='@img/gallery/card@@img.jpg' alt='Quest preview'>
+			</picture>
+		</div>
+		<div class="card__content">
+			<div class="card__preview">
+				<div class="card__left">
+					<h4 class="card__title">@@title</h4>
+					<p class="card__text">З акторами</p>
+				</div>
+				<ul class="card__about">
+					<li>
+						@@include('../icons/_team.html')
+						<p><span>5-10</span> чоловік</p>
+					</li>
+					<li>
+						@@include('../icons/_location.html')
+						<p><span>Дніпро</span> (Лівий берег)</p>
+						<p>Проспект Слобожанський 125</p>
+					</li>
+					<li>
+						@@include('../icons/_wallet.html')
+						<p><span>1200 грн</span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="card__body-wrapper">
+				<div class="card__body">
+					@@include('./_fear.html')
+					@@include('./_difficulty.html')
+					<ul class="card__about">
+						<li>
+							@@include('../icons/_team.html')
+							<p><span>5-10</span> чоловік</p>
+						</li>
+						<li>
+							@@include('../icons/_location.html')
+							<p><span>Дніпро</span> (Лівий берег)</p>
+							<p>Проспект Слобожанський 125</p>
+						</li>
+						<li>
+							@@include('../icons/_wallet.html')
+							<p><span>1200 грн</span></p>
+						</li>
+					</ul>
+					<div class="card__buttons">
+						<a href="" class="card__order">Замовити</a>
+						<a href="#" class="card__info">Детальніше</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

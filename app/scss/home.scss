@@ -18,6 +18,9 @@
 
 // Подключение стилей компонентов
 @import "./components/base/btn";
+@import "./components/base/cards";
+@import "./components/base/difficulty";
+@import "./components/base/fear";
 
 //Подключение стилей конкретной страницы
 @import "./pages/home";
