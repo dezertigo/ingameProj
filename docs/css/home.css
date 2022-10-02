@@ -717,27 +717,31 @@ main {
   background-color: lightgrey;
   position: relative;
   overflow: hidden;
+  border-bottom: 4px solid #9ad018;
+}
+
+.card:hover .card {
+  border-bottom: 4px solid rgba(153, 208, 24, 0.9);
 }
 
 .card:hover .card__content {
+  border-left: 4px solid rgba(153, 208, 24, 0.9);
+  border-right: 4px solid rgba(153, 208, 24, 0.9);
   top: 0 !important;
 }
 
 .card:hover .card__content:before {
   background-color: #9ad018;
+  background-color: lightgrey;
   opacity: 0.9;
 }
 
 .card:hover .card__preview {
   color: #fff;
-  padding-top: 22px;
-  padding-bottom: 21px;
-  padding-left: 24px;
-  padding-right: 20px;
 }
 
 .card:hover .card__preview .card__about {
-  visibility: hidden;
+  display: none;
 }
 
 .card:hover .card__title {
@@ -776,6 +780,8 @@ main {
 }
 
 .card__content {
+  border-left: 4px solid #9ad018;
+  border-right: 4px solid #9ad018;
   transition: top 0.9s ease;
   position: absolute;
   width: 100%;
@@ -804,6 +810,10 @@ main {
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 13px;
+  padding-right: 20px;
 }
 
 .card__preview > div {
@@ -962,8 +972,8 @@ main {
 .card__body {
   position: relative;
   z-index: 1;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 46px;
   padding-top: 16px;
   color: #fff;
@@ -1139,12 +1149,6 @@ body.home .cards__container {
   padding-right: 3.2%;
 }
 
-@media (min-width: 600px) {
-  .cards__wrapper {
-    gap: 12px;
-  }
-}
-
 @media (min-width: 769px) {
   .header-action li:hover a:after {
     width: 100%;
@@ -1209,6 +1213,24 @@ body.home .cards__container {
 }
 
 @media (min-width: 1000px) {
+  .cards__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card:hover .card__preview {
+    padding-top: 56px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
+  .card__body {
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 79px;
+    padding-bottom: 36px;
+  }
+
   body.home .hero .hero__swiper-cards {
     position: absolute;
     bottom: -51px;
@@ -1224,6 +1246,11 @@ body.home .cards__container {
 
 @media (min-width: 1400px) {
   body.home .hero .hero__swiper-cards {
+    padding-left: 14.0625%;
+    padding-right: 14.0625%;
+  }
+
+  body.home .cards__container {
     padding-left: 14.0625%;
     padding-right: 14.0625%;
   }
@@ -1250,16 +1277,15 @@ body.home .cards__container {
   }
 }
 
+@media (max-width: 899px) {
+  .cards__wrapper {
+    gap: 9px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__body {
     min-height: 132px;
-  }
-
-  .card__preview {
-    padding-top: 21px;
-    padding-bottom: 21px;
-    padding-left: 13px;
-    padding-right: 20px;
   }
 
   .card__preview .card__about li :first-child {
@@ -1308,9 +1334,11 @@ body.home .cards__container {
   }
 }
 
-@media (max-width: 599px) {
-  .cards__wrapper {
-    gap: 9px;
+@media (max-width: 568px) {
+  .card:nth-child(4),
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
   }
 }
 
@@ -1333,6 +1361,29 @@ body.home .cards__container {
   body.home .hero .card-slide__title {
     font-size: 0.75rem;
     line-height: 1.25;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 999px) {
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 300px) {
+  .card:hover .card__preview {
+    padding-top: 20px;
+    padding-bottom: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card__body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 24px;
   }
 }
 

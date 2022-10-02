@@ -110,15 +110,50 @@ window.addEventListener("load", () => {
    swiperBanners.controller.control = swiperCards;
    swiperCards.controller.control = swiperBanners;
 
+   // // ! Cards
+   // let cards = qa(".cards .card");
+   // let cardContent = qa(".cards .card__content");
+   // let cardPreview = qs(".cards .card:nth-child(2) .card__preview");
+   // let cardBody = qs(".cards .card__body");
+   // cards.forEach((el) => {
+   //    el.style.height = cardPreview.scrollHeight + cardBody.scrollHeight + "px";
+   // });
+   // cardContent.forEach((el) => {
+   //    el.style.top = `calc(100% - ${cardPreview.scrollHeight}px)`;
+   // });
    // ! Cards
    let cards = qa(".cards .card");
    let cardContent = qa(".cards .card__content");
-   let cardPreview = qs(".cards .card:nth-child(3) .card__preview");
-   let cardBody = qs(".cards .card__body");
+   let cardsPreview = qa(".cards .card .card__preview");
+   let cardsPreviewHeight = [];
+   cardsPreview.forEach((el) => {
+      cardsPreviewHeight.push(el.scrollHeight);
+   });
+   let maxPreviewHeight = Math.max(...cardsPreviewHeight);
+
+   let cardBody = qa(".cards .card__body");
+   let cardsBodyHeight = [];
+   cardBody.forEach((el) => {
+      cardsBodyHeight.push(el.scrollHeight);
+   });
+   let maxBodyHeight = Math.max(...cardsBodyHeight);
+
+   function resizeLayout(e) {
+      let newPreviewHeight = e.target.closest(".card").children[1].firstElementChild.scrollHeight;
+      // e.target.closest(".card").style.height = newPreviewHeight + maxBodyHeight + "px";
+      cards.forEach((el) => {
+         let maxHeight = newPreviewHeight + maxBodyHeight;
+         if (e.target.closest(".card").scrollHeight > maxHeight) {
+            el.style.height = maxHeight + "px";
+         }
+      });
+   }
+
    cards.forEach((el) => {
-      el.style.height = cardPreview.scrollHeight + cardBody.scrollHeight + "px";
+      el.style.height = maxPreviewHeight + maxBodyHeight + "px";
+      el.addEventListener("mouseover", resizeLayout);
    });
    cardContent.forEach((el) => {
-      el.style.top = `calc(100% - ${cardPreview.scrollHeight}px)`;
+      el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
 });
