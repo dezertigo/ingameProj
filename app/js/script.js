@@ -79,6 +79,7 @@ window.addEventListener("load", () => {
       }
    }
 
+   // ! Home => Hero
    const swiperBanners = new Swiper(".hero__swiper-banners", {
       // loop: true,
       speed: 500,
@@ -108,4 +109,13 @@ window.addEventListener("load", () => {
    });
    swiperBanners.controller.control = swiperCards;
    swiperCards.controller.control = swiperBanners;
+
+   // ! Cards
+   let cards = qa(".card__content");
+
+   cards.forEach((el) => {
+      console.log(el);
+      el.style.height = el.scrollHeight + "px";
+      el.style.transform = `translateY(-${el.scrollHeight}px)`;
+   });
 });
