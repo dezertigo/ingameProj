@@ -1,0 +1,12 @@
+{
+	"Print to console": {
+		"scope": "css, scss",
+		"prefix": "mind",
+		"body": [
+			"@media (min-width: 1920px) {",
+			"$1",
+			"}"
+		],
+		"description": "min-width: 1920px"
+	}
+}

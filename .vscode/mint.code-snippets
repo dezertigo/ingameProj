@@ -1,0 +1,11 @@
+{
+	"Print to console": {
+		"scope": "css, scss",
+		"prefix": "mint",
+		"body": [
+			"@media (min-width: 744px) {$1",
+			"}"
+		],
+		"description": "Min-width: 744px"
+	}
+}
