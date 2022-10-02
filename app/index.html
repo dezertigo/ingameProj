@@ -12,7 +12,65 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="hero">
-				<div class="hero__container"></div>
+				<div class="hero__swiper-banners ">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide banner-slide">
+							<div class='banner-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/banner_01.webp'>
+									<img src='@img/gallery/banner_01.jpg' alt='banner photo'>
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide banner-slide">
+							<div class='banner-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/banner_02.webp'>
+									<img src='@img/gallery/banner_02.jpg' alt='banner photo'>
+								</picture>
+							</div>
+						</div>
+						<div class="swiper-slide banner-slide">
+							<div class='banner-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/banner_03.webp'>
+									<img src='@img/gallery/banner_03.jpg' alt='banner photo'>
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__swiper-cards swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide card-slide card-slide_green">
+							<div class='card-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/01.webp'>
+									<img src='@img/gallery/01.png' alt='Telegram icon'>
+								</picture>
+							</div>
+							<h1 class="card-slide__title">Виїзні квести та шоу</h1>
+						</div>
+						<div class="swiper-slide card-slide card-slide_orange">
+							<div class='card-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/02.webp'>
+									<img src='@img/gallery/02.png' alt='Lamp icon'>
+								</picture>
+							</div>
+							<h2 class="card-slide__title">Квест-кімнати у Дніпрі</h2>
+						</div>
+						<div class="swiper-slide card-slide card-slide_green">
+							<div class='card-slide__image'>
+								<picture>
+									<source type='image/webp' srcset='@img/gallery/03.webp'>
+									<img src='@img/gallery/03.png' alt='Box icon'>
+								</picture>
+							</div>
+							<h2 class="card-slide__title">Квести у коробках</h1>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		@@include('./components/structure/_footer.html')

@@ -15,6 +15,9 @@
       @extend %container;
    }
    &__body {
+      @media (max-width: 768px) {
+         min-height: 132px;
+      }
       min-height: 216px; // todo Указываем минимальную высоту шапки
       display: flex;
       align-items: center;

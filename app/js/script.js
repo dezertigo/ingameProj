@@ -78,4 +78,34 @@ window.addEventListener("load", () => {
          }
       }
    }
+
+   const swiperBanners = new Swiper(".hero__swiper-banners", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      simulateTouch: true,
+      effect: "fade",
+      fadeEffect: {
+         crossFade: true,
+      },
+   });
+   const swiperCards = new Swiper(".hero__swiper-cards", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1.75,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      breakpoints: {
+         568: {
+            slidesPerView: 2.25,
+         },
+         1000: {
+            slidesPerView: 3,
+         },
+      },
+   });
+   swiperBanners.controller.control = swiperCards;
+   swiperCards.controller.control = swiperBanners;
 });
