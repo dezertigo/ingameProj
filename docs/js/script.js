@@ -112,15 +112,13 @@ window.addEventListener("load", () => {
 
    // ! Cards
    let cards = qa(".cards .card");
+   let cardContent = qa(".cards .card__content");
+   let cardPreview = qs(".cards .card:nth-child(3) .card__preview");
+   let cardBody = qs(".cards .card__body");
    cards.forEach((el) => {
-      console.log(el.scrollHeight);
-
-      // el.style.height = el.scrollHeight + "px";
+      el.style.height = cardPreview.scrollHeight + cardBody.scrollHeight + "px";
    });
-
-   // cards.forEach((el) => {
-   //    console.log(el);
-   //    el.style.height = el.scrollHeight + "px";
-   //    el.style.transform = `translateY(-${el.scrollHeight}px)`;
-   // });
+   cardContent.forEach((el) => {
+      el.style.top = `calc(100% - ${cardPreview.scrollHeight}px)`;
+   });
 });
