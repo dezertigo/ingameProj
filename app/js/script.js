@@ -111,11 +111,16 @@ window.addEventListener("load", () => {
    swiperCards.controller.control = swiperBanners;
 
    // ! Cards
-   let cards = qa(".card__content");
-
+   let cards = qa(".cards .card");
    cards.forEach((el) => {
-      console.log(el);
-      el.style.height = el.scrollHeight + "px";
-      el.style.transform = `translateY(-${el.scrollHeight}px)`;
+      console.log(el.scrollHeight);
+
+      // el.style.height = el.scrollHeight + "px";
    });
+
+   // cards.forEach((el) => {
+   //    console.log(el);
+   //    el.style.height = el.scrollHeight + "px";
+   //    el.style.transform = `translateY(-${el.scrollHeight}px)`;
+   // });
 });
