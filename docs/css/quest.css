@@ -128,13 +128,6 @@ input[type=submit],
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Meidum.woff") format("woff"), url("../fonts/Montserrat-Meidum.woff-2") format("woff-2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff-2") format("woff-2");
   font-weight: 600;
   font-style: normal;
@@ -403,7 +396,7 @@ main {
 }
 
 .header__body {
-  min-height: 70px;
+  min-height: 216px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -736,5 +729,11 @@ main {
 
   .burger {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__body {
+    min-height: 132px;
   }
 }
