@@ -712,41 +712,27 @@ main {
 }
 
 .card {
+  transition: all 1s ease;
   box-shadow: 0px 4px 24px rgba(94, 135, 15, 0.6);
-}
-
-.card__wrapper {
+  background-color: lightgrey;
   position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #9ad018;
 }
 
-.card__image {
-  position: relative;
-  height: 100%;
-}
-
-.card__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+.card:hover .card {
+  border-bottom: 4px solid rgba(153, 208, 24, 0.9);
 }
 
 .card:hover .card__content {
   border-left: 4px solid rgba(153, 208, 24, 0.9);
   border-right: 4px solid rgba(153, 208, 24, 0.9);
-  border-bottom: 4px solid rgba(153, 208, 24, 0.9);
-  top: 0;
-  height: 100% !important;
-  transform: translateY(0) !important;
+  top: 0 !important;
 }
 
 .card:hover .card__content:before {
   background-color: #9ad018;
+  background-color: lightgrey;
   opacity: 0.9;
 }
 
@@ -773,16 +759,33 @@ main {
   height: auto;
 }
 
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 .card__content {
-  overflow: hidden;
   border-left: 4px solid #9ad018;
   border-right: 4px solid #9ad018;
-  border-bottom: 4px solid #9ad018;
-  transition: all 0.5s ease;
+  transition: top 0.9s ease;
   position: absolute;
-  top: 100%;
   width: 100%;
-  height: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -802,11 +805,15 @@ main {
 }
 
 .card__preview {
-  position: relative;
-  z-index: 1;
   color: #101010;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 13px;
+  padding-right: 20px;
 }
 
 .card__preview > div {
@@ -870,6 +877,7 @@ main {
 
 .card__body-wrapper {
   overflow: hidden;
+  transition: height 1s ease;
   height: 0;
 }
 
@@ -964,9 +972,10 @@ main {
 .card__body {
   position: relative;
   z-index: 1;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 46px;
+  padding-top: 16px;
   color: #fff;
 }
 
@@ -1140,12 +1149,6 @@ body.home .cards__container {
   padding-right: 3.2%;
 }
 
-@media (min-width: 600px) {
-  .cards__wrapper {
-    gap: 12px;
-  }
-}
-
 @media (min-width: 769px) {
   .header-action li:hover a:after {
     width: 100%;
@@ -1169,20 +1172,6 @@ body.home .cards__container {
 
   .burger {
     display: none;
-  }
-
-  .card:hover .card__preview {
-    padding-top: 14.5px;
-    padding-bottom: 15.5px;
-    padding-left: 24px;
-    padding-right: 70px;
-  }
-
-  .card__preview {
-    padding-top: 14.5px;
-    padding-bottom: 15.5px;
-    padding-left: 24px;
-    padding-right: 70px;
   }
 
   .card__preview .card__about li :first-child {
@@ -1221,13 +1210,27 @@ body.home .cards__container {
   .cards__wrapper {
     gap: 20px;
   }
-
-  .card__image {
-    padding-bottom: 136.3228699552%;
-  }
 }
 
 @media (min-width: 1000px) {
+  .cards__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card:hover .card__preview {
+    padding-top: 56px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
+  .card__body {
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 79px;
+    padding-bottom: 36px;
+  }
+
   body.home .hero .hero__swiper-cards {
     position: absolute;
     bottom: -51px;
@@ -1243,6 +1246,11 @@ body.home .cards__container {
 
 @media (min-width: 1400px) {
   body.home .hero .hero__swiper-cards {
+    padding-left: 14.0625%;
+    padding-right: 14.0625%;
+  }
+
+  body.home .cards__container {
     padding-left: 14.0625%;
     padding-right: 14.0625%;
   }
@@ -1269,23 +1277,15 @@ body.home .cards__container {
   }
 }
 
+@media (max-width: 899px) {
+  .cards__wrapper {
+    gap: 9px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__body {
     min-height: 132px;
-  }
-
-  .card:hover .card__preview {
-    padding-top: 18px;
-    padding-bottom: 21px;
-    padding-left: 24px;
-    padding-right: 20px;
-  }
-
-  .card__preview {
-    padding-top: 21px;
-    padding-bottom: 21px;
-    padding-left: 13px;
-    padding-right: 20px;
   }
 
   .card__preview .card__about li :first-child {
@@ -1334,9 +1334,11 @@ body.home .cards__container {
   }
 }
 
-@media (max-width: 599px) {
-  .cards__wrapper {
-    gap: 9px;
+@media (max-width: 568px) {
+  .card:nth-child(4),
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
   }
 }
 
@@ -1351,10 +1353,6 @@ body.home .cards__container {
 }
 
 @media (max-width: 374px) {
-  .card__image {
-    padding-bottom: 161.4864864865%;
-  }
-
   .card__title {
     font-size: 0.75rem;
     line-height: 1.25;
@@ -1366,15 +1364,26 @@ body.home .cards__container {
   }
 }
 
-@media (max-width: 599px) and (min-width: 375px) {
-  .card__image {
-    padding-bottom: 136.1823361823%;
+@media (min-width: 568px) and (max-width: 999px) {
+  .card:nth-child(5),
+  .card:nth-child(6) {
+    display: none;
   }
 }
 
-@media (min-width: 600px) and (max-width: 899px) {
-  .card__image {
-    padding-bottom: 162.3931623932%;
+@media (max-width: 999px) and (min-width: 300px) {
+  .card:hover .card__preview {
+    padding-top: 20px;
+    padding-bottom: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card__body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 24px;
   }
 }
 

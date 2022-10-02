@@ -207,6 +207,10 @@ body.home {
          @media (min-width: 1000px) {
             padding-top: 75px;
          }
+         @media (min-width: 1400px) {
+            padding-left: percent(270, 1920);
+            padding-right: percent(270, 1920);
+         }
       }
    }
 }
