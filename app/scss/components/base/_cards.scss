@@ -1,26 +1,87 @@
 .cards__wrapper {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
-   @media (max-width: 768px) {
+   @media (max-width: 899px) {
       gap: 9px;
    }
-   @media (min-width: 769px) {
+   @media (min-width: 900px) {
       gap: 20px;
+   }
+   @media (min-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
    }
 }
 .card {
+   transition: all 1s ease;
    box-shadow: 0px 4px 24px rgba(94, 135, 15, 0.6);
-   // .card__wrapper
-
-   &__wrapper {
-      position: relative;
+   background-color: lightgrey;
+   position: relative;
+   overflow: hidden;
+   border-bottom: 4px solid $green;
+   @media (max-width: 568px) {
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+         display: none;
+      }
    }
+   @media (min-width: 568px) and (max-width: 999px) {
+      &:nth-child(5),
+      &:nth-child(6) {
+         display: none;
+      }
+   }
+   &:hover {
+      .card {
+         border-bottom: 4px solid rgba(153, 208, 24, 0.9);
+         &__content {
+            border-left: 4px solid rgba(153, 208, 24, 0.9);
+            border-right: 4px solid rgba(153, 208, 24, 0.9);
+            top: 0 !important;
+            &:before {
+               background-color: $green;
+               background-color: lightgrey;
+               opacity: 0.9;
+            }
+         }
+         &__preview {
+            color: $light;
+            .card__about {
+               // visibility: hidden;
+               display: none;
+            }
 
-   // .card__image
-
+            @media (max-width: 999px) and (min-width: 300px) {
+               padding-top: 20px;
+               padding-bottom: 21px;
+               padding-left: 20px;
+               padding-right: 20px;
+            }
+            @media (min-width: 1000px) {
+               padding-top: 56px;
+               padding-left: 30px;
+               padding-right: 30px;
+               padding-bottom: 40px;
+            }
+         }
+         &__title {
+            @include fl(24, 32);
+            margin-bottom: 4px;
+         }
+         &__text {
+            @include fl(14);
+         }
+         &__body-wrapper {
+            height: auto;
+         }
+      }
+   }
    &__image {
-      position: relative;
-      padding-bottom: percent(478, 351);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       img {
          position: absolute;
          top: 0;
@@ -31,49 +92,16 @@
          object-position: center;
       }
    }
-
-   &:hover {
-      .card {
-         &__content {
-            border-left: none;
-            border-right: none;
-            border-bottom: none;
-            top: 0;
-            height: 100% !important;
-            transform: translateY(0) !important;
-
-            &:before {
-               background-color: $green;
-               opacity: 0.9;
-            }
-         }
-         &__preview {
-            color: $light;
-            .card__about {
-               display: none;
-            }
-         }
-         &__body-wrapper {
-            height: auto;
-         }
-      }
-   }
-   // .card__content
-
    &__content {
-      overflow: hidden;
       border-left: 4px solid $green;
       border-right: 4px solid $green;
-      border-bottom: 4px solid $green;
-      transition: all 0.5s ease;
+      transition: top 0.9s ease;
       position: absolute;
-      top: 100%;
       width: 100%;
-      height: 0;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       &:before {
          content: "";
          position: absolute;
@@ -87,73 +115,121 @@
          opacity: 1;
       }
    }
-
    // .card__preview
-
    &__preview {
-      position: relative;
-      z-index: 1;
       color: $dark;
       display: flex;
       justify-content: space-between;
+      position: relative;
+      z-index: 1;
       > div {
          flex: 0 0 50%;
       }
-      @media (max-width: 768px) {
-         padding-top: 21px;
-         padding-bottom: 21px;
-         padding-left: 18px;
-         padding-right: 28px;
-      }
-      @media (min-width: 769px) {
-         padding-top: 14.5px;
-         padding-bottom: 15.5px;
-         padding-left: 24px;
-         padding-right: 70px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      padding-left: 13px;
+      padding-right: 20px;
+
+      .card__about {
+         padding-top: 4px;
+         display: grid;
+         row-gap: 7px;
+         li {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            :first-child {
+               @media (max-width: 768px) {
+                  flex: 0 0 20px;
+                  height: 20px;
+               }
+               @media (min-width: 769px) {
+                  flex: 0 0 24px;
+                  height: 24px;
+               }
+            }
+            &:nth-child(2) {
+               :first-child {
+                  align-self: flex-start;
+               }
+               span {
+                  display: inline-block;
+                  margin-bottom: 3px;
+               }
+            }
+            span {
+               font-weight: 700;
+               @include fl(16);
+               font-size: 14px;
+            }
+            p {
+               font-weight: 500;
+               @include fl(12);
+            }
+            &:last-child {
+               padding-top: 3px;
+               i {
+                  padding-left: 2px;
+                  @include fl(18);
+               }
+               p {
+                  font-family: $ff2;
+               }
+            }
+         }
       }
    }
    &__title {
+      padding-top: 3px;
       font-weight: 700;
+      margin-bottom: 6px;
+      @media (max-width: 374px) {
+         @include fl(12);
+      }
+      @media (max-width: 768px) and (min-width: 375px) {
+         @include fl(14);
+      }
+      @media (min-width: 769px) and (max-width: 999px) {
+         @include fl(16);
+      }
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fl(18);
+      }
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(20);
+      }
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(22);
+      }
+      @media (min-width: 1600px) {
+         @include fl(24);
+      }
    }
-   &__about {
-      display: grid;
-      grid-template-columns: 1fr;
-      flex-direction: column;
-      row-gap: 9px;
-      li {
-         display: flex;
-         align-items: center;
-         align-items: flex-start;
-         column-gap: 9px;
-         :first-child {
-            flex: 0 0 24px;
-            height: 24px;
-         }
-         span {
-            font-weight: 700;
-         }
-         p {
-            &:nth-child(3) {
-               display: none;
-            }
-         }
-         &:last-child {
-            // padding-left: 3px;
-            i {
-               padding-left: 2px;
-               @include fl(18);
-            }
-         }
+   &__text {
+      @media (max-width: 768px) {
+         @include fl(12);
+      }
+      @media (min-width: 769px) {
+         @include fl(14);
       }
    }
 
    &__body-wrapper {
       overflow: hidden;
+      transition: height 1s ease;
+
       height: 0;
       .card__about {
-         margin-bottom: 28px;
+         display: grid;
+         row-gap: 13px;
+         margin-bottom: 15px;
          li {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
             &:first-child {
+               transform: translateY(2px);
+
                ellipse {
                   stroke: #fff;
                }
@@ -162,16 +238,51 @@
                }
             }
             &:nth-child(2) {
+               transform: translateY(-2px);
+
                circle {
                   stroke: #fff;
                }
                path {
                   fill: #fff;
                }
+               :first-child {
+                  align-self: flex-start;
+               }
+               span {
+                  display: inline-block;
+               }
             }
             &:last-child {
                svg {
                   stroke: #fff;
+               }
+            }
+            :first-child {
+               flex: 0 0 24px;
+               height: 24px;
+            }
+            span {
+               font-weight: 700;
+               @include fl(16);
+            }
+            p {
+               font-weight: 500;
+               &:first-of-type {
+                  @include fl(14);
+               }
+               &:last-of-type {
+                  @include fl(12);
+               }
+            }
+            &:last-child {
+               padding-top: 3px;
+               i {
+                  padding-left: 2px;
+                  @include fl(18);
+               }
+               p {
+                  font-family: $ff2;
                }
             }
          }
@@ -182,20 +293,56 @@
    &__body {
       position: relative;
       z-index: 1;
-      padding: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 46px;
+      padding-top: 16px;
       color: $light;
-      // height: 0px;
+      // height: 0;
+      @media (max-width: 999px) and (min-width: 300px) {
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-top: 16px;
+         // padding-bottom: 46px;
+         padding-bottom: 24px;
+      }
+      @media (min-width: 1000px) {
+         padding-left: 31px;
+         padding-right: 31px;
+         padding-top: 79px;
+         // padding-bottom: 95px;
+         padding-bottom: 36px;
+         // padding-bottom: 66px;
+      }
    }
    .fear {
-      margin-bottom: 10px;
+      margin-bottom: 3px;
+      &__text {
+         @include fl(12);
+         font-weight: 500;
+      }
+      &__icons {
+         :not(:first-child) {
+            margin-left: -2px;
+         }
+      }
    }
    .difficulty {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+      &__text {
+         @include fl(12);
+         font-weight: 500;
+      }
+      &__icons {
+         :not(:first-child) {
+            margin-left: -2px;
+         }
+      }
    }
    &__buttons {
       display: flex;
       align-items: center;
-      column-gap: 12px;
+      column-gap: 10px;
       a {
          text-transform: uppercase;
          min-height: 36px;

@@ -245,11 +245,18 @@ body.home {
          padding-right: percent(12, 375);
 
          @media (max-width: 768px) {
-            padding-top: 13px;
+            padding-top: 10px;
          }
 
-         @media (min-width: 769px) {
+         @media (min-width: 769px) and (max-width: 999px) {
             padding-top: 24px;
+         }
+         @media (min-width: 1000px) {
+            padding-top: 75px;
+         }
+         @media (min-width: 1400px) {
+            padding-left: percent(270, 1920);
+            padding-right: percent(270, 1920);
          }
       }
    }
