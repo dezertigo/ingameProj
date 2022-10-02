@@ -25,18 +25,18 @@
    &__image {
       position: relative;
       height: 100%;
-      @media (max-width: 374px) {
-         padding-bottom: percent(478, 296);
-      }
-      @media (max-width: 599px) and (min-width: 375px) {
-         padding-bottom: percent(478, 351);
-      }
-      @media (min-width: 600px) and (max-width: 899px) {
-         padding-bottom: percent(570, 351);
-      }
-      @media (min-width: 900px) {
-         padding-bottom: percent(608, 446);
-      }
+      // @media (max-width: 374px) {
+      //    padding-bottom: percent(478, 296);
+      // }
+      // @media (max-width: 599px) and (min-width: 375px) {
+      //    padding-bottom: percent(478, 351);
+      // }
+      // @media (min-width: 600px) and (max-width: 899px) {
+      //    padding-bottom: percent(570, 351);
+      // }
+      // @media (min-width: 900px) {
+      //    padding-bottom: percent(608, 446);
+      // }
       img {
          position: absolute;
          top: 0;

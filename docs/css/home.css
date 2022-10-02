@@ -1221,10 +1221,6 @@ body.home .cards__container {
   .cards__wrapper {
     gap: 20px;
   }
-
-  .card__image {
-    padding-bottom: 136.3228699552%;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -1351,10 +1347,6 @@ body.home .cards__container {
 }
 
 @media (max-width: 374px) {
-  .card__image {
-    padding-bottom: 161.4864864865%;
-  }
-
   .card__title {
     font-size: 0.75rem;
     line-height: 1.25;
@@ -1363,18 +1355,6 @@ body.home .cards__container {
   body.home .hero .card-slide__title {
     font-size: 0.75rem;
     line-height: 1.25;
-  }
-}
-
-@media (max-width: 599px) and (min-width: 375px) {
-  .card__image {
-    padding-bottom: 136.1823361823%;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 899px) {
-  .card__image {
-    padding-bottom: 162.3931623932%;
   }
 }
 
