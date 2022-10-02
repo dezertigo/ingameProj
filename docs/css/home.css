@@ -404,7 +404,7 @@ main {
 }
 
 .header__body {
-  min-height: 70px;
+  min-height: 216px;
   display: flex;
   align-items: center;
   justify-content: space-between;

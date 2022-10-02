@@ -15,7 +15,7 @@
       @extend %container;
    }
    &__body {
-      min-height: 70px; // todo Указываем минимальную высоту шапки
+      min-height: 216px; // todo Указываем минимальную высоту шапки
       display: flex;
       align-items: center;
       justify-content: space-between; // todo Позиционируем элементы по оси Х
