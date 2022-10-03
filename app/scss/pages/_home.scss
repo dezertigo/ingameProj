@@ -412,7 +412,7 @@ body.home {
       }
 
       &__item:nth-child(1) {
-         &__text {
+         .benefits__text {
             padding-top: 20px;
          }
 
@@ -444,7 +444,7 @@ body.home {
             }
          }
 
-         &__text {
+         .benefits__text {
             padding-top: 20px;
          }
 
@@ -461,7 +461,7 @@ body.home {
       &__item:nth-child(3) {
          padding-top: 5px;
 
-         &__text {
+         .benefits__text {
             width: 78%;
             margin: 0 auto;
 
@@ -508,7 +508,7 @@ body.home {
             order: 8;
          }
 
-         &__text {
+         .benefits__text {
             @media (min-width: 744px) {
                width: 77%;
                margin: 0 auto;
@@ -527,7 +527,7 @@ body.home {
             }
          }
 
-         &__text {
+         .benefits__text {
             width: 90%;
             margin: 0 auto;
          }
@@ -554,7 +554,7 @@ body.home {
             }
          }
 
-         &__text {
+         .benefits__text {
             width: 90%;
             margin: 0 auto;
 
