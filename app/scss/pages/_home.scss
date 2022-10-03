@@ -1,5 +1,6 @@
 body.home {
-
+   // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
+   // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    .hero {
       position: relative;
@@ -239,6 +240,8 @@ body.home {
    }
 
    // ! Cards === Cards === Cards === Cards === Cards === Cards === Cards
+   // ! Cards === Cards === Cards === Cards === Cards === Cards === Cards
+   // ! Cards === Cards === Cards === Cards === Cards === Cards === Cards
    .cards {
       &__container {
          padding-left: percent(12, 375);
@@ -251,8 +254,17 @@ body.home {
          @media (min-width: 769px) {
             padding-top: 24px;
          }
+         @media (min-width: 1000px) {
+            padding-top: 70px;
+         }
+         @media (min-width: 1400px) {
+            padding-left: percent(270, 1920);
+            padding-right: percent(270, 1920);
+         }
       }
 
+      // ! benefits === benefits === benefits === benefits === benefits
+      // ! benefits === benefits === benefits === benefits === benefits
       // ! benefits === benefits === benefits === benefits === benefits
       .benefits {
          width: 100%;

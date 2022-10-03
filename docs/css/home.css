@@ -732,7 +732,6 @@ main {
 
 .card:hover .card__content:before {
   background-color: #9ad018;
-  background-color: lightgrey;
   opacity: 0.9;
 }
 
@@ -808,6 +807,7 @@ main {
   color: #101010;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
   padding-top: 21px;
@@ -1642,21 +1642,7 @@ body.home .blog__text-link {
 
 @media (min-width: 1000px) {
   .cards__wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .card:hover .card__preview {
-    padding-top: 56px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 40px;
-  }
-
-  .card__body {
-    padding-left: 31px;
-    padding-right: 31px;
-    padding-top: 79px;
-    padding-bottom: 36px;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   }
 
   body.home .hero .hero__swiper-cards {
@@ -1666,6 +1652,10 @@ body.home .blog__text-link {
     transform: translateX(-50%);
     width: 100%;
   }
+
+  body.home .cards__container {
+    padding-top: 70px;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1673,12 +1663,31 @@ body.home .blog__text-link {
     padding-left: 14.0625%;
     padding-right: 14.0625%;
   }
+
+  body.home .cards__container {
+    padding-left: 14.0625%;
+    padding-right: 14.0625%;
+  }
 }
 
 @media (min-width: 1600px) {
+  .card:hover .card__preview {
+    padding-top: 62px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
   .card__title {
     font-size: 1.5rem;
     line-height: 1.25;
+  }
+
+  .card__body {
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 79px;
+    padding-bottom: 36px;
   }
 
   body.home .hero .card-slide {
@@ -1946,7 +1955,7 @@ body.home .blog__text-link {
   }
 }
 
-@media (min-width: 568px) and (max-width: 999px) {
+@media (min-width: 568px) and (max-width: 991px) {
   .card:nth-child(5),
   .card:nth-child(6) {
     display: none;
@@ -1966,6 +1975,19 @@ body.home .blog__text-link {
     padding-right: 20px;
     padding-top: 16px;
     padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1599px) {
+  .card:hover .card__preview {
+    padding: 30px;
+  }
+
+  .card__body {
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 }
 
