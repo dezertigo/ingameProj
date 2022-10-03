@@ -121,14 +121,17 @@ window.addEventListener("load", () => {
    // cardContent.forEach((el) => {
    //    el.style.top = `calc(100% - ${cardPreview.scrollHeight}px)`;
    // });
+
    // ! Cards
    let cards = qa(".cards .card");
    let cardContent = qa(".cards .card__content");
+
    let cardsPreview = qa(".cards .card .card__preview");
    let cardsPreviewHeight = [];
    cardsPreview.forEach((el) => {
       cardsPreviewHeight.push(el.scrollHeight);
    });
+   // Узнаем макисмальную высоту превьюшки карточки квеста
    let maxPreviewHeight = Math.max(...cardsPreviewHeight);
 
    let cardBody = qa(".cards .card__body");
@@ -136,23 +139,31 @@ window.addEventListener("load", () => {
    cardBody.forEach((el) => {
       cardsBodyHeight.push(el.scrollHeight);
    });
+   // Узнаем макисмальную высоту спрятанной части карточки квеста
    let maxBodyHeight = Math.max(...cardsBodyHeight);
 
+   // В эту переменную передадим высоту превьюшки после увелечения шрифта
+   let finalHeight = maxPreviewHeight;
    function resizeLayout(e) {
-      let newPreviewHeight = e.target.closest(".card").children[1].firstElementChild.scrollHeight;
-      // e.target.closest(".card").style.height = newPreviewHeight + maxBodyHeight + "px";
-      cards.forEach((el) => {
-         let maxHeight = newPreviewHeight + maxBodyHeight;
-         if (e.target.closest(".card").scrollHeight > maxHeight) {
-            el.style.height = maxHeight + "px";
+      if (e.target.closest(".card")) {
+         let newPreviewHeight = e.target.closest(".card").children[1].firstElementChild.scrollHeight;
+         // Проверяем стала ли высота превьюшки больше чем любая другая на странице
+         if (newPreviewHeight > finalHeight) {
+            cards.forEach((el) => {
+               let maxHeight = newPreviewHeight + maxBodyHeight;
+               finalHeight = newPreviewHeight;
+               // Если стала - увеличиваем все превьюшки до одного размера
+               el.style.height = maxHeight + "px";
+            });
          }
-      });
+      }
    }
-
+   // Задаем базовую высоту карточке
    cards.forEach((el) => {
       el.style.height = maxPreviewHeight + maxBodyHeight + "px";
-      el.addEventListener("mouseover", resizeLayout);
    });
+   body.addEventListener("mouseover", resizeLayout);
+   // Возвращаем превьюшку(а точнее все тело, но ненужную его часть не видно) в область видимости карточки (в самый её низ)
    cardContent.forEach((el) => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
