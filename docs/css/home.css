@@ -1149,7 +1149,7 @@ body.home .cards__container {
   padding-right: 3.2%;
 }
 
-body.home .cards .benefits {
+body.home .benefits {
   width: 100%;
   max-width: 100%;
   background: url("@img/gallery/benefits-backgrond.webp") no-repeat center;
@@ -1157,25 +1157,25 @@ body.home .cards .benefits {
   background-size: cover;
 }
 
-body.home .cards .benefits__container-wrap {
+body.home .benefits .benefits__container-wrap {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84));
   height: 100%;
   min-height: 566px;
 }
 
-body.home .cards .benefits__container {
+body.home .benefits .benefits__container {
   max-width: 1250px;
   margin: 0 auto;
 }
 
-body.home .cards .benefits__wrap {
+body.home .benefits .benefits__wrap {
   padding: 9.8% 2% 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-body.home .cards .benefits__title {
+body.home .benefits .benefits__title {
   color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 24px;
@@ -1184,7 +1184,7 @@ body.home .cards .benefits__title {
   margin-bottom: 11px;
 }
 
-body.home .cards .benefits__par {
+body.home .benefits .benefits__par {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -1194,32 +1194,32 @@ body.home .cards .benefits__par {
   margin-bottom: 40px;
 }
 
-body.home .cards .benefits__list {
+body.home .benefits .benefits__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.2em;
   row-gap: 2.4em;
 }
 
-body.home .cards .benefits__item {
+body.home .benefits .benefits__item {
   position: relative;
   text-align: center;
 }
 
-body.home .cards .benefits__item svg {
+body.home .benefits .benefits__item svg {
   width: 34px;
   height: 34px;
 }
 
-body.home .cards .benefits__item svg ellipse {
+body.home .benefits .benefits__item svg ellipse {
   stroke: #9ad018;
 }
 
-body.home .cards .benefits__item svg path {
+body.home .benefits .benefits__item svg path {
   fill: #9ad018;
 }
 
-body.home .cards .benefits__text {
+body.home .benefits .benefits__text {
   font-weight: 400;
   color: #90c75e;
   font-size: 14px;
@@ -1227,71 +1227,71 @@ body.home .cards .benefits__text {
   padding-top: 11px;
 }
 
-body.home .cards .benefits__item:nth-child(1) .benefits__text {
+body.home .benefits .benefits__item:nth-child(1) .benefits__text {
   padding-top: 20px;
 }
 
-body.home .cards .benefits__item:nth-child(2) svg {
+body.home .benefits .benefits__item:nth-child(2) svg {
   width: 34px;
   height: 34px;
 }
 
-body.home .cards .benefits__item:nth-child(2) svg ellipse {
+body.home .benefits .benefits__item:nth-child(2) svg ellipse {
   stroke: #9ad018;
 }
 
-body.home .cards .benefits__item:nth-child(2) svg path {
+body.home .benefits .benefits__item:nth-child(2) svg path {
   fill: #9ad018;
 }
 
-body.home .cards .benefits__item:nth-child(2) .benefits__text {
+body.home .benefits .benefits__item:nth-child(2) .benefits__text {
   padding-top: 20px;
 }
 
-body.home .cards .benefits__item:nth-child(3) {
+body.home .benefits .benefits__item:nth-child(3) {
   padding-top: 5px;
 }
 
-body.home .cards .benefits__item:nth-child(3) .benefits__text {
+body.home .benefits .benefits__item:nth-child(3) .benefits__text {
   width: 78%;
   margin: 0 auto;
 }
 
-body.home .cards .benefits__item:nth-child(3) svg {
+body.home .benefits .benefits__item:nth-child(3) svg {
   width: 30px;
   height: 30px;
 }
 
-body.home .cards .benefits__item:nth-child(3) svg path {
+body.home .benefits .benefits__item:nth-child(3) svg path {
   stroke: rgb(144, 199, 94);
 }
 
-body.home .cards .benefits__item:nth-child(4) {
+body.home .benefits .benefits__item:nth-child(4) {
   padding-top: 2px;
 }
 
-body.home .cards .benefits__item:nth-child(5) {
+body.home .benefits .benefits__item:nth-child(5) {
   padding-top: 1px;
 }
 
-body.home .cards .benefits__item:nth-child(5) img {
+body.home .benefits .benefits__item:nth-child(5) img {
   margin-bottom: 8px;
 }
 
-body.home .cards .benefits__item:nth-child(5) .benefits__text {
+body.home .benefits .benefits__item:nth-child(5) .benefits__text {
   width: 90%;
   margin: 0 auto;
 }
 
-body.home .cards .benefits__item:nth-child(6) {
+body.home .benefits .benefits__item:nth-child(6) {
   padding-top: 1px;
 }
 
-body.home .cards .benefits__item:nth-child(6) img {
+body.home .benefits .benefits__item:nth-child(6) img {
   margin-bottom: 8px;
 }
 
-body.home .cards .benefits__item:nth-child(6) .benefits__text {
+body.home .benefits .benefits__item:nth-child(6) .benefits__text {
   width: 90%;
   margin: 0 auto;
 }
@@ -1448,81 +1448,81 @@ body.home .blog__text-link {
 }
 
 @media (min-width: 400px) {
-  body.home .cards .benefits__item:nth-child(6) br {
+  body.home .benefits .benefits__item:nth-child(6) br {
     display: none;
   }
 }
 
 @media (min-width: 744px) {
-  body.home .cards .benefits {
+  body.home .benefits {
     min-height: 436px;
   }
 
-  body.home .cards .benefits__container-wrap {
+  body.home .benefits .benefits__container-wrap {
     min-height: 436px;
     height: 100%;
   }
 
-  body.home .cards .benefits__wrap {
+  body.home .benefits .benefits__wrap {
     padding: 5.5% 2% 1%;
   }
 
-  body.home .cards .benefits__title {
+  body.home .benefits .benefits__title {
     width: 60%;
   }
 
-  body.home .cards .benefits__list {
+  body.home .benefits .benefits__list {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
     row-gap: 2.4em;
     padding: 0 2%;
   }
 
-  body.home .cards .benefits__item:nth-child(1) {
+  body.home .benefits .benefits__item:nth-child(1) {
     padding-top: 8px;
   }
 
-  body.home .cards .benefits__item:nth-child(2) {
+  body.home .benefits .benefits__item:nth-child(2) {
     order: 3;
     padding-top: 8px;
   }
 
-  body.home .cards .benefits__item:nth-child(3) .benefits__text {
+  body.home .benefits .benefits__item:nth-child(3) .benefits__text {
     width: 58%;
     padding-top: 13px;
   }
 
-  body.home .cards .benefits__item:nth-child(3) {
+  body.home .benefits .benefits__item:nth-child(3) {
     order: 1;
     padding-top: 0;
   }
 
-  body.home .cards .benefits__item:nth-child(4) {
+  body.home .benefits .benefits__item:nth-child(4) {
     order: 8;
   }
 
-  body.home .cards .benefits__item:nth-child(4) .benefits__text {
+  body.home .benefits .benefits__item:nth-child(4) .benefits__text {
     width: 77%;
     margin: 0 auto;
   }
 
-  body.home .cards .benefits__item:nth-child(5) img {
+  body.home .benefits .benefits__item:nth-child(5) img {
     margin-bottom: 0;
   }
 
-  body.home .cards .benefits__item:nth-child(5) {
+  body.home .benefits .benefits__item:nth-child(5) {
     order: 9;
   }
 
-  body.home .cards .benefits__item:nth-child(6) img {
+  body.home .benefits .benefits__item:nth-child(6) img {
     margin-bottom: 0;
   }
 
-  body.home .cards .benefits__item:nth-child(6) .benefits__text {
+  body.home .benefits .benefits__item:nth-child(6) .benefits__text {
     width: 77%;
   }
 
-  body.home .cards .benefits__item:nth-child(6) {
+  body.home .benefits .benefits__item:nth-child(6) {
     order: 10;
   }
 
@@ -1706,70 +1706,70 @@ body.home .blog__text-link {
 }
 
 @media (min-width: 1920px) {
-  body.home .cards .benefits {
+  body.home .benefits {
     min-height: 762px;
   }
 
-  body.home .cards .benefits__container-wrap {
+  body.home .benefits .benefits__container-wrap {
     min-height: 762px;
   }
 
-  body.home .cards .benefits__wrap {
+  body.home .benefits .benefits__wrap {
     padding: 9.6% 2% 1%;
   }
 
-  body.home .cards .benefits__title {
+  body.home .benefits .benefits__title {
     font-size: 36px;
     line-height: 44px;
     width: 100%;
     margin-bottom: 40px;
   }
 
-  body.home .cards .benefits__par {
+  body.home .benefits .benefits__par {
     font-size: 28px;
     line-height: 34px;
   }
 
-  body.home .cards .benefits__list {
+  body.home .benefits .benefits__list {
     padding: 0;
     gap: 5em;
     row-gap: 2.4em;
   }
 
-  body.home .cards .benefits__item svg {
+  body.home .benefits .benefits__item svg {
     width: 64px;
     height: 64px;
   }
 
-  body.home .cards .benefits__text {
+  body.home .benefits .benefits__text {
     font-size: 24px;
     line-height: 32px;
   }
 
-  body.home .cards .benefits__item:nth-child(1) {
+  body.home .benefits .benefits__item:nth-child(1) {
     padding-top: 0;
   }
 
-  body.home .cards .benefits__item:nth-child(2) svg {
+  body.home .benefits .benefits__item:nth-child(2) svg {
     width: 64px;
     height: 64px;
   }
 
-  body.home .cards .benefits__item:nth-child(2) {
+  body.home .benefits .benefits__item:nth-child(2) {
     padding-top: 0;
   }
 
-  body.home .cards .benefits__item:nth-child(3) .benefits__text {
+  body.home .benefits .benefits__item:nth-child(3) .benefits__text {
     width: 100%;
     padding-top: 24px;
   }
 
-  body.home .cards .benefits__item:nth-child(3) svg {
+  body.home .benefits .benefits__item:nth-child(3) svg {
     width: 57px;
     height: 57px;
   }
 
-  body.home .cards .benefits__item:nth-child(3) {
+  body.home .benefits .benefits__item:nth-child(3) {
     order: 4;
     padding-top: 3px;
   }
@@ -2089,7 +2089,7 @@ body.home .blog__text-link {
 }
 
 @media (min-width: 744px) and (max-width: 1919px) {
-  body.home .cards .benefits__par {
+  body.home .benefits .benefits__par {
     margin-bottom: 42px;
   }
 }
