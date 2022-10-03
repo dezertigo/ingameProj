@@ -607,24 +607,8 @@ main {
   margin-bottom: 34px;
 }
 
-.footer-top__first :nth-child(1) {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.footer-top__first :nth-child(2) {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-
-.footer-top__first :nth-child(3) {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
 .footer-top__first :nth-child(4) {
   grid-column: span 2;
-  grid-row: 3/4;
 }
 
 .footer-top__contacts li:not(:last-child) {
@@ -688,6 +672,7 @@ main {
 .footer-top__working-time {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 24px;
 }
 
@@ -720,6 +705,10 @@ main {
 
 .footer-top__working-time ul + p span {
   display: block;
+}
+
+.footer-top__subscribe {
+  text-align: center;
 }
 
 .footer-top__subscribe p {
