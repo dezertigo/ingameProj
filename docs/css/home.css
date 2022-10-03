@@ -1149,15 +1149,6 @@ body.home .cards__container {
   padding-right: 3.2%;
 }
 
-body.home .cards svg {
-  width: 30px;
-  height: 30px;
-}
-
-body.home .cards svg path {
-  stroke: rgb(144, 199, 94);
-}
-
 body.home .benefits {
   width: 100%;
   max-width: 100%;
@@ -1308,11 +1299,6 @@ body.home .benefits__item:nth-child(6) .benefits__text {
 }
 
 @media (min-width: 744px) {
-  body.home .cards {
-    order: 1;
-    padding-top: 0;
-  }
-
   body.home .benefits {
     min-height: 436px;
   }
@@ -1510,16 +1496,6 @@ body.home .benefits__item:nth-child(6) .benefits__text {
 }
 
 @media (min-width: 1920px) {
-  body.home .cards svg {
-    width: 57px;
-    height: 57px;
-  }
-
-  body.home .cards {
-    order: 4;
-    padding-top: 3px;
-  }
-
   body.home .benefits {
     min-height: 762px;
   }

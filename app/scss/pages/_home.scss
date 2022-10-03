@@ -251,30 +251,6 @@ body.home {
             padding-top: 24px;
          }
       }
-
-      svg {
-         width: 30px;
-         height: 30px;
-
-         @media (min-width: 1920px) {
-            width: 57px;
-            height: 57px;
-         }
-
-         path {
-            stroke: rgba(144, 199, 94, 1);
-         }
-      }
-
-      @media (min-width: 744px) {
-         order: 1;
-         padding-top: 0;
-      }
-
-      @media (min-width: 1920px) {
-         order: 4;
-         padding-top: 3px;
-      }
    }
 
    // ! benefits === benefits === benefits === benefits === benefits
