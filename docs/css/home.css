@@ -1071,11 +1071,11 @@ body.home .hero {
   position: relative;
 }
 
-body.home .hero .banner-slide__image {
+body.home .hero__image {
   position: relative;
 }
 
-body.home .hero .banner-slide__image img {
+body.home .hero__image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1085,11 +1085,6 @@ body.home .hero .banner-slide__image img {
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
-}
-
-body.home .hero .banner-slide__image:last-child img {
-  -o-object-position: center 90%;
-  object-position: center 90%;
 }
 
 body.home .hero .hero__swiper-cards {
@@ -1603,7 +1598,7 @@ body.home .blog__text-link {
     line-height: 1.25;
   }
 
-  body.home .hero .banner-slide__image {
+  body.home .hero__image {
     padding-bottom: 34.375%;
   }
 
@@ -1884,7 +1879,7 @@ body.home .blog__text-link {
     line-height: 1.25;
   }
 
-  body.home .hero .banner-slide__image {
+  body.home .hero__image {
     padding-bottom: 37.3333333333%;
   }
 
