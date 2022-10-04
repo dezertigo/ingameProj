@@ -167,4 +167,34 @@ window.addEventListener("load", () => {
    cardContent.forEach((el) => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
+
+
+
+   // reviews slider
+   const swiperReviews = new Swiper(".reviews__slider", {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 20,
+      pagination: {
+         el: '.reviews__pagination',
+         clicable: true,
+      },
+      navigation: {
+         nextEl: '.reviews__next',
+         prevEl: '.reviews__prev',
+      },
+      breakpoints: {
+         568: {
+            slidesPerView: 2.25,
+         },
+         1000: {
+            slidesPerView: 3,
+         },
+      },
+   });
+
 });

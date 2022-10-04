@@ -1574,6 +1574,229 @@ body.home .for-u__link {
   width: max-content;
 }
 
+body.home .reviews {
+  padding: 80px 0;
+  background-image: url(../../img/reviews-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.home .reviews__container {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding-left: 3.2%;
+  padding-right: 3.2%;
+}
+
+body.home .reviews__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+body.home .reviews__slider {
+  position: relative;
+}
+
+body.home .reviews__slide {
+  background-color: #fff;
+  min-height: 360px;
+}
+
+body.home .reviews__head {
+  padding: 30.5px 6.2678062678%;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+body.home .reviews__head-suptitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+body.home .reviews__head-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101010;
+  max-width: 370px;
+  width: 100%;
+}
+
+body.home .reviews__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+body.home .reviews__wrap .reviews__body {
+  padding: 12px 0 24px 22px;
+  max-width: 58.4%;
+}
+
+body.home .reviews__wrap .reviews__body-name {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body.home .reviews__wrap .reviews__body-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body.home .reviews__body {
+  padding: 12px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.home .reviews__body--video {
+  padding: 0;
+  position: relative;
+  width: 100%;
+  padding-bottom: 271px;
+  display: block;
+}
+
+body.home .reviews__body--video::before {
+  position: absolute;
+  content: "";
+  width: 66px;
+  height: 66px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-image: url(../../img/icons/play.svg);
+}
+
+body.home .reviews__body--video img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center -120px;
+  object-position: center -120px;
+}
+
+body.home .reviews__body--video .reviews__body-name {
+  color: #fff;
+  position: absolute;
+  left: 22px;
+  top: 24px;
+}
+
+body.home .reviews__body--video .reviews__footer {
+  position: absolute;
+  bottom: 24px;
+  left: 22px;
+}
+
+body.home .reviews__body--video .reviews__footer-date {
+  color: #fff;
+  opacity: 0.6;
+}
+
+body.home .reviews__body-name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #101010;
+  margin-bottom: 12px;
+}
+
+body.home .reviews__body-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+body.home .reviews__body-text--margin {
+  margin-bottom: 40px;
+}
+
+body.home .reviews__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.home .reviews__footer-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101010;
+  opacity: 0.4;
+  margin-top: auto;
+}
+
+body.home .reviews__footer-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #90c75e;
+}
+
+body.home .reviews__img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 271px;
+}
+
+body.home .reviews__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0 0;
+  object-position: 0 0;
+}
+
+body.home .reviews__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 192px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+body.home .reviews__prev,
+body.home .reviews__next {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home .reviews__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.home .reviews .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(144, 199, 94, 0.2);
+}
+
+body.home .reviews .swiper-pagination-bullet-active {
+  background: #90c75e;
+}
+
 body.home .blog {
   width: 100%;
   max-width: 100%;
@@ -1672,6 +1895,16 @@ body.home .blog__text {
 body.home .blog__text-link {
   font-weight: 500;
   color: rgb(144, 199, 94);
+}
+
+@media (min-width: 350px) {
+  body.home .reviews__body--video {
+    padding-bottom: 250px;
+  }
+
+  body.home .reviews__img {
+    padding-bottom: 250px;
+  }
 }
 
 @media (min-width: 375px) {
