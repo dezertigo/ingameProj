@@ -1,9 +1,11 @@
 body.home {
+
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    .hero {
       position: relative;
+
       &__image {
          position: relative;
 
@@ -245,9 +247,11 @@ body.home {
          @media (min-width: 769px) {
             padding-top: 24px;
          }
+
          @media (min-width: 1000px) {
             padding-top: 70px;
          }
+
          @media (min-width: 1400px) {
             padding-left: percent(270, 1920);
             padding-right: percent(270, 1920);
@@ -273,6 +277,7 @@ body.home {
       @media (min-width: 1920px) {
          min-height: 762px;
       }
+
       &__container-wrap {
          background: linear-gradient(0deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84));
          height: 100%;
@@ -338,7 +343,7 @@ body.home {
          margin-bottom: 40px;
 
          @media (min-width: 744px) and (max-width: 1919px) {
-            margin-bottom: 42px;
+            margin-bottom: 40px;
          }
 
          @media (min-width: 1920px) {
@@ -363,7 +368,7 @@ body.home {
          @media (min-width: 1920px) {
             padding: 0;
             gap: 5em;
-            row-gap: 2.4em;
+            row-gap: 3.6em;
          }
       }
 
@@ -400,16 +405,21 @@ body.home {
          @media (min-width: 1920px) {
             font-size: 24px;
             line-height: 32px;
+            padding-top: 20px;
          }
       }
 
       &__item:nth-child(1) {
          .benefits__text {
-            padding-top: 20px;
+            padding-top: 11px;
+
+            @media (min-width: 1920px) {
+               padding-top: 20px;
+            }
          }
 
          @media (min-width: 744px) {
-            padding-top: 8px;
+            padding-top: 10px;
          }
 
          @media (min-width: 1920px) {
@@ -437,12 +447,16 @@ body.home {
          }
 
          .benefits__text {
-            padding-top: 20px;
+            padding-top: 11px;
+
+            @media (min-width: 1920px) {
+               padding-top: 20px;
+            }
          }
 
          @media (min-width: 744px) {
             order: 3;
-            padding-top: 8px;
+            padding-top: 10px;
          }
 
          @media (min-width: 1920px) {
@@ -451,7 +465,7 @@ body.home {
       }
 
       &__item:nth-child(3) {
-         padding-top: 5px;
+         padding-top: 2px;
 
          .benefits__text {
             width: 78%;
@@ -459,12 +473,12 @@ body.home {
 
             @media (min-width: 744px) {
                width: 58%;
-               padding-top: 13px;
+               padding-top: 11px;
             }
 
             @media (min-width: 1920px) {
                width: 100%;
-               padding-top: 24px;
+               padding-top: 20px;
             }
          }
 
@@ -489,7 +503,7 @@ body.home {
 
          @media (min-width: 1920px) {
             order: 4;
-            padding-top: 3px;
+            padding-top: 0;
          }
       }
 
@@ -505,11 +519,19 @@ body.home {
                width: 77%;
                margin: 0 auto;
             }
+
+            @media (min-width: 1920px) {
+               width: 95%;
+            }
          }
       }
 
       &__item:nth-child(5) {
          padding-top: 1px;
+
+         @media (max-width: 374px) {
+            padding-bottom: 10px;
+         }
 
          img {
             margin-bottom: 8px;
@@ -532,6 +554,10 @@ body.home {
       &__item:nth-child(6) {
          padding-top: 1px;
 
+         @media (max-width: 374px) {
+            padding-bottom: 10px;
+         }
+
          br {
             @media (min-width: 400px) {
                display: none;
@@ -553,6 +579,10 @@ body.home {
             @media (min-width: 744px) {
                width: 77%;
             }
+
+            @media (min-width: 1920px) {
+               width: 100%;
+            }
          }
 
          @media (min-width: 744px) {
@@ -568,6 +598,7 @@ body.home {
       width: 100%;
       max-width: 100%;
       background-color: rgba(255, 255, 255, 1);
+
       &__container {
          margin: 0 auto;
          max-width: 1700px;
@@ -576,6 +607,7 @@ body.home {
       &__wrap {
          display: flex;
          flex-direction: column;
+
          @media (max-width: 743px) {
             padding: 21.7% 3.3% 21.3%;
          }

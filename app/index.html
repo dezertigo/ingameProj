@@ -9,208 +9,199 @@
 <!-- todo указать нужное значение дял подключени\отключения свайпера -->
 
 <body class="home">
-	<div class="wrapper">
-		@@include('./components/structure/_header.html')
-		<main>
-			<section class="hero">
-				<div class='hero__image'>
-					<picture>
-						<source type='image/webp' srcset='@img/gallery/banner_01.webp'>
-						<img src='@img/gallery/banner_01.jpg' alt='banner photo'>
-					</picture>
-				</div>
-				<div class="hero__swiper-cards swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide card-slide card-slide_green">
-							<div class='card-slide__image'>
-								<picture>
-									<source type='image/webp' srcset='@img/gallery/01.webp'>
-									<img src='@img/gallery/01.png' alt='Telegram icon'>
-								</picture>
-							</div>
-							<h1 class="card-slide__title">Виїзні квести та шоу</h1>
-						</div>
-						<div class="swiper-slide card-slide card-slide_orange">
-							<div class='card-slide__image'>
-								<picture>
-									<source type='image/webp' srcset='@img/gallery/02.webp'>
-									<img src='@img/gallery/02.png' alt='Lamp icon'>
-								</picture>
-							</div>
-							<h2 class="card-slide__title">Квест-кімнати у Дніпрі</h2>
-						</div>
-						<div class="swiper-slide card-slide card-slide_green">
-							<div class='card-slide__image'>
-								<picture>
-									<source type='image/webp' srcset='@img/gallery/03.webp'>
-									<img src='@img/gallery/03.png' alt='Box icon'>
-								</picture>
-							</div>
-							<h2 class="card-slide__title">Квести у коробках</h1>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="cards">
-				<div class="cards__container">
-					@@include('./components/base/_cards.html')
-					<a href="#" class="cards__link">Link</a>
+  <div class="wrapper">
+    @@include('./components/structure/_header.html')
+    <main>
+      <section class="hero">
+        <div class='hero__image'>
+          <picture>
+            <source type='image/webp' srcset='@img/gallery/banner_01.webp'>
+            <img src='@img/gallery/banner_01.jpg' alt='banner photo'>
+          </picture>
+        </div>
+        <div class="hero__swiper-cards swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card-slide card-slide_green">
+              <div class='card-slide__image'>
+                <picture>
+                  <source type='image/webp' srcset='@img/gallery/01.webp'>
+                  <img src='@img/gallery/01.png' alt='Telegram icon'>
+                </picture>
+              </div>
+              <h1 class="card-slide__title">Виїзні квести та шоу</h1>
+            </div>
+            <div class="swiper-slide card-slide card-slide_orange">
+              <div class='card-slide__image'>
+                <picture>
+                  <source type='image/webp' srcset='@img/gallery/02.webp'>
+                  <img src='@img/gallery/02.png' alt='Lamp icon'>
+                </picture>
+              </div>
+              <h2 class="card-slide__title">Квест-кімнати у Дніпрі</h2>
+            </div>
+            <div class="swiper-slide card-slide card-slide_green">
+              <div class='card-slide__image'>
+                <picture>
+                  <source type='image/webp' srcset='@img/gallery/03.webp'>
+                  <img src='@img/gallery/03.png' alt='Box icon'>
+                </picture>
+              </div>
+              <h2 class="card-slide__title">Квести у коробках</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="cards__container">
+          @@include('./components/base/_cards.html')
+          <a href="#" class="cards__link">Link</a>
 
-				</div>
-			</section>
-			<section class="benefits">
-				<div class="benefits__container-wrap">
-					<div class="benefits__container">
-						<div class="benefits__wrap">
-							<h2 class="benefits__title">Вітаємо в першій компанії
-								гіпер-квестів в Україні!</h2>
-							<p class="benefits__par">Тільки в INGAME для Вас:</p>
-							<ul class="benefits__list">
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/team-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/team.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Від 1 до 40 гравців</p>
-								</li>
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/age-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/age.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Від 5 до 99 років</p>
-								</li>
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/heart-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/heart.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Затишні зони для чаювання</p>
-								</li>
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/mask-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/mask.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Творча команда акторів та ведучих</p>
-								</li>
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/key-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/key.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Персональний День народження під ключ</p>
-								</li>
-								<li class="benefits__item">
-									<div class="benefits__picture">
-										<picture>
-											<source srcset="@img/icons/budget-desk.png" type="image/png"
-												media="(min-width: 1920px)">
-											<img src="@img/icons/budget.png" alt="">
-										</picture>
-									</div>
-									<p class="benefits__text">Цікаві рішення <br> на <br> будь-який бюджет
-									</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="for-u">
-				<div class="for-u__container">
-					<div class="for-u__wrap">
-						<h2 class="for-u__title">Працюємо для Вас</h2>
-						<div class="for-u__picture">
-							<picture>
-								<img src="@img/gallery/team.jpg" alt="">
-							</picture>
-						</div>
-						<div class="for-u__content">
-							<p class="for-u__text">Главное отличие всей нашей компании – мы очень активные
-								и влюбленные в свое дело,
-								нас
-								не сломили кризисы, конкуренция, локдауны и даже война, хотя от
-								первоначального рынка в 2015 году не
-								осталось кроме нас ни одного бизнеса квестов, все уже закрылись. Мы же
-								выходили из каждой передряги с
-								новыми проектами, как и сейчас готовим к запуску целую сеть новых проектов.
-								Сегодня мы предлагаем Вам уже целых 4 “больших” квеста в Днепре, в которых
-								может играть от 2-х до 14-ти
-								человек. И, конечно, загадки в наших квест-комнатах отличаются от привычного
-								формата. Вам нужно не
-								просто
-								сопоставить или найти коды! Здесь нужно действовать всей командой, а в
-								одиночку – не справиться.</p>
-							<a class="for-u__link">Дивитись детальніше</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="blog">
-				<div class="blog__container">
-					<div class="blog__wrap">
-						<div class="blog__block">
-							<h2 class="blog__title">Блог</h2>
-							<div class="blog__link-pic">
-								<a href="#" class="blog__link">Дивитись статті</a>
-								<svg width="22" height="16" viewBox="0 0 22 16" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M14.1667 14.3335L20.5 8.00016M20.5 8.00016L14.1667 1.66683M20.5 8.00016L1.5 8.00016"
-										stroke="#9ACF16" stroke-width="2" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="blog__content">
-							<h3 class="blog__par">
-								<p class="blog__par-text">Квест в подарок или</p>
-								<p class="blog__par-text">День рождения в стиле квест!</p>
-							</h3>
-							<div class="blog__picture">
-								<img src="@img/gallery/blog.png" alt="">
-							</div>
-							<p class="blog__text">Эта статья поможет вам организовать квест на дому или
-								придумать замечательный
-								сценарий квеста на природе. Это может быть, например, квест парню на день
-								рождения или квест на день
-								рождения ребенка от 7 лет. Еще одна фишка, которую всегда высоко оценивают
-								наши игроки, - это яркий
-								финал игры. В каждом квесте Ingame вас ждет совершенно неожиданная развязка.
-								Это не просто открытие
-								двери, это всегда своеобразное шоу, которое запоминается надолго. В этом нам
-								помогает четкость сюжета,
-								звук, свет и, конечно, размер игрового пространства, в котором “есть где
-								развернуться”. <a class="blog__text-link" href="#">Дивитись більше</a>
-							</p>
-						</div>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="benefits__container-wrap">
+          <div class="benefits__container">
+            <div class="benefits__wrap">
+              <h2 class="benefits__title">Вітаємо в першій компанії
+                гіпер-квестів в Україні!</h2>
+              <p class="benefits__par">Тільки в INGAME для Вас:</p>
+              <ul class="benefits__list">
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/team-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/team.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Від 1 до 40 гравців</p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/age-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/age.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Від 5 до 99 років</p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/heart-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/heart.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Затишні зони для чаювання</p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/mask-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/mask.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Творча команда акторів та ведучих</p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/key-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/key.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Персональний День народження під ключ</p>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__picture">
+                    <picture>
+                      <source srcset="@img/icons/budget-desk.png" type="image/png" media="(min-width: 1920px)">
+                      <img src="@img/icons/budget.png" alt="">
+                    </picture>
+                  </div>
+                  <p class="benefits__text">Цікаві рішення <br> на <br> будь-який бюджет
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="for-u">
+        <div class="for-u__container">
+          <div class="for-u__wrap">
+            <h2 class="for-u__title">Працюємо для Вас</h2>
+            <div class="for-u__picture">
+              <picture>
+                <img src="@img/gallery/team.jpg" alt="">
+              </picture>
+            </div>
+            <div class="for-u__content">
+              <p class="for-u__text">Главное отличие всей нашей компании – мы очень активные
+                и влюбленные в свое дело,
+                нас
+                не сломили кризисы, конкуренция, локдауны и даже война, хотя от
+                первоначального рынка в 2015 году не
+                осталось кроме нас ни одного бизнеса квестов, все уже закрылись. Мы же
+                выходили из каждой передряги с
+                новыми проектами, как и сейчас готовим к запуску целую сеть новых проектов.
+                Сегодня мы предлагаем Вам уже целых 4 “больших” квеста в Днепре, в которых
+                может играть от 2-х до 14-ти
+                человек. И, конечно, загадки в наших квест-комнатах отличаются от привычного
+                формата. Вам нужно не
+                просто
+                сопоставить или найти коды! Здесь нужно действовать всей командой, а в
+                одиночку – не справиться.</p>
+              <a href="#" class="for-u__link">Дивитись детальніше</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="blog__container">
+          <div class="blog__wrap">
+            <div class="blog__block">
+              <h2 class="blog__title">Блог</h2>
+              <div class="blog__link-pic">
+                <a href="#" class="blog__link">Дивитись статті</a>
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1667 14.3335L20.5 8.00016M20.5 8.00016L14.1667 1.66683M20.5 8.00016L1.5 8.00016"
+                    stroke="#9ACF16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="blog__content">
+              <h3 class="blog__par">
+                <p class="blog__par-text">Квест в подарок или</p>
+                <p class="blog__par-text">День рождения в стиле квест!</p>
+              </h3>
+              <div class="blog__picture">
+                <img src="@img/gallery/blog.png" alt="">
+              </div>
+              <p class="blog__text">Эта статья поможет вам организовать квест на дому или
+                придумать замечательный
+                сценарий квеста на природе. Это может быть, например, квест парню на день
+                рождения или квест на день
+                рождения ребенка от 7 лет. Еще одна фишка, которую всегда высоко оценивают
+                наши игроки, - это яркий
+                финал игры. В каждом квесте Ingame вас ждет совершенно неожиданная развязка.
+                Это не просто открытие
+                двери, это всегда своеобразное шоу, которое запоминается надолго. В этом нам
+                помогает четкость сюжета,
+                звук, свет и, конечно, размер игрового пространства, в котором “есть где
+                развернуться”. <a class="blog__text-link" href="#">Дивитись більше</a>
+              </p>
+            </div>
 
-					</div>
-				</div>
-			</section>
-		</main>
-		@@include('./components/structure/_footer.html')
-	</div>
-	@@include('./components/structure/_scripts.html', {
-	'swiper': 'true',
-	})
-	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/structure/_footer.html')
+  </div>
+  @@include('./components/structure/_scripts.html', {
+  'swiper': 'true',
+  })
+  <!-- todo указать нужное значение дял подключения\отключения свайпера -->
 </body>
 
 </html>
