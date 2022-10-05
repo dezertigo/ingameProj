@@ -54,6 +54,16 @@ window.addEventListener("load", () => {
          }
       }
    }
+   // ! Header
+   // window.addEventListener("resize", moveCart); // todo написать не при ресайзе, а при перевороте мобилки в другое положение (горизонталь\вертикаль)
+   moveCart();
+   function moveCart() {
+      if (window.innerWidth < 1000) {
+         qs(".header-top__buttons").prepend(qs("#cart"));
+      } else {
+         qs(".header-menu__container").append(qs("#cart"));
+      }
+   }
 
    // ! Spoiler
 
