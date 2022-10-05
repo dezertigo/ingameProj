@@ -682,23 +682,31 @@ body.home {
       background-repeat: no-repeat;
       background-size: cover;
       &__container {
-         max-width: 1700px;
          margin: 0 auto;
          padding-left: percent(12, 375);
          padding-right: percent(12, 375);
+         @media (min-width: 1400px) {
+            padding-left: percent(130, 1920);
+            padding-right: percent(130, 1920);
+            
+         }
       }
       &__title {
          font-weight: 700;
-         font-size: 24px;
-         line-height: 30px;
+         @include fl(24, 30);
          color: $light;
          text-align: center;
          margin-bottom: 24px;
+         @media (min-width: 1400px) {
+            margin-bottom: 10px;
+            @include fl(36,44);
+         }
       }
       &__slider {
          position: relative;
          @media (min-width: 1100px) {
             overflow: hidden;
+            padding-top: 30px;
          }
       }
       &__slide {
@@ -706,27 +714,42 @@ body.home {
          min-height: 360px;
          display: flex;
          flex-direction: column;
+         cursor: pointer;
+         transition: all 0.3s;
+         &:hover {
+            transform: scale(1.15);
+            z-index: 10;
+            filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.4));
+         }
       }
       &__head {
          padding: 30.5px percent(22, 351);
          border-bottom: 1px solid #d9d9d9;
+         @media (min-width: 1400px) {
+            padding: 20px percent(30,540) 8px;
+         }
       }
       &__head-suptitle {
          font-weight: 700;
-         font-size: 12px;
-         line-height: 18px;
+         @include fl(12,18);
          color: $dark;
          margin-bottom: 10px;
+         @media (min-width: 1400px) {
+            @include fl(16, 20);
+         }
       }
       &__head-title {
          font-weight: 700;
-         font-size: 14px;
-         line-height: 20px;
+         @include fl(14, 20);
          color: $dark;
          max-width: 370px;
          width: 100%;
+         @media (min-width: 1400px) {
+            @include fl(24, 28);
+         }
       }
       &__wrap {
+         flex: 1 1 auto;
          display: flex;
          justify-content: space-between;
          gap: 12px;
@@ -735,14 +758,18 @@ body.home {
             max-width: 58.4%; 
          }
          .reviews__body-name {
-            font-size: 16px;
-            line-height: 20px;
+            @include fl(16, 20);
+            @media (min-width: 1400px) {
+               @include fl(24,29);
+            }
          }
          .reviews__body-text {
-            font-size: 14px;
-            line-height: 20px;
+            @include fl(14, 20);
             font-weight: 400;
             font-style: italic;
+            @media (min-width: 1400px) {
+               @include fl(16,22);
+            }
          }
       }
       &__body {
@@ -768,26 +795,45 @@ body.home {
                z-index: 3;
                background-image: url(../../img/icons/play.svg);
             }
+            &::after {
+               position: absolute;
+               content: '';
+               top: 0;
+               bottom: 0;
+               right: 0;
+               left: 0;
+               background-color: rgba(10,10,10,.2);
+               z-index: 2;
+            }
             @media (min-width: 350px) {
                padding-bottom: 250px;
+            }
+            @media (min-width: 1400px) {
+               padding-bottom: 245px;
             }
             img {
                position: absolute;
                width: 100%;
                height: 100%;
                object-fit: cover;
-               object-position: center -120px;
+               object-position: center 40%;
             }
             .reviews__body-name {
                color: $light;
                position: absolute;
                left: 22px;
                top: 24px;
+               z-index: 3;
+               @include fl(18, 22);
+               @media (min-width: 1400px) {
+                  @include fl(24,29);
+               }
             }
             .reviews__footer {
                position: absolute;
                bottom: 24px;
                left: 22px;
+               z-index: 3;
             }
             .reviews__footer-date {
                color: $light;
@@ -798,15 +844,13 @@ body.home {
       }
       &__body-name {
          font-weight: 700;
-         font-size: 24px;
-         line-height: 29px;
+         @include fl(24, 29);
          color: $dark;
          margin-bottom: 12px;
       }
       &__body-text {
          font-weight: 500;
-         font-size: 16px;
-         line-height: 22px;
+         @include fl(16, 22);
          &--margin {
             margin-bottom: 40px;
          }
@@ -819,16 +863,14 @@ body.home {
       }
       &__footer-date {
          font-weight: 500;
-         font-size: 14px;
-         line-height: 20px;
+         @include fl(14, 20);
          color: $dark;
          opacity: 0.4;
          margin-top: auto;
       }
       &__footer-btn {
          font-weight: 700;
-         font-size: 16px;
-         line-height: 22px;
+         @include fl(16, 22);
          color: $greenItem;
       }
       &__img {
@@ -838,6 +880,9 @@ body.home {
          @media (min-width: 350px) {
             padding-bottom: 250px;
          }
+         @media (min-width: 1400px) {
+            padding-bottom: 245px;
+         }
          img {
             position: absolute;
             width: 100%;
@@ -846,42 +891,8 @@ body.home {
             object-position: center center;
          }
       }
-      &__nav {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         gap: 16px;
-         max-width: 192px;
-         margin: 0 auto;
-         margin-top: 24px;
-      }
-      &__prev ,
-      &__next {
-         width: 34px;
-         height: 34px;
-         display: flex; 
-         align-items: center;
-         justify-content: center;
-      }
-      &__pagination {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      }
-      .swiper-pagination-bullet {
-         width: 12px;
-         height: 12px;
-         background: rgba(144, 199, 94, 0.2);
-         &-active {
-            background: $greenItem;
-         }
-      }
    }
    
- 
-
-
-
 
    // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog === Blog
    // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog === Blog

@@ -178,10 +178,10 @@ window.addEventListener("load", () => {
       initialSlide: 1,
       centeredSlides: true,
       slideToClickedSlide: true,
-      spaceBetween: 20,
+      spaceBetween: 24,
       pagination: {
          el: '.reviews__pagination',
-         clicable: true,
+         clickable: true,
       },
       navigation: {
          nextEl: '.reviews__next',
@@ -189,16 +189,17 @@ window.addEventListener("load", () => {
       },
       breakpoints: {
          568: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.5,
          },
          700: {
-            slidesPerView: 1.6,
+            slidesPerView: 1.9299,
          },
          900: {
             slidesPerView: 2,
          },
          1100: {
             slidesPerView: 3,
+            spaceBetween: 20,
          },
       },
    });
