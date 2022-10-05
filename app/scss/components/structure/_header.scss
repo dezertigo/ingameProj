@@ -1,28 +1,31 @@
 .header {
    position: relative;
-   &:before {
-      // Накрывает менюшки с position: fixed
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent; // todo Изменить на нужный цвет подложки
-      z-index: 1;
-   }
+   // &:before {
+   //    // Накрывает менюшки с position: fixed
+   //    content: "";
+   //    position: absolute;
+   //    top: 0;
+   //    left: 0;
+   //    width: 100%;
+   //    height: 100%;
+   //    // background-color: green; // todo Изменить на нужный цвет подложки
+   //    z-index: 1;
+   // }
    &__container {
       @extend %container;
-   }
-   &__body {
-      @media (max-width: 768px) {
+      @media (max-width: 739px) {
          min-height: 132px;
+         padding-top: 16px;
+      }
+      @media (min-width: 740px) and (max-width: 1000px) {
+         min-height: 98px;
+         padding-top: 22px;
       }
       min-height: 216px; // todo Указываем минимальную высоту шапки
-      display: flex;
-      align-items: center;
-      justify-content: space-between; // todo Позиционируем элементы по оси Х
-      column-gap: 20px;
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between; // todo Позиционируем элементы по оси Х
+      // column-gap: 20px;
    }
    &__logo {
       z-index: 2;
@@ -34,43 +37,179 @@
    }
 }
 
-.header-action {
-   flex: 1 1 auto; //Растягиваем на всю возможную ширину
-   max-width: 150px; // Задаем максимальную ширину (брать ширину меню из макета)
-   position: relative;
-   z-index: 2;
-   display: flex;
-   align-items: center;
-   justify-content: space-between; // Раздвигаем элементы меню между собой для резинового увеличения отступа
-   column-gap: 15px; // минимальный отступ между элементами меню
-   li {
-      cursor: pointer;
-      transition: all 0.3s ease;
-      &:hover {
-         @media (min-width: 769px) {
-            a {
+.header-top {
+   // .header-top__container
+   &__container {
+      @extend %container;
+   }
+
+   &__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   // .header-top__logo
+   &__logo {
+      width: 114px;
+   }
+
+   // .header-top__buttons
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i {
+         color: $greenItem;
+         @include fl(20);
+      }
+   }
+
+   &__action {
+      @media (max-width: 344px) {
+         justify-content: center;
+      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+   }
+
+   &__lists {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 12px;
+      ul {
+         display: flex;
+         column-gap: 2px;
+         a {
+            @include fl(10, 14);
+            font-weight: 500;
+            color: $dark;
+            padding: 6px;
+            &.active {
+               color: rgba(16, 16, 16, 0.6);
+               border: 1px solid $greenItem;
+               border-radius: 4px;
+            }
+         }
+      }
+   }
+
+   &__lang {
+   }
+
+   &__city {
+   }
+
+   &__phone {
+      @media (max-width: 344px) {
+         align-items: center;
+      }
+      // text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      row-gap: 2px;
+      a {
+         @include fl(14, 18);
+         font-weight: 700;
+      }
+      button {
+         @include fl(12, 16);
+         font-weight: 500;
+         color: $greenItem;
+         font-family: $ff1;
+      }
+   }
+}
+.header-menu {
+   display: none;
+   // .header-menu__container
+   &__container {
+   }
+
+   // .header-menu__navigation
+   &__navigation {
+   }
+
+   // .header-menu__list
+
+   &__list {
+      flex: 1 1 auto; //Растягиваем на всю возможную ширину
+      max-width: 150px; // Задаем максимальную ширину (брать ширину меню из макета)
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; // Раздвигаем элементы меню между собой для резинового увеличения отступа
+      column-gap: 15px; // минимальный отступ между элементами меню
+      li {
+         cursor: pointer;
+         transition: all 0.3s ease;
+         &:hover {
+            @media (min-width: 769px) {
+               a {
+                  &:after {
+                     width: 100%;
+                  }
+               }
+            }
+         }
+         a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            @media (min-width: 769px) {
+               display: block;
+               position: relative;
                &:after {
-                  width: 100%;
+                  content: "";
+                  position: absolute;
+                  bottom: 5px;
+                  left: 0;
+                  width: 0;
+                  height: 1px;
+                  background: #000;
+                  transition: all 0.3s ease;
                }
             }
          }
       }
-      a {
-         padding-top: 5px;
-         padding-bottom: 5px;
-         @media (min-width: 769px) {
-            display: block;
-            position: relative;
-            &:after {
-               content: "";
-               position: absolute;
-               bottom: 5px;
-               left: 0;
-               width: 0;
-               height: 1px;
-               background: #000;
-               transition: all 0.3s ease;
-            }
+   }
+
+   // .header-menu__about
+   &__about {
+   }
+}
+.header-bottom {
+   // .header-bottom__container
+   &__container {
+   }
+
+   // .header-bottom__image
+   &__image {
+      position: relative;
+      &:not(:last-child) {
+         margin-bottom: 12px;
+         height: 12px;
+         img {
+            width: 471px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+      &:last-child {
+         height: 2px;
+         img {
+            width: 712px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
          }
       }
    }
@@ -79,10 +218,10 @@
 .burger {
    position: relative;
    z-index: 2;
-   min-height: 40px; // Высота блока для удобства нажатия на иконку
-   width: 40px; // Ширина блока для удобства нажатия на иконку
+   min-height: 30px; // Высота блока для удобства нажатия на иконку
+   width: 30px; // Ширина блока для удобства нажатия на иконку
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
-   margin-left: -5px;
+   margin-right: -8px;
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
    display: flex;
    align-items: center;
@@ -106,8 +245,8 @@
    }
 	*/
    &__wrapper {
-      width: 30px; // todo Макетная ширина бургера
-      height: 20px; // todo Макетная высота бургера
+      width: 14px; // todo Макетная ширина бургера
+      height: 12px; // todo Макетная высота бургера
       position: relative;
       display: flex;
       flex-direction: column;
@@ -116,11 +255,12 @@
       &:after {
          width: 100%;
          height: 2px;
-         background-color: #000;
+         background-color: $greenItem;
          transition: all 0.3s ease;
          transform: translateY(0);
          position: relative;
          left: 0;
+         border-radius: 1.5px;
       }
       &:before {
          content: "";

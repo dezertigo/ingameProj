@@ -5,7 +5,7 @@ body.lock {
 body {
    font-family: $ff1;
    @include fl(16);
-   background-color: grey;
+   background-color: $light;
 }
 .wrapper {
    display: flex;
