@@ -369,6 +369,10 @@ body.lock {
   overflow: hidden;
 }
 
+body.lock::before {
+  display: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -392,8 +396,24 @@ main {
   position: relative;
 }
 
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 11;
+}
+
 .header__container {
   min-height: 216px;
+}
+
+.header-top {
+  position: relative;
+  z-index: 11;
 }
 
 .header-top__container {
@@ -460,6 +480,11 @@ main {
   font-weight: 500;
   color: #90c75e;
   font-family: "Montserrat", sans-serif;
+}
+
+.header-bottom {
+  position: relative;
+  z-index: 11;
 }
 
 .header-bottom__image {
@@ -922,6 +947,8 @@ main {
   }
 
   .header-menu {
+    position: relative;
+    z-index: 11;
     background-color: #9ad018;
   }
 
@@ -1371,8 +1398,179 @@ main {
     margin-bottom: 12px;
   }
 
+  .header-menu {
+    transition: right 0.8s ease 0.3s, background-color 0.3s ease 0s, z-index 1s ease 1s;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    overflow-y: auto;
+    z-index: 0;
+  }
+
+  .header-menu__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 140px;
+  }
+
+  .header-menu__list {
+    text-align: center;
+  }
+
+  .header-menu__list li:not(:last-child) {
+    margin-bottom: 26px;
+  }
+
+  .header-menu__list li a {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    color: #101010;
+  }
+
+  .header-menu__list li a.active {
+    font-weight: 500;
+    color: #9acf16;
+  }
+
+  .header-menu__working-time {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-menu__working-time ul {
+    position: relative;
+  }
+
+  .header-menu__working-time ul:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: #101010;
+  }
+
+  .header-menu__working-time ul li p {
+    white-space: nowrap;
+  }
+
+  .header-menu__working-time ul + p span {
+    display: block;
+  }
+
+  .header-menu__subscribe p {
+    font-weight: 500;
+  }
+
+  .header-menu__subscribe a:first-child {
+    background-color: #101010;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #101010;
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
+  .header-menu__subscribe a:last-child {
+    position: relative;
+  }
+
+  .header-menu__subscribe a:last-child:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #101010;
+  }
+
+  .header-menu.active {
+    z-index: 10;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
+  }
+
   .footer-top__second {
     margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 369px) {
+  .header-menu__container {
+    padding-top: 190px;
+  }
+
+  .header-menu__list li a {
+    font-size: 0.9375rem;
+    line-height: 1.2666666667;
+  }
+
+  .header-menu__working-time ul {
+    padding-right: 10px;
+  }
+
+  .header-menu__working-time ul li p {
+    padding-right: 10px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .header-menu__working-time ul + p {
+    padding-left: 10px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .header-menu__subscribe p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .header-menu__subscribe div {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 739px) {
+  .header-menu__list {
+    margin-bottom: 59px;
+  }
+
+  .header-menu__working-time {
+    margin-bottom: 24px;
+  }
+
+  .header-menu__subscribe p {
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 1000px) {
+  .header-menu__about {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 1000px) and (max-width: 999px) {
+  .header-menu__working-time {
+    justify-content: center;
+  }
+
+  .header-menu__subscribe {
+    text-align: center;
   }
 }
 
@@ -1665,17 +1863,7 @@ main {
   }
 }
 
-@media (max-width: 560px) {
-  .footer-top__proposal {
-    text-align: center;
-  }
-
-  .footer-top__proposal ul li:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
-
-@media (max-width: 459px) {
+@media (max-width: 580px) {
   .header-bottom__image:first-child {
     margin-bottom: 12px;
     height: 12px;
@@ -1688,7 +1876,19 @@ main {
     left: 50%;
     transform: translateX(-50%);
   }
+}
 
+@media (max-width: 560px) {
+  .footer-top__proposal {
+    text-align: center;
+  }
+
+  .footer-top__proposal ul li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 459px) {
   .header-bottom__image:last-child img {
     width: 712px;
     position: absolute;
@@ -1822,7 +2022,54 @@ main {
   }
 }
 
-@media (min-width: 460px) and (max-width: 999px) {
+@media (max-width: 1000px) and (min-width: 740px) and (max-width: 999px) {
+  .header-menu__list {
+    margin-bottom: 48px;
+  }
+
+  .header-menu__working-time {
+    margin-bottom: 41px;
+  }
+
+  .header-menu__subscribe p {
+    margin-bottom: 13px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 370px) and (max-width: 999px) {
+  .header-menu__list li a {
+    font-size: 1.125rem;
+    line-height: 1.2222222222;
+  }
+
+  .header-menu__working-time ul {
+    padding-right: 24px;
+  }
+
+  .header-menu__working-time ul li p {
+    padding-right: 24px;
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+
+  .header-menu__working-time ul + p {
+    padding-left: 24px;
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+
+  .header-menu__subscribe p {
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+
+  .header-menu__subscribe div {
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 999px) {
   .header-bottom__image:first-child {
     position: relative;
     height: 18px;

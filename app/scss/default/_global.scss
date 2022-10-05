@@ -1,5 +1,8 @@
 body.lock {
    overflow: hidden;
+   &::before {
+      display: none;
+   }
 }
 
 body {
