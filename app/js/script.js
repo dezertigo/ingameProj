@@ -92,6 +92,32 @@ window.addEventListener("load", () => {
       }
    }
 
+   // ! CEO
+   if (qs(".ceo")) {
+      // ? Если нужно открыть только первый спойлер на странице. Можно прогнать циклом для остальных
+      // if (qs(".spoiler").classList.contains("opened")) {
+      //    let spoilerWrapper = qa(".spoiler__wrapper")[0];
+      //    spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+      // }
+      const ceoBtn = document.querySelector('.ceo__btn');
+      ceoBtn.addEventListener("click", toggleCeo);
+
+      function toggleCeo(e) {
+
+         if (e.target.closest(".ceo__preview") || e.target.closest(".ceo__btn")) {
+            e.target.closest(".ceo").classList.toggle("opened");
+            let ceoWrapper = document.querySelector(".ceo__preview").nextElementSibling;
+            if (!e.target.closest(".ceo").classList.contains("opened")) {
+               ceoWrapper.style.height = null;
+               ceoBtn.textContent = 'Дивитись більше';
+            } else {
+               ceoBtn.textContent = 'Сховати';
+               ceoWrapper.style.height = ceoWrapper.scrollHeight + "px";
+            }
+         }
+      }
+   }
+
    // ! Home => Hero
    // const swiperBanners = new Swiper(".hero__swiper-banners", {
    //    // loop: true,
@@ -193,6 +219,61 @@ window.addEventListener("load", () => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
 
+
+
+
+   // reviews slider
+   const swiperReviews = new Swiper(".reviews__slider", {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 24,
+      pagination: {
+         el: '.reviews__pagination',
+         clickable: true,
+      },
+      navigation: {
+         nextEl: '.reviews__next',
+         prevEl: '.reviews__prev',
+      },
+      breakpoints: {
+         568: {
+            slidesPerView: 1.5,
+         },
+         700: {
+            slidesPerView: 1.9299,
+         },
+         900: {
+            slidesPerView: 2,
+         },
+         1100: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+      },
+   });
+   const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 24,
+      pagination: {
+         el: '.reviews-popup__pagination',
+         clickable: true,
+      },
+      navigation: {
+         nextEl: '.reviews-popup__next',
+         prevEl: '.reviews-popup__prev',
+      },
+   });
+
+
    // ! Footer
    // Telegram hover
    document.body.addEventListener("pointerover", changeTelegramColor);
@@ -231,4 +312,5 @@ window.addEventListener("load", () => {
       // document.body.removeEventListener("pointerup", removeStylesUp);
       document.body.removeEventListener("pointerout", removeStylesOut);
    }
+
 });
