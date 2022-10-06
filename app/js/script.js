@@ -203,5 +203,22 @@ window.addEventListener("load", () => {
          },
       },
    });
+   const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 24,
+      pagination: {
+         el: '.reviews-popup__pagination',
+         clickable: true,
+      },
+      navigation: {
+         nextEl: '.reviews-popup__next',
+         prevEl: '.reviews-popup__prev',
+      },
+   });
 
 });
