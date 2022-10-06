@@ -99,19 +99,18 @@ window.addEventListener("load", () => {
       //    let spoilerWrapper = qa(".spoiler__wrapper")[0];
       //    spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
       // }
-      const ceoBtn = document.querySelector('.ceo__btn');
+      const ceoBtn = document.querySelector(".ceo__btn");
       ceoBtn.addEventListener("click", toggleCeo);
 
       function toggleCeo(e) {
-
          if (e.target.closest(".ceo__preview") || e.target.closest(".ceo__btn")) {
             e.target.closest(".ceo").classList.toggle("opened");
             let ceoWrapper = document.querySelector(".ceo__preview").nextElementSibling;
             if (!e.target.closest(".ceo").classList.contains("opened")) {
                ceoWrapper.style.height = null;
-               ceoBtn.textContent = 'Дивитись більше';
+               ceoBtn.textContent = "Дивитись більше";
             } else {
-               ceoBtn.textContent = 'Сховати';
+               ceoBtn.textContent = "Сховати";
                ceoWrapper.style.height = ceoWrapper.scrollHeight + "px";
             }
          }
@@ -219,9 +218,6 @@ window.addEventListener("load", () => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
 
-
-
-
    // reviews slider
    const swiperReviews = new Swiper(".reviews__slider", {
       loop: true,
@@ -232,12 +228,12 @@ window.addEventListener("load", () => {
       slideToClickedSlide: true,
       spaceBetween: 24,
       pagination: {
-         el: '.reviews__pagination',
+         el: ".reviews__pagination",
          clickable: true,
       },
       navigation: {
-         nextEl: '.reviews__next',
-         prevEl: '.reviews__prev',
+         nextEl: ".reviews__next",
+         prevEl: ".reviews__prev",
       },
       breakpoints: {
          568: {
@@ -255,7 +251,7 @@ window.addEventListener("load", () => {
          },
       },
    });
-   const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
+   const reviewsPopupSlider = new Swiper(".reviews-popup__slider", {
       loop: true,
       speed: 500,
       slidesPerView: 1,
@@ -264,15 +260,14 @@ window.addEventListener("load", () => {
       slideToClickedSlide: true,
       spaceBetween: 24,
       pagination: {
-         el: '.reviews-popup__pagination',
+         el: ".reviews-popup__pagination",
          clickable: true,
       },
       navigation: {
-         nextEl: '.reviews-popup__next',
-         prevEl: '.reviews-popup__prev',
+         nextEl: ".reviews-popup__next",
+         prevEl: ".reviews-popup__prev",
       },
    });
-
 
    // ! Footer
    // Telegram hover
@@ -312,5 +307,29 @@ window.addEventListener("load", () => {
       // document.body.removeEventListener("pointerup", removeStylesUp);
       document.body.removeEventListener("pointerout", removeStylesOut);
    }
-
+   //! Table swiper
+   const swiperTale = new Swiper(".step3__swiper", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      initialSlide: 0,
+      simulateTouch: true,
+      spaceBetween: 20,
+      freeMode: true,
+      breakpoints: {
+         500: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+         },
+         620: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+         },
+         740: {
+            slidesPerView: 7,
+            slidesPerGroup: 7,
+         },
+      },
+   });
 });

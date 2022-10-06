@@ -1,0 +1,144 @@
+.table-column {
+   display: flex;
+   flex-direction: column;
+   // align-items: center;
+   // .table-column__head
+   &__head {
+      text-align: center;
+      @media (max-width: 999px) {
+         margin-bottom: 24px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 28px;
+      }
+   }
+
+   // .table-column__date
+   &__date {
+      font-weight: 700;
+      color: $dark;
+      @media (max-width: 999px) {
+         @include fl(18, 24);
+         margin-bottom: 8px;
+      }
+      @media (min-width: 1000px) {
+         @include fl(20, 28);
+         margin-bottom: 10px;
+      }
+      @media (min-width: 1300px) {
+         @include fl(22, 30);
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 32);
+      }
+   }
+
+   // .table-column__day
+   &__day {
+      color: $dark;
+      @media (max-width: 739px) {
+         @include fl(12, 16);
+      }
+      @media (min-width: 740px) {
+         @include fl(14, 18);
+      }
+   }
+
+   // .table-column__list
+   &__list {
+      li {
+         &:not(:last-child) {
+            margin-bottom: 23.5px;
+         }
+      }
+      p {
+         display: flex;
+         align-items: center;
+         @media (max-width: 739px) {
+            padding-left: 5px;
+         }
+         @media (min-width: 740px) and (max-width: 999px) {
+            padding-left: 3px;
+         }
+         @media (max-width: 999px) {
+            column-gap: 8px;
+         }
+         @media (min-width: 1000px) {
+            padding-left: 11px;
+            column-gap: 13px;
+         }
+         i {
+            color: $greenHover;
+            @media (max-width: 999px) {
+               @include fl(15);
+            }
+            @media (min-width: 1000px) {
+               @include fl(14);
+            }
+         }
+         span {
+            @media (max-width: 999px) {
+               @include fl(12, 16);
+            }
+            @media (min-width: 1000px) {
+               @include fl(14, 20);
+            }
+            @media (min-width: 1600px) {
+               @include fl(16, 22);
+            }
+         }
+         &:first-of-type {
+            @media (max-width: 999px) {
+               margin-bottom: 4px;
+            }
+            @media (min-width: 1000px) {
+               margin-bottom: 7px;
+            }
+         }
+         &:last-of-type {
+            font-weight: 500;
+            @media (max-width: 999px) {
+               margin-bottom: 5px;
+            }
+            @media (min-width: 1000px) {
+               margin-bottom: 7.3px;
+            }
+         }
+      }
+   }
+
+   // .table-column__time
+   &__time {
+   }
+
+   // .table-column__price
+   &__price {
+   }
+   // .table-column__book
+   &__book {
+      cursor: pointer;
+      font-weight: 500;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 4px;
+      padding-right: 4px;
+      box-shadow: 0px 4px 12px rgba(92, 123, 14, 0.12);
+      border: 1px solid $greenHover;
+      width: 100%;
+      font-family: $ff1;
+      color: $greenHover;
+      @media (max-width: 739px) {
+         @include fl(12, 16);
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         @include fl(10, 14);
+      }
+      @media (min-width: 1000px) {
+         @include fl(14, 22);
+      }
+      &.blocked {
+         color: rgba(16, 16, 16, 0.4);
+         border: 1px solid rgba(16, 16, 16, 0.4);
+      }
+   }
+}

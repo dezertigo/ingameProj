@@ -1,3 +1,6 @@
+// ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
+// ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
+// ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
 .show {
    width: 100%;
    max-width: 100%;
@@ -433,3 +436,61 @@
 // ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
 // ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
 // ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
+
+// ! STEP-TITLE
+.step-title {
+   text-align: center;
+   @media (max-width: 999px) {
+      @include fl(24, 30);
+   }
+   @media (min-width: 1000px) and (max-width: 1199px) {
+      @include fl(26, 34);
+   }
+   @media (min-width: 1200px) and (max-width: 1399px) {
+      @include fl(29, 37);
+   }
+   @media (min-width: 1400px) and (max-width: 1599px) {
+      @include fl(32, 40);
+   }
+   @media (min-width: 1600px) {
+      @include fl(34, 42);
+   }
+   span {
+      font-weight: 500;
+      @media (max-width: 1399px) {
+         margin-right: 13px;
+      }
+      @media (min-width: 1400px) {
+         margin-right: 20px;
+      }
+   }
+}
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+.step3 {
+   &__container {
+      @media (max-width: 739px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-left: percent(34, 744);
+         padding-right: percent(34, 744);
+      }
+      @media (min-width: 1000px) {
+         padding-left: 15px;
+         padding-right: 15px;
+         max-width: 990px;
+         margin: 0 auto;
+      }
+   }
+   &__title {
+      @media (max-width: 999px) {
+         margin-bottom: 15px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
+   }
+}
