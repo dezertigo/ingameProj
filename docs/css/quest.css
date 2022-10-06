@@ -1010,10 +1010,6 @@ main {
   position: relative;
 }
 
-.show__item1 {
-  grid-column: span 2;
-}
-
 .show__item1 .show__item-wrap {
   padding: 9px 0 8px 40px;
 }
@@ -1062,7 +1058,6 @@ main {
 }
 
 .show__item4 {
-  grid-column: span 2;
   justify-self: center;
   padding: 0 38px;
 }
@@ -1230,7 +1225,6 @@ main {
   }
 
   .show__item1 {
-    grid-column: span 22;
     padding-right: 11px;
     max-width: 567px;
   }
@@ -1245,7 +1239,6 @@ main {
   }
 
   .show__item2 {
-    grid-column: span 7;
     padding: 0;
     padding-right: 8px;
   }
@@ -1255,7 +1248,6 @@ main {
   }
 
   .show__item3 {
-    grid-column: span 7;
     padding: 0 12px 0 4px;
   }
 
@@ -1264,7 +1256,6 @@ main {
   }
 
   .show__item4 {
-    grid-column: span 11;
     padding: 0;
   }
 
@@ -1741,11 +1732,10 @@ main {
   }
 
   .show__list {
-    grid-template-columns: repeat(120, 1fr);
+    grid-template-columns: repeat(4, auto);
   }
 
   .show__item1 {
-    grid-column: span 54;
     padding-right: 8px;
     max-width: none;
   }
@@ -1755,7 +1745,6 @@ main {
   }
 
   .show__item2 {
-    grid-column: span 19;
     padding: 0 0 0 0;
   }
 
@@ -1764,7 +1753,6 @@ main {
   }
 
   .show__item3 {
-    grid-column: span 20;
     padding: 0 10px 0 8px;
   }
 
@@ -1778,7 +1766,6 @@ main {
 
   .show__item4 {
     transform: translate(-2%, 0);
-    grid-column: span 27;
     padding: 0 7px 0 2px;
   }
 
