@@ -430,6 +430,8 @@ main {
 }
 
 .header-top__logo svg {
+  min-height: 30px;
+  min-width: 100px;
   transform: translateY(-2px);
 }
 
@@ -2132,9 +2134,6 @@ body.home .blog__text-link {
     order: 2;
     top: 50%;
     transform: translate(-51%, -50%);
-  }
-
-  .header-top__logo {
     height: 80px;
   }
 
@@ -3047,7 +3046,7 @@ body.home .blog__text-link {
   }
 
   .header-top__logo {
-    width: 128px;
+    min-width: 128px;
     margin-left: -8px;
   }
 
@@ -3173,9 +3172,6 @@ body.home .blog__text-link {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .header-top__logo {
     height: 60px;
   }
 
