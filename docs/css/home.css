@@ -697,13 +697,13 @@ main {
   white-space: nowrap;
 }
 
-.footer-top__working-time ul+p {
+.footer-top__working-time ul + p {
   font-size: 0.875rem;
   line-height: 1.4285714286;
   padding-left: 24px;
 }
 
-.footer-top__working-time ul+p span {
+.footer-top__working-time ul + p span {
   display: block;
 }
 
@@ -1041,7 +1041,7 @@ main {
   padding-right: 20px;
 }
 
-.card__preview>div {
+.card__preview > div {
   flex: 0 0 50%;
 }
 
@@ -2002,6 +2002,71 @@ body.home .blog__text {
 body.home .blog__text-link {
   font-weight: 500;
   color: rgb(144, 199, 94);
+  border-bottom: 1px solid rgb(144, 199, 94);
+}
+
+body.home .ceo {
+  width: 100%;
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+body.home .ceo__container {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+
+body.home .ceo__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.home .ceo__preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+body.home .ceo__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+body.home .ceo__decor {
+  box-shadow: inset 0px -124px 47px -70px rgb(255, 255, 255);
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+body.home .ceo__body {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+body.home .ceo__text {
+  color: rgb(16, 16, 16);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+body.home .ceo__btn {
+  color: rgb(144, 199, 94);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.9px;
+  padding: 5px;
+}
+
+body.home .ceo.opened .ceo__decor {
+  box-shadow: none;
 }
 
 @media (min-width: 350px) {
@@ -2228,6 +2293,13 @@ body.home .blog__text-link {
   body.home .reviews__slider {
     overflow: hidden;
     padding-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body.home .ceo__body {
+    gap: 2em;
+    flex-direction: row;
   }
 }
 
@@ -2719,7 +2791,6 @@ body.home .blog__text-link {
 }
 
 @media (max-width: 568px) {
-
   .card:nth-child(4),
   .card:nth-child(5),
   .card:nth-child(6) {
@@ -2764,7 +2835,6 @@ body.home .blog__text-link {
 }
 
 @media (min-width: 568px) and (max-width: 991px) {
-
   .card:nth-child(5),
   .card:nth-child(6) {
     display: none;
