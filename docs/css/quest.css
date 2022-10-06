@@ -698,6 +698,23 @@ main {
   margin-bottom: 12px;
 }
 
+.footer-top__proposal ul li a {
+  transition: color 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.footer-top__proposal ul li a:hover {
+  color: #fff;
+}
+
+.footer-top__proposal ul li a:hover:after {
+  background-color: #fff;
+}
+
+.footer-top__proposal ul li a:active {
+  opacity: 0.6;
+}
+
 .footer-bottom {
   position: relative;
 }
