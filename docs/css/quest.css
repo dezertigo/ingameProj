@@ -457,7 +457,6 @@ main {
 
 .header-top__lists {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -701,7 +700,7 @@ main {
   white-space: nowrap;
 }
 
-.footer-top__working-time ul+p span {
+.footer-top__working-time ul + p span {
   display: block;
 }
 
@@ -1657,7 +1656,7 @@ main {
     line-height: 1.375;
   }
 
-  .footer-top__working-time ul+p {
+  .footer-top__working-time ul + p {
     font-size: 1rem;
     line-height: 1.375;
     padding-left: 33px;
@@ -1686,6 +1685,20 @@ main {
   .footer-top__proposal ul li:not(:last-child) {
     margin-bottom: 14px;
   }
+
+  .show__tile {
+    font-size: 72px;
+    line-height: 86.4px;
+  }
+
+  .show__par {
+    line-height: 16px;
+  }
+
+  .show__text {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: 1800px) {
@@ -1695,6 +1708,90 @@ main {
 
   .header-bottom__image:last-child {
     height: 6px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .show {
+    min-height: 680px;
+  }
+
+  .show__wrap {
+    padding: 127px 0.7% 10px 5.5%;
+  }
+
+  .show__tile {
+    text-align: left;
+    width: 53%;
+    margin-bottom: 29px;
+  }
+
+  .show__list {
+    grid-template-columns: repeat(120, 1fr);
+  }
+
+  .show__item1 {
+    grid-column: span 54;
+    padding-right: 8px;
+    max-width: none;
+  }
+
+  .show__item1 .show__item-wrap {
+    padding: 16px 0 19px 57px;
+  }
+
+  .show__item2 {
+    grid-column: span 19;
+    padding: 0 0 0 0;
+  }
+
+  .show__item2 .show__item-wrap {
+    padding: 15px 0 15px 34px;
+  }
+
+  .show__item3 {
+    grid-column: span 20;
+    padding: 0 10px 0 8px;
+  }
+
+  .show__item3 .show__item-wrap {
+    padding: 15px 0 14px 35px;
+  }
+
+  .show__item3 .description-title {
+    margin-bottom: 5px;
+  }
+
+  .show__item4 {
+    transform: translate(-2%, 0);
+    grid-column: span 27;
+    padding: 0 7px 0 2px;
+  }
+
+  .show__cost {
+    margin-bottom: 0;
+    margin-left: auto;
+    white-space: nowrap;
+    padding-top: 15px;
+  }
+
+  .show__text {
+    max-width: 66%;
+  }
+
+  .show__content {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .fear img {
+    width: 26px;
+    height: 24px;
+  }
+
+  .difficulty img {
+    width: 20px;
+    height: 17px;
   }
 }
 
@@ -1733,7 +1830,7 @@ main {
     line-height: 1.4285714286;
   }
 
-  .footer-top__working-time ul+p {
+  .footer-top__working-time ul + p {
     font-size: 0.875rem;
     line-height: 1.4285714286;
   }
@@ -1882,7 +1979,7 @@ main {
     white-space: nowrap;
   }
 
-  .header-menu__working-time ul+p span {
+  .header-menu__working-time ul + p span {
     display: block;
   }
 
@@ -1947,7 +2044,7 @@ main {
     line-height: 1.5;
   }
 
-  .header-menu__working-time ul+p {
+  .header-menu__working-time ul + p {
     padding-left: 10px;
     font-size: 0.75rem;
     line-height: 1.5;
@@ -2084,7 +2181,7 @@ main {
     transition: background-color 0.3s ease, transform 0.3s ease 0s;
   }
 
-  @keyframes burgerTopDisabled {
+@keyframes burgerTopDisabled {
     0% {
       top: 50%;
       transform: translateY(-50%) rotate(-45deg);
@@ -2099,9 +2196,9 @@ main {
       top: 0;
       transform: translateY(0);
     }
-  }
+}
 
-  @keyframes burgerBottomDisabled {
+@keyframes burgerBottomDisabled {
     0% {
       top: 50%;
       transform: translateY(-250%) rotate(45deg);
@@ -2116,7 +2213,7 @@ main {
       top: 100%;
       transform: translateY(-300%);
     }
-  }
+}
 
   .burger.active .burger__wrapper:before {
     animation: burgerTopActive 0.7s ease 0s 1;
@@ -2133,7 +2230,7 @@ main {
     animation-fill-mode: forwards;
   }
 
-  @keyframes burgerTopActive {
+@keyframes burgerTopActive {
     0% {
       top: 0;
       transform: translateY(0);
@@ -2148,9 +2245,9 @@ main {
       top: 50%;
       transform: translateY(-50%) rotate(-45deg);
     }
-  }
+}
 
-  @keyframes burgerBottomActive {
+@keyframes burgerBottomActive {
     0% {
       top: 100%;
       transform: translateY(-300%);
@@ -2165,7 +2262,7 @@ main {
       top: 50%;
       transform: translateY(-250%) rotate(45deg);
     }
-  }
+}
 
   #cart {
     padding: 4px 7px;
@@ -2244,7 +2341,7 @@ main {
     padding-right: 24px;
   }
 
-  .footer-top__working-time ul+p {
+  .footer-top__working-time ul + p {
     padding-left: 24px;
   }
 
@@ -2485,7 +2582,7 @@ main {
     line-height: 1.4285714286;
   }
 
-  .header-menu__working-time ul+p {
+  .header-menu__working-time ul + p {
     padding-left: 24px;
     font-size: 0.875rem;
     line-height: 1.4285714286;
@@ -2577,7 +2674,7 @@ main {
     padding-right: 16px;
   }
 
-  .footer-top__working-time ul+p {
+  .footer-top__working-time ul + p {
     padding-left: 16px;
   }
 }
