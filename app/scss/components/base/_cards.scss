@@ -1,8 +1,8 @@
-.cards__wrapper {
+.cards__slide {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+   grid-template-columns: repeat(2, 1fr);
    @media (max-width: 899px) {
-      gap: 9px;
+      gap: 5px;
    }
    @media (min-width: 900px) {
       gap: 20px;
@@ -19,14 +19,8 @@
    position: relative;
    overflow: hidden;
    border-bottom: 4px solid $green;
-   @media (max-width: 568px) {
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6) {
-         display: none;
-      }
-   }
-   @media (min-width: 568px) and (max-width: 991px) {
+
+   @media (min-width: 569px) and (max-width: 991px) {
       &:nth-child(5),
       &:nth-child(6) {
          display: none;

@@ -104,7 +104,19 @@ window.addEventListener("load", () => {
    //       crossFade: true,
    //    },
    // });
-   const swiperCards = new Swiper(".hero__swiper-cards", {
+   const swiperCards = new Swiper(".cards__swiper", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      simulateTouch: true,
+      spaceBetween: 20,
+      // effect: "fade",
+      // fadeEffect: {
+      //    crossFade: true,
+      // },
+   });
+   const swiperHeroCards = new Swiper(".hero__swiper-cards", {
       // loop: true,
       speed: 500,
       slidesPerView: 1.75,
@@ -120,8 +132,8 @@ window.addEventListener("load", () => {
          },
       },
    });
-   // swiperBanners.controller.control = swiperCards;
-   // swiperCards.controller.control = swiperBanners;
+   swiperCards.controller.control = swiperHeroCards;
+   swiperHeroCards.controller.control = swiperCards;
 
    // // ! Cards
    // let cards = qa(".cards .card");
