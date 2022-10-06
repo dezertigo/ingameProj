@@ -167,4 +167,58 @@ window.addEventListener("load", () => {
    cardContent.forEach((el) => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
+
+
+
+   // reviews slider
+   const swiperReviews = new Swiper(".reviews__slider", {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 24,
+      pagination: {
+         el: '.reviews__pagination',
+         clickable: true,
+      },
+      navigation: {
+         nextEl: '.reviews__next',
+         prevEl: '.reviews__prev',
+      },
+      breakpoints: {
+         568: {
+            slidesPerView: 1.5,
+         },
+         700: {
+            slidesPerView: 1.9299,
+         },
+         900: {
+            slidesPerView: 2,
+         },
+         1100: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+      },
+   });
+   const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
+      loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      spaceBetween: 24,
+      pagination: {
+         el: '.reviews-popup__pagination',
+         clickable: true,
+      },
+      navigation: {
+         nextEl: '.reviews-popup__next',
+         prevEl: '.reviews-popup__prev',
+      },
+   });
+
 });
