@@ -941,6 +941,98 @@ main {
   color: #9acf16;
 }
 
+.vertical-gallery__image-big {
+  position: relative;
+}
+
+.vertical-gallery__image-big img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.vertical-gallery .swiper-slide-active .horizontal-gallery__image-small {
+  position: relative;
+}
+
+.vertical-gallery .swiper-slide-active .horizontal-gallery__image-small:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: solid #9ad018;
+}
+
+.vertical-gallery__image-small {
+  position: relative;
+}
+
+.vertical-gallery__image-small img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.horizontal-gallery__image-big {
+  position: relative;
+}
+
+.horizontal-gallery__image-big img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.horizontal-gallery .swiper-slide-active .horizontal-gallery__image-small {
+  position: relative;
+}
+
+.horizontal-gallery .swiper-slide-active .horizontal-gallery__image-small:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 4px solid #9ad018;
+}
+
+.horizontal-gallery__image-small {
+  position: relative;
+}
+
+.horizontal-gallery__image-small img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 .btn {
   cursor: pointer;
   padding-left: 15px;
@@ -1215,6 +1307,11 @@ main {
 
 .step-title span {
   font-weight: 500;
+}
+
+.heroes__title {
+  color: #101010;
+  font-weight: 700;
 }
 
 @media (min-width: 375px) {
@@ -1552,6 +1649,34 @@ main {
     line-height: 1.5714285714;
   }
 
+  .vertical-gallery__swiper-big {
+    margin-bottom: 20px;
+  }
+
+  .vertical-gallery__image-big {
+    padding-bottom: 49.6086694762%;
+  }
+
+  .vertical-gallery .swiper-slide-active .horizontal-gallery__image-small:after {
+    border-width: 6px;
+  }
+
+  .vertical-gallery__image-small {
+    padding-bottom: 74.6153846154%;
+  }
+
+  .horizontal-gallery__swiper-big {
+    margin-bottom: 20px;
+  }
+
+  .horizontal-gallery__image-big {
+    padding-bottom: 65.8536585366%;
+  }
+
+  .horizontal-gallery__image-small {
+    padding-bottom: 65.8333333333%;
+  }
+
   .show .show__background img {
     width: 100%;
     height: 100%;
@@ -1570,6 +1695,10 @@ main {
 
   .step3__title {
     margin-bottom: 24px;
+  }
+
+  .heroes__title {
+    text-align: center;
   }
 }
 
@@ -1828,8 +1957,18 @@ main {
     line-height: 30px;
   }
 
+  .hero__container {
+    padding-left: 6.7708333333%;
+    padding-right: 6.7708333333%;
+  }
+
   .step-title span {
     margin-right: 20px;
+  }
+
+  .heroes__container {
+    padding-left: 6.7708333333%;
+    padding-right: 6.7708333333%;
   }
 }
 
@@ -1857,6 +1996,12 @@ main {
 
   .header-bottom__image:last-child {
     height: 6px;
+  }
+
+  .heroes__title {
+    margin-bottom: 80px;
+    font-size: 2.25rem;
+    line-height: 1.2222222222;
   }
 }
 
@@ -2477,6 +2622,10 @@ main {
     margin-bottom: 5px;
   }
 
+  .vertical-gallery .swiper-slide-active .horizontal-gallery__image-small:after {
+    border-width: 4px;
+  }
+
   .show .show__background img {
     width: 132%;
     height: 289%;
@@ -2495,6 +2644,11 @@ main {
 
   .step3__title {
     margin-bottom: 15px;
+  }
+
+  .heroes__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
   }
 }
 
@@ -2573,9 +2727,48 @@ main {
     line-height: 1.3333333333;
   }
 
+  .vertical-gallery__swiper-big {
+    margin-bottom: 12px;
+  }
+
+  .vertical-gallery__image-big {
+    padding-bottom: 66.0968660969%;
+  }
+
+  .vertical-gallery__image-small {
+    padding-bottom: 59.8484848485%;
+  }
+
+  .horizontal-gallery__swiper-big {
+    margin-bottom: 12px;
+  }
+
+  .horizontal-gallery__image-big {
+    padding-bottom: 66.0968660969%;
+  }
+
+  .horizontal-gallery__image-small {
+    padding-bottom: 59.8484848485%;
+  }
+
+  .hero__container {
+    padding-left: 3.2%;
+    padding-right: 3.2%;
+  }
+
   .step3__container {
     padding-left: 3.2%;
     padding-right: 3.2%;
+  }
+
+  .heroes__container {
+    padding-left: 3.2%;
+    padding-right: 3.2%;
+  }
+
+  .heroes__title {
+    margin-bottom: 16px;
+    text-align: center;
   }
 }
 
@@ -2855,6 +3048,12 @@ main {
     font-size: 1.625rem;
     line-height: 1.3076923077;
   }
+
+  .heroes__title {
+    font-size: 1.625rem;
+    line-height: 1.3076923077;
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -2869,6 +3068,12 @@ main {
   .step-title {
     font-size: 1.8125rem;
     line-height: 1.275862069;
+  }
+
+  .heroes__title {
+    font-size: 1.75rem;
+    line-height: 1.2857142857;
+    margin-bottom: 50px;
   }
 }
 
@@ -2908,6 +3113,16 @@ main {
   .footer-top__working-time ul + p {
     padding-left: 16px;
   }
+
+  .hero__container {
+    padding-left: 4.0322580645%;
+    padding-right: 4.0322580645%;
+  }
+
+  .heroes__container {
+    padding-left: 4.0322580645%;
+    padding-right: 4.0322580645%;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1299px) {
@@ -2941,9 +3156,37 @@ main {
     line-height: 1.4;
   }
 
+  .vertical-gallery__swiper-big {
+    margin-bottom: 14px;
+  }
+
+  .vertical-gallery__image-big {
+    padding-bottom: 55.5555555556%;
+  }
+
+  .vertical-gallery__image-small {
+    padding-bottom: 65%;
+  }
+
+  .horizontal-gallery__swiper-big {
+    margin-bottom: 10px;
+  }
+
+  .horizontal-gallery__image-big {
+    padding-bottom: 65.7894736842%;
+  }
+
+  .horizontal-gallery__image-small {
+    padding-bottom: 65.7142857143%;
+  }
+
   .step3__container {
     padding-left: 4.5698924731%;
     padding-right: 4.5698924731%;
+  }
+
+  .heroes__title {
+    margin-bottom: 12px;
   }
 }
 
@@ -2972,5 +3215,19 @@ main {
   .step-title {
     font-size: 2rem;
     line-height: 1.25;
+  }
+
+  .heroes__title {
+    font-size: 1.9375rem;
+    line-height: 1.2580645161;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1799px) {
+  .heroes__title {
+    font-size: 2.125rem;
+    line-height: 1.2352941176;
+    margin-bottom: 70px;
   }
 }
