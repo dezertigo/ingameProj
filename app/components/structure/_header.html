@@ -1,17 +1,78 @@
 <header class="header">
-	<div class="header__container">
-		<div class="header__body">
-			<div class="header__burger burger">
-				<div class="burger__wrapper">
-					<span></span>
+	<div class="header__top header-top">
+		<div class="header-top__container">
+			<a class="header-top__logo" href="index.html">@@include('../icons/_logo.html')</a>
+			<!-- <a class="header-top__logo" href="index.html"><img src="@img/logo.svg" alt=""></a> -->
+			<div class="header-top__buttons">
+				<a id="cart" class="active" href="#"><i class="cart"></i></a>
+				<div class="header__burger burger">
+					<div class="burger__wrapper">
+						<span></span>
+					</div>
 				</div>
 			</div>
-			<a class="header__logo" href="index.html">Logo</a>
-			<ul class="header__action header-action">
-				<li class="header-action__item"><a href="#">Link #1</a></li>
-				<li class="header-action__item"><a href="#">Link #2</a></li>
-			</ul>
-
+			<nav class="header-top__lists ">
+				<ul class="header-top__lang">
+					<li><a class="active" href="#">ua</a></li>
+					<li><a href="#">ru</a></li>
+				</ul>
+				<ul class="header-top__city">
+					<li><a class="active" href="#">Дніпро</a></li>
+					<li><a href="#">Київ</a></li>
+				</ul>
+			</nav>
+			<div class="header-top__phone">
+				<a href="tel:+380000000000">+ 38 (000) 000 00 00</a>
+				<button>Передзвонити</button>
+			</div>
 		</div>
 	</div>
+	<div class="header__menu header-menu">
+		<div class="header-menu__container">
+			<nav class="header-menu__navigation">
+				<ul class="header-menu__list">
+					<li><a class="active" href="#">День народження “Під ключ”</a></li>
+					<li><a href="#">Квест-кімнати у Дніпрі</a></li>
+					<li><a href="#">Квесті у коробках</a></li>
+					<li><a href="#">Виїзні квести</a></li>
+					<li><a href="#">Подарункові сертифікати</a></li>
+				</ul>
+			</nav>
+			<div class="header-menu__about">
+				<div class="header-menu__working-time">
+					<ul>
+						<li>
+							<p>ПН-ЧТ до 21:00</p>
+						</li>
+						<li>
+							<p>ПТ- НД до 22:30</p>
+						</li>
+					</ul>
+					<p><span>або до</span> останього бронювання</p>
+				</div>
+				<div class="header-menu__subscribe">
+					<p>Підписуйся на НОВІ СЦЕНАРІЇ ТА АКЦІЇ</p>
+					<div>
+						<a class="not" href="#"><i class="telegram"></i></a>
+						Переходь до нашого <a href="#" class="not">Телеграм</a> каналу
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom  header-bottom ">
+		<div class="header-bottom__container">
+			<div class='header-bottom__image'>
+				<picture>
+					<source type='image/webp' srcset='@img/gallery/ua.webp'>
+					<img src='@img/gallery/ua.png' alt='Ukraine image'>
+				</picture>
+			</div>
+			<div class='header-bottom__image'>
+				<picture>
+					<source type='image/webp' srcset='@img/gallery/ua-decor.webp'>
+					<img src='@img/gallery/ua-decor.png' alt='Ukraine image'>
+				</picture>
+			</div>
+		</div>
 </header>
