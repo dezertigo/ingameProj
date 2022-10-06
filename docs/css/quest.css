@@ -422,7 +422,7 @@ main {
 
 .header-top__logo {
   position: relative;
-  z-index: 101;
+  z-index: 11;
   transition: all 0.3s ease;
   overflow: hidden;
   display: flex;
