@@ -17,6 +17,8 @@
 
       color: $greenItem;
       a:not(a.not) {
+         transition: all 0.3s ease;
+
          position: relative;
          &:after {
             content: "";
@@ -30,8 +32,17 @@
             transition: all 0.3s ease;
          }
          &:hover {
+            color: $light;
             &:after {
+               background-color: $light;
                width: 100%;
+            }
+            &:active {
+               color: $greenItem;
+               opacity: 0.6;
+               &:after {
+                  background-color: $greenItem;
+               }
             }
          }
       }
@@ -128,6 +139,13 @@
          }
          &:last-child {
             margin-top: -4px;
+         }
+         a {
+            transition: all 0.3s ease;
+
+            &:after {
+               width: 0 !important;
+            }
          }
       }
       p {

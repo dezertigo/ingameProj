@@ -136,6 +136,13 @@ input[type=submit],
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+  src: url("../fonts/Montserrat-Meidum.woff") format("woff"), url("../fonts/Montserrat-Meidum.woff-2") format("woff-2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff-2") format("woff-2");
   font-weight: 600;
   font-style: normal;
@@ -457,12 +464,21 @@ main {
 .header-top__lists ul a {
   font-weight: 500;
   color: #101010;
+  transition: all 0.3s ease;
 }
 
 .header-top__lists ul a.active {
   color: rgba(16, 16, 16, 0.6);
   border: 1px solid #90c75e;
   border-radius: 4px;
+}
+
+.header-top__lists ul a:hover.active {
+  opacity: 0.6;
+}
+
+.header-top__lists ul a:hover:not(a.active) {
+  color: #f9bf30;
 }
 
 .header-top__phone {
@@ -477,9 +493,20 @@ main {
 }
 
 .header-top__phone button {
+  cursor: pointer;
   font-weight: 500;
   color: #90c75e;
   font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.header-top__phone button:hover {
+  color: #f9bf30;
+}
+
+.header-top__phone button:active {
+  color: #90c75e;
+  opacity: 0.6;
 }
 
 .header-bottom {
@@ -491,6 +518,30 @@ main {
   position: relative;
 }
 
+#cart {
+  transition: all 0.3s ease;
+}
+
+#cart:hover {
+  background-color: #9acf16;
+}
+
+#cart:hover i {
+  color: #fff;
+}
+
+#cart.active:after {
+  content: "3";
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #101010;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
 .footer {
   background-color: #11140e;
 }
@@ -500,6 +551,7 @@ main {
 }
 
 .footer__container a:not(a.not) {
+  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -515,8 +567,22 @@ main {
   transition: all 0.3s ease;
 }
 
+.footer__container a:not(a.not):hover {
+  color: #fff;
+}
+
 .footer__container a:not(a.not):hover:after {
+  background-color: #fff;
   width: 100%;
+}
+
+.footer__container a:not(a.not):hover:active {
+  color: #90c75e;
+  opacity: 0.6;
+}
+
+.footer__container a:not(a.not):hover:active:after {
+  background-color: #90c75e;
 }
 
 .footer__button-start {
@@ -562,6 +628,14 @@ main {
 
 .footer-top__contacts li:last-child {
   margin-top: -4px;
+}
+
+.footer-top__contacts li a {
+  transition: all 0.3s ease;
+}
+
+.footer-top__contacts li a:after {
+  width: 0 !important;
 }
 
 .footer-top__contacts p {
@@ -1030,11 +1104,24 @@ main {
     top: 50%;
     transform: translateY(-50%);
     right: 3.2%;
+    padding: 5px 8px;
+    margin-right: -10px;
+    z-index: 2;
   }
 
   #cart i {
+    transition: all 0.3s ease;
     font-size: 1.5rem;
     line-height: 1.25;
+  }
+
+  #cart.active:after {
+    bottom: 6px;
+    right: 6px;
+    width: 12px;
+    height: 12px;
+    font-size: 0.625rem;
+    line-height: 1;
   }
 
   .footer-top {
@@ -1093,11 +1180,11 @@ main {
 
 @media (min-width: 1000px) and (min-width: 1920px) {
   .header-menu__list li:not(:first-child) {
-    margin-left: 2.1557719054%;
+    margin-left: 2.0862308762%;
   }
 
   .header-menu__list li:not(:last-child) {
-    padding-right: 2.1557719054%;
+    padding-right: 2.0862308762%;
   }
 }
 
@@ -1229,7 +1316,6 @@ main {
   .header-top__phone button {
     font-size: 1rem;
     line-height: 1.375;
-    cursor: pointer;
   }
 
   .footer__container {
@@ -1430,13 +1516,42 @@ main {
   .header-menu__list li a {
     text-transform: uppercase;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 0;
     color: #101010;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .header-menu__list li a:after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: #101010;
+    transition: all 0.3s ease;
   }
 
   .header-menu__list li a.active {
-    font-weight: 500;
     color: #9acf16;
+  }
+
+  .header-menu__list li a:hover {
+    font-weight: 600;
+  }
+
+  .header-menu__list li a:hover:after {
+    width: 100%;
+  }
+
+  .header-menu__list li a:hover.active:after {
+    background-color: #9acf16;
+  }
+
+  .header-menu__list li a:active {
+    opacity: 0.6;
   }
 
   .header-menu__working-time {
@@ -1747,6 +1862,23 @@ main {
     }
 }
 
+  #cart {
+    padding: 4px 7px;
+  }
+
+  #cart.active {
+    position: relative;
+  }
+
+  #cart.active:after {
+    bottom: 4px;
+    right: 4px;
+    width: 10px;
+    height: 10px;
+    font-size: 0.4375rem;
+    line-height: 1;
+  }
+
   .footer-top__working-time {
     justify-content: center;
   }
@@ -1953,7 +2085,6 @@ main {
   .header-top__phone button {
     font-size: 0.875rem;
     line-height: 1.2857142857;
-    cursor: pointer;
   }
 
   .header-bottom__image:last-child {
@@ -2010,8 +2141,8 @@ main {
 
 @media (min-width: 1000px) and (min-width: 1200px) and (max-width: 1679px) {
   .header-menu__list li a {
-    font-size: 0.875rem;
-    line-height: 1.2857142857;
+    font-size: 0.8625rem;
+    line-height: 1.3043478261;
   }
 }
 

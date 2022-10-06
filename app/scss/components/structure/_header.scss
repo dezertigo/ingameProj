@@ -216,6 +216,16 @@
                border: 1px solid $greenItem;
                border-radius: 4px;
             }
+            transition: all 0.3s ease;
+            &:hover {
+               &.active {
+                  opacity: 0.6;
+               }
+
+               &:not(a.active) {
+                  color: $orangeHover;
+               }
+            }
          }
       }
    }
@@ -249,6 +259,7 @@
          }
       }
       button {
+         cursor: pointer;
          font-weight: 500;
          color: $greenItem;
          font-family: $ff1;
@@ -257,11 +268,17 @@
          }
          @media (min-width: 1000px) and (max-width: 1399px) {
             @include fl(14, 18);
-            cursor: pointer;
          }
          @media (min-width: 1400px) {
             @include fl(16, 22);
-            cursor: pointer;
+         }
+         transition: all 0.3s ease;
+         &:hover {
+            color: $orangeHover;
+         }
+         &:active {
+            color: $greenItem;
+            opacity: 0.6;
          }
       }
    }
@@ -314,7 +331,7 @@
                   margin-left: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  margin-left: percent(31, 1438);
+                  margin-left: percent(30, 1438);
                }
             }
             &:not(:last-child) {
@@ -323,7 +340,7 @@
                   padding-right: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  padding-right: percent(31, 1438);
+                  padding-right: percent(30, 1438);
                }
             }
             cursor: pointer;
@@ -348,7 +365,7 @@
                   @include fl(12, 16);
                }
                @media (min-width: 1200px) and (max-width: 1679px) {
-                  @include fl(14, 18);
+                  @include fl(13.8, 18);
                }
                @media (min-width: 1680px) and (max-width: 1849px) {
                   @include fl(16, 20);
@@ -420,7 +437,7 @@
             a {
                text-transform: uppercase;
                display: inline-block;
-               padding: 10px;
+               padding: 10px 0;
                color: $dark;
                @media (max-width: 369px) {
                   @include fl(15, 19);
@@ -428,9 +445,35 @@
                @media (min-width: 370px) and (max-width: 999px) {
                   @include fl(18, 22);
                }
+               position: relative;
+               &:after {
+                  content: "";
+                  position: absolute;
+                  bottom: 5px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 0;
+                  height: 1px;
+                  background: $dark;
+                  transition: all 0.3s ease;
+               }
                &.active {
-                  font-weight: 500;
                   color: $greenHover;
+               }
+               transition: all 0.3s ease;
+               &:hover {
+                  font-weight: 600;
+                  &:after {
+                     width: 100%;
+                  }
+                  &.active {
+                     &:after {
+                        background-color: $greenHover;
+                     }
+                  }
+               }
+               &:active {
+                  opacity: 0.6;
                }
             }
             // &:first-child {
@@ -853,17 +896,62 @@
       top: 50%;
       transform: translateY(-50%);
       right: percent(12, 375);
-
+      padding: 5px 8px;
+      margin-right: -10px;
+      z-index: 2;
       @media (min-width: 1400px) {
          right: percent(132, 1920);
       }
       i {
+         transition: all 0.3s ease;
+
          @include fl(24);
          @media (min-width: 1200px) {
             @include fl(28);
          }
          @media (min-width: 1400px) {
             @include fl(34);
+         }
+      }
+   }
+   transition: all 0.3s ease;
+   @media (max-width: 999px) {
+      padding: 4px 7px;
+   }
+   &:hover {
+      background-color: $greenHover;
+
+      i {
+         color: $light;
+      }
+   }
+   &.active {
+      @media (max-width: 999px) {
+         position: relative;
+      }
+      &:after {
+         content: "3";
+         color: #fff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         background: $dark;
+         border: 2px solid $light;
+         border-radius: 50%;
+         @media (max-width: 999px) {
+            bottom: 4px;
+            right: 4px;
+            width: 10px;
+            height: 10px;
+            @include fl(7, 7);
+         }
+         @media (min-width: 1000px) {
+            bottom: 6px;
+            right: 6px;
+            width: 12px;
+            height: 12px;
+            @include fl(10, 10);
          }
       }
    }
