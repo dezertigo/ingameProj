@@ -1,4 +1,11 @@
 .table-column {
+   &_disabled {
+      .table-column__book {
+         color: rgba(16, 16, 16, 0.4);
+         border: 1px solid rgba(16, 16, 16, 0.4);
+         pointer-events: none;
+      }
+   }
    display: flex;
    flex-direction: column;
    // align-items: center;
@@ -135,10 +142,6 @@
       }
       @media (min-width: 1000px) {
          @include fl(14, 22);
-      }
-      &.blocked {
-         color: rgba(16, 16, 16, 0.4);
-         border: 1px solid rgba(16, 16, 16, 0.4);
       }
    }
 }

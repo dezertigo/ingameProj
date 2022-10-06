@@ -891,6 +891,12 @@ main {
   flex-direction: column;
 }
 
+.table-column_disabled .table-column__book {
+  color: rgba(16, 16, 16, 0.4);
+  border: 1px solid rgba(16, 16, 16, 0.4);
+  pointer-events: none;
+}
+
 .table-column__head {
   text-align: center;
 }
@@ -933,11 +939,6 @@ main {
   width: 100%;
   font-family: "Montserrat", sans-serif;
   color: #9acf16;
-}
-
-.table-column__book.blocked {
-  color: rgba(16, 16, 16, 0.4);
-  border: 1px solid rgba(16, 16, 16, 0.4);
 }
 
 .btn {
