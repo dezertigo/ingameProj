@@ -65,13 +65,16 @@
          padding-bottom: 26px;
       }
    }
-
    // .header-top__logo
    &__logo {
-      z-index: 2;
+      position: relative;
+      z-index: 11;
       @media (max-width: 699px) {
          width: 128px;
          margin-left: -8px;
+      }
+      @media (max-width: 999px) {
+         height: 40px;
       }
       @media (min-width: 700px) and (max-width: 999px) {
          width: 160px;
@@ -86,6 +89,7 @@
          left: 50%;
          top: 50%;
          transform: translate(-50%, -50%);
+         height: 60px;
       }
       @media (min-width: 1400px) {
          width: 285px;
@@ -94,21 +98,14 @@
          order: 2;
          top: 50%;
          transform: translate(-51%, -50%);
+         height: 80px;
       }
       transition: all 0.3s ease;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      @media (max-width: 999px) {
-         height: 40px;
-      }
-      @media (min-width: 1000px) and (max-width: 1399px) {
-         height: 60px;
-      }
-      @media (min-width: 1400px) {
-         height: 80px;
-      }
+
       &:hover {
          @media (max-width: 999px) {
             transform: scale(1.1);
@@ -118,6 +115,8 @@
          }
       }
       svg {
+         min-height: 30px;
+         min-width: 100px;
          transform: translateY(-2px);
          @media (min-width: 1000px) {
             position: absolute;

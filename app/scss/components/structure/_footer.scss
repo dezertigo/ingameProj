@@ -483,6 +483,19 @@
                   margin-bottom: 14px;
                }
             }
+            a {
+               transition: color 0.3s ease, opacity 0.3s ease;
+               opacity: 1;
+               &:hover {
+                  color: $light;
+                  &:after {
+                     background-color: $light;
+                  }
+               }
+               &:active {
+                  opacity: 0.6;
+               }
+            }
          }
       }
    }
