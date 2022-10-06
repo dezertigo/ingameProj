@@ -421,7 +421,8 @@ main {
 }
 
 .header-top__logo {
-  z-index: 2;
+  position: relative;
+  z-index: 101;
   transition: all 0.3s ease;
   overflow: hidden;
   display: flex;
@@ -3046,7 +3047,7 @@ body.home .blog__text-link {
   }
 
   .header-top__logo {
-    min-width: 128px;
+    width: 128px;
     margin-left: -8px;
   }
 
