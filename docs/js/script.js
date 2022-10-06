@@ -209,6 +209,7 @@ window.addEventListener("load", () => {
          }
       }
    }
+   // 
    // Задаем базовую высоту карточке
    cards.forEach((el) => {
       el.style.height = maxPreviewHeight + maxBodyHeight + "px";
