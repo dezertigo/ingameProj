@@ -3,8 +3,8 @@
 window.addEventListener("load", () => {
    const burger = document.querySelector(".burger"),
       header = document.querySelector(".header"),
-      body = document.querySelector("body");
-
+      body = document.querySelector("body"),
+      menu = qs(".header-menu");
    function qs(element) {
       let newEl = document.querySelector(element);
       if (newEl) return newEl;
@@ -29,16 +29,19 @@ window.addEventListener("load", () => {
             if (burger.classList.contains("active")) {
                burger.classList.remove("active");
                header.classList.remove("active");
+               menu.classList.remove("active");
                body.classList.remove("lock");
             } else {
                burger.classList.add("active");
                header.classList.add("active");
                body.classList.add("lock");
+               menu.classList.add("active");
                window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
             }
-         } else if (!e.target.closest(".burger") && !e.target.closest(".menu")) {
+         } else if (!e.target.closest(".burger") && !e.target.closest(".header-menu")) {
             burger.classList.remove("active");
             header.classList.remove("active");
+            menu.classList.remove("active");
             body.classList.remove("lock");
             window.removeEventListener("scroll", closeBurger);
          }
@@ -52,6 +55,16 @@ window.addEventListener("load", () => {
             body.classList.remove("lock");
             window.removeEventListener("scroll", closeBurger);
          }
+      }
+   }
+   // ! Header
+   // window.addEventListener("resize", moveCart); // todo написать не при ресайзе, а при перевороте мобилки в другое положение (горизонталь\вертикаль)
+   moveCart();
+   function moveCart() {
+      if (window.innerWidth < 1000) {
+         qs(".header-top__buttons").prepend(qs("#cart"));
+      } else {
+         qs(".header-menu__container").append(qs("#cart"));
       }
    }
 
@@ -117,7 +130,19 @@ window.addEventListener("load", () => {
    //       crossFade: true,
    //    },
    // });
-   const swiperCards = new Swiper(".hero__swiper-cards", {
+   const swiperCards = new Swiper(".cards__swiper", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 1,
+      simulateTouch: true,
+      spaceBetween: 20,
+      // effect: "fade",
+      // fadeEffect: {
+      //    crossFade: true,
+      // },
+   });
+   const swiperHeroCards = new Swiper(".hero__swiper-cards", {
       // loop: true,
       speed: 500,
       slidesPerView: 1.75,
@@ -133,8 +158,8 @@ window.addEventListener("load", () => {
          },
       },
    });
-   // swiperBanners.controller.control = swiperCards;
-   // swiperCards.controller.control = swiperBanners;
+   swiperCards.controller.control = swiperHeroCards;
+   swiperHeroCards.controller.control = swiperCards;
 
    // // ! Cards
    // let cards = qa(".cards .card");
@@ -188,63 +213,48 @@ window.addEventListener("load", () => {
    cards.forEach((el) => {
       el.style.height = maxPreviewHeight + maxBodyHeight + "px";
    });
-   body.addEventListener("mouseover", resizeLayout);
+   body.addEventListener("pointerover", resizeLayout);
    // Возвращаем превьюшку(а точнее все тело, но ненужную его часть не видно) в область видимости карточки (в самый её низ)
    cardContent.forEach((el) => {
       el.style.top = `calc(100% - ${maxPreviewHeight}px)`;
    });
 
+   // ! Footer
+   // Telegram hover
+   document.body.addEventListener("pointerover", changeTelegramColor);
 
-
-   // reviews slider
-   const swiperReviews = new Swiper(".reviews__slider", {
-      loop: true,
-      speed: 500,
-      slidesPerView: 1,
-      initialSlide: 1,
-      centeredSlides: true,
-      slideToClickedSlide: true,
-      spaceBetween: 24,
-      pagination: {
-         el: '.reviews__pagination',
-         clickable: true,
-      },
-      navigation: {
-         nextEl: '.reviews__next',
-         prevEl: '.reviews__prev',
-      },
-      breakpoints: {
-         568: {
-            slidesPerView: 1.5,
-         },
-         700: {
-            slidesPerView: 1.9299,
-         },
-         900: {
-            slidesPerView: 2,
-         },
-         1100: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-         },
-      },
-   });
-   const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
-      loop: true,
-      speed: 500,
-      slidesPerView: 1,
-      initialSlide: 1,
-      centeredSlides: true,
-      slideToClickedSlide: true,
-      spaceBetween: 24,
-      pagination: {
-         el: '.reviews-popup__pagination',
-         clickable: true,
-      },
-      navigation: {
-         nextEl: '.reviews-popup__next',
-         prevEl: '.reviews-popup__prev',
-      },
-   });
-
+   function changeTelegramColor(e) {
+      if (e.type == "pointerdown") {
+         if (e.target.closest(".footer-top__subscribe a")) {
+            e.preventDefault();
+            qa(".footer-top__subscribe .not")[0].classList.remove("hover");
+            qa(".footer-top__subscribe .not")[1].classList.remove("hover");
+            qa(".footer-top__subscribe .not")[0].classList.add("clicked");
+            qa(".footer-top__subscribe .not")[1].classList.add("clicked");
+            document.body.addEventListener("pointerup", removeStylesUp);
+         }
+      } else if (e.type == "pointerover") {
+         if (e.target.closest(".footer-top__subscribe a")) {
+            qa(".footer-top__subscribe .not")[0].classList.add("hover");
+            qa(".footer-top__subscribe .not")[1].classList.add("hover");
+            document.body.addEventListener("pointerdown", changeTelegramColor);
+            document.body.addEventListener("pointerout", removeStylesOut);
+         }
+      }
+   }
+   function removeStylesUp(e) {
+      console.log("up");
+      qa(".footer-top__subscribe .not")[0].classList.remove("clicked");
+      qa(".footer-top__subscribe .not")[1].classList.remove("clicked");
+      document.body.removeEventListener("pointerdown", changeTelegramColor);
+      document.body.removeEventListener("pointerup", removeStylesUp);
+      document.body.removeEventListener("pointerout", removeStylesOut);
+   }
+   function removeStylesOut(e) {
+      qa(".footer-top__subscribe .not")[0].classList.remove("hover");
+      qa(".footer-top__subscribe .not")[1].classList.remove("hover");
+      document.body.removeEventListener("pointerdown", changeTelegramColor);
+      // document.body.removeEventListener("pointerup", removeStylesUp);
+      document.body.removeEventListener("pointerout", removeStylesOut);
+   }
 });

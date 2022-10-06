@@ -12,6 +12,13 @@
    background-clip: text;
    color: transparent;
 }
+%instagram-grad {
+   background: linear-gradient(to bottom, #bf5ec7 0%, #e9ca5f 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   color: transparent;
+}
 %overflow-string {
    max-height: 39px;
    overflow: hidden;
