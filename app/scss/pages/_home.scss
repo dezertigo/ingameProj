@@ -1011,12 +1011,11 @@ body.home {
       background-color: rgba(0, 0, 0, 0);
       overflow-y: auto;
       z-index: 0;
-
       &.active {
          pointer-events: all;
          opacity: 1;
          overflow-y: scroll;
-         z-index: 10;
+         z-index: 20;
          right: 0;
          background-color: rgba(0, 0, 0, 0.8);
          transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
@@ -1024,11 +1023,17 @@ body.home {
 
       &__fixed {
          position: absolute;
-         min-width: 1040px;
-         min-height: 762px;
-         top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
+         @media (min-width: 320px) {
+            min-width: 90%;
+            top: 15%;
+         }
+         @media (min-width: 1200px) {
+            top: 50%;
+            min-width: 1040px;
+            min-height: 762px;
+         }
       }
 
       &__view {
@@ -1047,12 +1052,14 @@ body.home {
 
       &__slide {
          background-color: $light;
-
+         @media (min-width:320px) {
+            min-height: 560px;
+         }
          @media (min-width: 1400px) {
             min-height: 762px;
+            padding: 25px 30px 30px;
          }
-
-         padding: 24px 30px 30px;
+         padding: 5px 10px 10px;
          display: flex;
          flex-direction: column;
       }
@@ -1061,6 +1068,7 @@ body.home {
          display: flex;
          align-items: center;
          justify-content: flex-end;
+         cursor: pointer;
       }
 
       &__head {
@@ -1069,7 +1077,10 @@ body.home {
          align-items: center;
          border-bottom: 1px solid #d9d9d9;
          gap: 20px;
-
+         padding: 5px 0px;
+         @media (min-width: 350px) {
+            padding:10px 0;
+         }
          @media (min-width: 1400px) {
             padding: 20px 0px;
 
@@ -1087,17 +1098,38 @@ body.home {
          max-width: 100%;
       }
 
+      &__date {
+         @include fl(14,20);
+         font-weight: 500;
+         color: $dark;
+         opacity: 0.4;
+         @media (min-width: 1000px) {
+            @include fl(16,22);
+         }
+      }
+
       &__author {
          @include fl(24, 29);
          color: $dark;
          margin: 16px 0;
          font-weight: 700;
       }
-
+      &__wrap {
+         .reviews-popup__body {
+            padding: 0;
+            max-width: 35%;
+            @media (min-width: 600px) {
+               max-width: 55%;
+            }
+         }
+      }
       &__body {
          padding: 0;
-
+         justify-content: start;
          &--video {
+            @media (min-width:350px) {
+               padding-bottom: 33.777%;
+            }
             @media (min-width: 1400px) {
                padding-bottom: 0;
             }
@@ -1121,9 +1153,28 @@ body.home {
       }
 
       &__img {
+         @media (min-width: 350px) {
+            padding-bottom: 40%;
+            img {
+               width: 100%;
+               right: 0;
+               object-position: 114%;
+               @media (min-width: 500px) {
+                  object-position: 50% 20%;
+               }
+               @media (min-width: 700px) {
+                  width: 70%;
+               }
+               @media (min-width: 800px) {
+                  object-position: 50% 5%;
+               }
+               @media (min-width: 900px) {
+                  width: 60%;
+               }
+            }
+         }
          @media (min-width:1400px) {
-            padding-bottom: 60.5%;
-
+            padding-bottom: 57.5%;
             img {
                width: 64%;
             }
