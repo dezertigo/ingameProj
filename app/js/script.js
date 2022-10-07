@@ -249,17 +249,68 @@ window.addEventListener("load", () => {
          900: {
             slidesPerView: 2,
          },
-         1100: {
+         1200: {
             slidesPerView: 3,
             spaceBetween: 20,
          },
       },
    });
+
+
+   
+   const popupReviews = document.querySelector('.reviews-popup');
+   // const reviewsImgBtn = document.querySelectorAll('.reviews__img');
+   // const reviewsVideoBtn = document.querySelectorAll('.reviews__body--video');
+   // const reviewsDetailsBtn = document.querySelectorAll('.reviews__footer-btn');
+   // const closeReviewsPopup = document.querySelectorAll('.reviews-popup__close');
+   const nextSlidePopUp = document.querySelector('.reviews-popup__next');
+   // const prevSlidePopUp = document.querySelector('.reviews-popup__prev');
+   let slideId;
+   let slidePopupId;
+   let numSlideId;
+      body.addEventListener('click', showPopupReviews);
+
+      function showPopupReviews(e) {
+         if (e.target.closest('.reviews__slide .reviews__img') || e.target.closest('.reviews__slide .reviews__body--video') || e.target.closest('.reviews__slide .reviews__footer-btn')) {
+            slideId = e.target.closest('.reviews__slide').getAttribute('data-slide');
+            slidePopupId = document.querySelector('.reviews-popup__slide').getAttribute('data-popup-slide');
+            popupReviews.classList.add('active');
+            body.classList.add('lock');
+            numSlideId = parseInt(slideId);
+            console.log(slideId, slidePopupId);
+            for (let i = 1;i < numSlideId;) {
+               nextSlidePopUp.click();
+               ++i;
+            }
+         }
+         if (e.target.closest('.reviews-popup__close')) {
+            popupReviews.classList.remove('active');
+            body.classList.remove('lock');
+         }
+        
+      }
+   // reviewsImgBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
+   // reviewsVideoBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
+   // reviewsDetailsBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
+   // closeReviewsPopup.forEach(item => (item.addEventListener('click', () => {
+   //    document.querySelector('body.home').classList.remove('lock');
+   //    popupReviews.classList.remove('active');
+   // })))
+
+   // function showReviewsPopup() {
+      
+   //    setTimeout( () => {
+   //       document.querySelector('body.home').classList.add('lock');
+   //       popupReviews.classList.add('active');
+   //    }, 300)
+   // }
+
+   //reviews-popup slider
    const reviewsPopupSlider = new Swiper('.reviews-popup__slider', {
       loop: true,
       speed: 500,
       slidesPerView: 1,
-      initialSlide: 1,
+      initialSlide: 0,
       centeredSlides: true,
       slideToClickedSlide: true,
       spaceBetween: 24,
@@ -271,8 +322,7 @@ window.addEventListener("load", () => {
          nextEl: '.reviews-popup__next',
          prevEl: '.reviews-popup__prev',
       },
-   });
-
+   });   
 
    // ! Footer
    // Telegram hover

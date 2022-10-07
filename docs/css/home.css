@@ -136,7 +136,8 @@ input[type=submit],
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Meidum.woff") format("woff"), url("../fonts/Montserrat-Meidum.woff-2") format("woff-2");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff-2") format("woff-2");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -1842,7 +1843,7 @@ body.home .reviews-popup.active {
   pointer-events: all;
   opacity: 1;
   overflow-y: scroll;
-  z-index: 10;
+  z-index: 20;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
@@ -1850,9 +1851,6 @@ body.home .reviews-popup.active {
 
 body.home .reviews-popup__fixed {
   position: absolute;
-  min-width: 1040px;
-  min-height: 762px;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1873,7 +1871,7 @@ body.home .reviews-popup__wrapper {
 
 body.home .reviews-popup__slide {
   background-color: #fff;
-  padding: 24px 30px 30px;
+  padding: 5px 10px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -1882,6 +1880,7 @@ body.home .reviews-popup__close {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 body.home .reviews-popup__head {
@@ -1890,6 +1889,7 @@ body.home .reviews-popup__head {
   align-items: center;
   border-bottom: 1px solid #d9d9d9;
   gap: 20px;
+  padding: 5px 0px;
 }
 
 body.home .reviews-popup__description {
@@ -1901,6 +1901,14 @@ body.home .reviews-popup__head-title {
   max-width: 100%;
 }
 
+body.home .reviews-popup__date {
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+  font-weight: 500;
+  color: #101010;
+  opacity: 0.4;
+}
+
 body.home .reviews-popup__author {
   font-size: 1.5rem;
   line-height: 1.2083333333;
@@ -1909,8 +1917,13 @@ body.home .reviews-popup__author {
   font-weight: 700;
 }
 
+body.home .reviews-popup__wrap .reviews-popup__body {
+  padding: 0;
+}
+
 body.home .reviews-popup__body {
   padding: 0;
+  justify-content: start;
 }
 
 body.home .reviews-popup__body--video::after {
@@ -2072,6 +2085,17 @@ body.home .ceo.opened .ceo__decor {
   box-shadow: none;
 }
 
+@media (min-width: 320px) {
+  body.home .reviews-popup__fixed {
+    min-width: 90%;
+    top: 15%;
+  }
+
+  body.home .reviews-popup__slide {
+    min-height: 560px;
+  }
+}
+
 @media (min-width: 350px) {
   body.home .reviews__body--video {
     padding-bottom: 250px;
@@ -2079,6 +2103,51 @@ body.home .ceo.opened .ceo__decor {
 
   body.home .reviews__img {
     padding-bottom: 250px;
+  }
+
+  body.home .reviews-popup__head {
+    padding: 10px 0;
+  }
+
+  body.home .reviews-popup__body--video {
+    padding-bottom: 33.777%;
+  }
+
+  body.home .reviews-popup__img {
+    padding-bottom: 40%;
+  }
+
+  body.home .reviews-popup__img img {
+    width: 100%;
+    right: 0;
+    -o-object-position: 32% 20%;
+    object-position: 32% 20%;
+  }
+}
+
+@media (min-width: 350px) and (min-width: 500px) {
+  body.home .reviews-popup__img img {
+    -o-object-position: 50% 20%;
+    object-position: 50% 20%;
+  }
+}
+
+@media (min-width: 350px) and (min-width: 700px) {
+  body.home .reviews-popup__img img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 350px) and (min-width: 800px) {
+  body.home .reviews-popup__img img {
+    -o-object-position: 50% 5%;
+    object-position: 50% 5%;
+  }
+}
+
+@media (min-width: 350px) and (min-width: 900px) {
+  body.home .reviews-popup__img img {
+    width: 60%;
   }
 }
 
@@ -2485,6 +2554,11 @@ body.home .ceo.opened .ceo__decor {
   body.home .cards__container {
     padding-top: 70px;
   }
+
+  body.home .reviews-popup__date {
+    font-size: 1rem;
+    line-height: 1.375;
+  }
 }
 
 @media (min-width: 1000px) and (min-width: 1400px) {
@@ -2593,6 +2667,12 @@ body.home .ceo.opened .ceo__decor {
 
   .footer-top__desktop-navigation ul li:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  body.home .reviews-popup__fixed {
+    top: 50%;
+    min-width: 1040px;
+    min-height: 762px;
   }
 
   body.home .ceo__body {
@@ -2799,6 +2879,7 @@ body.home .ceo.opened .ceo__decor {
 
   body.home .reviews-popup__slide {
     min-height: 762px;
+    padding: 25px 30px 30px;
   }
 
   body.home .reviews-popup__head {
@@ -2810,7 +2891,7 @@ body.home .ceo.opened .ceo__decor {
   }
 
   body.home .reviews-popup__img {
-    padding-bottom: 60.5%;
+    padding-bottom: 57.5%;
   }
 
   body.home .reviews-popup__img img {
