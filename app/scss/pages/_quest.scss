@@ -417,17 +417,17 @@
          padding-left: percent(12, 375);
          padding-right: percent(12, 375);
          padding-top: 40px;
-         padding-bottom: 60px;
+         // padding-bottom: 60px;
       }
       @media (min-width: 740px) and (max-width: 1399px) {
          padding-left: percent(30, 744);
          padding-right: percent(30, 744);
          padding-top: 60px;
-         padding-bottom: 73px;
+         // padding-bottom: 73px;
       }
       @media (min-width: 1000px) {
          padding-top: percent(130, 1920);
-         padding-bottom: percent(120, 1920);
+         // padding-bottom: percent(120, 1920);
 
          display: flex;
          column-gap: 20px;
@@ -1058,9 +1058,9 @@
    &__container {
       @media (max-width: 739px) {
          padding-top: 60px;
-         padding-top: 73px;
       }
       @media (min-width: 740px) and (max-width: 999px) {
+         padding-top: 73px;
       }
       @media (min-width: 1000px) {
          padding-top: percent(120, 1920);
@@ -1107,6 +1107,15 @@
       }
       @media (min-width: 1000px) {
          margin-bottom: 24px;
+      }
+   }
+   &__prev,
+   &__next {
+      svg {
+         fill: transparent;
+         path {
+            stroke: #000000;
+         }
       }
    }
 }
@@ -1350,9 +1359,7 @@
       min-height: 360px;
       display: flex;
       flex-direction: column;
-      cursor: pointer;
       transition: all 0.3s;
-
       &:hover {
          transform: scale(1.15);
          z-index: 10;
@@ -1435,7 +1442,7 @@
          width: 100%;
          padding-bottom: 271px;
          display: block;
-
+         cursor: pointer;
          &::before {
             position: absolute;
             content: "";
@@ -1539,13 +1546,14 @@
       font-weight: 700;
       @include fl(16, 22);
       color: $greenItem;
+      cursor: pointer;
    }
 
    &__img {
       position: relative;
       width: 100%;
       padding-bottom: 271px;
-
+      cursor: pointer;
       @media (min-width: 350px) {
          padding-bottom: 250px;
       }
@@ -1648,19 +1656,13 @@
          padding: 20px 0px;
       }
    }
-
    &__description {
       max-width: 100%;
       width: 100%;
    }
-
-   &__head-suptitle {
-   }
-
    &__head-title {
       max-width: 100%;
    }
-
    &__date {
       @include fl(14, 20);
       font-weight: 500;
@@ -1759,6 +1761,18 @@
    &__container {
       padding-left: percent(12, 375);
       padding-right: percent(12, 375);
+      @media (min-width: 744px) and (max-width: 1399px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+         max-width: 1100px;
+         width: 100%;
+         margin: 0 auto;
+      }
+
+      @media (min-width: 1400px) {
+         padding-left: percent(410, 1920);
+         padding-right: percent(410, 1920);
+      }
    }
    &__title {
       font-weight: 700;
@@ -1767,44 +1781,13 @@
       text-align: center;
       padding-bottom: 24px;
       border-bottom: 1px solid #d9d9d9;
-   }
-   &__spoiler {
-      border-bottom: 1px solid #d9d9d9;
-      &.opened {
-         transition: all 0.8s;
-         .faq__preview-icon {
-            transition: all 0.8s;
-            transform: rotate(180deg);
-         }
+      @media (min-width: 600px) {
+         text-align: left;
       }
-   }
-   &__preview {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0 16px;
-   }
-   &__preview-head {
-      font-weight: 700;
-      @include fl(16, 22);
-   }
-   &__preview-icon {
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.8s;
-   }
-   &__wrapper {
-      height: 0;
-      overflow: hidden;
-      transition: all 0.8s;
-   }
-   &__body {
-      padding-bottom: 24px;
-   }
-   &__text {
+      @media (min-width: 1400px) {
+         @include fl(36, 44);
+         padding-bottom: 16px;
+      }
    }
 }
 

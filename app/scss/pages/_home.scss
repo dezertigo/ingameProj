@@ -783,7 +783,6 @@ body.home {
          min-height: 360px;
          display: flex;
          flex-direction: column;
-         cursor: pointer;
          transition: all 0.3s;
 
          &:hover {
@@ -868,7 +867,7 @@ body.home {
             width: 100%;
             padding-bottom: 271px;
             display: block;
-
+            cursor: pointer;
             &::before {
                position: absolute;
                content: "";
@@ -972,13 +971,14 @@ body.home {
          font-weight: 700;
          @include fl(16, 22);
          color: $greenItem;
+         cursor: pointer;
       }
 
       &__img {
          position: relative;
          width: 100%;
          padding-bottom: 271px;
-
+         cursor: pointer;
          @media (min-width: 350px) {
             padding-bottom: 250px;
          }

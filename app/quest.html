@@ -75,6 +75,7 @@
 			<section class="hero">
 				<div class="hero__container">
 					@@include('./components/base/_horizontal-gallery.html')
+					
 					<div class="hero__form">
 						@@include('./components/base/_gal-form.html')
 					</div>
@@ -99,7 +100,7 @@
 			<section class="step3">
 				<div class="step3__container">
 					<p class="step3__title step-title"><span>Крок 3:</span> Оберіть час</p>
-					<div class="step3__swiper swiper">
+					<div class="step3__swiper swiper slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								@@include('./components/base/_table-column.html', {
@@ -312,6 +313,12 @@
 								})
 							</div>
 						</div>
+						@@include('./components/base/_slider-nav.html', {
+							'class': 'step3__nav',
+							'prev': 'step3__prev',
+							'next': 'step3__next',
+							'pagination': 'step3__pagination',
+						})
 					</div>
 
 
@@ -804,131 +811,26 @@
 					<h2 class="faq__title">
 						Частозадавані питання
 					</h2>
-					<div class="faq__spoiler">
-						<div class="faq__preview">
-							<p class="faq__preview-head">
-								Заголовок першого питання
-							</p>
-							<div class="faq__preview-icon">
-								<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010"
-										stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="faq__wrapper">
-							<div class="faq__body">
-								<p class="faq__text">
-									Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
-									Одповідь
-									на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
-									на 1
-									питання
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="faq__spoiler">
-						<div class="faq__preview">
-							<p class="faq__preview-head">
-								Заголовок першого питання
-							</p>
-							<div class="faq__preview-icon">
-								<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010"
-										stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="faq__wrapper">
-							<div class="faq__body">
-								<p class="faq__text">
-									Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
-									Одповідь
-									на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
-									на 1
-									питання
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="faq__spoiler">
-						<div class="faq__preview">
-							<p class="faq__preview-head">
-								Заголовок першого питання
-							</p>
-							<div class="faq__preview-icon">
-								<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010"
-										stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="faq__wrapper">
-							<div class="faq__body">
-								<p class="faq__text">
-									Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
-									Одповідь
-									на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
-									на 1
-									питання
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="faq__spoiler">
-						<div class="faq__preview">
-							<p class="faq__preview-head">
-								Заголовок першого питання
-							</p>
-							<div class="faq__preview-icon">
-								<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010"
-										stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="faq__wrapper">
-							<div class="faq__body">
-								<p class="faq__text">
-									Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
-									Одповідь
-									на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
-									на 1
-									питання
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="faq__spoiler">
-						<div class="faq__preview">
-							<p class="faq__preview-head">
-								Заголовок першого питання
-							</p>
-							<div class="faq__preview-icon">
-								<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010"
-										stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-						<div class="faq__wrapper">
-							<div class="faq__body">
-								<p class="faq__text">
-									Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
-									Одповідь
-									на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
-									на 1
-									питання
-								</p>
-							</div>
-						</div>
-					</div>
+					@@include('./components/base/_faq-spoiler.html', {
+						'headtext': 'Заголовок першого питання',
+						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+					})
+					@@include('./components/base/_faq-spoiler.html', {
+						'headtext': 'Заголовок першого питання',
+						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+					})
+					@@include('./components/base/_faq-spoiler.html', {
+						'headtext': 'Заголовок першого питання',
+						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+					})
+					@@include('./components/base/_faq-spoiler.html', {
+						'headtext': 'Заголовок першого питання',
+						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+					})
+					@@include('./components/base/_faq-spoiler.html', {
+						'headtext': 'Заголовок першого питання',
+						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+					})
 				</div>
 			</section>
 			<section class="map-block">

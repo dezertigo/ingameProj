@@ -226,6 +226,7 @@ window.addEventListener("load", () => {
       speed: 500,
       slidesPerView: 1,
       initialSlide: 1,
+      simulateTouch: true,
       centeredSlides: true,
       slideToClickedSlide: true,
       spaceBetween: 24,
@@ -309,6 +310,7 @@ window.addEventListener("load", () => {
       speed: 500,
       slidesPerView: 1,
       initialSlide: 0,
+      simulateTouch: true,
       centeredSlides: true,
       slideToClickedSlide: true,
       spaceBetween: 24,
@@ -369,7 +371,15 @@ window.addEventListener("load", () => {
       initialSlide: 0,
       simulateTouch: true,
       spaceBetween: 20,
-      freeMode: true,
+      // freeMode: true,
+      pagination: {
+         el: ".step3__pagination",
+         clickable: true,
+      },
+      navigation: {
+         nextEl: ".slider__next",
+         prevEl: ".slider__prev",
+      },
       breakpoints: {
          500: {
             slidesPerView: 4,
@@ -459,6 +469,14 @@ window.addEventListener("load", () => {
       simulateTouch: true,
       spaceBetween: 12,
       sliderPerColumn: 1,
+      // navigation: {
+      //    prevEl: '.horizontal-gallery__prev',
+      //    nextEl: '.horizontal-gallery__next',
+      // },
+      // pagination: {
+      //    el: '.horizontal-gallery__pagination',
+      //    clickable: true,
+      // }, работает, но нужно
       breakpoints: {
          1000: {
             spaceBetween: 20,

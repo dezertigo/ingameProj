@@ -19,6 +19,15 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      svg {
+         path {
+               transition: all 0.5s;
+               stroke: #9ACF16;
+            }
+      }
+    }
  }
  &__pagination {
     display: flex;
@@ -28,10 +37,14 @@
  .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
-    background: rgba(144, 199, 94, 0.2);
+    background: rgba(154, 207, 22, 0.2);
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      background: rgba(249, 191, 48, 0.4);
+    }
     &-active {
-       background: $greenItem;
+       background: #9ACF16;
     }
  }
 }
