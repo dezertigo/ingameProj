@@ -363,4 +363,21 @@ window.addEventListener("load", () => {
       document.body.removeEventListener("pointerout", removeStylesOut);
    }
 
+   if (qs('body.quest')) {
+
+      body.addEventListener("click", toggleSpoiler);
+
+      function toggleSpoiler(e) {
+         if (e.target.closest(".faq__preview")) {
+            e.target.closest(".faq__spoiler").classList.toggle("opened");
+            let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
+            if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
+               spoilerWrapper.style.height = null;
+            } else {
+               spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+            }
+         }
+      }
+   }
+
 });

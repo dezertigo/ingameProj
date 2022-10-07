@@ -1155,6 +1155,70 @@ main {
   transform: scale(1.2);
 }
 
+.faq {
+  padding: 60px 0 30px;
+}
+
+.faq__container {
+  padding-left: 3.2%;
+  padding-right: 3.2%;
+}
+
+.faq__title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #101010;
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.faq__spoiler {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.faq__spoiler.opened {
+  transition: all 0.8s;
+}
+
+.faq__spoiler.opened .faq__preview-icon {
+  transition: all 0.8s;
+  transform: rotate(180deg);
+}
+
+.faq__preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 16px;
+}
+
+.faq__preview-head {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.375;
+}
+
+.faq__preview-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s;
+}
+
+.faq__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.8s;
+}
+
+.faq__body {
+  padding-bottom: 24px;
+}
+
 @media (min-width: 375px) {
   .footer-top__contacts h5 {
     white-space: nowrap;
