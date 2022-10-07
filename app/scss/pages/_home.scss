@@ -1,5 +1,4 @@
 body.home {
-
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
    // ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
@@ -622,7 +621,6 @@ body.home {
             column-gap: 2em;
          }
 
-
          @media (min-width: 1920px) {
             padding: 121px 1.2% 7.1% 9.4%;
             display: grid;
@@ -665,7 +663,7 @@ body.home {
          @media (min-width: 744px) {
             width: 51.3%;
             // ПОКАЗАТЬ ЗАКАЗЧИКУ ЛУЧШИЙ ВАРИАНТ
-            // width: 100%; 
+            // width: 100%;
             padding-bottom: 31.3%;
             margin-bottom: 16px;
          }
@@ -739,6 +737,9 @@ body.home {
    // ! Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews
 
    .reviews {
+      .swiper-slide {
+         height: auto;
+      }
       padding: 80px 0;
       background-image: url(../../img/reviews-bg.png);
       background-repeat: no-repeat;
@@ -752,7 +753,6 @@ body.home {
          @media (min-width: 1400px) {
             padding-left: percent(130, 1920);
             padding-right: percent(130, 1920);
-
          }
       }
 
@@ -783,7 +783,6 @@ body.home {
          min-height: 360px;
          display: flex;
          flex-direction: column;
-         cursor: pointer;
          transition: all 0.3s;
 
          &:hover {
@@ -868,10 +867,10 @@ body.home {
             width: 100%;
             padding-bottom: 271px;
             display: block;
-
+            cursor: pointer;
             &::before {
                position: absolute;
-               content: '';
+               content: "";
                width: 66px;
                height: 66px;
                top: 50%;
@@ -885,12 +884,12 @@ body.home {
 
             &::after {
                position: absolute;
-               content: '';
+               content: "";
                top: 0;
                bottom: 0;
                right: 0;
                left: 0;
-               background-color: rgba(10, 10, 10, .2);
+               background-color: rgba(10, 10, 10, 0.2);
                z-index: 2;
             }
 
@@ -932,9 +931,8 @@ body.home {
 
             .reviews__footer-date {
                color: $light;
-               opacity: .6;
+               opacity: 0.6;
             }
-
          }
       }
 
@@ -973,13 +971,14 @@ body.home {
          font-weight: 700;
          @include fl(16, 22);
          color: $greenItem;
+         cursor: pointer;
       }
 
       &__img {
          position: relative;
          width: 100%;
          padding-bottom: 271px;
-
+         cursor: pointer;
          @media (min-width: 350px) {
             padding-bottom: 250px;
          }
@@ -997,9 +996,6 @@ body.home {
          }
       }
    }
-
-
-
 
    .reviews-popup {
       transition: right 0.8s ease 0.3s, background-color 0.3s ease 0s, z-index 1s ease 1s;
@@ -1052,7 +1048,7 @@ body.home {
 
       &__slide {
          background-color: $light;
-         @media (min-width:320px) {
+         @media (min-width: 320px) {
             min-height: 560px;
          }
          @media (min-width: 1400px) {
@@ -1079,11 +1075,10 @@ body.home {
          gap: 20px;
          padding: 5px 0px;
          @media (min-width: 350px) {
-            padding:10px 0;
+            padding: 10px 0;
          }
          @media (min-width: 1400px) {
             padding: 20px 0px;
-
          }
       }
 
@@ -1092,19 +1087,20 @@ body.home {
          width: 100%;
       }
 
-      &__head-suptitle {}
+      &__head-suptitle {
+      }
 
       &__head-title {
          max-width: 100%;
       }
 
       &__date {
-         @include fl(14,20);
+         @include fl(14, 20);
          font-weight: 500;
          color: $dark;
          opacity: 0.4;
          @media (min-width: 1000px) {
-            @include fl(16,22);
+            @include fl(16, 22);
          }
       }
 
@@ -1127,7 +1123,7 @@ body.home {
          padding: 0;
          justify-content: start;
          &--video {
-            @media (min-width:350px) {
+            @media (min-width: 350px) {
                padding-bottom: 33.777%;
             }
             @media (min-width: 1400px) {
@@ -1173,7 +1169,7 @@ body.home {
                }
             }
          }
-         @media (min-width:1400px) {
+         @media (min-width: 1400px) {
             padding-bottom: 57.5%;
             img {
                width: 64%;
@@ -1188,10 +1184,9 @@ body.home {
       }
    }
 
-
-   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog === Blog
-   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog === Blog
-   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog === Blog
+   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog
+   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog
+   // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog
    .blog {
       width: 100%;
       max-width: 100%;
@@ -1340,7 +1335,6 @@ body.home {
          }
       }
 
-      // 
       &__par-text {
          font-weight: 700;
          color: rgba(16, 16, 16, 1);
@@ -1408,7 +1402,7 @@ body.home {
             height: 100%;
             object-fit: cover;
             transform: scale(1.08);
-            // 
+            //
 
             @media (min-width: 425px) and (max-width: 743px) {
                transform: scale(1);
@@ -1462,7 +1456,6 @@ body.home {
       }
    }
 
-
    // ! CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO
    // ! CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO
    // ! CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO === CEO
@@ -1471,8 +1464,6 @@ body.home {
       width: 100%;
       max-width: 100%;
       background-color: rgba(255, 255, 255, 1);
-
-
 
       &__container {
          margin: 0 auto;
@@ -1579,6 +1570,7 @@ body.home {
       }
 
       &__btn {
+         cursor: pointer;
          color: rgba(144, 199, 94, 1);
          font-weight: 700;
          font-size: 18px;
@@ -1592,7 +1584,6 @@ body.home {
       }
 
       &__text-hide {
-
          @media (max-width: 749px) {
             display: none;
          }
@@ -1601,7 +1592,6 @@ body.home {
             display: initial;
          }
       }
-
    }
 
    .ceo.opened {
