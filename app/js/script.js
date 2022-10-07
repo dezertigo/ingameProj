@@ -449,7 +449,7 @@ window.addEventListener("load", () => {
    // });
    // swiperVerticalSmall.controller.control = swiperVerticalBig;
    // swiperVerticalBig.controller.control = swiperVerticalSmall;
-
+ 
    window.addEventListener("resize", fixSlider);
    fixSlider();
    function fixSlider() {
