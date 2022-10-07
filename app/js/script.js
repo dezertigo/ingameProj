@@ -368,16 +368,35 @@ window.addEventListener("load", () => {
       body.addEventListener("click", toggleSpoiler);
 
       function toggleSpoiler(e) {
-         if (e.target.closest(".faq__preview")) {
-            e.target.closest(".faq__spoiler").classList.toggle("opened");
-            let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
-            if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
-               spoilerWrapper.style.height = null;
-            } else {
-               spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+         // if (e.target.closest(".faq__preview")) {
+         //    e.target.closest(".faq__spoiler").classList.toggle("opened");
+         //    let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
+         //    if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
+         //       spoilerWrapper.style.height = null;
+         //    } else {
+         //       spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+         //    }
+         // }
+         const spoilerItem = document.querySelectorAll('.faq__spoiler');
+         const spoilerWrapper = document.querySelectorAll('.faq__wrapper')
+         if (e.target.closest('.faq__spoiler')) {
+            if (e.target.closest('.faq__spoiler').classList.contains('opened')) {
+              e.target.closest('.faq__spoiler').classList.remove('opened');
+              e.target.closest('.faq__preview').nextElementSibling.style.height = null;
+            } else if (e.target.closest('.faq__spoiler')) {
+              spoilerItem.forEach(function (el) {
+                el.classList.remove('opened');
+              });
+              spoilerWrapper.forEach(function (el) {
+                el.style.height = null;
+              });
+              e.target.closest('.faq__spoiler').classList.toggle('opened');
+              e.target.closest('.faq__preview').nextElementSibling.style.height = e.target.closest('.faq__preview').nextElementSibling.scrollHeight + 'px';
             }
+          }
          }
       }
-   }
+
+     
 
 });
