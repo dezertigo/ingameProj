@@ -143,5 +143,15 @@
       @media (min-width: 1000px) {
          @include fl(14, 22);
       }
+      transition: all 0.3s ease;
+      &:hover {
+         border-color: $orangeHover;
+         color: $orangeHover;
+      }
+      &:active {
+         color: $greenHover;
+         border-color: $greenHover;
+         opacity: 0.6;
+      }
    }
 }

@@ -1,6 +1,17 @@
 %container {
-   padding-left: percent(12, 375);
-   padding-right: percent(12, 375);
+   @media (max-width: 739px) {
+      padding-left: percent(12, 375);
+      padding-right: percent(12, 375);
+   }
+
+   @media (min-width: 740px) and (max-width: 999px) {
+      padding-left: percent(30, 744);
+      padding-right: percent(30, 744);
+   }
+   @media (min-width: 1400px) {
+      padding-left: percent(130, 1920);
+      padding-right: percent(130, 1920);
+   }
 }
 %grad-bg {
    background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);

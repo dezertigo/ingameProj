@@ -461,7 +461,7 @@ window.addEventListener("load", () => {
       sliderPerColumn: 1,
       breakpoints: {
          1000: {
-            spaceBetween: 0,
+            spaceBetween: 20,
          },
       },
       thumbs: {
