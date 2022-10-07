@@ -418,6 +418,7 @@ window.addEventListener("load", () => {
                1000: {
                   spaceBetween: 20,
                   slidesPerView: 6,
+                  direction: "vertical",
                },
             },
          },
