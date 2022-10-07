@@ -253,7 +253,6 @@ window.addEventListener("load", () => {
          },
       },
    });
-
    const popupReviews = document.querySelector(".reviews-popup");
    // const reviewsImgBtn = document.querySelectorAll('.reviews__img');
    // const reviewsVideoBtn = document.querySelectorAll('.reviews__body--video');
@@ -361,7 +360,162 @@ window.addEventListener("load", () => {
       // document.body.removeEventListener("pointerup", removeStylesUp);
       document.body.removeEventListener("pointerout", removeStylesOut);
    }
+   //! Table swiper
+   const swiperTale = new Swiper(".step3__swiper", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      initialSlide: 0,
+      simulateTouch: true,
+      spaceBetween: 20,
+      freeMode: true,
+      breakpoints: {
+         500: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+         },
+         620: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+         },
+         740: {
+            slidesPerView: 7,
+            slidesPerGroup: 7,
+         },
+      },
+   });
 
+   // ! Slider-vertical
+   const swiperVerticalBig = new Swiper(".vertical-gallery__swiper-big", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      initialSlide: 0,
+      simulateTouch: true,
+      spaceBetween: 12,
+      thumbs: {
+         swiper: {
+            el: ".vertical-gallery__swiper-small",
+            slidesPerView: 3,
+            spaceBetween: 12,
+            breakpoints: {
+               500: {
+                  slidesPerView: 4,
+                  spaceBetween: 14,
+               },
+               600: {
+                  slidesPerView: 5,
+               },
+               1000: {
+                  spaceBetween: 20,
+                  slidesPerView: 5,
+               },
+               1200: {
+                  slidesPerView: 6,
+               },
+            },
+         },
+      },
+   });
+   // const swiperVerticalSmall = new Swiper(".vertical-gallery__swiper-small", {
+   //    // loop: true,
+   //    speed: 500,
+   //    slidesPerView: 3,
+   //    initialSlide: 0,
+   //    slideToClickedSlide: true,
+   //    spaceBetween: 12,
+   //    breakpoints: {
+   //       500: {
+   //          slidesPerView: 4,
+   //          spaceBetween: 14,
+   //       },
+   //       1000: {
+   //          slidesPerView: 5,
+   //          spaceBetween: 20,
+   //       },
+   //       1200: {
+   //          slidesPerView: 6,
+   //       },
+   //    },
+   // });
+   // swiperVerticalSmall.controller.control = swiperVerticalBig;
+   // swiperVerticalBig.controller.control = swiperVerticalSmall;
+
+   window.addEventListener("resize", fixSlider);
+   fixSlider();
+   function fixSlider() {
+      if (window.innerWidth >= 1000) {
+         let bugSlider = document.querySelector(".horizontal-gallery__small-wrap");
+         let normalSlider = document.querySelector(".horizontal-gallery__big-wrap").getBoundingClientRect().height;
+         bugSlider.style.maxHeight = normalSlider + "px";
+      }
+   }
+   // ! Slider-horizontal
+   const swiperHorizontalBig = new Swiper(".horizontal-gallery__swiper-big", {
+      // loop: true,
+      speed: 500,
+      slidesPerView: 1,
+      simulateTouch: true,
+      spaceBetween: 12,
+      sliderPerColumn: 1,
+      breakpoints: {
+         1000: {
+            spaceBetween: 0,
+         },
+      },
+      thumbs: {
+         swiper: {
+            el: ".horizontal-gallery__swiper-small",
+            slidesPerView: 3,
+            spaceBetween: 12,
+            breakpoints: {
+               500: {
+                  slidesPerView: 4,
+                  spaceBetween: 10,
+               },
+               600: {
+                  slidesPerView: 5,
+               },
+               700: {
+                  slidesPerView: 6,
+               },
+               1000: {
+                  spaceBetween: 20,
+                  slidesPerView: 6,
+                  direction: "vertical",
+               },
+            },
+         },
+      },
+   });
+   // ! BREAK
+   // const swiperHorizontalSmall = new Swiper(".horizontal-gallery__swiper-small", {
+   //    loop: true,
+   //    speed: 500,
+   //    slidesPerView: 3,
+   //    initialSlide: 0,
+   //    slideToClickedSlide: true,
+   //    spaceBetween: 12,
+   // breakpoints: {
+   //    500: {
+   //       slidesPerView: 4,
+   //       spaceBetween: 10,
+   //    },
+   //    600: {
+   //       slidesPerView: 5,
+   //    },
+   //    700: {
+   //       slidesPerView: 6,
+   //    },
+   //    1000: {
+   //       spaceBetween: 20,
+   //       slidesPerView: 6,
+   //    },
+   // },
+   // });
+   // swiperHorizontalSmall.controller.control = swiperHorizontalBig;
+   // swiperHorizontalBig.controller.control = swiperHorizontalSmall;
    if (qs("body.quest")) {
       body.addEventListener("click", toggleSpoiler);
 

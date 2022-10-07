@@ -516,8 +516,7 @@ window.addEventListener("load", () => {
    // });
    // swiperHorizontalSmall.controller.control = swiperHorizontalBig;
    // swiperHorizontalBig.controller.control = swiperHorizontalSmall;
-	if (qs('body.quest')) {
-
+   if (qs("body.quest")) {
       body.addEventListener("click", toggleSpoiler);
 
       function toggleSpoiler(e) {
@@ -530,25 +529,24 @@ window.addEventListener("load", () => {
          //       spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
          //    }
          // }
-         const spoilerItem = document.querySelectorAll('.faq__spoiler');
-         const spoilerWrapper = document.querySelectorAll('.faq__wrapper')
-         if (e.target.closest('.faq__spoiler')) {
-            if (e.target.closest('.faq__spoiler').classList.contains('opened')) {
-              e.target.closest('.faq__spoiler').classList.remove('opened');
-              e.target.closest('.faq__preview').nextElementSibling.style.height = null;
-            } else if (e.target.closest('.faq__spoiler')) {
-              spoilerItem.forEach(function (el) {
-                el.classList.remove('opened');
-              });
-              spoilerWrapper.forEach(function (el) {
-                el.style.height = null;
-              });
-              e.target.closest('.faq__spoiler').classList.toggle('opened');
-              e.target.closest('.faq__preview').nextElementSibling.style.height = e.target.closest('.faq__preview').nextElementSibling.scrollHeight + 'px';
+         const spoilerItem = document.querySelectorAll(".faq__spoiler");
+         const spoilerWrapper = document.querySelectorAll(".faq__wrapper");
+         if (e.target.closest(".faq__spoiler")) {
+            if (e.target.closest(".faq__spoiler").classList.contains("opened")) {
+               e.target.closest(".faq__spoiler").classList.remove("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height = null;
+            } else if (e.target.closest(".faq__spoiler")) {
+               spoilerItem.forEach(function (el) {
+                  el.classList.remove("opened");
+               });
+               spoilerWrapper.forEach(function (el) {
+                  el.style.height = null;
+               });
+               e.target.closest(".faq__spoiler").classList.toggle("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height =
+                  e.target.closest(".faq__preview").nextElementSibling.scrollHeight + "px";
             }
-          }
          }
       }
-
-     
-};);
+   }
+});
