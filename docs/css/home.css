@@ -2060,6 +2060,7 @@ body.home .ceo__text {
 }
 
 body.home .ceo__btn {
+  cursor: pointer;
   color: rgb(144, 199, 94);
   font-weight: 700;
   font-size: 18px;
