@@ -1617,6 +1617,10 @@ body.home .reviews {
   background-size: cover;
 }
 
+body.home .reviews .swiper-slide {
+  height: auto;
+}
+
 body.home .reviews__container {
   margin: 0 auto;
   padding-left: 3.2%;

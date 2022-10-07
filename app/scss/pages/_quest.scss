@@ -1132,6 +1132,458 @@
       }
    }
 }
+
+// ! Reviews === Reviews === Reviews=== Reviews === Reviews === Reviews === Reviews === Reviews
+// ! Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews
+// ! Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews === Reviews
+
+.reviews {
+   .swiper-slide {
+      height: auto;
+   }
+   padding: 80px 0;
+   background-image: url(../../img/reviews-bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   &__container {
+      margin: 0 auto;
+      padding-left: percent(12, 375);
+      padding-right: percent(12, 375);
+
+      @media (min-width: 1400px) {
+         padding-left: percent(130, 1920);
+         padding-right: percent(130, 1920);
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      @include fl(24, 30);
+      color: $light;
+      text-align: center;
+      margin-bottom: 24px;
+
+      @media (min-width: 1400px) {
+         margin-bottom: 10px;
+         @include fl(36, 44);
+      }
+   }
+
+   &__slider {
+      position: relative;
+
+      @media (min-width: 1100px) {
+         overflow: hidden;
+         padding-top: 30px;
+      }
+   }
+
+   &__slide {
+      background-color: $light;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+         transform: scale(1.15);
+         z-index: 10;
+         filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.4));
+      }
+   }
+
+   &__head {
+      padding: 30.5px percent(22, 351);
+      border-bottom: 1px solid #d9d9d9;
+
+      @media (min-width: 1400px) {
+         padding: 20px percent(30, 540) 8px;
+      }
+   }
+
+   &__head-suptitle {
+      font-weight: 700;
+      @include fl(12, 18);
+      color: $dark;
+      margin-bottom: 10px;
+
+      @media (min-width: 1400px) {
+         @include fl(16, 20);
+      }
+   }
+
+   &__head-title {
+      font-weight: 700;
+      @include fl(14, 20);
+      color: $dark;
+      max-width: 370px;
+      width: 100%;
+
+      @media (min-width: 1400px) {
+         @include fl(24, 28);
+      }
+   }
+
+   &__wrap {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+
+      .reviews__body {
+         padding: 12px 0 24px 22px;
+         max-width: 58.4%;
+      }
+
+      .reviews__body-name {
+         @include fl(16, 20);
+
+         @media (min-width: 1400px) {
+            @include fl(24, 29);
+         }
+      }
+
+      .reviews__body-text {
+         @include fl(14, 20);
+         font-weight: 400;
+         font-style: italic;
+
+         @media (min-width: 1400px) {
+            @include fl(16, 22);
+         }
+      }
+   }
+
+   &__body {
+      padding: 12px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 auto;
+
+      &--video {
+         padding: 0;
+         position: relative;
+         width: 100%;
+         padding-bottom: 271px;
+         display: block;
+
+         &::before {
+            position: absolute;
+            content: "";
+            width: 66px;
+            height: 66px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            background-image: url(../../img/icons/play.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+
+         &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(10, 10, 10, 0.2);
+            z-index: 2;
+         }
+
+         @media (min-width: 350px) {
+            padding-bottom: 250px;
+         }
+
+         @media (min-width: 1400px) {
+            padding-bottom: 245px;
+         }
+
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+         }
+
+         .reviews__body-name {
+            color: $light;
+            position: absolute;
+            left: 22px;
+            top: 24px;
+            z-index: 3;
+            @include fl(18, 22);
+
+            @media (min-width: 1400px) {
+               @include fl(24, 29);
+            }
+         }
+
+         .reviews__footer {
+            position: absolute;
+            bottom: 24px;
+            left: 22px;
+            z-index: 3;
+         }
+
+         .reviews__footer-date {
+            color: $light;
+            opacity: 0.6;
+         }
+      }
+   }
+
+   &__body-name {
+      font-weight: 700;
+      @include fl(24, 29);
+      color: $dark;
+      margin-bottom: 12px;
+   }
+
+   &__body-text {
+      font-weight: 500;
+      @include fl(16, 22);
+
+      &--margin {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+   }
+
+   &__footer-date {
+      font-weight: 500;
+      @include fl(14, 20);
+      color: $dark;
+      opacity: 0.4;
+      margin-top: auto;
+   }
+
+   &__footer-btn {
+      font-weight: 700;
+      @include fl(16, 22);
+      color: $greenItem;
+   }
+
+   &__img {
+      position: relative;
+      width: 100%;
+      padding-bottom: 271px;
+
+      @media (min-width: 350px) {
+         padding-bottom: 250px;
+      }
+
+      @media (min-width: 1400px) {
+         padding-bottom: 245px;
+      }
+
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center center;
+      }
+   }
+}
+
+.reviews-popup {
+   transition: right 0.8s ease 0.3s, background-color 0.3s ease 0s, z-index 1s ease 1s;
+   position: fixed;
+   top: 0;
+   right: -100%;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0);
+   overflow-y: auto;
+   z-index: 0;
+   &.active {
+      pointer-events: all;
+      opacity: 1;
+      overflow-y: scroll;
+      z-index: 20;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
+   }
+
+   &__fixed {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media (min-width: 320px) {
+         min-width: 90%;
+         top: 15%;
+      }
+      @media (min-width: 1200px) {
+         top: 50%;
+         min-width: 1040px;
+         min-height: 762px;
+      }
+   }
+
+   &__view {
+      box-shadow: 0 2px 24px rgb(0 0 0 / 4%);
+      position: absolute;
+      width: 100%;
+   }
+
+   &__slider {
+      overflow: hidden;
+   }
+
+   &__wrapper {
+      background-color: $light;
+   }
+
+   &__slide {
+      background-color: $light;
+      @media (min-width: 320px) {
+         min-height: 560px;
+      }
+      @media (min-width: 1400px) {
+         min-height: 762px;
+         padding: 25px 30px 30px;
+      }
+      padding: 5px 10px 10px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+   }
+
+   &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #d9d9d9;
+      gap: 20px;
+      padding: 5px 0px;
+      @media (min-width: 350px) {
+         padding: 10px 0;
+      }
+      @media (min-width: 1400px) {
+         padding: 20px 0px;
+      }
+   }
+
+   &__description {
+      max-width: 100%;
+      width: 100%;
+   }
+
+   &__head-suptitle {
+   }
+
+   &__head-title {
+      max-width: 100%;
+   }
+
+   &__date {
+      @include fl(14, 20);
+      font-weight: 500;
+      color: $dark;
+      opacity: 0.4;
+      @media (min-width: 1000px) {
+         @include fl(16, 22);
+      }
+   }
+
+   &__author {
+      @include fl(24, 29);
+      color: $dark;
+      margin: 16px 0;
+      font-weight: 700;
+   }
+   &__wrap {
+      .reviews-popup__body {
+         padding: 0;
+         max-width: 35%;
+         @media (min-width: 600px) {
+            max-width: 55%;
+         }
+      }
+   }
+   &__body {
+      padding: 0;
+      justify-content: start;
+      &--video {
+         @media (min-width: 350px) {
+            padding-bottom: 33.777%;
+         }
+         @media (min-width: 1400px) {
+            padding-bottom: 0;
+         }
+
+         &::after {
+            content: none;
+         }
+      }
+   }
+
+   &__body-name {
+      margin: 16px 0;
+   }
+
+   &__body-text {
+      margin-bottom: 0;
+      max-width: 882px;
+      width: 100%;
+      color: $dark;
+      font-weight: 500;
+   }
+
+   &__img {
+      @media (min-width: 350px) {
+         padding-bottom: 40%;
+         img {
+            width: 100%;
+            right: 0;
+            object-position: 114%;
+            @media (min-width: 500px) {
+               object-position: 50% 20%;
+            }
+            @media (min-width: 700px) {
+               width: 70%;
+            }
+            @media (min-width: 800px) {
+               object-position: 50% 5%;
+            }
+            @media (min-width: 900px) {
+               width: 60%;
+            }
+         }
+      }
+      @media (min-width: 1400px) {
+         padding-bottom: 57.5%;
+         img {
+            width: 64%;
+         }
+      }
+   }
+
+   &__nav {
+      @media (min-width: 1400px) {
+         margin-top: 24px;
+      }
+   }
+}
 // ! FAQ === FAQ === FAQ === FAQ=== FAQ === FAQ === FAQ === FAQ === FAQ
 // ! FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ
 // ! FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ === FAQ
