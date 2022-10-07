@@ -1,4 +1,7 @@
 .horizontal-gallery {
+   @media (min-width: 1000px) {
+      max-width: 960px;
+   }
    // .horizontal-gallery__swiper-big
    &__swiper-big {
       @media (max-width: 739px) {
@@ -48,7 +51,7 @@
    &__slide-small {
    }
 
-   .swiper-slide-active {
+   .swiper-slide-thumb-active {
       .horizontal-gallery__image-small {
          position: relative;
          &:after {

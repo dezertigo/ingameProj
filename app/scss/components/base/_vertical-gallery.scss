@@ -48,8 +48,8 @@
    &__slide-small {
    }
 
-   .swiper-slide-active {
-      .horizontal-gallery__image-small {
+   .swiper-slide-thumb-active {
+      .vertical-gallery__image-small {
          position: relative;
          &:after {
             content: "";

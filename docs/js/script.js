@@ -342,65 +342,112 @@ window.addEventListener("load", () => {
       initialSlide: 0,
       simulateTouch: true,
       spaceBetween: 12,
-   });
-   const swiperVerticalSmall = new Swiper(".vertical-gallery__swiper-small", {
-      // loop: true,
-      speed: 500,
-      slidesPerView: 3,
-      initialSlide: 0,
-      slideToClickedSlide: true,
-      spaceBetween: 12,
-      breakpoints: {
-         500: {
-            slidesPerView: 4,
-            spaceBetween: 14,
-         },
-         1000: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-         },
-         1200: {
-            slidesPerView: 6,
+      thumbs: {
+         swiper: {
+            el: ".vertical-gallery__swiper-small",
+            slidesPerView: 3,
+            spaceBetween: 12,
+            breakpoints: {
+               500: {
+                  slidesPerView: 4,
+                  spaceBetween: 14,
+               },
+               600: {
+                  slidesPerView: 5,
+               },
+               1000: {
+                  spaceBetween: 20,
+                  slidesPerView: 5,
+               },
+               1200: {
+                  slidesPerView: 6,
+               },
+            },
          },
       },
    });
-   swiperVerticalSmall.controller.control = swiperVerticalBig;
-   swiperVerticalBig.controller.control = swiperVerticalSmall;
+   // const swiperVerticalSmall = new Swiper(".vertical-gallery__swiper-small", {
+   //    // loop: true,
+   //    speed: 500,
+   //    slidesPerView: 3,
+   //    initialSlide: 0,
+   //    slideToClickedSlide: true,
+   //    spaceBetween: 12,
+   //    breakpoints: {
+   //       500: {
+   //          slidesPerView: 4,
+   //          spaceBetween: 14,
+   //       },
+   //       1000: {
+   //          slidesPerView: 5,
+   //          spaceBetween: 20,
+   //       },
+   //       1200: {
+   //          slidesPerView: 6,
+   //       },
+   //    },
+   // });
+   // swiperVerticalSmall.controller.control = swiperVerticalBig;
+   // swiperVerticalBig.controller.control = swiperVerticalSmall;
 
    // ! Slider-horizontal
    const swiperHorizontalBig = new Swiper(".horizontal-gallery__swiper-big", {
       // loop: true,
       speed: 500,
       slidesPerView: 1,
-      initialSlide: 0,
+      // initialSlide: 0,
       simulateTouch: true,
       spaceBetween: 12,
-   });
-   // ! BREAK
-   const swiperHorizontalSmall = new Swiper(".horizontal-gallery__swiper-small", {
-      // loop: true,
-      speed: 500,
-      slidesPerView: 3,
-      initialSlide: 0,
-      slideToClickedSlide: true,
-      spaceBetween: 12,
-      breakpoints: {
-         500: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-         },
-         600: {
-            slidesPerView: 5,
-         },
-         700: {
-            slidesPerView: 6,
-         },
-         1000: {
-            spaceBetween: 20,
-            slidesPerView: 6,
+      sliderPerColumn: 1,
+      thumbs: {
+         swiper: {
+            el: ".horizontal-gallery__swiper-small",
+            slidesPerView: 3,
+            spaceBetween: 12,
+            breakpoints: {
+               500: {
+                  slidesPerView: 4,
+                  spaceBetween: 10,
+               },
+               600: {
+                  slidesPerView: 5,
+               },
+               700: {
+                  slidesPerView: 6,
+               },
+               1000: {
+                  spaceBetween: 20,
+                  slidesPerView: 6,
+               },
+            },
          },
       },
    });
-   swiperHorizontalSmall.controller.control = swiperHorizontalBig;
-   swiperHorizontalBig.controller.control = swiperHorizontalSmall;
+   // ! BREAK
+   // const swiperHorizontalSmall = new Swiper(".horizontal-gallery__swiper-small", {
+   //    loop: true,
+   //    speed: 500,
+   //    slidesPerView: 3,
+   //    initialSlide: 0,
+   //    slideToClickedSlide: true,
+   //    spaceBetween: 12,
+   // breakpoints: {
+   //    500: {
+   //       slidesPerView: 4,
+   //       spaceBetween: 10,
+   //    },
+   //    600: {
+   //       slidesPerView: 5,
+   //    },
+   //    700: {
+   //       slidesPerView: 6,
+   //    },
+   //    1000: {
+   //       spaceBetween: 20,
+   //       slidesPerView: 6,
+   //    },
+   // },
+   // });
+   // swiperHorizontalSmall.controller.control = swiperHorizontalBig;
+   // swiperHorizontalBig.controller.control = swiperHorizontalSmall;
 });
