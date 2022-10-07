@@ -944,12 +944,15 @@ main {
 
 .show .show__background {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  -o-object-position: 50% 50%;
-  object-position: 50% 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 290%;
+  height: 283%;
+  -o-object-position: 67% 48%;
+  object-position: 67% 48%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .show__decor {
@@ -1154,6 +1157,344 @@ main {
   transform: scale(1.2);
 }
 
+.block7 {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+}
+
+.prize {
+  width: 100%;
+  max-width: 100%;
+  background-color: rgb(16, 16, 16);
+}
+
+.prize__container {
+  margin: 0 auto;
+  max-width: 1750px;
+}
+
+.prize__wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 3.1% 50px;
+}
+
+.prize__block-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 23px;
+  grid-column: span 2;
+}
+
+.prize__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 16px;
+}
+
+.prize__text:nth-child(2) {
+  margin: 0;
+}
+
+.prize__block-picture {
+  margin-bottom: 9px;
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+.prize__picture {
+  position: relative;
+  padding-bottom: 93.7%;
+}
+
+.prize__picture img {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.prize__block-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  grid-column: 2/3;
+  width: 100%;
+}
+
+.prize__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 11px;
+}
+
+.prize__item {
+  padding: 16px 0;
+  position: relative;
+}
+
+.prize__item svg,
+.prize__item i {
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+.prize__item:first-child {
+  padding: 16px 0 14px;
+}
+
+.prize__item:first-child svg {
+  width: 24px;
+  height: 24px;
+}
+
+.prize__item:first-child svg ellipse {
+  stroke: rgb(255, 255, 255);
+}
+
+.prize__item:first-child svg circle {
+  stroke: rgb(255, 255, 255);
+}
+
+.prize__item:first-child .prize__number-desk {
+  padding-top: 6px;
+}
+
+.prize__item:nth-child(2) {
+  padding: 25px 0 14px;
+}
+
+.prize__item:nth-child(2) svg ellipse {
+  stroke: rgb(255, 255, 255);
+}
+
+.prize__item:nth-child(2) svg path {
+  fill: rgb(255, 255, 255);
+}
+
+.prize__item:nth-child(2) .prize__number-desk {
+  padding-top: 7px;
+}
+
+.prize__item:nth-child(3) {
+  padding: 25px 0 14px;
+}
+
+.prize__item:nth-child(3) i {
+  color: rgb(255, 255, 255);
+  font-size: 21px;
+  top: 0;
+  left: 2px;
+}
+
+.prize__item:nth-child(3) .prize__number-desk {
+  padding-top: 6px;
+}
+
+.prize__item:not(li:last-child)::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+}
+
+.prize__item-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 36px;
+  padding-right: 1px;
+  position: relative;
+}
+
+.prize__par {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  padding-top: 2px;
+}
+
+.prize__number {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+.prize__number-desk {
+  display: none;
+}
+
+.prize__btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prize__btn {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: rgb(154, 208, 24);
+  max-width: 351px;
+  width: 100%;
+  height: 52px;
+  cursor: pointer;
+  letter-spacing: 1.3px;
+}
+
+.gallery-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.gallery-form__container {
+  margin: 0 auto;
+  max-width: 1750px;
+}
+
+.gallery-form__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-form__imit-block {
+  flex: 1 1 300px;
+  min-height: 300px;
+  background-color: rebeccapurple;
+}
+
+.gal-form {
+  flex: 1 1 auto;
+}
+
+.gal-form__list {
+  padding: 0 3.1%;
+  margin-bottom: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gal-form__item {
+  padding: 27px 0 14px;
+  position: relative;
+}
+
+.gal-form__item i {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  color: rgba(16, 16, 16, 0.8);
+  font-size: 21px;
+}
+
+.gal-form__item:not(li:last-child):after {
+  content: "";
+  position: absolute;
+  background-color: rgba(16, 16, 16, 0.2);
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+}
+
+.gal-form__item:first-child svg {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+.gal-form__item:first-child svg ellipse {
+  stroke: rgba(16, 16, 16, 0.8);
+}
+
+.gal-form__item:first-child svg circle {
+  stroke: rgba(16, 16, 16, 0.8);
+}
+
+.gal-form__item:nth-child(2) {
+  padding: 25px 0 14px;
+}
+
+.gal-form__item:nth-child(2) svg {
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+.gal-form__item:nth-child(2) svg ellipse {
+  stroke: rgba(16, 16, 16, 0.8);
+}
+
+.gal-form__item:nth-child(2) svg path {
+  fill: rgba(16, 16, 16, 0.8);
+}
+
+.gal-form__item:nth-child(3) {
+  padding: 25px 0 14px;
+}
+
+.gal-form__item:nth-child(4) {
+  padding: 25px 0 14px;
+}
+
+.gal-form__item-wrap {
+  display: flex;
+  -moz-column-gap: 0.5em;
+  column-gap: 0.5em;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 36px;
+  padding-right: 1px;
+}
+
+.gal-form__par {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(16, 16, 16);
+  padding-top: 2px;
+}
+
+.gal-form__number {
+  color: rgb(16, 16, 16);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.gal-form__btn-wrap {
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.gal-form__btn {
+  background-color: rgb(154, 207, 22);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  width: 100%;
+  max-width: 433px;
+  height: 52px;
+  letter-spacing: 1.3px;
+  cursor: pointer;
+}
+
 @media (min-width: 375px) {
   .footer-top__contacts h5 {
     white-space: nowrap;
@@ -1205,6 +1546,16 @@ main {
 @media (min-width: 744px) {
   .show {
     min-height: 560px;
+  }
+
+  .show .show__background {
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    -o-object-position: 67% -22%;
+    object-position: 67% -22%;
   }
 
   .show__container {
@@ -1266,6 +1617,57 @@ main {
   .show__cost {
     margin-bottom: 25px;
     text-align: left;
+  }
+
+  .prize__wrap {
+    padding: 31px 4% 50px;
+    display: grid;
+    gap: 0.5em;
+    -moz-column-gap: 1.47em;
+    column-gap: 1.47em;
+    grid-template-columns: 45.2% 1fr;
+  }
+
+  .prize__block-text {
+    margin-bottom: 0;
+  }
+
+  .prize__block-picture {
+    padding-top: 15px;
+  }
+
+  .prize__picture {
+    padding-bottom: 94.5%;
+  }
+
+  .gal-form__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    -moz-column-gap: 4.1em;
+    column-gap: 4.1em;
+    padding: 0 3.9% 0 4%;
+  }
+
+  .gal-form__item {
+    grid-column: span 3;
+    padding: 27px 0 14px 0;
+  }
+
+  .gal-form__item:nth-child(2)::after {
+    display: none;
+  }
+
+  .gal-form__item:nth-child(2) {
+    order: 3;
+  }
+
+  .gal-form__item:nth-child(3) {
+    order: 2;
+    padding: 27px 0 14px;
+  }
+
+  .gal-form__item:nth-child(4) {
+    order: 4;
   }
 }
 
@@ -1694,11 +2096,6 @@ main {
   .show__par {
     line-height: 16px;
   }
-
-  .show__text {
-    font-size: 24px;
-    line-height: 30px;
-  }
 }
 
 @media (min-width: 1800px) {
@@ -1716,6 +2113,16 @@ main {
     min-height: 680px;
   }
 
+  .show .show__background {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-object-position: 67% 33%;
+    object-position: 67% 33%;
+  }
+
   .show__wrap {
     padding: 127px 0.7% 10px 5.5%;
   }
@@ -1727,13 +2134,16 @@ main {
   }
 
   .show__list {
-    grid-template-columns: repeat(120, 1fr);
+    display: flex;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
   }
 
   .show__item1 {
-    grid-column: span 54;
-    padding-right: 8px;
-    max-width: none;
+    padding: 0;
+    max-width: 567px;
+    width: 100%;
+    flex: 1 0 567px;
   }
 
   .show__item1 .show__item-wrap {
@@ -1741,8 +2151,10 @@ main {
   }
 
   .show__item2 {
-    grid-column: span 19;
-    padding: 0 0 0 0;
+    padding: 0;
+    max-width: 198px;
+    width: 100%;
+    flex: 1 0 198px;
   }
 
   .show__item2 .show__item-wrap {
@@ -1750,8 +2162,10 @@ main {
   }
 
   .show__item3 {
-    grid-column: span 20;
-    padding: 0 10px 0 8px;
+    padding: 0;
+    max-width: 190px;
+    width: 100%;
+    flex: 1 0 190px;
   }
 
   .show__item3 .show__item-wrap {
@@ -1764,8 +2178,10 @@ main {
 
   .show__item4 {
     transform: translate(-2%, 0);
-    grid-column: span 27;
-    padding: 0 7px 0 2px;
+    padding: 0;
+    max-width: 274px;
+    width: 100%;
+    flex: 1 0 274px;
   }
 
   .show__cost {
@@ -1777,6 +2193,8 @@ main {
 
   .show__text {
     max-width: 66%;
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .show__content {
@@ -1792,6 +2210,199 @@ main {
   .difficulty img {
     width: 20px;
     height: 17px;
+  }
+
+  .prize__wrap {
+    grid-template-columns: 49.4% 1fr;
+    padding: 105px 2.5% 100px 2.55%;
+    -moz-column-gap: 10em;
+    column-gap: 10em;
+  }
+
+  .prize__block-text {
+    grid-column: 2/3;
+    padding-top: 16px;
+    margin-bottom: 31px;
+  }
+
+  .prize__text {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+
+  .prize__block-picture {
+    grid-row: 1/4;
+  }
+
+  .prize__picture {
+    padding-bottom: 94.3%;
+  }
+
+  .prize__list {
+    margin-bottom: 65px;
+  }
+
+  .prize__item svg,
+  .prize__item i {
+    top: -6px;
+  }
+
+  .prize__item:first-child {
+    order: 2;
+    padding: 37px 0 39px;
+  }
+
+  .prize__item:first-child svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .prize__item:nth-child(2) {
+    order: 1;
+    padding: 37px 0 40px;
+  }
+
+  .prize__item:nth-child(2) svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .prize__item:nth-child(3) {
+    order: 3;
+    padding: 37px 0 35px;
+  }
+
+  .prize__item:nth-child(3) i {
+    font-size: 41px;
+    top: -4px;
+  }
+
+  .prize__item::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+  }
+
+  .prize__item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 1px;
+    top: 0;
+  }
+
+  .prize__item-wrap {
+    padding-left: 65px;
+  }
+
+  .prize__par {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+
+  .prize__number {
+    font-size: 24px;
+    line-height: 22px;
+    display: none;
+  }
+
+  .prize__number-desk {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  .prize__btn {
+    max-width: 680px;
+    height: 112px;
+  }
+
+  .gallery-form__wrap {
+    flex-direction: row;
+  }
+
+  .gallery-form__imit-block {
+    flex: 0 0 1005px;
+  }
+
+  .gal-form__list {
+    display: flex;
+    padding: 0 6% 0 2.7%;
+    margin-bottom: 39px;
+  }
+
+  .gal-form__item {
+    padding: 30px 0 29px 0;
+  }
+
+  .gal-form__item i {
+    font-size: 40px;
+    left: 2px;
+    top: -5px;
+  }
+
+  .gal-form__item:nth-child(2)::after {
+    display: block;
+  }
+
+  .gal-form__item:first-child svg {
+    width: 47px;
+    height: 47px;
+    top: -10px;
+  }
+
+  .gal-form__item:nth-child(2) {
+    order: 0;
+    padding: 38px 0 40px;
+  }
+
+  .gal-form__item:nth-child(2) svg {
+    width: 53px;
+    height: 46px;
+    left: -4px;
+    top: -9px;
+  }
+
+  .gal-form__item:nth-child(3) {
+    order: 0;
+    padding: 39px 0 40px;
+  }
+
+  .gal-form__item:nth-child(4) {
+    padding: 39px 0 40px;
+    order: 0;
+  }
+
+  .gal-form__item-wrap {
+    padding-left: 66px;
+  }
+
+  .gal-form__par {
+    font-size: 24px;
+    line-height: 28.8px;
+    padding: 0;
+  }
+
+  .gal-form__number {
+    font-size: 24px;
+    padding-top: 5px;
+  }
+
+  .gal-form__btn-wrap {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+
+  .gal-form__btn {
+    max-width: 680px;
+    height: 112px;
   }
 }
 
