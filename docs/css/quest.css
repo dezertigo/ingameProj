@@ -1304,12 +1304,6 @@ main {
   transform: scale(1.2);
 }
 
-.block7 {
-  width: 100%;
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-}
-
 .prize {
   width: 100%;
   max-width: 100%;
