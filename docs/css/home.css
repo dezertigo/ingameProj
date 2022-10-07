@@ -1919,6 +1919,7 @@ body.home .reviews-popup__author {
 
 body.home .reviews-popup__wrap .reviews-popup__body {
   padding: 0;
+  max-width: 35%;
 }
 
 body.home .reviews-popup__body {
@@ -2120,8 +2121,8 @@ body.home .ceo.opened .ceo__decor {
   body.home .reviews-popup__img img {
     width: 100%;
     right: 0;
-    -o-object-position: 32% 20%;
-    object-position: 32% 20%;
+    -o-object-position: 114%;
+    object-position: 114%;
   }
 }
 
@@ -2176,6 +2177,12 @@ body.home .ceo.opened .ceo__decor {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+  }
+}
+
+@media (min-width: 600px) {
+  body.home .reviews-popup__wrap .reviews-popup__body {
+    max-width: 55%;
   }
 }
 
