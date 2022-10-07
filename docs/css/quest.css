@@ -1120,6 +1120,11 @@ main {
   padding-bottom: 24px;
 }
 
+.faq__text {
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+}
+
 .btn {
   cursor: pointer;
   padding-left: 15px;
@@ -2178,6 +2183,10 @@ main {
   .reviews-popup__wrap .reviews-popup__body {
     max-width: 55%;
   }
+
+  .faq__title {
+    text-align: left;
+  }
 }
 
 @media (min-width: 700px) {
@@ -2914,6 +2923,20 @@ main {
     margin-top: 42px;
   }
 
+  .faq__preview {
+    padding-bottom: 24px;
+  }
+
+  .faq__preview-head {
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+  }
+
+  .faq__text {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
   .show__tile {
     font-size: 72px;
     line-height: 86.4px;
@@ -3013,6 +3036,12 @@ main {
   .faq__container {
     padding-left: 21.3541666667%;
     padding-right: 21.3541666667%;
+  }
+
+  .faq__title {
+    font-size: 2.25rem;
+    line-height: 1.2222222222;
+    padding-bottom: 16px;
   }
 }
 

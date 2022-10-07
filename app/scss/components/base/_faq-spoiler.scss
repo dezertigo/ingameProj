@@ -14,10 +14,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 0 16px;
+    @media (min-width: 1400px) {
+      padding-bottom: 24px;
+    }
  }
  &__preview-head {
     font-weight: 700;
     @include fl(16, 22);
+    @media (min-width: 1400px) {
+      @include fl(24, 32);
+    }
  }
  &__preview-icon {
     width: 34px;
@@ -36,5 +42,9 @@
     padding-bottom: 24px;
  }
  &__text {
+   @include fl(14,20);
+   @media (min-width: 1400px) {
+      @include fl(24, 30);
+   }
  }
 }
