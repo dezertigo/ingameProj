@@ -390,15 +390,28 @@ window.addEventListener("load", () => {
    // swiperVerticalSmall.controller.control = swiperVerticalBig;
    // swiperVerticalBig.controller.control = swiperVerticalSmall;
 
+   window.addEventListener("resize", fixSlider);
+   fixSlider();
+   function fixSlider() {
+      if (window.innerWidth >= 1000) {
+         let bugSlider = document.querySelector(".horizontal-gallery__small-wrap");
+         let normalSlider = document.querySelector(".horizontal-gallery__big-wrap").getBoundingClientRect().height;
+         bugSlider.style.maxHeight = normalSlider + "px";
+      }
+   }
    // ! Slider-horizontal
    const swiperHorizontalBig = new Swiper(".horizontal-gallery__swiper-big", {
       // loop: true,
       speed: 500,
       slidesPerView: 1,
-      // initialSlide: 0,
       simulateTouch: true,
       spaceBetween: 12,
       sliderPerColumn: 1,
+      breakpoints: {
+         1000: {
+            spaceBetween: 0,
+         },
+      },
       thumbs: {
          swiper: {
             el: ".horizontal-gallery__swiper-small",

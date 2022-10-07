@@ -447,6 +447,17 @@
          padding-left: percent(30, 744);
          padding-right: percent(30, 744);
       }
+      @media (min-width: 1000px) {
+         display: flex;
+         column-gap: 20px;
+         > :first-child {
+            flex: 0 0 58%;
+         }
+         > :last-child {
+            flex: 0 0 calc(42% - 20px);
+         }
+      }
+
       @media (min-width: 1400px) {
          padding-left: percent(130, 1920);
          padding-right: percent(130, 1920);
