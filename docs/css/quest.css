@@ -988,6 +988,55 @@ main {
   object-position: center;
 }
 
+.slider__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 192px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.slider__prev,
+.slider__next {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider__prev:hover svg path,
+.slider__next:hover svg path {
+  transition: all 0.5s;
+  stroke: #9ACF16;
+}
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(154, 207, 22, 0.2);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider .swiper-pagination-bullet:hover {
+  background: rgba(249, 191, 48, 0.4);
+}
+
+.slider .swiper-pagination-bullet-active {
+  background: #9ACF16;
+}
+
 .horizontal-gallery__image-big {
   position: relative;
 }
@@ -1056,6 +1105,13 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider__prev:hover svg path,
+.slider__next:hover svg path {
+  transition: all 0.5s;
+  stroke: #9ACF16;
 }
 
 .slider__pagination {
@@ -1067,12 +1123,17 @@ main {
 .slider .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: rgba(144, 199, 94, 0.2);
+  background: rgba(154, 207, 22, 0.2);
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider .swiper-pagination-bullet:hover {
+  background: rgba(249, 191, 48, 0.4);
 }
 
 .slider .swiper-pagination-bullet-active {
-  background: #90c75e;
+  background: #9ACF16;
 }
 
 .faq__spoiler {
@@ -1093,6 +1154,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0 16px;
+  cursor: pointer;
 }
 
 .faq__preview-head {
@@ -1730,6 +1792,16 @@ main {
   font-weight: 500;
 }
 
+.step3__prev svg,
+.step3__next svg {
+  fill: transparent;
+}
+
+.step3__prev svg path,
+.step3__next svg path {
+  stroke: #000000;
+}
+
 .heroes__title {
   color: #101010;
   font-weight: 700;
@@ -1770,7 +1842,6 @@ main {
   min-height: 360px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -1840,6 +1911,7 @@ main {
   width: 100%;
   padding-bottom: 271px;
   display: block;
+  cursor: pointer;
 }
 
 .reviews__body--video::before {
@@ -1938,12 +2010,14 @@ main {
   font-size: 1rem;
   line-height: 1.375;
   color: #90c75e;
+  cursor: pointer;
 }
 
 .reviews__img {
   position: relative;
   width: 100%;
   padding-bottom: 271px;
+  cursor: pointer;
 }
 
 .reviews__img img {
@@ -2917,6 +2991,10 @@ main {
 
   .footer-top__proposal ul li:not(:last-child) {
     margin-bottom: 14px;
+  }
+
+  .slider__nav {
+    margin-top: 42px;
   }
 
   .slider__nav {

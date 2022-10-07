@@ -1314,6 +1314,13 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider__prev:hover svg path,
+.slider__next:hover svg path {
+  transition: all 0.5s;
+  stroke: #9ACF16;
 }
 
 .slider__pagination {
@@ -1325,12 +1332,17 @@ main {
 .slider .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: rgba(144, 199, 94, 0.2);
+  background: rgba(154, 207, 22, 0.2);
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slider .swiper-pagination-bullet:hover {
+  background: rgba(249, 191, 48, 0.4);
 }
 
 .slider .swiper-pagination-bullet-active {
-  background: #90c75e;
+  background: #9ACF16;
 }
 
 body.home .hero {
@@ -1645,7 +1657,6 @@ body.home .reviews__slide {
   min-height: 360px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -1715,6 +1726,7 @@ body.home .reviews__body--video {
   width: 100%;
   padding-bottom: 271px;
   display: block;
+  cursor: pointer;
 }
 
 body.home .reviews__body--video::before {
@@ -1813,12 +1825,14 @@ body.home .reviews__footer-btn {
   font-size: 1rem;
   line-height: 1.375;
   color: #90c75e;
+  cursor: pointer;
 }
 
 body.home .reviews__img {
   position: relative;
   width: 100%;
   padding-bottom: 271px;
+  cursor: pointer;
 }
 
 body.home .reviews__img img {

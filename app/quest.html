@@ -75,6 +75,7 @@
 			<section class="hero">
 				<div class="hero__container">
 					@@include('./components/base/_horizontal-gallery.html')
+					
 					<div class="hero__form">
 						@@include('./components/base/_gal-form.html')
 					</div>
@@ -83,7 +84,7 @@
 			<section class="step3">
 				<div class="step3__container">
 					<p class="step3__title step-title"><span>Крок 3:</span> Оберіть час</p>
-					<div class="step3__swiper swiper">
+					<div class="step3__swiper swiper slider">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								@@include('./components/base/_table-column.html', {
@@ -296,6 +297,12 @@
 								})
 							</div>
 						</div>
+						@@include('./components/base/_slider-nav.html', {
+							'class': 'step3__nav',
+							'prev': 'step3__prev',
+							'next': 'step3__next',
+							'pagination': 'step3__pagination',
+						})
 					</div>
 
 
