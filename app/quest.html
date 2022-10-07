@@ -9,19 +9,187 @@
 <!-- todo указать нужное значение дял подключения\отключения свайпера -->
 
 <body class="quest">
-	<div class="wrapper">
-		@@include('./components/structure/_header.html')
-		<main>
-			<section class="hero">
-				<div class="hero__container"></div>
-			</section>
-		</main>
-		@@include('./components/structure/_footer.html')
-	</div>
-	@@include('./components/structure/_scripts.html', {
-	'swiper': 'true',
-	})
-	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+  <div class="wrapper">
+    @@include('./components/structure/_header.html')
+    <main>
+      <section class="show">
+        <img class="show__background" src="@img/gallery/show.webp" alt="background">
+        <div class="show__decor"></div>
+        <div class="show__container">
+          <div class="show__wrap">
+            <h2 class="show__tile">Квест-кімната
+              Silent Hill</h2>
+            <div class="show__content">
+              <ul class="show__list">
+                <li class="show__item show__item1">
+                  <div class="show__item-wrap">
+                    <div class="show__item-block">
+                      <span class="description-title">Адреса:</span>
+                      @@include('./components/icons/_location.html')
+                      <p class="show__par">Дніпро (лівий берег) <a class="show__link" href="#">проспект Слобожанский
+                          125.</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="show__item show__item2">
+                  <div class="show__item-wrap">
+                    <div class="show__item-block">
+                      @@include('./components/base/_fear.html')
+                    </div>
+                  </div>
+                </li>
+                <li class="show__item show__item3">
+                  <div class="show__item-wrap">
+                    <div class="show__item-block">
+                      @@include('./components/base/_difficulty.html')
+                    </div>
+                  </div>
+                </li>
+                <li class="show__item show__item4">
+                  <div class="show__item-wrap">
+                    <div class="show__item-block">
+                      <span class="description-title">Жанр:</span>
+                      <div class="show__desck-block">
+                        <i class="genre"></i>
+                        <p class="show__desc">Тийлер/ пригоди</p>
+                        <i class="genre-ask"></i>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <span class="show__cost">1200 грн</span>
+            </div>
+            <p class="show__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+          </div>
+        </div>
+      </section>
+      <section class="prize">
+        <div class="prize__container">
+          <div class="prize__wrap">
+            <div class="prize__block-text">
+              <p class="prize__text">Подарунковий сертифікат на квест "Silent Hill" - це чудовий подарунок для любителів
+                гострих відчуттів. Незабутні 60 хвилин в автентичній обстановці іншої реальності. Такий подарунок
+                запам'ятається назавжди!</p>
+              <p class="prize__text">Отримати сертифікат можно як у одному з наших центрів, так і замовивши доставку.
+              </p>
+            </div>
+            <div class="prize__block-picture"></div>
+            <div class="prize__block-content"></div>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__container">
+          <h2 class="faq__title">
+            Частозадавані питання
+          </h2>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./components/structure/_footer.html')
+  </div>
+  @@include('./components/structure/_scripts.html', {
+  'swiper': 'true',
+  })
+  <!-- todo указать нужное значение дял подключения\отключения свайпера -->
 
 </body>
 
