@@ -75,9 +75,165 @@
 			<section class="hero">
 				<div class="hero__container">
 					@@include('./components/base/_horizontal-gallery.html')
-					
+			
 					<div class="hero__form">
 						@@include('./components/base/_gal-form.html')
+					</div>
+				</div>
+			</section>
+			<section class="step1">
+				<div class="step1__container">
+					<div class="step1__head">
+						<p>Порахуйте вартість та забронюйте квест-кімнату</p>
+						<p>Вартість залежить від обраного пакету, кількості учасників та додаткових
+							послуг.
+					</div>
+					</p>
+					<p class="step1__title step-title"><span>Крок 1:</span> Оберіть пакет</p>
+					<div class="step1__inner">
+						<div class="step1__swiper swiper slider">
+							<div class="swiper-wrapper step1__wrapper">
+								<div class="swiper-slide step1__slide">
+									<div class="pack-card pack-card--eco">
+										<p class="pack-card__title">
+											Економ
+											<ul class="pack-card__list">
+												<li class="pack-card__item">
+													5 локацій з випробуваннями
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
+												</li>
+												<li class="pack-card__item">
+													Супровід досвідчених інструкторів
+												</li>
+												<li class="pack-card__item">
+													Мильні кульки
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
+												</li>
+												<li class="pack-card__item">
+													Міні-діскотека
+												</li>
+											</ul>
+											<p class="pack-card__price">
+												Від: 1200 грн
+											</p>
+											<button class="pack-card__btn">
+												Обрати
+											</button>
+										</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pack-card pack-card--stan">
+										<p class="pack-card__title">
+											Стандарт
+											<ul class="pack-card__list">
+												<li class="pack-card__item">
+													5 локацій з випробуваннями
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
+												</li>
+												<li class="pack-card__item">
+													Супровід досвідчених інструкторів
+												</li>
+												<li class="pack-card__item">
+													Мильні кульки
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
+												</li>
+												<li class="pack-card__item">
+													Міні-діскотека
+												</li>
+											</ul>
+											<p class="pack-card__price">
+												Від: 1200 грн
+											</p>
+											<button class="pack-card__btn">
+												Обрати
+											</button>
+										</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="pack-card pack-card--prem">
+										<p class="pack-card__title">
+											Преміум
+											<ul class="pack-card__list">
+												<li class="pack-card__item">
+													5 локацій з випробуваннями
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
+												</li>
+												<li class="pack-card__item">
+													Супровід досвідчених інструкторів
+												</li>
+												<li class="pack-card__item">
+													Мильні кульки
+												</li>
+												<li class="pack-card__item">
+													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
+												</li>
+												<li class="pack-card__item">
+													Міні-діскотека
+												</li>
+											</ul>
+											<p class="pack-card__price">
+												Від: 1200 грн
+											</p>
+											<button class="pack-card__btn">
+												Обрати
+											</button>
+										</p>
+									</div>
+								</div>
+							</div>
+							@@include('./components/base/_slider-nav.html', {
+								'class': 'step1__nav',
+								'prev': 'step1__prev',
+								'next': 'step1__next',
+								'pagination': 'step1__pagination',
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="step2">
+				<div class="step2__container">
+					<p class="step2__title step-title"><span>Крок 2:</span> Оберіть кількість гравців</p>
+					<div class="step2__spoiler">
+						<div class="step2__preview">
+							1
+						</div>
+						<div class="step2__wrapper">
+							<div class="step2__body">
+								<input class="step2__input" type="radio" name="people" id="radio_1">
+								<label class="step2__label" for="radio_1">1</label>
+								<input class="step2__input" type="radio" name="people" id="radio_2">
+								<label class="step2__label" for="radio_2">2</label>
+								<input class="step2__input" type="radio" name="people" id="radio_3">
+								<label class="step2__label" for="radio_3">3</label>
+								<input class="step2__input" type="radio" name="people" id="radio_4">
+								<label class="step2__label" for="radio_4">4</label>
+								<input class="step2__input" type="radio" name="people" id="radio_5">
+								<label class="step2__label" for="radio_5">5</label>
+								<input class="step2__input" type="radio" name="people" id="radio_6">
+								<label class="step2__label" for="radio_6">6</label>
+								<input class="step2__input" type="radio" name="people" id="radio_7">
+								<label class="step2__label" for="radio_7">7</label>
+								<input class="step2__input" type="radio" name="people" id="radio_8">
+								<label class="step2__label" for="radio_8">8</label>
+								<input class="step2__input" type="radio" name="people" id="radio_9">
+								<label class="step2__label" for="radio_9">9</label>
+								<input class="step2__input" type="radio" name="people" id="radio_10">
+								<label class="step2__label" for="radio_10">10 <span>(максимум)</span></label>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -308,6 +464,22 @@
 
 				</div>
 
+			</section>
+			<section class="video-block">
+				<div class="video-block__container">
+					<p class="video-block__text">Ужасы с актером по сюжету фильма "Silent Hill".
+						Атмосфера заброшенного детского приюта и монстр,
+						который следует за вами по пятам... Вам лучше не кричать, потому что он услышит!
+					</p>
+					<div class='video-block__video'>
+						<picture>
+							<source type='image/webp' srcset='@img/gallery/kids_01.webp'>
+							<img src='@img/gallery/kids_01.jpg' alt='Video preview'>
+						</picture>
+						<i class="play"></i>
+					</div>
+
+				</div>
 			</section>
 			<section class="heroes">
 				<div class="heroes__container">
@@ -558,10 +730,8 @@
 			<section class="reviews-popup">
 				<div class="reviews-popup__fixed">
 					<div class="reviews-popup__view">
-						<div class="reviews-popup__slider slider">
-							<div class="reviews-popup__wrapper swiper-wrapper">
-								<div class="reviews-popup__slide swiper-slide reviews-popup__slide--video"
-									data-popup-slide="1">
+						<div class="reviews-popup__wrapper">
+								<div class="reviews-popup__item reviews-popup__item--video">
 									<div class="reviews-popup__close">
 										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -571,32 +741,34 @@
 												stroke-linejoin="round" />
 										</svg>
 									</div>
-									<div class="reviews__head reviews-popup__head">
-										<div class="reviews-popup__description">
-											<p class="reviews__head-suptitle reviews-popup__head-suptitle">
-												Квест:
-											</p>
-											<p class="reviews__head-title reviews-popup__head-title">
-												“День народження в стилі супер-героя”
-											</p>
+									<div class="reviews-popup__video">
+										<video src=""></video>
+										<div class="reviews-popup__poster">
+											<picture>
+												<source type="image/jpg" srcset="img/gallery/comment1.jpg">
+												<img src="./img/gallery/comment1.jpg" alt="review preview">
+											</picture>
 										</div>
-										<p class="reviews-popup__date">
-											12.09.2022
-										</p>
+										<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M51.9611 34.7365L19.4923 53.2901C18.159 54.052 16.5 53.0893 16.5 51.5536V33V14.4464C16.5 12.9107 18.159 11.948 19.4923 12.7099L51.9611 31.2635C53.3048 32.0313 53.3048 33.9687 51.9611 34.7365Z" fill="#9ACF16"/>
+											</svg>
 									</div>
-									<p class="reviews-popup__author">
-										Олена Малахова
+								</div>
+								<div class="reviews-popup__item reviews-popup__item--text">
+									<div class="reviews-popup__close">
+										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+												stroke-linejoin="round" />
+										</svg>
+									</div>
+									<p class="reviews-popup__text">
+										Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст ідгука, Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука. Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука.Текст відгука, Текст відгука, Текст, символів 200 відгука
 									</p>
-									<div
-										class="reviews__body reviews__body--video reviews-popup__body reviews-popup__body--video">
-										<!-- <iframe width="100%" height="499"
-														src="https://www.youtube.com/embed/K0ipwWOjjgQ" title="YouTube video player"
-														frameborder="0"
-														allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-														allowfullscreen></iframe> -->
-									</div>
 								</div>
-								<div class="reviews-popup__slide swiper-slide" data-popup-slide="2">
+								<div class="reviews-popup__item reviews-popup__item--img">
 									<div class="reviews-popup__close">
 										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
 											xmlns="http://www.w3.org/2000/svg">
@@ -606,170 +778,13 @@
 												stroke-linejoin="round" />
 										</svg>
 									</div>
-									<div class="reviews__head reviews-popup__head">
-										<div class="reviews-popup__description">
-											<p class="reviews__head-suptitle reviews-popup__head-suptitle">
-												Квест:
-											</p>
-											<p class="reviews__head-title reviews-popup__head-title">
-												“День народження в стилі супер-героя”
-											</p>
-										</div>
-										<p class="reviews-popup__date">
-											12.09.2022
-										</p>
-									</div>
-									<div class="reviews__body reviews-popup__body">
-										<p class="reviews__body-name reviews-popup__body-name">
-											Олена Малахова
-										</p>
-										<p class="reviews__body-text reviews__body-text--margin
-											reviews-popup__body-text reviews__body-text--margin">
-											Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст
-											ідгука,
-											Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст
-											відгука.
-											Текст відгука, Текст ідгука
-										</p>
-										<div class="reviews__footer reviews-popup__footer">
-
-										</div>
+									<div class="reviews-popup__screen">
+										<picture>
+											<img src="./img/reviews-img.png" alt="review screen">
+										</picture>
 									</div>
 								</div>
-								<div class="reviews-popup__slide swiper-slide" data-popup-slide="3">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews__head reviews-popup__head">
-										<div class="reviews-popup__description">
-											<p class="reviews__head-suptitle reviews-popup__head-suptitle">
-												Квест:
-											</p>
-											<p class="reviews__head-title reviews-popup__head-title">
-												“День народження в стилі супер-героя”
-											</p>
-										</div>
-										<p class="reviews-popup__date">
-											12.09.2022
-										</p>
-									</div>
-
-									<div class="reviews__wrap reviews-popup__wrap">
-										<div class="reviews__body reviews-popup__body">
-											<p class="reviews__body-name reviews-popup__body-name">
-												Олена Малахова
-											</p>
-											<p class="reviews__body-text reviews-popup__body-text">
-												“ Текст відгука, Текст відгука, Текст, символів 200 відгука,
-												Текст
-												ідгука, Текст відгука, Текст відгука, Текст ідгука, Текст
-												відгука “
-											</p>
-											<div class="reviews-popup__footer"></div>
-										</div>
-										<div class="reviews__img reviews-popup__img">
-											<picture>
-												<img src="./img/reviews-img.png" alt=" reviews screenshot">
-											</picture>
-										</div>
-									</div>
-								</div>
-								<div class="reviews-popup__slide swiper-slide" data-popup-slide="4">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews__head reviews-popup__head">
-										<div class="reviews-popup__description">
-											<p class="reviews__head-suptitle reviews-popup__head-suptitle">
-												Квест:
-											</p>
-											<p class="reviews__head-title reviews-popup__head-title">
-												“День народження в стилі супер-героя”
-											</p>
-										</div>
-										<p class="reviews-popup__date">
-											12.09.2022
-										</p>
-									</div>
-									<div class="reviews__body reviews-popup__body">
-										<p class="reviews__body-name reviews-popup__body-name">
-											Олена Малахова
-										</p>
-										<p class="reviews__body-text reviews__body-text--margin
-											reviews-popup__body-text reviews__body-text--margin">
-											Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст
-											ідгука,
-											Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст
-											відгука.
-											Текст відгука, Текст ідгука
-										</p>
-										<div class="reviews__footer reviews-popup__footer">
-
-										</div>
-									</div>
-								</div>
-								<div class="reviews-popup__slide swiper-slide" data-popup-slide="5">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews__head reviews-popup__head">
-										<div class="reviews-popup__description">
-											<p class="reviews__head-suptitle reviews-popup__head-suptitle">
-												Квест:
-											</p>
-											<p class="reviews__head-title reviews-popup__head-title">
-												“День народження в стилі супер-героя”
-											</p>
-										</div>
-										<p class="reviews-popup__date">
-											12.09.2022
-										</p>
-									</div>
-									<div class="reviews__wrap reviews-popup__wrap">
-										<div class="reviews__body reviews-popup__body">
-											<p class="reviews__body-name reviews-popup__body-name">
-												Олена Малахова
-											</p>
-											<p class="reviews__body-text reviews-popup__body-text">
-												“ Текст відгука, Текст відгука, Текст, символів 200 відгука,
-												Текст
-												ідгука, Текст відгука, Текст відгука, Текст ідгука, Текст
-												відгука “
-											</p>
-											<div class="reviews-popup__footer"></div>
-										</div>
-										<div class="reviews__img reviews-popup__img">
-											<picture>
-												<img src="./img/reviews-img.png" alt=" reviews screenshot">
-											</picture>
-										</div>
-									</div>
-								</div>
-							</div>
-							@@include('./components/base/_slider-nav.html', {
-							'class': 'reviews-popup__nav',
-							'prev': 'reviews-popup__prev',
-							'next': 'reviews-popup__next',
-							'pagination': 'reviews-popup__pagination',
-							})
+								
 						</div>
 					</div>
 				</div>
@@ -780,25 +795,149 @@
 						Частозадавані питання
 					</h2>
 					@@include('./components/base/_faq-spoiler.html', {
-						'headtext': 'Заголовок першого питання',
-						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+						'title': 'Заголовок першого питання',
+						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'headtext': 'Заголовок першого питання',
-						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+						'title': 'Заголовок першого питання',
+						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'headtext': 'Заголовок першого питання',
-						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+						'title': 'Заголовок першого питання',
+						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'headtext': 'Заголовок першого питання',
-						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+						'title': 'Заголовок першого питання',
+						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'headtext': 'Заголовок першого питання',
-						'bodytext': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання',
+						'title': 'Заголовок першого питання',
+						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
+				</div>
+			</section>
+			<section class="map-block">
+				<div class="map-block__container">
+					<h2 class="map-block__title">Квест-кімната Silent Hill в Дніпрі</h2>
+					<div class="map-block__map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23760.86137457543!2d35.049893660060015!3d48.455279770664504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1665166416321!5m2!1sru!2sua"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+						<i class="location"></i>
+					</div>
+				</div>
+			</section>
+			<section class="ceo">
+				<div class="ceo__container">
+					<div class="ceo__wrap">
+						<div class="ceo__preview">
+							<div class="ceo__decor"></div>
+							<p class="ceo__text ceo__text1">Квест-комнаты или квесты в реальности – это
+								один из самых
+								молодых форматов
+								отдыха в
+								Украине. В 2014 году мы впервые узнали, что такое квест-комната. Этот
+								невероятный
+								объемный мир оказался
+								настолько захватывающим, что в тот же день мы решили, что непременно станем
+								его частью!
+								На тот момент в
+								Днепре уже было много квест-комнат. Но мы не пошли по их пути. <span
+									class="ceo__text-hide">Мы нашли
+									огромный подвал площадью
+									140
+									квадратных метров. В нем можно было открыть 3 или даже 5 обычных
+									квест-комнат, но мы
+									рискнули и отдали
+									все пространство под один проект! Наш первый квест “Точка доступа” - это
+									далеко не
+									одна
+									“квест-комната”
+									в Днепре, это целых 11 “квест-комнат”: коридор, КПП, комната допросов,
+									карцер,
+									тюрьма, кабинет
+									начальника штаба… И все это игрокам предстоит обнаружить и пройти за 100
+									минут. И
+									люди оценили нашу
+									идею, поддержали нас своими многочисленными отзывами и комментариями.
+									“Точка
+									доступа” никого не
+									оставила
+									равнодушным.</span></p>
+						</div>
+						<div class="ceo__wrapper">
+							<div class="ceo__body">
+								<p class="ceo__text ceo__text2">Квест-комнаты или квесты в реальности – это
+									один из
+									самых молодых
+									форматов
+									отдыха в
+									Украине. В 2014 году мы впервые узнали, что такое квест-комната. Этот
+									невероятный
+									объемный мир
+									оказался
+									настолько захватывающим, что в тот же день мы решили, что непременно
+									станем его
+									частью! На тот момент
+									в
+									Днепре уже было много квест-комнат. Но мы не пошли по их пути. Мы нашли
+									огромный
+									подвал площадью 140
+									квадратных метров. В нем можно было открыть 3 или даже 5 обычных
+									квест-комнат, но мы
+									рискнули и отдали
+									все пространство под один проект! Наш первый квест “Точка доступа” - это
+									далеко не
+									одна
+									“квест-комната”
+									в Днепре, это целых 11 “квест-комнат”: коридор, КПП, комната допросов,
+									карцер,
+									тюрьма, кабинет
+									начальника штаба… И все это игрокам предстоит обнаружить и пройти за 100
+									минут. И
+									люди оценили нашу
+									идею, поддержали нас своими многочисленными отзывами и комментариями.
+									“Точка
+									доступа” никого не
+									оставила
+									равнодушным.</p>
+								<p class="ceo__text ceo__text3">Квест-комнаты или квесты в реальности – это
+									один из
+									самых молодых
+									форматов
+									отдыха в Украине. В 2014 году мы впервые узнали, что такое квест-комната.
+									Этот
+									невероятный объемный
+									мир
+									оказался настолько захватывающим, что в тот же день мы решили, что
+									непременно станем
+									его частью! На
+									тот
+									момент в Днепре уже было много квест-комнат. Но мы не пошли по их пути.
+									Мы нашли
+									огромный подвал
+									площадью 140 квадратных метров. В нем можно было открыть 3 или даже 5
+									обычных
+									квест-комнат, но мы
+									рискнули и отдали все пространство под один проект! Наш первый квест
+									“Точка доступа”
+									- это далеко не
+									одна “квест-комната” в Днепре, это целых 11 “квест-комнат”: коридор, КПП,
+									комната
+									допросов, карцер,
+									тюрьма, кабинет начальника штаба… И все это игрокам предстоит обнаружить
+									и пройти за
+									100 минут. И люди
+									оценили нашу идею, поддержали нас своими многочисленными отзывами и
+									комментариями.
+									“Точка доступа”
+									никого не оставила равнодушным.</p>
+							</div>
+						</div>
+						<button class="ceo__btn">Дивитись більше</button>
+					</div>
 				</div>
 			</section>
 		</main>

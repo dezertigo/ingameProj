@@ -784,7 +784,6 @@ body.home {
          display: flex;
          flex-direction: column;
          transition: all 0.3s;
-
          &:hover {
             transform: scale(1.15);
             z-index: 10;
@@ -1038,150 +1037,252 @@ body.home {
          width: 100%;
       }
 
-      &__slider {
-         overflow: hidden;
-      }
-
       &__wrapper {
          background-color: $light;
       }
-
-      &__slide {
-         background-color: $light;
-         @media (min-width: 320px) {
-            min-height: 560px;
+      &__item {
+         padding: 10px;
+         display: none;
+         @media (min-width: 800px) and (max-width: 1399px) {
+            padding: 20px;
          }
          @media (min-width: 1400px) {
-            min-height: 762px;
-            padding: 25px 30px 30px;
+            padding: 30px;
          }
-         padding: 5px 10px 10px;
-         display: flex;
-         flex-direction: column;
+         &.active {
+            display: block;
+         }
       }
-
       &__close {
          display: flex;
          align-items: center;
          justify-content: flex-end;
          cursor: pointer;
-      }
-
-      &__head {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         border-bottom: 1px solid #d9d9d9;
-         gap: 20px;
-         padding: 5px 0px;
-         @media (min-width: 350px) {
-            padding: 10px 0;
+         margin-bottom: 10px;
+         @media (min-width: 800px) and (max-width: 1399px) {
+            margin-bottom: 20px;
          }
          @media (min-width: 1400px) {
-            padding: 20px 0px;
+            margin-bottom: 30px;
          }
       }
-
-      &__description {
+      &__video {
+         position: relative;
          max-width: 100%;
+         padding-bottom: 60%;
+         video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+            z-index: 0;
+         }
+         svg {
+            cursor: pointer;
+            transition: .3s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+         }
+      }
+      &__poster {
+         position: absolute;
+         top: 0;
+         left: 0;
          width: 100%;
-      }
-
-      &__head-suptitle {
-      }
-
-      &__head-title {
-         max-width: 100%;
-      }
-
-      &__date {
-         @include fl(14, 20);
-         font-weight: 500;
-         color: $dark;
-         opacity: 0.4;
-         @media (min-width: 1000px) {
-            @include fl(16, 22);
+         padding-bottom: 60%;
+         z-index: 1;
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
          }
       }
-
-      &__author {
-         @include fl(24, 29);
-         color: $dark;
-         margin: 16px 0;
-         font-weight: 700;
-      }
-      &__wrap {
-         .reviews-popup__body {
-            padding: 0;
-            max-width: 35%;
-            @media (min-width: 600px) {
-               max-width: 55%;
-            }
-         }
-      }
-      &__body {
-         padding: 0;
-         justify-content: start;
-         &--video {
-            @media (min-width: 350px) {
-               padding-bottom: 33.777%;
-            }
-            @media (min-width: 1400px) {
-               padding-bottom: 0;
-            }
-
-            &::after {
-               content: none;
-            }
-         }
-      }
-
-      &__body-name {
-         margin: 16px 0;
-      }
-
-      &__body-text {
-         margin-bottom: 0;
-         max-width: 882px;
+      &__text {
+         @include fl(16,22);
          width: 100%;
          color: $dark;
          font-weight: 500;
+         @media (min-width: 800px) and (max-width: 999px) {
+            @include fl(18,24)
+         }
+         @media (min-width: 1000px)  and (max-width: 1399px) {
+            @include fl(20, 26);
+         }
+         @media (min-width: 1400px)  and (max-width: 1699px) {
+            @include fl(22, 28);
+         }
+         @media (min-width: 1700px) {
+            @include fl(24, 30);
+         }
       }
-
-      &__img {
-         @media (min-width: 350px) {
-            padding-bottom: 40%;
-            img {
-               width: 100%;
-               right: 0;
-               object-position: 114%;
-               @media (min-width: 500px) {
-                  object-position: 50% 20%;
-               }
-               @media (min-width: 700px) {
-                  width: 70%;
-               }
-               @media (min-width: 800px) {
-                  object-position: 50% 5%;
-               }
-               @media (min-width: 900px) {
-                  width: 60%;
-               }
+      &__screen {
+         position: relative;
+         width: 100%;
+         padding-bottom: 150%;
+         @media (min-width: 600px) {
+            padding-bottom: 100%;
+         }
+         @media (min-width: 850px) {
+            padding-bottom: 83%;
+         }
+         @media (min-width: 1100px) {
+            padding-bottom: 51%;
+         }
+          img {
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            left: 50%;
+            transform: translateX(-50%);
+            @media (min-width: 600px)  {
+               width: 50%;
+            }
+            @media (min-width:850px) {
+               width: 45%;
+            }
+            @media (min-width: 1100px) {
+               width: 27%;
             }
          }
-         @media (min-width: 1400px) {
-            padding-bottom: 57.5%;
-            img {
-               width: 64%;
-            }
-         }
       }
 
-      &__nav {
-         @media (min-width: 1400px) {
-            margin-top: 24px;
-         }
-      }
+      // &__slide {
+      //    @media (min-width: 320px) {
+      //       min-height: 560px;
+      //    }
+      //    @media (min-width: 1400px) {
+      //       min-height: 762px;
+      //       padding: 25px 30px 30px;
+      //    }
+      //    padding: 5px 10px 10px;
+      //    display: flex;
+      //    flex-direction: column;
+      // }
+
+      // &__head {
+      //    display: flex;
+      //    justify-content: space-between;
+      //    align-items: center;
+      //    border-bottom: 1px solid #d9d9d9;
+      //    gap: 20px;
+      //    padding: 5px 0px;
+      //    @media (min-width: 350px) {
+      //       padding: 10px 0;
+      //    }
+      //    @media (min-width: 1400px) {
+      //       padding: 20px 0px;
+      //    }
+      // }
+
+      // &__description {
+      //    max-width: 100%;
+      //    width: 100%;
+      // }
+
+      // &__head-title {
+      //    max-width: 100%;
+      // }
+
+      // &__date {
+      //    @include fl(14, 20);
+      //    font-weight: 500;
+      //    color: $dark;
+      //    opacity: 0.4;
+      //    @media (min-width: 1000px) {
+      //       @include fl(16, 22);
+      //    }
+      // }
+
+      // &__author {
+      //    @include fl(24, 29);
+      //    color: $dark;
+      //    margin: 16px 0;
+      //    font-weight: 700;
+      // }
+      // &__wrap {
+      //    .reviews-popup__body {
+      //       padding: 0;
+      //       max-width: 35%;
+      //       @media (min-width: 600px) {
+      //          max-width: 55%;
+      //       }
+      //    }
+      // }
+      // &__body {
+      //    padding: 0;
+      //    justify-content: start;
+      //    &--video {
+      //       @media (min-width: 350px) {
+      //          padding-bottom: 33.777%;
+      //       }
+      //       @media (min-width: 1400px) {
+      //          padding-bottom: 0;
+      //       }
+
+      //       &::after {
+      //          content: none;
+      //       }
+      //    }
+      // }
+
+      // &__body-name {
+      //    margin: 16px 0;
+      // }
+
+      // &__body-text {
+      //    margin-bottom: 0;
+      //    max-width: 882px;
+      //    width: 100%;
+      //    color: $dark;
+      //    font-weight: 500;
+      // }
+
+      // &__img {
+      //    @media (min-width: 350px) {
+      //       padding-bottom: 40%;
+      //       img {
+      //          width: 100%;
+      //          right: 0;
+      //          object-position: 114%;
+      //          @media (min-width: 500px) {
+      //             object-position: 50% 20%;
+      //          }
+      //          @media (min-width: 700px) {
+      //             width: 70%;
+      //          }
+      //          @media (min-width: 800px) {
+      //             object-position: 50% 5%;
+      //          }
+      //          @media (min-width: 900px) {
+      //             width: 60%;
+      //          }
+      //       }
+      //    }
+      //    @media (min-width: 1400px) {
+      //       padding-bottom: 57.5%;
+      //       img {
+      //          width: 64%;
+      //       }
+      //    }
+      // }
+
+      // &__nav {
+      //    @media (min-width: 1400px) {
+      //       margin-top: 24px;
+      //    }
+      // }
    }
 
    // ! Blog === Blog === Blog === Blog === Blog === Blog === Blog
