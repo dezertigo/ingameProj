@@ -1050,7 +1050,7 @@
       }
    }
 }
-
+//
 // ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
 // ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
 // ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
@@ -1129,7 +1129,7 @@
       font-weight: 700;
       margin-bottom: 24px;
       color: $green;
-      color: #B790B7;
+      color: #b790b7;
       text-align: center;
       @media (max-width: 799px) {
          @include fl(24, 32);
@@ -1139,7 +1139,7 @@
          margin-bottom: 30px;
       }
       @media (min-width: 1400px) and (max-width: 1699px) {
-         @include fl(32,40);
+         @include fl(32, 40);
          margin-bottom: 35px;
       }
       @media (min-width: 1700px) {
@@ -1154,7 +1154,7 @@
          gap: 16px;
          margin-bottom: 24px;
       }
-      @media (min-width: 800px) and (max-width:1399px) {
+      @media (min-width: 800px) and (max-width: 1399px) {
          gap: 20px;
          margin-bottom: 30px;
       }
@@ -1163,7 +1163,7 @@
          margin-bottom: 35px;
       }
       @media (min-width: 1700px) {
-         gap: 24px;  
+         gap: 24px;
          margin-bottom: 40px;
       }
    }
@@ -1172,23 +1172,23 @@
       padding-left: 30px;
       position: relative;
       @media (max-width: 799px) {
-       @include fl(16, 22);
+         @include fl(16, 22);
       }
-      @media (min-width: 800px) and (max-width:1399px) {
+      @media (min-width: 800px) and (max-width: 1399px) {
          @include fl(18, 24);
       }
       @media (min-width: 1400px) and (max-width: 1699px) {
          @include fl(22, 28);
       }
       @media (min-width: 1700px) {
-         @include fl(24,30);
+         @include fl(24, 30);
       }
       &::before {
-         content: '';
+         content: "";
          position: absolute;
          width: 14px;
          height: 14px;
-         background-color: #B790B7;
+         background-color: #b790b7;
          border-radius: 100%;
          left: 0;
          top: 5px;
@@ -1201,15 +1201,15 @@
       @media (max-width: 799px) {
          @include fl(24, 32);
          margin-bottom: 24px;
-        }
-        @media (min-width: 800px) and (max-width:1399px) {
-           @include fl(28, 36);
-           margin-bottom: 30px;
-        }
-        @media (min-width: 1400px) and (max-width: 1699px) {
-           @include fl(32, 40);
-           margin-bottom: 35px;
-        }
+      }
+      @media (min-width: 800px) and (max-width: 1399px) {
+         @include fl(28, 36);
+         margin-bottom: 30px;
+      }
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         @include fl(32, 40);
+         margin-bottom: 35px;
+      }
       @media (min-width: 1400px) {
          margin-bottom: 40px;
          @include fl(36, 43);
@@ -1232,12 +1232,12 @@
          box-shadow: 0px 4px 14px rgba(104, 139, 16, 0.6);
       }
       &:active {
-         opacity: .6;
+         opacity: 0.6;
       }
       @media (max-width: 799px) {
          min-height: 52px;
       }
-      @media (min-width:800px) and (max-width: 1399px) {
+      @media (min-width: 800px) and (max-width: 1399px) {
          min-height: 72px;
       }
       @media (min-width: 1400px) and (max-width: 1699px) {
@@ -1294,7 +1294,7 @@
          max-width: 128px;
       }
       &::before {
-         content: '';
+         content: "";
          position: absolute;
          left: 0;
          width: 18px;
@@ -1304,7 +1304,7 @@
          background-color: #f5f5f5;
       }
       &::after {
-         content: '';
+         content: "";
          position: absolute;
          width: 12px;
          height: 12px;
@@ -2039,7 +2039,7 @@
       padding: 13px 0 2px;
       border-bottom: 1px solid #d9d9d9;
       cursor: pointer;
-      transition: all .8s ease;
+      transition: all 0.8s ease;
       &[open] {
          .faq__head {
             &::after {
@@ -2049,23 +2049,22 @@
       }
    }
    &__head {
-      @include fl(16,22);
+      @include fl(16, 22);
       font-weight: 700;
       position: relative;
       padding-bottom: 22px;
       list-style: none;
       &::after {
          position: absolute;
-         content: '';
+         content: "";
          width: 16px;
          height: 8px;
-         background: url(../../img/icons/arrow-top.svg) no-repeat /cover;
-        right: 0;
-        top: 8px;
-        transform: rotate(180deg);
-        transition: all 0.5s ease;
+         background: url(../../img/icons/arrow-top.svg) no-repeat / cover;
+         right: 0;
+         top: 8px;
+         transform: rotate(180deg);
+         transition: all 0.5s ease;
       }
-      
    }
    &__content {
       @include fl(14, 20);
