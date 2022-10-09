@@ -506,7 +506,8 @@ window.addEventListener("load", () => {
    function fixSlider() {
       if (window.innerWidth >= 1000) {
          let bugSlider = document.querySelector(".horizontal-gallery__small-wrap");
-         let normalSlider = document.querySelector(".horizontal-gallery__big-wrap").getBoundingClientRect().height;
+         // let normalSlider = document.querySelector(".horizontal-gallery__big-wrap").getBoundingClientRect().height;
+         let normalSlider = document.querySelector(".horizontal-gallery__image-big").getBoundingClientRect().height;
          bugSlider.style.maxHeight = normalSlider + "px";
       }
    }
