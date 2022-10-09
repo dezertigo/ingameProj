@@ -136,30 +136,32 @@ window.addEventListener("load", () => {
       initialSlide: 1,
       simulateTouch: true,
       spaceBetween: 20,
-      // effect: "fade",
-      // fadeEffect: {
-      //    crossFade: true,
-      // },
-   });
-   const swiperHeroCards = new Swiper(".hero__swiper-cards", {
-      // loop: true,
-      speed: 500,
-      slidesPerView: 1.75,
-      initialSlide: 1,
-      centeredSlides: true,
-      slideToClickedSlide: true,
-      simulateTouch: true,
-      breakpoints: {
-         568: {
-            slidesPerView: 2.25,
-         },
-         1000: {
+      thumbs: {
+         swiper: {
+            el: ".hero__swiper-cards",
             slidesPerView: 3,
          },
       },
    });
-   swiperCards.controller.control = swiperHeroCards;
-   swiperHeroCards.controller.control = swiperCards;
+   // const swiperHeroCards = new Swiper(".hero__swiper-cards", {
+   //    // loop: true,
+   //    speed: 500,
+   //    slidesPerView: 1.75,
+   //    initialSlide: 1,
+   //    centeredSlides: true,
+   //    slideToClickedSlide: true,
+   //    simulateTouch: true,
+   //    breakpoints: {
+   //       568: {
+   //          slidesPerView: 2.25,
+   //       },
+   //       1000: {
+   //          slidesPerView: 3,
+   //       },
+   //    },
+   // });
+   // swiperCards.controller.control = swiperHeroCards;
+   // swiperHeroCards.controller.control = swiperCards;
 
    // // ! Cards
    // let cards = qa(".cards .card");
