@@ -1274,33 +1274,36 @@
 			<section class="step2">
 				<div class="step2__container">
 					<p class="step2__title step-title"><span>Крок 2:</span> Оберіть кількість гравців</p>
-					<div class="step2__spoiler">
-						<div class="step2__preview">
-							1
+					<div class="step2__spoiler select">
+						<div class="step2__preview select__preview">
+							<p class="select__current">1</p>
+							<div class="select__icon"></div>
 						</div>
-						<div class="step2__wrapper">
-							<div class="step2__body">
-								<input class="step2__input" type="radio" name="people" id="radio_1">
-								<label class="step2__label" for="radio_1">1</label>
-								<input class="step2__input" type="radio" name="people" id="radio_2">
-								<label class="step2__label" for="radio_2">2</label>
-								<input class="step2__input" type="radio" name="people" id="radio_3">
-								<label class="step2__label" for="radio_3">3</label>
-								<input class="step2__input" type="radio" name="people" id="radio_4">
-								<label class="step2__label" for="radio_4">4</label>
-								<input class="step2__input" type="radio" name="people" id="radio_5">
-								<label class="step2__label" for="radio_5">5</label>
-								<input class="step2__input" type="radio" name="people" id="radio_6">
-								<label class="step2__label" for="radio_6">6</label>
-								<input class="step2__input" type="radio" name="people" id="radio_7">
-								<label class="step2__label" for="radio_7">7</label>
-								<input class="step2__input" type="radio" name="people" id="radio_8">
-								<label class="step2__label" for="radio_8">8</label>
-								<input class="step2__input" type="radio" name="people" id="radio_9">
-								<label class="step2__label" for="radio_9">9</label>
-								<input class="step2__input" type="radio" name="people" id="radio_10">
-								<label class="step2__label" for="radio_10">10
-									<span>(максимум)</span></label>
+						<div class="step2__wrapper select__wrapper">
+							<div class="step2__body select__body">
+								<input class="step2__input select__input" type="radio" name="people" id="radio_1">
+								<label class="step2__label select__label" for="radio_1">1</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_2">
+								<label class="step2__label select__label" for="radio_2">2</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_3">
+								<label class="step2__label select__label" for="radio_3">3</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_4">
+								<label class="step2__label select__label" for="radio_4">4</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_5">
+								<label class="step2__label select__label" for="radio_5">5</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_6">
+								<label class="step2__label select__label" for="radio_6">6</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_7">
+								<label class="step2__label select__label" for="radio_7">7</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_8">
+								<label class="step2__label select__label" for="radio_8">8</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_9">
+								<label class="step2__label select__label" for="radio_9">9</label>
+								<input class="step2__input select__input" type="radio" name="people" id="radio_10">
+								<label class="step2__label select__label" for="radio_10"><p>
+									10 <span>(максимум)</span>
+								</p> 
+								</label>
 							</div>
 						</div>
 					</div>
@@ -2325,6 +2328,7 @@
 								</div>
 								<div class="reviews__body reviews__body--video">
 									<picture>
+										<source type="image/webp" srcset="img/gallery/comment1.webp">
 										<img src="./img/gallery/comment1.jpg" alt="video preview">
 									</picture>
 									<p class="reviews__body-name">
@@ -2392,6 +2396,7 @@
 									</div>
 									<div class="reviews__img">
 										<picture>
+											<source type="image/webp" srcset="img/reviews-img.webp">
 											<img src="./img/reviews-img.png" alt=" reviews screenshot">
 										</picture>
 									</div>
@@ -2452,13 +2457,15 @@
 									</div>
 									<div class="reviews__img">
 										<picture>
+											<source type="image/webp" srcset="img/reviews-img.webp">
 											<img src="./img/reviews-img.png" alt=" reviews screenshot">
 										</picture>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="reviews__nav slider__nav">
+						<div class="reviews__bottom">
+							<div class="reviews__nav slider__nav">
   <div class="reviews__prev slider__prev">
     <svg width="8" height="16" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg">
       <path d="M6.83398 0.916992L1.16732 8.00033L6.83398 15.0837" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2471,6 +2478,10 @@
     </svg>
   </div>
 </div>
+								<button class="reviews__feedback">
+									Залишити відгук
+								</button>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -2492,7 +2503,7 @@
 									<video src=""></video>
 									<div class="reviews-popup__poster">
 										<picture>
-											<source type="image/jpg" srcset="img/gallery/comment1.jpg">
+											<source type="image/jpg" srcset="img/gallery/comment1.webp">
 											<img src="./img/gallery/comment1.jpg" alt="review preview">
 										</picture>
 									</div>
@@ -2535,15 +2546,58 @@
 								</div>
 								<div class="reviews-popup__screen">
 									<picture>
+										<source type="image/webp" srcset="img/reviews-img.webp">
 										<img src="./img/reviews-img.png" alt="review screen">
 									</picture>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</section>
+			<div class="feedback-popup">
+				<div class="feedback-popup__fixed">
+					<div class="feedback-popup__wrapper">
+						<div class="feedback-popup__body">
+							<div class="feedback-popup__close">
+								<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+										stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</div>
+							<p class="feedback-popup__title">
+								Залишити відгук
+							</p>
+							<form class="feedback-popup__form">
+								<input type="text" class="feedback-popup__form-input" placeholder="Ім’я та прізвище *">
+								<div class="feedback-popup__select-box">
+									<select class="feedback-popup__form-select">
+										<option value="0" class="feedback-popup__form-option" disabled selected>
+										Оберіть назву гри *
+										</option>
+										<option value="1" class="feedback-popup__form-option">
+										1
+										</option>
+										<option value="2" class="feedback-popup__form-option">
+										2
+										</option>
+										<option value="3" class="feedback-popup__form-option">
+										3
+										</option>
+									</select>
+								</div>
+								<textarea placeholder="Ваш відгук *" class="feedback-popup__form-textarea"></textarea>
+								<button class="feedback-popup__form-btn">
+									Надіслати відгук
+								</button>
+							</form>
+					</div>
+					</div>
+				</div>
+			</div>
 			<section class="faq">
 				<div class="faq__container">
 					<h2 class="faq__title">
