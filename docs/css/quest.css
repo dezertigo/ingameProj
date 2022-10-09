@@ -2720,7 +2720,7 @@ main {
 .feedback-popup__form-select {
   max-width: 100%;
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(16, 16, 16, 0.2);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2732,7 +2732,7 @@ main {
 }
 
 .feedback-popup__form-textarea {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(16, 16, 16, 0.2);
   min-height: 120px;
   resize: none;
@@ -3058,14 +3058,6 @@ main {
 
   .feedback-popup__wrapper {
     padding: 30px;
-  }
-
-  .ceo__text {
-    letter-spacing: 0.15px;
-  }
-
-  .ceo__text1 {
-    width: 99.9%;
   }
 }
 
@@ -3846,6 +3838,10 @@ main {
 
   .reviews-popup__close {
     margin-bottom: 30px;
+  }
+
+  .feedback-popup__body {
+    padding: 60px;
   }
 
   .faq__container {
@@ -5259,10 +5255,6 @@ main {
     padding: 54px 0 60px;
     padding-left: 3.2%;
     padding-right: 3.2%;
-  }
-
-  .ceo__wrap {
-    padding: 45px 3.1% 75px;
   }
 }
 

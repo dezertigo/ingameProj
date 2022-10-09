@@ -2080,7 +2080,7 @@
    }
    &__preview {
       // padding: 27px 37px;
-      
+
       @include fl(24, 30);
       border: 3px solid $greenHover;
       border-radius: 12px;
@@ -2090,7 +2090,7 @@
       @media (max-width: 799px) {
          padding: 8px 16px;
       }
-      @media (min-width:800px) and (max-width: 1199px) {
+      @media (min-width: 800px) and (max-width: 1199px) {
          padding: 14px 20px;
       }
       @media (min-width: 1200px) and (max-width: 1599px) {
@@ -2103,7 +2103,7 @@
    &__wrapper {
       height: 0;
       overflow: hidden;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
    }
    &__body {
       display: flex;
@@ -2161,11 +2161,9 @@
          transform: translate(0, -50%);
          background-color: $greenItem;
          opacity: 0;
-         transition: all .5s ease;
+         transition: all 0.5s ease;
       }
       p {
-         
-        
       }
       span {
          @include fl(14, 30);
@@ -2189,12 +2187,12 @@
       }
    }
    &__icon {
-      width: 0; 
-      height: 0; 
+      width: 0;
+      height: 0;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
       border-top: 8px solid $greenItem;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
    }
 }
 
@@ -2761,7 +2759,7 @@
       font-weight: 700;
       @include fl(18, 24);
       cursor: pointer;
-      transition: color .5s ease;
+      transition: color 0.5s ease;
       &:hover {
          color: $greenHover;
       }
@@ -3061,13 +3059,13 @@
 }
 
 .feedback-popup {
-   transition: right .8s .3s,background-color .3s,z-index 1s 1s;
+   transition: right 0.8s 0.3s, background-color 0.3s, z-index 1s 1s;
    position: fixed;
    top: 0;
    right: -100%;
    width: 100vw;
    height: 100vh;
-   background-color: rgba(0,0,0,0);
+   background-color: rgba(0, 0, 0, 0);
    overflow-y: auto;
    z-index: 0;
    &.active {
@@ -3083,12 +3081,12 @@
       position: absolute;
       left: 50%;
       top: 5%;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
       max-width: 100%;
       width: 100%;
    }
    &__wrapper {
-      @media (min-width:744px) {
+      @media (min-width: 744px) {
          padding: 30px;
       }
    }
@@ -3108,6 +3106,10 @@
          padding-left: percent(20, 684);
          padding-right: percent(20, 684);
          padding-bottom: 60px;
+      }
+
+      @media (min-width: 1400px) {
+         padding: 60px;
       }
    }
    &__close {
@@ -3157,7 +3159,7 @@
       padding-bottom: 16px;
       border-bottom: 1px solid #10101033;
       color: #707070;
-      @media (max-width:799px) {
+      @media (max-width: 799px) {
          @include fl(14, 18);
       }
       @media (min-width: 800px) and (max-width: 1199px) {
@@ -3176,10 +3178,10 @@
    &__select-box {
       position: relative;
       &::before {
-         content: '';
+         content: "";
          display: block;
          position: absolute;
-         background: url(../../img/icons/arrow-bottom.svg) no-repeat /cover;
+         background: url(../../img/icons/arrow-bottom.svg) no-repeat / cover;
          width: 16px;
          height: 8px;
          top: 50%;
@@ -3190,14 +3192,14 @@
    &__form-select {
       max-width: 100%;
       width: 100%;
-      background: #FFFFFF;
+      background: #ffffff;
       border: 1px solid rgba(16, 16, 16, 0.2);
       appearance: none;
       font-family: inherit;
       color: #707070;
       cursor: pointer;
       font-family: inherit;
-      @media (max-width:799px) {
+      @media (max-width: 799px) {
          @include fl(14, 18);
          padding: 21px 40px 21px 16px;
       }
@@ -3215,7 +3217,7 @@
       }
    }
    &__form-option {
-      @media (max-width:799px) {
+      @media (max-width: 799px) {
          @include fl(14, 18);
       }
       @media (min-width: 800px) and (max-width: 1199px) {
@@ -3229,11 +3231,11 @@
       }
    }
    &__form-textarea {
-      background: #FFFFFF;
+      background: #ffffff;
       border: 1px solid rgba(16, 16, 16, 0.2);
       min-height: 120px;
       resize: none;
-      @media (max-width:799px) {
+      @media (max-width: 799px) {
          @include fl(14, 18);
          padding: 12px 16px;
       }
