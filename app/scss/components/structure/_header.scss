@@ -21,11 +21,9 @@
          min-height: 98px;
          padding-top: 22px;
       }
-      min-height: 216px; // todo Указываем минимальную высоту шапки
-      // display: flex;
-      // align-items: center;
-      // justify-content: space-between; // todo Позиционируем элементы по оси Х
-      // column-gap: 20px;
+      @media (min-width: 1000px) {
+         min-height: 216px; // todo Указываем минимальную высоту шапки
+      }
    }
 }
 
@@ -53,6 +51,8 @@
       }
       @media (min-width: 1000px) {
          position: relative;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
       }
       @media (min-width: 1000px) and (max-width: 1399px) {
          padding-top: 25px;
@@ -60,8 +60,6 @@
       }
       @media (min-width: 1400px) {
          padding-top: 25px;
-         padding-left: percent(130, 1920);
-         padding-right: percent(130, 1920);
          padding-bottom: 26px;
       }
    }

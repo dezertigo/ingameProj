@@ -13,7 +13,12 @@
 		@@include('./components/structure/_header.html')
 		<main>
 			<section class="show">
-				<img class="show__background" src="@img/gallery/show.webp" alt="background">
+				<div class='show__background'>
+					<picture>
+						<source type='image/webp' srcset='@img/gallery/card5.webp'>
+						<img src='@img/gallery/card5.png' alt='Background image'>
+					</picture>
+				</div>
 				<div class="show__decor"></div>
 				<div class="show__container">
 					<div class="show__wrap">
@@ -75,7 +80,6 @@
 			<section class="hero">
 				<div class="hero__container">
 					@@include('./components/base/_horizontal-gallery.html')
-					@@include('./components/base/_slider-nav.html')
 					<div class="hero__form">
 						@@include('./components/base/_gal-form.html')
 					</div>
@@ -892,33 +896,23 @@
 					</h2>
 					@@include('./components/base/_faq-spoiler.html', {
 					'title': 'Заголовок першого питання',
-					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
-					Одповідь на
-					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'text': 'das'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
 					'title': 'Заголовок першого питання',
-					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
-					Одповідь на
-					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'text': 'ds'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
 					'title': 'Заголовок першого питання',
-					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
-					Одповідь на
-					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'text': 'dsa'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
 					'title': 'Заголовок першого питання',
-					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
-					Одповідь на
-					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'text': 'das'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
 					'title': 'Заголовок першого питання',
-					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
-					Одповідь на
-					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'text': 'das'
 					})
 				</div>
 			</section>
@@ -927,10 +921,9 @@
 					<h2 class="map-block__title">Квест-кімната Silent Hill в Дніпрі</h2>
 					<div class="map-block__map">
 						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23760.86137457543!2d35.049893660060015!3d48.455279770664504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1665166416321!5m2!1sru!2sua"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40656.9284051901!2d30.487933715009316!3d50.440019842317355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce56657a3ab7%3A0x4def1e77f63fc61d!2z0KbQo9Cc!5e0!3m2!1sru!2sua!4v1665333041704!5m2!1sru!2sua"
 							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade">
-						</iframe>
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
 						<i class="location"></i>
 					</div>
 				</div>
