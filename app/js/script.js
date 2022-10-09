@@ -277,7 +277,7 @@ window.addEventListener("load", () => {
          body.classList.add("lock");
          numSlideId = parseInt(slideId);
          console.log(slideId, slidePopupId);
-         for (let i = 1; i < numSlideId; ) {
+         for (let i = 1; i < numSlideId;) {
             nextSlidePopUp.click();
             ++i;
          }
@@ -321,6 +321,7 @@ window.addEventListener("load", () => {
          prevEl: ".reviews-popup__prev",
       },
    });
+
 
    // ! Footer
    // Telegram hover
@@ -383,6 +384,11 @@ window.addEventListener("load", () => {
             slidesPerView: 7,
             slidesPerGroup: 7,
          },
+      },
+
+      navigation: {
+         nextEl: ".step3__btn-right",
+         prevEl: ".step3__btn-left"
       },
    });
 
@@ -547,6 +553,12 @@ window.addEventListener("load", () => {
                   e.target.closest(".faq__preview").nextElementSibling.scrollHeight + "px";
             }
          }
+      }
+   }
+   document.body.addEventListener('click', togglePopupForm)
+   function togglePopupForm(e) {
+      if (e.target.closest('.table-column__book') || e.target.closest('.prize__btn') || e.target.closest('.gal-form__btn')) {
+         document.querySelector('.popup-hero').classList.add('active')
       }
    }
 });
