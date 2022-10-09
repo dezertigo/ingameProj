@@ -56,7 +56,41 @@
 					<div class=" cards__swiper swiper">
 						@@include('./components/base/_cards.html')
 					</div>
-					<a href="#" class="cards__link">Link</a>
+					<a href="#" class="cards__link-block">
+						<p>Дивитись всі</p>
+						<svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14.1667 14.3335L20.5 8.00016M20.5 8.00016L14.1667 1.66683M20.5 8.00016L1.5 8.00016"
+								stroke="#9ACF16" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</a>
+					<div class="tags">
+						<!-- <div class="tags__container"> -->
+						<ul class="tags__list tags__list_orange">
+							<li><a href="#"># Тімбілдинг</a></li>
+							<li><a href="#"># Сімейні</a></li>
+							<li><a href="#"># Для хлопчиків</a>
+							</li>
+							<li><a href="#"># Для дівчаток</a>
+							</li>
+						</ul>
+						<ul class="tags__list tags__list_green">
+							<li><a href="#"># Хеловін</a></li>
+							<li><a href="#"># Новорічний
+									корпоратив</a>
+							</li>
+							<li><a href="#"># День козацтва</a>
+							</li>
+						</ul>
+						<!-- </div> -->
+						<!-- <div class="tags__round-btn-wrap"> -->
+						<!-- <div class="tags__round-container"> -->
+						<button class="tags__round-btn">День народження “Під ключ”</button>
+						<!-- </div> -->
+						<!-- </div> -->
+					</div>
 				</div>
 			</section>
 			<section class="benefits">
@@ -181,6 +215,7 @@
 								</div>
 								<div class="reviews__body reviews__body--video">
 									<picture>
+										<source type="image/webp" srcset="@img/gallery/comment1.webp">
 										<img src="./img/gallery/comment1.jpg" alt="video preview">
 									</picture>
 									<p class="reviews__body-name">
@@ -248,6 +283,7 @@
 									</div>
 									<div class="reviews__img">
 										<picture>
+											<source type="image/webp" srcset="@img/reviews-img.webp">
 											<img src="./img/reviews-img.png" alt=" reviews screenshot">
 										</picture>
 									</div>
@@ -308,6 +344,7 @@
 									</div>
 									<div class="reviews__img">
 										<picture>
+											<source type="image/webp" srcset="@/img/reviews-img.webp">
 											<img src="./img/reviews-img.png" alt=" reviews screenshot">
 										</picture>
 									</div>
@@ -327,121 +364,68 @@
 				<div class="reviews-popup__fixed">
 					<div class="reviews-popup__view">
 						<div class="reviews-popup__wrapper">
-								<!-- <div class="reviews-popup__slide reviews-popup__slide--video"
-									data-popup-slide="1">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div
-										class="reviews__body reviews__body--video reviews-popup__body reviews-popup__body--video">
-										<iframe width="100%" height="499"
-											src="https://www.youtube.com/embed/K0ipwWOjjgQ" title="YouTube video player"
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-											allowfullscreen></iframe>
-									</div>
+							<div class="reviews-popup__item reviews-popup__item--video">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
 								</div>
-								<div class="reviews-popup__slide">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-								</div>
-								<div class="reviews-popup__slide">
-									<div class="reviews__body">
-										<p class="reviews__body-text reviews__body-text--margin">
-											Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст
-											ідгука, Текст
-											відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука.
-											Текст
-											відгука, Текст ідгука
-										</p>
-									</div>
-								</div>
-								</div>
-								<div class="reviews-popup__slide">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews__wrap reviews-popup__wrap">
-										<div class="reviews__img reviews-popup__img">
-											<picture>
-												<img src="./img/reviews-img.png" alt=" reviews screenshot">
-											</picture>
-										</div>
-									</div>
-								</div> -->
-								
-								<div class="reviews-popup__item reviews-popup__item--video">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews-popup__video">
-										<video src=""></video>
-										<div class="reviews-popup__poster">
-											<picture>
-												<source type="image/jpg" srcset="img/gallery/comment1.jpg">
-												<img src="./img/gallery/comment1.jpg" alt="review preview">
-											</picture>
-										</div>
-										<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M51.9611 34.7365L19.4923 53.2901C18.159 54.052 16.5 53.0893 16.5 51.5536V33V14.4464C16.5 12.9107 18.159 11.948 19.4923 12.7099L51.9611 31.2635C53.3048 32.0313 53.3048 33.9687 51.9611 34.7365Z" fill="#9ACF16"/>
-											</svg>
-									</div>
-								</div>
-								<div class="reviews-popup__item reviews-popup__item--text">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<p class="reviews-popup__text">
-										Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст ідгука, Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука. Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука.Текст відгука, Текст відгука, Текст, символів 200 відгука
-									</p>
-								</div>
-								<div class="reviews-popup__item reviews-popup__item--img">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews-popup__screen">
+								<div class="reviews-popup__video">
+									<video src=""></video>
+									<div class="reviews-popup__poster">
 										<picture>
-											<img src="./img/reviews-img.png" alt="review screen">
+											<source type="image/jpg" srcset="@img/gallery/comment1.webp">
+											<img src="./img/gallery/comment1.jpg" alt="review preview">
 										</picture>
 									</div>
+									<svg width="66" height="66" viewBox="0 0 66 66" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M51.9611 34.7365L19.4923 53.2901C18.159 54.052 16.5 53.0893 16.5 51.5536V33V14.4464C16.5 12.9107 18.159 11.948 19.4923 12.7099L51.9611 31.2635C53.3048 32.0313 53.3048 33.9687 51.9611 34.7365Z"
+											fill="#9ACF16" />
+									</svg>
 								</div>
-								
+							</div>
+							<div class="reviews-popup__item reviews-popup__item--text">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="reviews-popup__text">
+									Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст ідгука,
+									Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука.
+									Текст відгука, Текст ідгука, Текст відгука. Текст ідгука, Текст відгука,
+									Текст відгука. Текст відгука, Текст ідгука, Текст відгука.Текст відгука,
+									Текст відгука, Текст, символів 200 відгука
+								</p>
+							</div>
+							<div class="reviews-popup__item reviews-popup__item--img">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+								<div class="reviews-popup__screen">
+									<picture>
+										<source type="image/webp" srcset="@/img/reviews-img.webp">
+										<img src="./img/reviews-img.png" alt="review screen">
+									</picture>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
