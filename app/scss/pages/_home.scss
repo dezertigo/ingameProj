@@ -588,50 +588,34 @@ body.home {
       width: 100%;
       max-width: 100%;
       background: url("@img/gallery/benefits-backgrond.webp") no-repeat center;
-      min-height: 566px;
       background-size: cover;
-
-      @media (min-width: 744px) {
-         min-height: 436px;
-      }
-
-      @media (min-width: 1920px) {
-         min-height: 762px;
-      }
-
       &__container-wrap {
-         background: linear-gradient(0deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84));
-         height: 100%;
-         min-height: 566px;
-
-         @media (min-width: 744px) {
-            min-height: 436px;
-            height: 100%;
-         }
-
-         @media (min-width: 1920px) {
-            min-height: 762px;
-         }
+         background-color: rgba(0, 0, 0, 0.84);
       }
 
       &__container {
-         max-width: 1250px;
-         margin: 0 auto;
+         @media (max-width: 743px) {
+            padding-top: 36px;
+            padding-bottom: 36px;
+         }
+         @media (min-width: 744px) {
+            padding-left: percent(41, 744);
+            padding-right: percent(41, 744);
+            padding-top: 40px;
+            padding-bottom: 40px;
+         }
+         @media (min-width: 1000px) {
+            padding-left: percent(378, 1920);
+            padding-right: percent(378, 1920);
+            padding-top: percent(120, 1920);
+            padding-bottom: percent(120, 1920);
+         }
       }
 
       &__wrap {
-         padding: 9.8% 2% 1%;
          display: flex;
          flex-direction: column;
          align-items: center;
-
-         @media (min-width: 744px) {
-            padding: 5.5% 2% 1%;
-         }
-
-         @media (min-width: 1920px) {
-            padding: 9.6% 2% 1%;
-         }
       }
 
       &__title {
@@ -676,20 +660,17 @@ body.home {
       &__list {
          display: grid;
          grid-template-columns: 1fr 1fr;
-         gap: 2.2em;
-         row-gap: 2.4em;
-
+         row-gap: 38px;
+         column-gap: 20px;
          @media (min-width: 744px) {
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 1em;
-            row-gap: 2.4em;
-            padding: 0 2%;
+            gap: 41px;
          }
 
          @media (min-width: 1920px) {
             padding: 0;
-            gap: 5em;
-            row-gap: 3.6em;
+            column-gap: 118px;
+            row-gap: 58px;
          }
       }
 
@@ -789,9 +770,11 @@ body.home {
          padding-top: 2px;
 
          .benefits__text {
-            width: 78%;
             margin: 0 auto;
 
+            @media (max-width: 743px) {
+               width: 72%;
+            }
             @media (min-width: 744px) {
                width: 58%;
                padding-top: 11px;
@@ -836,13 +819,13 @@ body.home {
          }
 
          .benefits__text {
-            @media (min-width: 744px) {
-               width: 77%;
+            @media (max-width: 743px) {
+               width: 90%;
                margin: 0 auto;
             }
-
-            @media (min-width: 1920px) {
-               width: 95%;
+            @media (min-width: 744px) and (max-width: 999px) {
+               width: 90%;
+               margin: 0 auto;
             }
          }
       }
@@ -863,8 +846,14 @@ body.home {
          }
 
          .benefits__text {
-            width: 90%;
             margin: 0 auto;
+            @media (max-width: 743px) {
+               width: 84%;
+               padding-top: 3px;
+            }
+            @media (min-width: 744px) {
+               width: 90%;
+            }
          }
 
          @media (min-width: 744px) {
@@ -894,8 +883,11 @@ body.home {
          }
 
          .benefits__text {
-            width: 90%;
             margin: 0 auto;
+            @media (max-width: 743px) {
+               padding-top: 3px;
+               width: 90%;
+            }
 
             @media (min-width: 744px) {
                width: 77%;
