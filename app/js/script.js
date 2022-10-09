@@ -255,15 +255,31 @@ window.addEventListener("load", () => {
       },
    });
    const popupReviews = document.querySelector(".reviews-popup");
+
+   const feedbackBtn = document.querySelector('.reviews__feedback');
+   const popupFeedback = document.querySelector('.feedback-popup');
+   const feedbackClose = document.querySelector('.feedback-popup__close');
+   feedbackBtn.addEventListener('click', getFeedback);
+   feedbackClose.addEventListener('click', closeFeedback);
+   function getFeedback() {
+      popupFeedback.classList.add('active');
+      setTimeout(() => {
+         body.classList.add('lock');
+      },300);
+   }
+   function closeFeedback() {
+      popupFeedback.classList.remove('active');
+      body.classList.remove('lock');
+   }
    // const reviewsImgBtn = document.querySelectorAll('.reviews__img');
    // const reviewsVideoBtn = document.querySelectorAll('.reviews__body--video');
    // const reviewsDetailsBtn = document.querySelectorAll('.reviews__footer-btn');
    // const closeReviewsPopup = document.querySelectorAll('.reviews-popup__close');
-   const nextSlidePopUp = document.querySelector(".reviews-popup__next");
+   // const nextSlidePopUp = document.querySelector(".reviews-popup__next");
    // const prevSlidePopUp = document.querySelector('.reviews-popup__prev');
-   let slideId;
-   let slidePopupId;
-   let numSlideId;
+   // let slideId;
+   // let slidePopupId;
+   // let numSlideId;
    body.addEventListener("click", showPopupReviews);
 
    const reviewsPopupImg = document.querySelector(".reviews-popup__item--img");
@@ -580,18 +596,29 @@ window.addEventListener("load", () => {
    // swiperHorizontalSmall.controller.control = swiperHorizontalBig;
    // swiperHorizontalBig.controller.control = swiperHorizontalSmall;
    if (qs("body.quest")) {
-      // body.addEventListener("click", toggleSpoiler);
+      body.addEventListener("click", toggleStep2);
+      function toggleStep2(e) {
+         if (e.target.closest(".step2__preview")) {
+            e.target.closest(".step2__spoiler").classList.toggle("opened");
+            let spoilerWrapper = e.target.closest(".step2__preview").nextElementSibling;
+            if (!e.target.closest(".step2__spoiler").classList.contains("opened")) {
+               spoilerWrapper.style.height = null;
+            } else {
+               spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+            }
+         }
+      }
 
-      // function toggleSpoiler(e) {
-      //    // if (e.target.closest(".faq__preview")) {
-      //    //    e.target.closest(".faq__spoiler").classList.toggle("opened");
-      //    //    let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
-      //    //    if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
-      //    //       spoilerWrapper.style.height = null;
-      //    //    } else {
-      //    //       spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
-      //    //    }
-      //    // }
+      let selectItem = document.querySelectorAll('.select__label');
+      selectItem.forEach(item => {
+         item.addEventListener('click', selectChoose);
+      })
+      function selectChoose() {
+         let text = this.innerText,
+         select = this.closest('.select'),
+         currentText = select.querySelector('.select__current');
+         currentText.innerText = text; 
+      }
       //    const spoilerItem = document.querySelectorAll(".faq__spoiler");
       //    const spoilerWrapper = document.querySelectorAll(".faq__wrapper");
       //    if (e.target.closest(".faq__spoiler")) {
@@ -647,5 +674,6 @@ window.addEventListener("load", () => {
             },
          },
       });
+   
    }
 });
