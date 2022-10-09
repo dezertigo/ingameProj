@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- ! Изменить все "quest" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
 @@include('./components/structure/_head.html', {
-'lang':'en',
+'lang':'ua',
 'css': './css/quest.min.css',
 'title': 'quest',
 'swiper': 'true',
@@ -17,8 +17,8 @@
         <div class="show__decor"></div>
         <div class="show__container">
           <div class="show__wrap">
-            <h2 class="show__tile">Квест-кімната
-              Silent Hill</h2>
+            <h1 class="show__tile">Квест-кімната
+              Silent Hill</h1>
             <div class="show__content">
               <ul class="show__list">
                 <li class="show__item show__item1">
@@ -26,7 +26,8 @@
                     <div class="show__item-block">
                       <span class="description-title">Адреса:</span>
                       @@include('./components/icons/_location.html')
-                      <p class="show__par">Дніпро (лівий берег) <span class="show__link">проспект Слобожанский
+                      <p class="show__par">Дніпро (лівий берег) <span class="show__link">проспект
+                          Слобожанский
                           125.</span></p>
                     </div>
                   </div>
@@ -60,21 +61,339 @@
               </ul>
               <span class="show__cost">1200 грн</span>
             </div>
-            <p class="show__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            <p class="show__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do
+              eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud
+              exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
           </div>
         </div>
       </section>
+      <section class="hero">
+        <div class="hero__container">
+          @@include('./components/base/_horizontal-gallery.html')
+          @@include('./components/base/_slider-nav.html')
+          <div class="hero__form">
+            @@include('./components/base/_gal-form.html')
+          </div>
+        </div>
+      </section>
+      <section class="popup-hero">
+        <div class="popup-hero__container">
+          <div class="popup-hero__wrap">
+            <h2 class="popup-hero__title">Бронювання<span class="popup-hero__elem">“Назва квест-кімнати”</span>
+            </h2>
+            <form class=" popup-hero__form">
+              <fieldset class="popup-hero__field-set">
+                <label class="popup-hero__label">Особисті дані замовніка</label>
+                <div class="popup-hero__field">
+                  <input class="popup-hero__lea" type="text" name="naming" value="" placeholder="Ім’я та призвище">
+                </div>
+                <div class="popup-hero__field">
+                  <input class="popup-hero__lea" type="email" name="emailing" value="" placeholder="E-mail *">
+                </div>
+                <div class="popup-hero__field">
+                  <input class="popup-hero__lea" type="tel" name="teling" value="" placeholder="Ваш номер телефону *">
+                </div>
+                <div class="popup-hero__field">
+                  <input class="popup-hero__check" type="checkbox" name="checkbox" value="" id="checks">
+                  <label class="popup-hero__sign-labe" for="checks">Згода на обробку персональних данних <a
+                      href="#">Політика
+                      конфіденційності</a></label>
+                </div>
+              </fieldset>
+              <fieldset class="popup-hero__field-set">
+                <label class="popup-hero__label popup-hero__label-hide">Особисті дані замовніка</label>
+                <div class="popup-hero__field2">
+                  <span class="popup-hero__sign">Адреса:</span>
+                  <p class="popup-hero__par">Дніпро, Лівий берег,пр. Слобожанський, 125</p>
+                </div>
+                <div class="popup-hero__field2">
+                  <label class="popup-hero__sign" for="number-select">Кількість гравців</label>
+                  <select class="popup-hero__select" name="number" id="number-select">
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+                <div class="popup-hero__field2">
+                  <label class="popup-hero__sign" for="class-select">Пакет</label>
+                  <select class="popup-hero__select" name="class" id="class-select">
+                    <option value="Стандарт">Стандарт</option>
+                  </select>
+                </div>
+                <div class="popup-hero__field2">
+                  <label class="popup-hero__sign" for="date">Дата</label>
+                  <input class="popup-hero__par" type="date" value="" name="date" id="date">
+                </div>
+                <div class="popup-hero__field2">
+                  <label class="popup-hero__sign" for="num">Промокод:</label>
+                  <input class="popup-hero__par" type="number" value="" name="num" id="num">
+                </div>
+              </fieldset>
+            </form>
+            <div class="pop-up__btn-wrap">
+              <button class="pop-up__btn-book">Забронювати</button>
+              <button class="pop-up__btn-back">Повернутися до вибору квестів</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="step3">
+        <div class="step3__container">
+          <p class="step3__title step-title"><span>Крок 3:</span> Оберіть час</p>
+          <div class="step3__block-btn">
+            <button class="step3__btn step3__btn-left">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.83398 0.916992L1.16732 8.00033L6.83398 15.0837" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="step3__btn step3__btn-right">
+              <svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.16602 0.916992L6.83268 8.00033L1.16602 15.0837" stroke="white" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="step3__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '15.08',
+                'day': "Понеділок",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '16.08',
+                'day': "Вівторок",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '17.08',
+                'day': "Середа",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '18.08',
+                'day': "Четвер",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '19.08',
+                'day': "П'ятниця",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '20.08',
+                'day': "Субота",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '21.08',
+                'day': "Неділя",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '22.08',
+                'day': "Понеділок",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '23.08',
+                'day': "Вівторок",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '24.08',
+                'day': "Середа",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '25.08',
+                'day': "Четвер",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '26.08',
+                'day': "П'ятниця",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '27.08',
+                'day': "Субота",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+              <div class="swiper-slide">
+                @@include('./components/base/_table-column.html', {
+                'date': '28.08',
+                'day': "Неділя",
+                'price':'1200 грн',
+                'time1': '11:00',
+                'time2': '12:00',
+                'time3': '13:00',
+                'time4': '14:00',
+                'time5': '15:00',
+                'time6': '16:00',
+                'time7': '17:00',
+                'time8': '18:00',
+                })
+              </div>
+            </div>
+          </div>
 
+
+        </div>
+
+      </section>
+      <section class="heroes">
+        <div class="heroes__container">
+          <p class="heroes__title">Наші герої</p>
+          @@include('./components/base/_vertical-gallery.html')
+        </div>
+      </section>
       <section class="prize">
         <div class="prize__container">
           <div class="prize__wrap">
             <div class="prize__block-text">
-              <p class="prize__text">Подарунковий сертифікат на квест "Silent Hill" - це чудовий подарунок для любителів
-                гострих відчуттів. Незабутні 60 хвилин в автентичній обстановці іншої реальності. Такий подарунок
+              <p class="prize__text">Подарунковий сертифікат на квест "Silent Hill" - це
+                чудовий подарунок для любителів
+                гострих відчуттів. Незабутні 60 хвилин в автентичній обстановці іншої
+                реальності. Такий подарунок
                 запам'ятається назавжди!</p>
-              <p class="prize__text">Отримати сертифікат можно як у одному з наших центрів, так і замовивши доставку.
+              <p class="prize__text">Отримати сертифікат можно як у одному з наших центрів,
+                так і замовивши доставку.
               </p>
             </div>
             <div class="prize__block-picture">
@@ -135,6 +454,133 @@
               </ul>
               <div class="prize__btn-wrap">
                 <button class="prize__btn">Замовити</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__container">
+          <h2 class="faq__title">
+            Частозадавані питання
+          </h2>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
+                  Одповідь
+                  на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
+                  на 1
+                  питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
+                  Одповідь
+                  на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
+                  на 1
+                  питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
+                  Одповідь
+                  на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
+                  на 1
+                  питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
+                  Одповідь
+                  на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
+                  на 1
+                  питання
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__spoiler">
+            <div class="faq__preview">
+              <p class="faq__preview-head">
+                Заголовок першого питання
+              </p>
+              <div class="faq__preview-icon">
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq__wrapper">
+              <div class="faq__body">
+                <p class="faq__text">
+                  Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання ,
+                  Одповідь
+                  на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь
+                  на 1
+                  питання
+                </p>
               </div>
             </div>
           </div>

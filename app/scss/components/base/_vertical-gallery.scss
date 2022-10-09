@@ -1,0 +1,94 @@
+.vertical-gallery {
+   // .vertical-gallery__swiper-big
+   &__swiper-big {
+      @media (max-width: 739px) {
+         margin-bottom: 12px;
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         margin-bottom: 14px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 20px;
+      }
+   }
+
+   // .vertical-gallery__slide-big
+   &__slide-big {
+   }
+
+   // .vertical-gallery__image-big
+   &__image-big {
+      position: relative;
+      @media (max-width: 739px) {
+         padding-bottom: percent(232, 351);
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-bottom: percent(380, 684);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(824, 1661);
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   // .vertical-gallery__swiper-small
+   &__swiper-small {
+      // margin-right: percent(-13, 375);
+   }
+
+   // .vertical-gallery__slide-small
+   &__slide-small {
+   }
+
+   .swiper-slide-thumb-active {
+      .vertical-gallery__image-small {
+         position: relative;
+         &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: solid $green;
+            @media (max-width: 999px) {
+               border-width: 4px;
+            }
+            @media (min-width: 1000px) {
+               border-width: 6px;
+            }
+         }
+      }
+   }
+
+   // .vertical-gallery__image-small
+   &__image-small {
+      position: relative;
+      @media (max-width: 739px) {
+         padding-bottom: calc(percent(79, 132));
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-bottom: percent(104, 160);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(194, 260);
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+}
