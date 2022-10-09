@@ -184,6 +184,8 @@ window.addEventListener("load", () => {
    });
    // Узнаем макисмальную высоту превьюшки карточки квеста
    let maxPreviewHeight = Math.max(...cardsPreviewHeight);
+   console.log(cardsPreviewHeight);
+   console.log(maxPreviewHeight);
 
    let cardBody = qa(".cards .card__body");
    let cardsBodyHeight = [];
