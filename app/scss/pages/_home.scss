@@ -586,17 +586,40 @@ body.home {
 
    .benefits {
       width: 100%;
-      max-width: 100%;
-      background: url("@img/gallery/benefits-backgrond.webp") no-repeat center;
-      background-size: cover;
-      &__container-wrap {
-         background-color: rgba(0, 0, 0, 0.84);
+      position: relative;
+      &__bg {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+         }
+         &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.84);
+         }
       }
-
       &__container {
+         position: relative;
+         z-index: 2;
          @media (max-width: 743px) {
             padding-top: 36px;
             padding-bottom: 36px;
+            padding-left: percent(14, 375);
+            padding-right: percent(14, 375);
          }
          @media (min-width: 744px) {
             padding-left: percent(41, 744);
@@ -661,7 +684,7 @@ body.home {
          display: grid;
          grid-template-columns: 1fr 1fr;
          row-gap: 38px;
-         column-gap: 20px;
+         column-gap: 47px;
          @media (min-width: 744px) {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 41px;
@@ -677,22 +700,44 @@ body.home {
       &__item {
          position: relative;
          text-align: center;
-
-         svg {
-            width: 34px;
-            height: 34px;
-
-            @media (min-width: 1920px) {
-               width: 64px;
-               height: 64px;
+         img {
+            @media (max-width: 999px) {
+               max-width: 34px;
             }
-
-            ellipse {
-               stroke: $green;
+            @media (min-width: 1000px) and (max-width: 1199px) {
+               max-width: 40px;
             }
-
-            path {
-               fill: $green;
+            @media (min-width: 1200px) and (max-width: 1399px) {
+               max-width: 48px;
+            }
+            @media (min-width: 1400px) and (max-width: 1599px) {
+               max-width: 54px;
+            }
+            @media (min-width: 1600px) and (max-width: 1799px) {
+               max-width: 60px;
+            }
+            @media (min-width: 1800px) {
+               max-width: 64px;
+            }
+         }
+         @media (min-width: 744px) and (max-width: 999px) {
+            &:nth-child(1) {
+               order: 1;
+            }
+            &:nth-child(2) {
+               order: 3;
+            }
+            &:nth-child(3) {
+               order: 2;
+            }
+            &:nth-child(4) {
+               order: 4;
+            }
+            &:nth-child(5) {
+               order: 5;
+            }
+            &:nth-child(6) {
+               order: 6;
             }
          }
       }
@@ -757,7 +802,6 @@ body.home {
          }
 
          @media (min-width: 744px) {
-            order: 3;
             padding-top: 10px;
          }
 
@@ -799,24 +843,10 @@ body.home {
                stroke: rgba(144, 199, 94, 1);
             }
          }
-
-         @media (min-width: 744px) {
-            order: 1;
-            padding-top: 0;
-         }
-
-         @media (min-width: 1920px) {
-            order: 4;
-            padding-top: 0;
-         }
       }
 
       &__item:nth-child(4) {
          padding-top: 2px;
-
-         @media (min-width: 744px) {
-            order: 8;
-         }
 
          .benefits__text {
             @media (max-width: 743px) {
@@ -848,16 +878,11 @@ body.home {
          .benefits__text {
             margin: 0 auto;
             @media (max-width: 743px) {
-               width: 84%;
                padding-top: 3px;
             }
             @media (min-width: 744px) {
                width: 90%;
             }
-         }
-
-         @media (min-width: 744px) {
-            order: 9;
          }
       }
 
@@ -897,10 +922,6 @@ body.home {
                width: 100%;
             }
          }
-
-         @media (min-width: 744px) {
-            order: 10;
-         }
       }
    }
 
@@ -909,35 +930,42 @@ body.home {
    // ! FOR U === FOR U === FOR U === FOR U === FOR U === FOR U === FOR U
    .for-u {
       width: 100%;
-      max-width: 100%;
-      background-color: rgba(255, 255, 255, 1);
-
       &__container {
-         margin: 0 auto;
-         max-width: 1700px;
+         @extend %container;
+         @media (max-width: 743px) {
+            padding-top: 60px;
+            padding-bottom: 80px;
+         }
+         @media (min-width: 744px) and (max-width: 999px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+         }
+
+         @media (min-width: 1000px) {
+            padding-top: percent(120, 1920);
+            padding-bottom: percent(120, 1920);
+            padding-left: percent(30, 744);
+            padding-right: percent(30, 744);
+         }
+         @media (min-width: 1400px) {
+            padding-left: percent(270, 1920);
+         }
       }
 
       &__wrap {
-         display: flex;
-         flex-direction: column;
-
-         @media (max-width: 743px) {
-            padding: 81px 3.3% 21.3%;
+         @media (max-width: 999px) {
+            display: flex;
+            flex-direction: column;
          }
-
-         @media (min-width: 744px) and (max-width: 1919px) {
-            padding: 61px 4% 8%;
-         }
-
-         @media (min-width: 1000px) and (max-width: 1919px) {
+         @media (min-width: 1000px) {
             display: grid;
+         }
+         @media (min-width: 1000px) and (max-width: 1919px) {
             grid-template-columns: 1fr 1fr;
             column-gap: 2em;
          }
 
          @media (min-width: 1920px) {
-            padding: 121px 1.2% 7.1% 9.4%;
-            display: grid;
             grid-template-columns: 1fr 53.9%;
             column-gap: 2em;
          }
@@ -974,7 +1002,7 @@ body.home {
          padding-bottom: 61%;
          margin-bottom: 24px;
 
-         @media (min-width: 744px) {
+         @media (min-width: 744px) and (max-width: 999px) {
             width: 51.3%;
             // ПОКАЗАТЬ ЗАКАЗЧИКУ ЛУЧШИЙ ВАРИАНТ
             // width: 100%;
@@ -1015,6 +1043,7 @@ body.home {
          font-weight: 400;
          font-size: 14px;
          line-height: 20px;
+         // @include fl(14, 20);
 
          @media (max-width: 743px) {
             margin-bottom: 24px;
@@ -1037,7 +1066,7 @@ body.home {
          font-weight: 700;
          font-size: 18px;
          line-height: 24px;
-         color: rgba(144, 199, 94, 1);
+         color: $greenItem;
          width: max-content;
          transition: all 0.3s ease;
 
@@ -1618,8 +1647,6 @@ body.home {
    .blog {
       width: 100%;
       max-width: 100%;
-      background-color: rgba(255, 255, 255, 1);
-
       &__container {
          margin: 0 auto;
          max-width: 1700px;
@@ -1630,7 +1657,7 @@ body.home {
          flex-direction: column;
 
          @media (max-width: 743px) {
-            padding: 80px 3.2% 1%;
+            padding: 60px 3.2% 1%;
          }
 
          @media (min-width: 744px) and (max-width: 1919px) {
@@ -1769,8 +1796,8 @@ body.home {
          @media (min-width: 1920px) {
             display: grid;
             grid-template-columns: 41.3% 1fr;
-            gap: 1em;
-            column-gap: 10em;
+            row-gap: 18px;
+            column-gap: 120px;
          }
       }
 
@@ -1811,14 +1838,17 @@ body.home {
       }
 
       &__text {
-         @media (max-width: 743px) {
+         @media (max-width: 999px) {
             margin-bottom: 12px;
+            @include fl(14, 20);
          }
 
          @media (min-width: 744px) and (max-width: 1919px) {
             margin-bottom: 24px;
          }
-
+         @media (min-width: 1000px) {
+            @include fl(16, 22);
+         }
          @media (min-width: 1920px) {
             margin-bottom: 0;
          }
@@ -1892,7 +1922,7 @@ body.home {
             line-height: 22px;
             grid-column: 2 / 3;
             grid-row: 2 / 3;
-            max-width: 67%;
+            max-width: 63%;
          }
       }
 
@@ -2017,9 +2047,9 @@ body.home {
             letter-spacing: 0.16px;
          }
 
-         @media (min-width: 744px) {
-            letter-spacing: 0.15px;
-         }
+         // @media (min-width: 744px) {
+         //    letter-spacing: 0.15px;
+         // }
 
          @media (min-width: 1920px) {
             margin: 0 auto;
