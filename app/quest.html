@@ -75,9 +75,80 @@
 			<section class="hero">
 				<div class="hero__container">
 					@@include('./components/base/_horizontal-gallery.html')
-			
+					@@include('./components/base/_slider-nav.html')
 					<div class="hero__form">
 						@@include('./components/base/_gal-form.html')
+					</div>
+				</div>
+			</section>
+			<section class="popup-hero">
+				<div class="popup-hero__container">
+					<div class="popup-hero__wrap">
+						<h2 class="popup-hero__title">Бронювання<span class="popup-hero__elem">“Назва
+								квест-кімнати”</span>
+						</h2>
+						<form class=" popup-hero__form">
+							<fieldset class="popup-hero__field-set">
+								<label class="popup-hero__label">Особисті дані замовніка</label>
+								<div class="popup-hero__field">
+									<input class="popup-hero__lea" type="text" name="naming" value=""
+										placeholder="Ім’я та призвище">
+								</div>
+								<div class="popup-hero__field">
+									<input class="popup-hero__lea" type="email" name="emailing" value=""
+										placeholder="E-mail *">
+								</div>
+								<div class="popup-hero__field">
+									<input class="popup-hero__lea" type="tel" name="teling" value=""
+										placeholder="Ваш номер телефону *">
+								</div>
+								<div class="popup-hero__field">
+									<input class="popup-hero__check" type="checkbox" name="checkbox" value=""
+										id="checks">
+									<label class="popup-hero__sign-labe" for="checks">Згода на обробку
+										персональних
+										данних <a href="#">Політика
+											конфіденційності</a></label>
+								</div>
+							</fieldset>
+							<fieldset class="popup-hero__field-set">
+								<label class="popup-hero__label popup-hero__label-hide">Особисті дані
+									замовніка</label>
+								<div class="popup-hero__field2">
+									<span class="popup-hero__sign">Адреса:</span>
+									<p class="popup-hero__par">Дніпро, Лівий берег,пр. Слобожанський, 125</p>
+								</div>
+								<div class="popup-hero__field2">
+									<label class="popup-hero__sign" for="number-select">Кількість
+										гравців</label>
+									<select class="popup-hero__select" name="number" id="number-select">
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+								</div>
+								<div class="popup-hero__field2">
+									<label class="popup-hero__sign" for="class-select">Пакет</label>
+									<select class="popup-hero__select" name="class" id="class-select">
+										<option value="Стандарт">Стандарт</option>
+									</select>
+								</div>
+								<div class="popup-hero__field2">
+									<label class="popup-hero__sign" for="date">Дата</label>
+									<input class="popup-hero__par" type="date" value="" name="date"
+										id="date">
+								</div>
+								<div class="popup-hero__field2">
+									<label class="popup-hero__sign" for="num">Промокод:</label>
+									<input class="popup-hero__par" type="number" value="" name="num"
+										id="num">
+								</div>
+							</fieldset>
+						</form>
+						<div class="pop-up__btn-wrap">
+							<button class="pop-up__btn-book">Забронювати</button>
+							<button class="pop-up__btn-back">Повернутися до вибору квестів</button>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -97,32 +168,34 @@
 									<div class="pack-card pack-card--eco">
 										<p class="pack-card__title">
 											Економ
-											<ul class="pack-card__list">
-												<li class="pack-card__item">
-													5 локацій з випробуваннями
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
-												</li>
-												<li class="pack-card__item">
-													Супровід досвідчених інструкторів
-												</li>
-												<li class="pack-card__item">
-													Мильні кульки
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
-												</li>
-												<li class="pack-card__item">
-													Міні-діскотека
-												</li>
-											</ul>
-											<p class="pack-card__price">
-												Від: 1200 грн
-											</p>
-											<button class="pack-card__btn">
-												Обрати
-											</button>
+										<ul class="pack-card__list">
+											<li class="pack-card__item">
+												5 локацій з випробуваннями
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою.
+											</li>
+											<li class="pack-card__item">
+												Супровід досвідчених інструкторів
+											</li>
+											<li class="pack-card__item">
+												Мильні кульки
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою
+											</li>
+											<li class="pack-card__item">
+												Міні-діскотека
+											</li>
+										</ul>
+										<p class="pack-card__price">
+											Від: 1200 грн
+										</p>
+										<button class="pack-card__btn">
+											Обрати
+										</button>
 										</p>
 									</div>
 								</div>
@@ -130,32 +203,34 @@
 									<div class="pack-card pack-card--stan">
 										<p class="pack-card__title">
 											Стандарт
-											<ul class="pack-card__list">
-												<li class="pack-card__item">
-													5 локацій з випробуваннями
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
-												</li>
-												<li class="pack-card__item">
-													Супровід досвідчених інструкторів
-												</li>
-												<li class="pack-card__item">
-													Мильні кульки
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
-												</li>
-												<li class="pack-card__item">
-													Міні-діскотека
-												</li>
-											</ul>
-											<p class="pack-card__price">
-												Від: 1200 грн
-											</p>
-											<button class="pack-card__btn">
-												Обрати
-											</button>
+										<ul class="pack-card__list">
+											<li class="pack-card__item">
+												5 локацій з випробуваннями
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою.
+											</li>
+											<li class="pack-card__item">
+												Супровід досвідчених інструкторів
+											</li>
+											<li class="pack-card__item">
+												Мильні кульки
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою
+											</li>
+											<li class="pack-card__item">
+												Міні-діскотека
+											</li>
+										</ul>
+										<p class="pack-card__price">
+											Від: 1200 грн
+										</p>
+										<button class="pack-card__btn">
+											Обрати
+										</button>
 										</p>
 									</div>
 								</div>
@@ -163,41 +238,43 @@
 									<div class="pack-card pack-card--prem">
 										<p class="pack-card__title">
 											Преміум
-											<ul class="pack-card__list">
-												<li class="pack-card__item">
-													5 локацій з випробуваннями
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою.
-												</li>
-												<li class="pack-card__item">
-													Супровід досвідчених інструкторів
-												</li>
-												<li class="pack-card__item">
-													Мильні кульки
-												</li>
-												<li class="pack-card__item">
-													Зона відпочинку на 25 особ. Тут Ви можете пити італійську зернову каву або чай та спостерігати за грою
-												</li>
-												<li class="pack-card__item">
-													Міні-діскотека
-												</li>
-											</ul>
-											<p class="pack-card__price">
-												Від: 1200 грн
-											</p>
-											<button class="pack-card__btn">
-												Обрати
-											</button>
+										<ul class="pack-card__list">
+											<li class="pack-card__item">
+												5 локацій з випробуваннями
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою.
+											</li>
+											<li class="pack-card__item">
+												Супровід досвідчених інструкторів
+											</li>
+											<li class="pack-card__item">
+												Мильні кульки
+											</li>
+											<li class="pack-card__item">
+												Зона відпочинку на 25 особ. Тут Ви можете пити італійську
+												зернову каву або чай та спостерігати за грою
+											</li>
+											<li class="pack-card__item">
+												Міні-діскотека
+											</li>
+										</ul>
+										<p class="pack-card__price">
+											Від: 1200 грн
+										</p>
+										<button class="pack-card__btn">
+											Обрати
+										</button>
 										</p>
 									</div>
 								</div>
 							</div>
 							@@include('./components/base/_slider-nav.html', {
-								'class': 'step1__nav',
-								'prev': 'step1__prev',
-								'next': 'step1__next',
-								'pagination': 'step1__pagination',
+							'class': 'step1__nav',
+							'prev': 'step1__prev',
+							'next': 'step1__next',
+							'pagination': 'step1__pagination',
 							})
 						</div>
 					</div>
@@ -231,7 +308,8 @@
 								<input class="step2__input" type="radio" name="people" id="radio_9">
 								<label class="step2__label" for="radio_9">9</label>
 								<input class="step2__input" type="radio" name="people" id="radio_10">
-								<label class="step2__label" for="radio_10">10 <span>(максимум)</span></label>
+								<label class="step2__label" for="radio_10">10
+									<span>(максимум)</span></label>
 							</div>
 						</div>
 					</div>
@@ -240,7 +318,23 @@
 			<section class="step3">
 				<div class="step3__container">
 					<p class="step3__title step-title"><span>Крок 3:</span> Оберіть час</p>
-					<div class="step3__swiper swiper slider">
+					<div class="step3__block-btn">
+						<button class="step3__btn step3__btn-left">
+							<svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.83398 0.916992L1.16732 8.00033L6.83398 15.0837" stroke="white"
+									stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<button class="step3__btn step3__btn-right">
+							<svg width="8" height="16" viewBox="0 0 8 16" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.16602 0.916992L6.83268 8.00033L1.16602 15.0837" stroke="white"
+									stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					<div class="step3__swiper swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								@@include('./components/base/_table-column.html', {
@@ -453,12 +547,6 @@
 								})
 							</div>
 						</div>
-						@@include('./components/base/_slider-nav.html', {
-							'class': 'step3__nav',
-							'prev': 'step3__prev',
-							'next': 'step3__next',
-							'pagination': 'step3__pagination',
-						})
 					</div>
 
 
@@ -731,60 +819,68 @@
 				<div class="reviews-popup__fixed">
 					<div class="reviews-popup__view">
 						<div class="reviews-popup__wrapper">
-								<div class="reviews-popup__item reviews-popup__item--video">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews-popup__video">
-										<video src=""></video>
-										<div class="reviews-popup__poster">
-											<picture>
-												<source type="image/jpg" srcset="img/gallery/comment1.jpg">
-												<img src="./img/gallery/comment1.jpg" alt="review preview">
-											</picture>
-										</div>
-										<svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M51.9611 34.7365L19.4923 53.2901C18.159 54.052 16.5 53.0893 16.5 51.5536V33V14.4464C16.5 12.9107 18.159 11.948 19.4923 12.7099L51.9611 31.2635C53.3048 32.0313 53.3048 33.9687 51.9611 34.7365Z" fill="#9ACF16"/>
-											</svg>
-									</div>
+							<div class="reviews-popup__item reviews-popup__item--video">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
 								</div>
-								<div class="reviews-popup__item reviews-popup__item--text">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<p class="reviews-popup__text">
-										Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст ідгука, Текст відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука. Текст ідгука, Текст відгука, Текст відгука. Текст відгука, Текст ідгука, Текст відгука.Текст відгука, Текст відгука, Текст, символів 200 відгука
-									</p>
-								</div>
-								<div class="reviews-popup__item reviews-popup__item--img">
-									<div class="reviews-popup__close">
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
-												stroke="#101010" stroke-width="1.5" stroke-linecap="round"
-												stroke-linejoin="round" />
-										</svg>
-									</div>
-									<div class="reviews-popup__screen">
+								<div class="reviews-popup__video">
+									<video src=""></video>
+									<div class="reviews-popup__poster">
 										<picture>
-											<img src="./img/reviews-img.png" alt="review screen">
+											<source type="image/jpg" srcset="img/gallery/comment1.jpg">
+											<img src="./img/gallery/comment1.jpg" alt="review preview">
 										</picture>
 									</div>
+									<svg width="66" height="66" viewBox="0 0 66 66" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M51.9611 34.7365L19.4923 53.2901C18.159 54.052 16.5 53.0893 16.5 51.5536V33V14.4464C16.5 12.9107 18.159 11.948 19.4923 12.7099L51.9611 31.2635C53.3048 32.0313 53.3048 33.9687 51.9611 34.7365Z"
+											fill="#9ACF16" />
+									</svg>
 								</div>
-								
+							</div>
+							<div class="reviews-popup__item reviews-popup__item--text">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+								<p class="reviews-popup__text">
+									Текст відгука, Текст відгука, Текст, символів 200 відгука, Текст ідгука,
+									Текст
+									відгука, Текст відгука, Текст ідгука, Текст відгука, Текст відгука. Текст
+									відгука, Текст ідгука, Текст відгука. Текст ідгука, Текст відгука, Текст
+									відгука. Текст відгука, Текст ідгука, Текст відгука.Текст відгука, Текст
+									відгука, Текст, символів 200 відгука
+								</p>
+							</div>
+							<div class="reviews-popup__item reviews-popup__item--img">
+								<div class="reviews-popup__close">
+									<svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M29.779 14.2218L14.2227 29.7781M29.779 29.778L14.2227 14.2217"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+								<div class="reviews-popup__screen">
+									<picture>
+										<img src="./img/reviews-img.png" alt="review screen">
+									</picture>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -795,24 +891,34 @@
 						Частозадавані питання
 					</h2>
 					@@include('./components/base/_faq-spoiler.html', {
-						'title': 'Заголовок першого питання',
-						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'title': 'Заголовок першого питання',
+					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
+					Одповідь на
+					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'title': 'Заголовок першого питання',
-						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'title': 'Заголовок першого питання',
+					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
+					Одповідь на
+					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'title': 'Заголовок першого питання',
-						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'title': 'Заголовок першого питання',
+					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
+					Одповідь на
+					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'title': 'Заголовок першого питання',
-						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'title': 'Заголовок першого питання',
+					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
+					Одповідь на
+					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 					@@include('./components/base/_faq-spoiler.html', {
-						'title': 'Заголовок першого питання',
-						'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання, Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
+					'title': 'Заголовок першого питання',
+					'text': 'Одповідь на 1 питання любої кількості символів, Одповідь на 1 питання,
+					Одповідь на
+					1 питання , Одповідь на 1 питання , Одповідь на 1 питання , Одповідь на 1 питання'
 					})
 				</div>
 			</section>

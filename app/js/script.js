@@ -266,33 +266,37 @@ window.addEventListener("load", () => {
    let numSlideId;
    body.addEventListener("click", showPopupReviews);
 
-   const reviewsPopupImg = document.querySelector('.reviews-popup__item--img');
-   const reviewsPopupText = document.querySelector('.reviews-popup__item--text');
-   const reviewsPopupVideo = document.querySelector('.reviews-popup__item--video');
+   const reviewsPopupImg = document.querySelector(".reviews-popup__item--img");
+   const reviewsPopupText = document.querySelector(".reviews-popup__item--text");
+   const reviewsPopupVideo = document.querySelector(".reviews-popup__item--video");
 
    function showPopupReviews(e) {
-      if (e.target.closest('.reviews__slide .reviews__img')) {
+      if (e.target.closest(".reviews__slide .reviews__img")) {
          popupReviews.classList.add("active");
          body.classList.add("lock");
-         reviewsPopupImg.classList.add('active');
-      } 
-      if (e.target.closest('.reviews__slide .reviews__body--video')) {
-         popupReviews.classList.add("active");
-         body.classList.add("lock");
-         reviewsPopupVideo.classList.add('active');
+         reviewsPopupImg.classList.add("active");
       }
-      if (e.target.closest('.reviews__slide .reviews__footer-btn')) {
+      if (e.target.closest(".reviews__slide .reviews__body--video")) {
          popupReviews.classList.add("active");
          body.classList.add("lock");
-         reviewsPopupText.classList.add('active');
+         reviewsPopupVideo.classList.add("active");
+      }
+      if (e.target.closest(".reviews__slide .reviews__footer-btn")) {
+         popupReviews.classList.add("active");
+         body.classList.add("lock");
+         reviewsPopupText.classList.add("active");
       }
       if (e.target.closest(".reviews-popup__close")) {
          popupReviews.classList.remove("active");
          body.classList.remove("lock");
-         if (reviewsPopupImg.classList.contains('active') || reviewsPopupText.classList.contains('active') || reviewsPopupVideo.classList.contains('active')) {
-            reviewsPopupImg.classList.remove('active');
-            reviewsPopupText.classList.remove('active');
-            reviewsPopupVideo.classList.remove('active');
+         if (
+            reviewsPopupImg.classList.contains("active") ||
+            reviewsPopupText.classList.contains("active") ||
+            reviewsPopupVideo.classList.contains("active")
+         ) {
+            reviewsPopupImg.classList.remove("active");
+            reviewsPopupText.classList.remove("active");
+            reviewsPopupVideo.classList.remove("active");
          }
       }
 
@@ -314,17 +318,16 @@ window.addEventListener("load", () => {
       // }
    }
 
-
    body.addEventListener("click", clickVideo);
 
-      function clickVideo(e) {
-         if (e.target.closest(".reviews-popup__video svg") || e.target.closest(".reviews-popup__poster")) {
-            qs("video").style.zIndex = "5";
-            qs("video").setAttribute("controls", "true");
-            qs("video").play();
-            qs(".reviews-popup__poster").style.opacity = "0";
-         }
+   function clickVideo(e) {
+      if (e.target.closest(".reviews-popup__video svg") || e.target.closest(".reviews-popup__poster")) {
+         qs("video").style.zIndex = "5";
+         qs("video").setAttribute("controls", "true");
+         qs("video").play();
+         qs(".reviews-popup__poster").style.opacity = "0";
       }
+   }
    // reviewsImgBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
    // reviewsVideoBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
    // reviewsDetailsBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
@@ -431,6 +434,11 @@ window.addEventListener("load", () => {
             slidesPerGroup: 7,
          },
       },
+
+      navigation: {
+         nextEl: ".step3__btn-right",
+         prevEl: ".step3__btn-left",
+      },
    });
 
    // ! Slider-vertical
@@ -488,7 +496,7 @@ window.addEventListener("load", () => {
    // });
    // swiperVerticalSmall.controller.control = swiperVerticalBig;
    // swiperVerticalBig.controller.control = swiperVerticalSmall;
- 
+
    window.addEventListener("resize", fixSlider);
    fixSlider();
    function fixSlider() {
@@ -604,7 +612,7 @@ window.addEventListener("load", () => {
       //    }
       // }
 
-      const packSlider = new Swiper('.step1__swiper', {
+      const packSlider = new Swiper(".step1__swiper", {
          speed: 500,
          slidesPerView: 1,
          initialSlide: 1,
@@ -636,7 +644,7 @@ window.addEventListener("load", () => {
             },
             1400: {
                slidesPerView: 3,
-            }
+            },
          },
       });
    }

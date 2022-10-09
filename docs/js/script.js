@@ -266,65 +266,28 @@ window.addEventListener("load", () => {
    let numSlideId;
    body.addEventListener("click", showPopupReviews);
 
-   const reviewsPopupImg = document.querySelector('.reviews-popup__item--img');
-   const reviewsPopupText = document.querySelector('.reviews-popup__item--text');
-   const reviewsPopupVideo = document.querySelector('.reviews-popup__item--video');
-
    function showPopupReviews(e) {
-      if (e.target.closest('.reviews__slide .reviews__img')) {
+      if (
+         e.target.closest(".reviews__slide .reviews__img") ||
+         e.target.closest(".reviews__slide .reviews__body--video") ||
+         e.target.closest(".reviews__slide .reviews__footer-btn")
+      ) {
+         slideId = e.target.closest(".reviews__slide").getAttribute("data-slide");
+         slidePopupId = document.querySelector(".reviews-popup__slide").getAttribute("data-popup-slide");
          popupReviews.classList.add("active");
          body.classList.add("lock");
-         reviewsPopupImg.classList.add('active');
-      } 
-      if (e.target.closest('.reviews__slide .reviews__body--video')) {
-         popupReviews.classList.add("active");
-         body.classList.add("lock");
-         reviewsPopupVideo.classList.add('active');
-      }
-      if (e.target.closest('.reviews__slide .reviews__footer-btn')) {
-         popupReviews.classList.add("active");
-         body.classList.add("lock");
-         reviewsPopupText.classList.add('active');
+         numSlideId = parseInt(slideId);
+         console.log(slideId, slidePopupId);
+         for (let i = 1; i < numSlideId; ) {
+            nextSlidePopUp.click();
+            ++i;
+         }
       }
       if (e.target.closest(".reviews-popup__close")) {
          popupReviews.classList.remove("active");
          body.classList.remove("lock");
-         if (reviewsPopupImg.classList.contains('active') || reviewsPopupText.classList.contains('active') || reviewsPopupVideo.classList.contains('active')) {
-            reviewsPopupImg.classList.remove('active');
-            reviewsPopupText.classList.remove('active');
-            reviewsPopupVideo.classList.remove('active');
-         }
       }
-
-      // if (
-      //    e.target.closest(".reviews__slide .reviews__img") ||
-      //    e.target.closest(".reviews__slide .reviews__body--video") ||
-      //    e.target.closest(".reviews__slide .reviews__footer-btn")
-      // ) {
-      //    slideId = e.target.closest(".reviews__slide").getAttribute("data-slide");
-      //    slidePopupId = document.querySelector(".reviews-popup__slide").getAttribute("data-popup-slide");
-      //    popupReviews.classList.add("active");
-      //    body.classList.add("lock");
-      //    numSlideId = parseInt(slideId);
-      //    console.log(slideId, slidePopupId);
-      //    for (let i = 1; i < numSlideId; ) {
-      //       nextSlidePopUp.click();
-      //       ++i;
-      //    }
-      // }
    }
-
-
-   body.addEventListener("click", clickVideo);
-
-      function clickVideo(e) {
-         if (e.target.closest(".reviews-popup__video svg") || e.target.closest(".reviews-popup__poster")) {
-            qs("video").style.zIndex = "5";
-            qs("video").setAttribute("controls", "true");
-            qs("video").play();
-            qs(".reviews-popup__poster").style.opacity = "0";
-         }
-      }
    // reviewsImgBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
    // reviewsVideoBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
    // reviewsDetailsBtn.forEach(item => (item.addEventListener('click', showReviewsPopup)));
@@ -431,6 +394,11 @@ window.addEventListener("load", () => {
             slidesPerGroup: 7,
          },
       },
+
+      navigation: {
+         nextEl: ".step3__btn-right",
+         prevEl: ".step3__btn-left",
+      },
    });
 
    // ! Slider-vertical
@@ -488,7 +456,7 @@ window.addEventListener("load", () => {
    // });
    // swiperVerticalSmall.controller.control = swiperVerticalBig;
    // swiperVerticalBig.controller.control = swiperVerticalSmall;
- 
+
    window.addEventListener("resize", fixSlider);
    fixSlider();
    function fixSlider() {
@@ -574,70 +542,44 @@ window.addEventListener("load", () => {
    if (qs("body.quest")) {
       // body.addEventListener("click", toggleSpoiler);
 
-      // function toggleSpoiler(e) {
-      //    // if (e.target.closest(".faq__preview")) {
-      //    //    e.target.closest(".faq__spoiler").classList.toggle("opened");
-      //    //    let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
-      //    //    if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
-      //    //       spoilerWrapper.style.height = null;
-      //    //    } else {
-      //    //       spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
-      //    //    }
-      //    // }
-      //    const spoilerItem = document.querySelectorAll(".faq__spoiler");
-      //    const spoilerWrapper = document.querySelectorAll(".faq__wrapper");
-      //    if (e.target.closest(".faq__spoiler")) {
-      //       if (e.target.closest(".faq__spoiler").classList.contains("opened")) {
-      //          e.target.closest(".faq__spoiler").classList.remove("opened");
-      //          e.target.closest(".faq__preview").nextElementSibling.style.height = null;
-      //       } else if (e.target.closest(".faq__spoiler")) {
-      //          spoilerItem.forEach(function (el) {
-      //             el.classList.remove("opened");
-      //          });
-      //          spoilerWrapper.forEach(function (el) {
-      //             el.style.height = null;
-      //          });
-      //          e.target.closest(".faq__spoiler").classList.toggle("opened");
-      //          e.target.closest(".faq__preview").nextElementSibling.style.height =
-      //             e.target.closest(".faq__preview").nextElementSibling.scrollHeight + "px";
-      //       }
-      //    }
-      // }
-
-      const packSlider = new Swiper('.step1__swiper', {
-         speed: 500,
-         slidesPerView: 1,
-         initialSlide: 1,
-         simulateTouch: true,
-         centeredSlides: true,
-         slideToClickedSlide: true,
-         spaceBetween: 24,
-         pagination: {
-            el: ".step1__pagination",
-            clickable: true,
-         },
-         navigation: {
-            nextEl: ".step1__next",
-            prevEl: ".step1__prev",
-         },
-         breakpoints: {
-            568: {
-               slidesPerView: 1.5,
-            },
-            700: {
-               slidesPerView: 2.048,
-            },
-            900: {
-               slidesPerView: 2.2,
-            },
-            1200: {
-               slidesPerView: 2.5,
-               spaceBetween: 20,
-            },
-            1400: {
-               slidesPerView: 3,
+      function toggleSpoiler(e) {
+         // if (e.target.closest(".faq__preview")) {
+         //    e.target.closest(".faq__spoiler").classList.toggle("opened");
+         //    let spoilerWrapper = e.target.closest(".faq__preview").nextElementSibling;
+         //    if (!e.target.closest(".faq__spoiler").classList.contains("opened")) {
+         //       spoilerWrapper.style.height = null;
+         //    } else {
+         //       spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+         //    }
+         // }
+         const spoilerItem = document.querySelectorAll(".faq__spoiler");
+         const spoilerWrapper = document.querySelectorAll(".faq__wrapper");
+         if (e.target.closest(".faq__spoiler")) {
+            if (e.target.closest(".faq__spoiler").classList.contains("opened")) {
+               e.target.closest(".faq__spoiler").classList.remove("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height = null;
+            } else if (e.target.closest(".faq__spoiler")) {
+               spoilerItem.forEach(function (el) {
+                  el.classList.remove("opened");
+               });
+               spoilerWrapper.forEach(function (el) {
+                  el.style.height = null;
+               });
+               e.target.closest(".faq__spoiler").classList.toggle("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height =
+                  e.target.closest(".faq__preview").nextElementSibling.scrollHeight + "px";
             }
-         },
-      });
+         }
+      }
+   }
+   document.body.addEventListener("click", togglePopupForm);
+   function togglePopupForm(e) {
+      if (
+         e.target.closest(".table-column__book") ||
+         e.target.closest(".prize__btn") ||
+         e.target.closest(".gal-form__btn")
+      ) {
+         document.querySelector(".popup-hero").classList.add("active");
+      }
    }
 });
