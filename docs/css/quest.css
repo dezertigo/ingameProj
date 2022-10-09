@@ -3164,6 +3164,7 @@ main {
     display: flex;
     -moz-column-gap: 20px;
     column-gap: 20px;
+    padding-top: 6.7708333333%;
   }
 
   .hero__container > :first-child {
@@ -3216,6 +3217,7 @@ main {
 
   .heroes__container {
     padding-top: 6.25%;
+    padding-bottom: 6.25%;
   }
 
   .heroes__title {
@@ -3413,6 +3415,7 @@ main {
 
 @media (min-width: 1400px) {
   .map-block__container,
+  .heroes__container,
   .header-top__container,
   .header__container {
     padding-left: 6.7708333333%;
@@ -3567,11 +3570,6 @@ main {
 
   .video-block__video i {
     font-size: 7.8125rem;
-  }
-
-  .heroes__container {
-    padding-left: 6.7708333333%;
-    padding-right: 6.7708333333%;
   }
 
   .reviews__container {
@@ -4951,6 +4949,7 @@ main {
 
 @media (max-width: 739px) {
   .map-block__container,
+  .heroes__container,
   .header-top__container,
   .header__container {
     padding-left: 3.2%;
@@ -5041,6 +5040,7 @@ main {
   .hero__container {
     padding-left: 3.2%;
     padding-right: 3.2%;
+    padding-top: 40px;
   }
 
   .step1__container {
@@ -5070,9 +5070,8 @@ main {
   }
 
   .heroes__container {
-    padding-left: 3.2%;
-    padding-right: 3.2%;
     padding-top: 60px;
+    padding-bottom: 70px;
   }
 
   .heroes__title {
@@ -5222,6 +5221,7 @@ main {
 
 @media (min-width: 740px) and (max-width: 999px) {
   .map-block__container,
+  .heroes__container,
   .header-top__container,
   .header__container {
     padding-left: 4.0322580645%;
@@ -5720,12 +5720,12 @@ main {
   .hero__container {
     padding-left: 4.0322580645%;
     padding-right: 4.0322580645%;
+    padding-top: 60px;
   }
 
   .heroes__container {
-    padding-left: 4.0322580645%;
-    padding-right: 4.0322580645%;
     padding-top: 60px;
+    padding-bottom: 70px;
   }
 }
 

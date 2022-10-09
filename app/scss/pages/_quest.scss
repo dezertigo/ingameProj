@@ -879,16 +879,19 @@
       @media (max-width: 739px) {
          padding-left: percent(12, 375);
          padding-right: percent(12, 375);
+         padding-top: 40px;
       }
 
       @media (min-width: 740px) and (max-width: 1399px) {
          padding-left: percent(30, 744);
          padding-right: percent(30, 744);
+         padding-top: 60px;
       }
 
       @media (min-width: 1000px) {
          display: flex;
          column-gap: 20px;
+         padding-top: percent(130, 1920);
 
          > :first-child {
             flex: 0 0 58%;
@@ -2335,23 +2338,22 @@
 .heroes {
    // .heroes__container
    &__container {
+      @extend %container;
+
       @media (max-width: 739px) {
-         padding-left: percent(12, 375);
-         padding-right: percent(12, 375);
          padding-top: 60px;
+         padding-bottom: 70px;
       }
 
       @media (min-width: 740px) and (max-width: 1399px) {
-         padding-left: percent(30, 744);
-         padding-right: percent(30, 744);
          padding-top: 60px;
+         padding-bottom: 70px;
       }
       @media (min-width: 1000px) {
          padding-top: percent(120, 1920);
+         padding-bottom: percent(120, 1920);
       }
       @media (min-width: 1400px) {
-         padding-left: percent(130, 1920);
-         padding-right: percent(130, 1920);
       }
    }
 
