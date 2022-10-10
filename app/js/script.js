@@ -713,7 +713,12 @@ window.addEventListener("load", () => {
       //    document.querySelector(".video-pop-up").classList.remove("active");
       // }
       let video = document.querySelector(".myVid video");
-      video.requestFullscreen();
+      if (devType() == "mobile" || devType() == "tablet") {
+         if (window.innerWidth < window.innerHeight) {
+            video.style.transform = "rotate(90deg)";
+         }
+         video.requestFullscreen();
+      }
    }
    function devType() {
       const ua = navigator.userAgent;
@@ -729,5 +734,5 @@ window.addEventListener("load", () => {
       console.log("desktop");
       return "desktop";
    }
-   alert(devType());
+   // alert(devType());
 });
