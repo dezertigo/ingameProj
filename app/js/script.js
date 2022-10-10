@@ -707,10 +707,12 @@ window.addEventListener("load", () => {
    // }
    body.addEventListener("click", openVideo);
    function openVideo(e) {
-      if (e.target.closest(".video-block__video")) {
-         document.querySelector(".video-pop-up").classList.add("active");
-      } else if (!e.target.closest(".video-pop-up__body")) {
-         document.querySelector(".video-pop-up").classList.remove("active");
-      }
+      // if (e.target.closest(".video-block__video")) {
+      //    document.querySelector(".video-pop-up").classList.add("active");
+      // } else if (!e.target.closest(".video-pop-up__body")) {
+      //    document.querySelector(".video-pop-up").classList.remove("active");
+      // }
+      let video = document.querySelector(".myVid video");
+      video.requestFullscreen();
    }
 });
