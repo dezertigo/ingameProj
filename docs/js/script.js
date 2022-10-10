@@ -260,20 +260,20 @@ window.addEventListener("load", () => {
    });
    const popupReviews = document.querySelector(".reviews-popup");
 
-   const feedbackBtn = document.querySelector('.reviews__feedback');
-   const popupFeedback = document.querySelector('.feedback-popup');
-   const feedbackClose = document.querySelector('.feedback-popup__close');
-   feedbackBtn.addEventListener('click', getFeedback);
-   feedbackClose.addEventListener('click', closeFeedback);
+   const feedbackBtn = document.querySelector(".reviews__feedback");
+   const popupFeedback = document.querySelector(".feedback-popup");
+   const feedbackClose = document.querySelector(".feedback-popup__close");
+   feedbackBtn.addEventListener("click", getFeedback);
+   feedbackClose.addEventListener("click", closeFeedback);
    function getFeedback() {
-      popupFeedback.classList.add('active');
+      popupFeedback.classList.add("active");
       setTimeout(() => {
-         body.classList.add('lock');
-      },300);
+         body.classList.add("lock");
+      }, 300);
    }
    function closeFeedback() {
-      popupFeedback.classList.remove('active');
-      body.classList.remove('lock');
+      popupFeedback.classList.remove("active");
+      body.classList.remove("lock");
    }
    // const reviewsImgBtn = document.querySelectorAll('.reviews__img');
    // const reviewsVideoBtn = document.querySelectorAll('.reviews__body--video');
@@ -614,15 +614,15 @@ window.addEventListener("load", () => {
          }
       }
 
-      let selectItem = document.querySelectorAll('.select__label');
-      selectItem.forEach(item => {
-         item.addEventListener('click', selectChoose);
-      })
+      let selectItem = document.querySelectorAll(".select__label");
+      selectItem.forEach((item) => {
+         item.addEventListener("click", selectChoose);
+      });
       function selectChoose() {
          let text = this.innerText,
-         select = this.closest('.select'),
-         currentText = select.querySelector('.select__current');
-         currentText.innerText = text; 
+            select = this.closest(".select"),
+            currentText = select.querySelector(".select__current");
+         currentText.innerText = text;
       }
       //    const spoilerItem = document.querySelectorAll(".faq__spoiler");
       //    const spoilerWrapper = document.querySelectorAll(".faq__wrapper");
@@ -679,6 +679,38 @@ window.addEventListener("load", () => {
             },
          },
       });
-   
+   }
+
+   //  ! Details \ Summary Maks
+
+   // if (qs(".faq__head")) {
+   //    // ? Если нужно открыть только первый спойлер на странице. Можно прогнать циклом для остальных
+   //    // if (qs(".spoiler").classList.contains("opened")) {
+   //    //    let spoilerWrapper = qa(".spoiler__wrapper")[0];
+   //    //    spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+   //    // }
+
+   //    body.addEventListener("click", toggleSpoiler);
+
+   //    function toggleSpoiler(e) {
+   // 		if (e.target.closest(".faq__head")) {
+   // 			e.target.closest(".faq__head").classList.toggle("opened");
+   //          let spoilerWrapper = e.target.closest(".faq__head").nextElementSibling;
+   //          if (!e.target.closest(".faq__head").classList.contains("opened")) {
+   // 				e.preventDefault();
+   // 				spoilerWrapper.style.height = null;
+   //          } else {
+   //             spoilerWrapper.style.height = spoilerWrapper.scrollHeight + "px";
+   //          }
+   //       }
+   //    }
+   // }
+   body.addEventListener("click", openVideo);
+   function openVideo(e) {
+      if (e.target.closest(".video-block__video")) {
+         document.querySelector(".video-pop-up").classList.add("active");
+      } else if (!e.target.closest(".video-pop-up__body")) {
+         document.querySelector(".video-pop-up").classList.remove("active");
+      }
    }
 });
