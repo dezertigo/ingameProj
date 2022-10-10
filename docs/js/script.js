@@ -705,34 +705,34 @@ window.addEventListener("load", () => {
    //       }
    //    }
    // }
-   body.addEventListener("click", openVideo);
+   // body.addEventListener("click", openVideo);
    function openVideo(e) {
       // if (e.target.closest(".video-block__video")) {
       //    document.querySelector(".video-pop-up").classList.add("active");
       // } else if (!e.target.closest(".video-pop-up__body")) {
       //    document.querySelector(".video-pop-up").classList.remove("active");
       // }
-      let video = document.querySelector(".myVid video");
-      if (devType() == "mobile" || devType() == "tablet") {
-         if (window.innerWidth < window.innerHeight) {
-            video.style.transform = "rotate(90deg)";
-         }
-         video.requestFullscreen();
-      }
+      // let video = document.querySelector(".myVid video");
+      // if (devType() == "mobile" || devType() == "tablet") {
+      //    if (window.innerWidth < window.innerHeight) {
+      //       video.style.transform = "rotate(90deg)";
+      //    }
+      //    video.requestFullscreen();
+      // }
    }
-   function devType() {
-      const ua = navigator.userAgent;
-      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-         console.log("tablet");
-         return "tablet";
-      } else if (
-         /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
-      ) {
-         console.log("mobile");
-         return "mobile";
-      }
-      console.log("desktop");
-      return "desktop";
-   }
+   // function devType() {
+   //    const ua = navigator.userAgent;
+   //    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+   //       console.log("tablet");
+   //       return "tablet";
+   //    } else if (
+   //       /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
+   //    ) {
+   //       console.log("mobile");
+   //       return "mobile";
+   //    }
+   //    console.log("desktop");
+   //    return "desktop";
+   // }
    // alert(devType());
 });

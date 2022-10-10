@@ -1,4 +1,25 @@
-<div class="cards__card card active">
+<div class="cards__card card">
+	<div class="card__top-preview">
+		@@if(context.color) {
+		<div class="card__what card__what_@@color">
+			<div class="card__icon">
+				@@if (context.svg == 'discount') {
+				@@include('./_discount.html')
+				}
+				@@if (context.svg == 'lightning') {
+				@@include('./_lightning.html')
+				}
+				@@if (context.svg == 'preorder') {
+				@@include('./_preorder.html')
+				}
+			</div>
+			<p class="card__subtext">@@text</p>
+		</div>
+		}
+		<div class="card__age">@@age</div>
+
+	</div>
+
 	<div class='card__image'>
 		<picture>
 			<source type='image/webp' srcset='@img/gallery/card@@img.webp'>
