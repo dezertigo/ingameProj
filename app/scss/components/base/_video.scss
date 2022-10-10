@@ -59,6 +59,7 @@
       }
       &:hover {
          i {
+            border-color: $greenItem;
             transform: translate(-50%, -50%) scale(1.2);
          }
       }
@@ -78,8 +79,14 @@
          left: 50%;
          transform: translate(-50%, -50%);
          z-index: 1;
+         border: 1px solid transparent;
+         padding: 10px 10px 10px 15px;
+         border-radius: 50%;
+
          @media (max-width: 739px) {
             @include fz(43);
+            width: 65px;
+            height: 65px;
          }
          @media (min-width: 740px) and (max-width: 999px) {
             @include fz(77);
@@ -163,7 +170,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      iframe {
+      video {
          position: absolute;
          top: 0;
          left: 0;

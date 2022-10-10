@@ -42,7 +42,7 @@ const paths = {
          img: `app/img/**/*.{jpg,jpeg,gif,png}`,
          webp: "app/img/**/*.webp",
          svg: "app/img/**/*.svg",
-         video: "app/img/**/*.{mp4,mkv}",
+         video: "app/img/video.mp4",
       },
       dest: "docs/img/",
    },

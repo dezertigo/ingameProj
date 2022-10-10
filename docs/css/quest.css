@@ -1252,6 +1252,7 @@ main {
 }
 
 .video-block__video:hover i {
+  border-color: #90c75e;
   transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -1274,6 +1275,9 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  border: 1px solid transparent;
+  padding: 10px 10px 10px 15px;
+  border-radius: 50%;
 }
 
 .video-block__video:after {
@@ -1332,7 +1336,7 @@ main {
   bottom: 0;
 }
 
-.video-pop-up__wrap iframe {
+.video-pop-up__wrap video {
   position: absolute;
   top: 0;
   left: 0;
@@ -5420,6 +5424,8 @@ main {
 
   .video-block__video i {
     font-size: 2.6875rem;
+    width: 65px;
+    height: 65px;
   }
 
   .hero__container {
