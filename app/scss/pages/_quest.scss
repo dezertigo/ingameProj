@@ -1175,13 +1175,16 @@
          padding-right: percent(30, 744);
          padding-top: 40px;
       }
-
+      @media (max-width: 999px) {
+         padding-bottom: 60px;
+      }
       @media (min-width: 1000px) {
          padding-left: percent(30, 744);
          padding-right: percent(30, 744);
          max-width: 990px;
          margin: 0 auto;
          padding-top: percent(60, 1920);
+         padding-bottom: percent(130, 1920);
       }
    }
 
@@ -1196,10 +1199,12 @@
    }
    &__prev,
    &__next {
-      svg {
-         fill: transparent;
-         path {
-            stroke: #000000;
+      @media (max-width: 743px) {
+         svg {
+            fill: transparent;
+            path {
+               stroke: #000000;
+            }
          }
       }
    }
@@ -1233,10 +1238,32 @@
          right: -7px;
       }
    }
-
    @media (min-width: 744px) {
       &__block-btn {
          display: none;
+      }
+   }
+   &__nav {
+      @media (max-width: 743px) {
+         display: none;
+      }
+      @media (min-width: 744px) {
+         padding-top: 50px;
+         justify-content: center;
+         path {
+            stroke: $dark;
+         }
+         .swiper-pagination-horizontal {
+            width: auto;
+         }
+         .swiper-pagination-bullet {
+            &-active {
+               background: $greenItem;
+               opacity: 1;
+            }
+            background: $greenItem;
+            opacity: 0.2;
+         }
       }
    }
 }

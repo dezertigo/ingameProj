@@ -116,6 +116,21 @@ window.addEventListener("load", () => {
             }
          }
       }
+
+      // ! Video-block {
+      if (qs(".video-block")) {
+         if (e.target.closest(".video-block__preview")) {
+            if (
+               (devType() == "mobile" || devType() == "tablet") &&
+               qs(".video-block__video video").classList.contains("first-view")
+            ) {
+               qs(".video-block__video video").requestFullscreen();
+               qs(".video-block__video video").classList.remove("first-view");
+            }
+            e.target.closest(".video-block__preview").style.display = "none";
+            e.target.closest(".video-block__preview").nextElementSibling.play();
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
@@ -345,6 +360,16 @@ window.addEventListener("load", () => {
                slidesPerView: 7,
                slidesPerGroup: 7,
             },
+            1000: {
+               pagination: {
+                  el: ".step3__pagination",
+                  clickable: true,
+               },
+               navigation: {
+                  nextEl: ".step3__next",
+                  prevEl: ".step3__prev",
+               },
+            },
          },
          navigation: {
             nextEl: ".step3__btn-right",
@@ -406,8 +431,6 @@ window.addEventListener("load", () => {
          pagination: {
             el: ".horizontal-gallery__pagination",
             clickable: true,
-            // dynamicBullets: true,
-            // dynamicMainBullets: 5,
          },
          navigation: {
             nextEl: ".horizontal-gallery__next",
@@ -491,5 +514,18 @@ window.addEventListener("load", () => {
             },
          },
       });
+   }
+
+   // ! Check devicy Type
+   function devType() {
+      const ua = navigator.userAgent;
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+         return "tablet";
+      } else if (
+         /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
+      ) {
+         return "mobile";
+      }
+      return "desktop";
    }
 });
