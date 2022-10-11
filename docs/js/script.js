@@ -148,6 +148,21 @@ window.addEventListener("load", () => {
             e.target.closest(".video-block__preview").nextElementSibling.play();
          }
       }
+
+      // ! Horizontal-gallery
+      if (qs(".horizontal-gallery")) {
+         if (
+            qs(".horizontal-gallery-pop-up").classList.contains("active") &&
+            (e.target.closest(".horizontal-gallery-pop-up__icon-wrapper") ||
+               !e.target.closest(".horizontal-gallery-pop-up__body"))
+         ) {
+            qs(".horizontal-gallery-pop-up").classList.remove("active");
+            body.classList.remove("lock");
+         } else if (e.target.closest(".horizontal-gallery__swiper-big img")) {
+            qs(".horizontal-gallery-pop-up").classList.add("active");
+            body.classList.add("lock");
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
@@ -201,14 +216,11 @@ window.addEventListener("load", () => {
    } else {
       window.addEventListener("scroll", () => {
          if (window.pageYOffset > qs(".header").scrollHeight / 2) {
-            // alert("more");
             qs(".header-top").style.height = "0px";
             qs(".header-top").style.overflow = "hidden";
             qs(".header-bottom").style.height = "0px";
             qs(".header-bottom").style.overflow = "hidden";
-            // header.style.opacity = "0.8";
-         } else if (window.pageYOffset < qs(".header").scrollHeight * 2) {
-            // header.style.opacity = "1";
+         } else if (window.pageYOffset < qs(".header").scrollHeight) {
             qs(".header-top").style.height = qs(".header-top").scrollHeight + "px";
             qs(".header-top").style.overflow = "visible";
             qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
@@ -431,6 +443,8 @@ window.addEventListener("load", () => {
                slidesPerGroup: 7,
             },
             1000: {
+               slidesPerView: 7,
+               slidesPerGroup: 7,
                pagination: {
                   el: ".step3__pagination",
                   clickable: true,
@@ -536,13 +550,44 @@ window.addEventListener("load", () => {
             },
          },
       });
+      if (window.innerWidth >= 1000) {
+         const swiperHorizontalBigPopUp = new Swiper(".horizontal-gallery__swiper-big-pop-up", {
+            speed: 500,
+            slidesPerView: 1,
+            simulateTouch: true,
+            spaceBetween: 20,
+            sliderPerColumn: 1,
+            pagination: {
+               el: ".horizontal-gallery__pagination-pop-up",
+               clickable: true,
+            },
+            navigation: {
+               nextEl: ".horizontal-gallery__next-pop-up",
+               prevEl: ".horizontal-gallery__prev-pop-up",
+            },
+            thumbs: {
+               swiper: {
+                  el: ".horizontal-gallery__swiper-small-pop-up",
+                  spaceBetween: 20,
+                  slidesPerView: 6,
+                  direction: "vertical",
+               },
+            },
+         });
+         swiperHorizontalBigPopUp.controller.control = swiperHorizontalBig; // Закомментировать, если не надо прокручивать слайды вне поп-апа
+         swiperHorizontalBig.controller.control = swiperHorizontalBigPopUp;
+      }
       window.addEventListener("resize", fixSlider);
       fixSlider();
       function fixSlider() {
          if (window.innerWidth >= 1000) {
-            let bugSlider = qs(".horizontal-gallery__small-wrap");
-            let normalSlider = qs(".horizontal-gallery__image-big").getBoundingClientRect().height;
-            bugSlider.style.maxHeight = normalSlider + "px";
+            let bugSlider1 = qs(".horizontal-gallery__small-wrap");
+            let normalSlider1 = qs(".horizontal-gallery__image-big").getBoundingClientRect().height;
+            bugSlider1.style.maxHeight = normalSlider1 + "px";
+
+            let bugSlider2 = qs(".horizontal-gallery__small-wrap-pop-up");
+            let normalSlider2 = qs(".horizontal-gallery__image-big-pop-up").getBoundingClientRect().height;
+            bugSlider2.style.maxHeight = normalSlider2 + "px";
          }
       }
    }
