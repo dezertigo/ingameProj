@@ -119,9 +119,7 @@ window.addEventListener("load", () => {
 
       // ! Video-block {
       if (qs(".video-block")) {
-         alert("video on page");
          if (e.target.closest(".video-block__preview")) {
-            alert("click on video preview");
             if (
                (devType() == "mobile" || devType() == "tablet") &&
                qs(".video-block__video video").classList.contains("first-view")
@@ -130,6 +128,7 @@ window.addEventListener("load", () => {
                qs(".video-block__video video").classList.remove("first-view");
             }
             e.target.closest(".video-block__preview").style.display = "none";
+            e.target.closest(".video-block__preview").nextElementSibling.style.zIndex = "5";
             e.target.closest(".video-block__preview").nextElementSibling.play();
          }
       }
