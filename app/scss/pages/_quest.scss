@@ -1171,14 +1171,14 @@
       }
 
       @media (min-width: 740px) and (max-width: 999px) {
-         padding-left: percent(34, 744);
-         padding-right: percent(34, 744);
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
          padding-top: 40px;
       }
 
       @media (min-width: 1000px) {
-         padding-left: 15px;
-         padding-right: 15px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
          max-width: 990px;
          margin: 0 auto;
          padding-top: percent(60, 1920);

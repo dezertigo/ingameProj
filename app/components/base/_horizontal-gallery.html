@@ -1,5 +1,11 @@
 <div class="horizontal-gallery">
 	<div class="horizontal-gallery__big-wrap">
+		@@include('./_second-nav.html', {
+		'class': 'horizontal-gallery__nav',
+		'prev': 'horizontal-gallery__prev',
+		'next': 'horizontal-gallery__next',
+		'pagination': 'horizontal-gallery__pagination',
+		})
 		<div class="horizontal-gallery__swiper-big swiper slider">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide horizontal-gallery__slide-big">
@@ -83,7 +89,6 @@
 			}) -->
 		</div>
 	</div>
-	<!--  -->
 	<div class="horizontal-gallery__small-wrap">
 		<div class="horizontal-gallery__swiper-small swiper">
 			<div class="swiper-wrapper">
@@ -162,4 +167,6 @@
 			</div>
 		</div>
 	</div>
+
+
 </div>

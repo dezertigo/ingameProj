@@ -361,6 +361,14 @@ window.addEventListener("load", () => {
          initialSlide: 0,
          simulateTouch: true,
          spaceBetween: 12,
+         pagination: {
+            el: ".vertical-gallery__pagination",
+            clickable: true,
+         },
+         navigation: {
+            nextEl: ".vertical-gallery__next",
+            prevEl: ".vertical-gallery__prev",
+         },
          thumbs: {
             swiper: {
                el: ".vertical-gallery__swiper-small",
@@ -395,14 +403,16 @@ window.addEventListener("load", () => {
          simulateTouch: true,
          spaceBetween: 12,
          sliderPerColumn: 1,
-         // navigation: {
-         //    prevEl: '.horizontal-gallery__prev',
-         //    nextEl: '.horizontal-gallery__next',
-         // },
-         // pagination: {
-         //    el: '.horizontal-gallery__pagination',
-         //    clickable: true,
-         // }, работает, но нужно
+         pagination: {
+            el: ".horizontal-gallery__pagination",
+            clickable: true,
+            // dynamicBullets: true,
+            // dynamicMainBullets: 5,
+         },
+         navigation: {
+            nextEl: ".horizontal-gallery__next",
+            prevEl: ".horizontal-gallery__prev",
+         },
          breakpoints: {
             1000: {
                spaceBetween: 20,

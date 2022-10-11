@@ -92,3 +92,33 @@
       }
    }
 }
+
+.vertical-gallery {
+   position: relative;
+   @media (max-width: 999px) {
+      padding-bottom: 50px;
+   }
+   &__big-wrap {
+      @media (min-width: 1000px) {
+         position: relative;
+      }
+   }
+   &__nav {
+      z-index: 5;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      @media (min-width: 1000px) {
+         bottom: 20px;
+      }
+      @media (min-width: 1400px) {
+         bottom: 30px;
+      }
+      @media (min-width: 1800px) {
+         bottom: 50px;
+      }
+      @media (max-width: 999px) {
+         bottom: 0px;
+      }
+   }
+}
