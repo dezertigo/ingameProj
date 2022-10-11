@@ -243,22 +243,29 @@ window.addEventListener("load", () => {
       cardsPreview.forEach((el) => {
          cardsPreviewHeight.push(el.scrollHeight);
       });
+      // console.log("Preview All Before");
+      // console.log(cardsPreviewHeight);
+
       // Узнаем макисмальную высоту превьюшки карточки квеста
       let maxPreviewHeight = Math.max(...cardsPreviewHeight);
+      // console.log("Preview Max = " + maxPreviewHeight);
 
       let cardBody = qa(".cards .card__body");
       let cardsBodyHeight = [];
       cardBody.forEach((el) => {
          cardsBodyHeight.push(el.scrollHeight);
       });
+      // console.log("Body all");
+      // console.log(cardsBodyHeight);
       // Узнаем макисмальную высоту спрятанной части карточки квеста
       let maxBodyHeight = Math.max(...cardsBodyHeight);
+      // console.log("Body max = " + maxBodyHeight);
 
       // В эту переменную передадим высоту превьюшки после увелечения шрифта
       let finalHeight = maxPreviewHeight;
       function resizeLayout(e) {
          if (e.target.closest(".card")) {
-            let newPreviewHeight = e.target.closest(".card").children[1].firstElementChild.scrollHeight;
+            let newPreviewHeight = e.target.closest(".card").children[2].firstElementChild.scrollHeight;
             // Проверяем стала ли высота превьюшки больше чем любая другая на странице
             if (newPreviewHeight > finalHeight) {
                cards.forEach((el) => {
