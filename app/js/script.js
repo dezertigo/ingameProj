@@ -156,6 +156,7 @@ window.addEventListener("load", () => {
    }
 
    qs("main").style.paddingTop = qs(".header").scrollHeight + "px";
+
    window.addEventListener("scroll", function () {
       if (window.pageYOffset > parseInt(window.getComputedStyle(header).height.match(/[-0-9.]+(?=px)/))) {
          // if (window.pageYOffset > 100) {
@@ -164,10 +165,10 @@ window.addEventListener("load", () => {
          header.style.opacity = "1";
       }
    });
-   header.addEventListener("pointerover", function () {
+   header.addEventListener("mouseover", function () {
       header.style.opacity = "1";
    });
-   header.addEventListener("pointerout", function () {
+   header.addEventListener("mouseout", function () {
       header.style.opacity = "0.05";
    });
 
