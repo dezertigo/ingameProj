@@ -149,7 +149,7 @@ window.addEventListener("load", () => {
          }
       }
 
-      // ! Horizontal-gallery
+      // ! Horizontal-gallery-pop-up
       if (qs(".horizontal-gallery")) {
          if (
             qs(".horizontal-gallery-pop-up").classList.contains("active") &&

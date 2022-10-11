@@ -1199,12 +1199,10 @@
    }
    &__prev,
    &__next {
-      @media (max-width: 743px) {
-         svg {
-            fill: transparent;
-            path {
-               stroke: #000000;
-            }
+      svg {
+         fill: transparent;
+         path {
+            stroke: #000000;
          }
       }
    }
@@ -1257,12 +1255,12 @@
             width: auto;
          }
          .swiper-pagination-bullet {
+            background-color: $greenItem !important;
+            opacity: 0.2 !important;
             &-active {
                background: $greenItem;
-               opacity: 1;
+               opacity: 1 !important;
             }
-            background: $greenItem;
-            opacity: 0.2;
          }
       }
    }

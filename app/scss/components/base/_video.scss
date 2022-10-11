@@ -10,6 +10,10 @@
       }
    }
    &__text {
+      @media (max-width: 743px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+      }
       @media (max-width: 560px) {
          text-align: center;
          margin-bottom: 16px;
@@ -89,7 +93,7 @@
 
       @media (min-width: 1200px) {
          width: 182px;
-         width: 182px;
+         height: 182px;
       }
       @media (min-width: 1400px) {
          border-width: 6px;

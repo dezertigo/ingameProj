@@ -1367,7 +1367,7 @@ main {
 .slider__prev:hover svg path,
 .slider__next:hover svg path {
   transition: all 0.5s;
-  stroke: #9ACF16;
+  stroke: #9acf16;
 }
 
 .slider__pagination {
@@ -1379,17 +1379,20 @@ main {
 .slider .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: rgba(154, 207, 22, 0.2);
+  background-color: #9acf16;
+  opacity: 0.2;
   cursor: pointer;
   transition: all 0.5s;
 }
 
 .slider .swiper-pagination-bullet:hover {
-  background: rgba(249, 191, 48, 0.4);
+  background-color: #f9bf30;
+  opacity: 0.4;
 }
 
 .slider .swiper-pagination-bullet-active {
-  background: #9ACF16;
+  background-color: #9acf16;
+  opacity: 1;
 }
 
 body.home .hero {

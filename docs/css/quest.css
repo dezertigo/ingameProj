@@ -1138,7 +1138,7 @@ main {
 .slider__prev:hover svg path,
 .slider__next:hover svg path {
   transition: all 0.5s;
-  stroke: #9ACF16;
+  stroke: #9acf16;
 }
 
 .slider__pagination {
@@ -1150,17 +1150,20 @@ main {
 .slider .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: rgba(154, 207, 22, 0.2);
+  background-color: #9acf16;
+  opacity: 0.2;
   cursor: pointer;
   transition: all 0.5s;
 }
 
 .slider .swiper-pagination-bullet:hover {
-  background: rgba(249, 191, 48, 0.4);
+  background-color: #f9bf30;
+  opacity: 0.4;
 }
 
 .slider .swiper-pagination-bullet-active {
-  background: #9ACF16;
+  background-color: #9acf16;
+  opacity: 1;
 }
 
 .horizontal-gallery__swiper-big img {
@@ -2700,6 +2703,16 @@ main {
   stroke: #000000;
 }
 
+.step3__prev svg,
+.step3__next svg {
+  fill: transparent;
+}
+
+.step3__prev svg path,
+.step3__next svg path {
+  stroke: #000000;
+}
+
 .map-block__title {
   font-weight: 700;
 }
@@ -2960,13 +2973,13 @@ main {
   }
 
   .step3__nav .swiper-pagination-bullet {
-    background: #90c75e;
-    opacity: 0.2;
+    background-color: #90c75e !important;
+    opacity: 0.2 !important;
   }
 
   .step3__nav .swiper-pagination-bullet-active {
     background: #90c75e;
-    opacity: 1;
+    opacity: 1 !important;
   }
 }
 
@@ -3631,7 +3644,7 @@ main {
 
   .video-block__icon {
     width: 182px;
-    width: 182px;
+    height: 182px;
   }
 
   .video-block__icon svg {
@@ -5307,6 +5320,11 @@ main {
     padding: 25px 0 14px;
   }
 
+  .video-block__text {
+    padding-left: 3.2%;
+    padding-right: 3.2%;
+  }
+
   .video-block__icon {
     padding-left: 8px;
     border-width: 2px;
@@ -5337,16 +5355,6 @@ main {
 
   .prize__picture {
     padding-bottom: 93.7%;
-  }
-
-  .step3__prev svg,
-  .step3__next svg {
-    fill: transparent;
-  }
-
-  .step3__prev svg path,
-  .step3__next svg path {
-    stroke: #000000;
   }
 
   .step3__block-btn {
