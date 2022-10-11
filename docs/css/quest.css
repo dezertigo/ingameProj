@@ -395,6 +395,15 @@ main {
 }
 
 .header {
+  position: fixed !important;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.header {
   position: relative;
 }
 

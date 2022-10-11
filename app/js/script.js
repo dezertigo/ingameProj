@@ -155,6 +155,22 @@ window.addEventListener("load", () => {
       }
    }
 
+   qs("main").style.paddingTop = qs(".header").scrollHeight + "px";
+   window.addEventListener("scroll", function () {
+      if (window.pageYOffset > parseInt(window.getComputedStyle(header).height.match(/[-0-9.]+(?=px)/))) {
+         // if (window.pageYOffset > 100) {
+         header.style.opacity = "0.05";
+      } else if (window.pageYOffset < parseInt(window.getComputedStyle(header).height.match(/[-0-9.]+(?=px)/))) {
+         header.style.opacity = "1";
+      }
+   });
+   header.addEventListener("pointerover", function () {
+      header.style.opacity = "1";
+   });
+   header.addEventListener("pointerout", function () {
+      header.style.opacity = "0.05";
+   });
+
    // ! Footer
    // Telegram hover
    document.body.addEventListener("pointerover", changeTelegramColor);
@@ -524,7 +540,7 @@ window.addEventListener("load", () => {
       });
    }
 
-   // ! Check devicy Type
+   // ! Check device Type
    function devType() {
       const ua = navigator.userAgent;
       if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {

@@ -23,8 +23,6 @@
    position: relative;
    overflow: hidden;
    border-bottom: 4px solid $green;
-   // &:nth-child(3) {
-   // &.activee {
    &:hover {
       border-bottom: 4px solid rgba(153, 208, 24, 0.9);
       box-shadow: 0px 4px 24px rgba(94, 135, 15, 0.6);
