@@ -119,7 +119,9 @@ window.addEventListener("load", () => {
 
       // ! Video-block {
       if (qs(".video-block")) {
+         alert("video on page");
          if (e.target.closest(".video-block__preview")) {
+            alert("click on video preview");
             if (
                (devType() == "mobile" || devType() == "tablet") &&
                qs(".video-block__video video").classList.contains("first-view")
