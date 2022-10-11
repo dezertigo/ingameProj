@@ -163,6 +163,15 @@ window.addEventListener("load", () => {
             body.classList.add("lock");
          }
       }
+
+      // ! Choose City
+      if (qs(".pop-up-city__btn")) {
+         if (e.target.closest("#city-1 .pop-up-city__btn")) {
+            qs("#city-1.pop-up-city").classList.remove("active");
+         } else if (e.target.closest("#city-2 .pop-up-city__btn")) {
+            qs("#city-2.pop-up-city").classList.remove("active");
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
