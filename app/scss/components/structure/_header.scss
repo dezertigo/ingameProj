@@ -338,7 +338,7 @@
                   margin-left: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  margin-left: percent(30, 1438);
+                  margin-left: percent(25, 1438);
                }
             }
             &:not(:last-child) {
@@ -347,7 +347,7 @@
                   padding-right: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  padding-right: percent(30, 1438);
+                  padding-right: percent(25, 1438);
                }
             }
             cursor: pointer;

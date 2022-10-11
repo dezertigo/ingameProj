@@ -3045,11 +3045,11 @@ body.home .ceo.opened .ceo__decor {
 
 @media (min-width: 1000px) and (min-width: 1920px) {
   .header-menu__list li:not(:first-child) {
-    margin-left: 2.0862308762%;
+    margin-left: 1.7385257302%;
   }
 
   .header-menu__list li:not(:last-child) {
-    padding-right: 2.0862308762%;
+    padding-right: 1.7385257302%;
   }
 }
 
