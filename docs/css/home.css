@@ -939,6 +939,10 @@ main {
   padding: 5px;
 }
 
+.ceo.opened .ceo__decor {
+  box-shadow: none;
+}
+
 .btn {
   cursor: pointer;
   padding-left: 15px;
