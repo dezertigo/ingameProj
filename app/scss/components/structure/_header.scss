@@ -160,6 +160,8 @@
    &__lists {
       display: flex;
       align-items: center;
+      transition: all 0.3s ease;
+
       @media (max-width: 1399px) {
          column-gap: 12px;
       }
@@ -232,6 +234,8 @@
       flex-direction: column;
       align-items: flex-end;
       row-gap: 2px;
+      transition: all 0.3s ease;
+
       @media (max-width: 369px) {
          align-items: center;
          grid-column: span 2;

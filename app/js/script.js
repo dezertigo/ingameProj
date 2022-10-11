@@ -24,11 +24,27 @@ window.addEventListener("load", () => {
             header.classList.remove("active");
             menu.classList.remove("active");
             body.classList.remove("lock");
+            if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+               setTimeout(() => {
+                  qs(".header-top__lists").style.height = "0px";
+                  qs(".header-top__lists").style.overflow = "hidden";
+                  qs(".header-top__phone").style.height = "0px";
+                  qs(".header-top__phone").style.overflow = "hidden";
+                  qs(".header-bottom").style.height = "0px";
+                  qs(".header-bottom").style.overflow = "hidden";
+               }, 800);
+            }
          } else {
             burger.classList.add("active");
             header.classList.add("active");
             body.classList.add("lock");
             menu.classList.add("active");
+            qs(".header-top__lists").style.height = qs(".header-top__lists").scrollHeight + "px";
+            qs(".header-top__lists").style.overflow = "visible";
+            qs(".header-top__phone").style.height = qs(".header-top__phone").scrollHeight + "px";
+            qs(".header-top__phone").style.overflow = "visible";
+            qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
+            qs(".header-bottom").style.overflow = "visible";
             window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
          }
       } else if (
@@ -163,12 +179,21 @@ window.addEventListener("load", () => {
    window.addEventListener("scroll", () => {
       if (window.pageYOffset > qs(".header").scrollHeight / 2) {
          // alert("more");
-         // qs(".header-top__lists").style.height = "0px";
-         // qs(".header-top__phone").style.height = "0px";
-         // qs(".header-bottom").style.height = "0px";
-         header.style.opacity = "0.1";
-      } else if (window.pageYOffset < parseInt(window.getComputedStyle(header).height.match(/[-0-9.]+(?=px)/))) {
-         header.style.opacity = "1";
+         qs(".header-top__lists").style.height = "0px";
+         qs(".header-top__lists").style.overflow = "hidden";
+         qs(".header-top__phone").style.height = "0px";
+         qs(".header-top__phone").style.overflow = "hidden";
+         qs(".header-bottom").style.height = "0px";
+         qs(".header-bottom").style.overflow = "hidden";
+         // header.style.opacity = "0.8";
+      } else if (window.pageYOffset < qs(".header").scrollHeight) {
+         // header.style.opacity = "1";
+         qs(".header-top__lists").style.height = qs(".header-top__lists").scrollHeight + "px";
+         qs(".header-top__lists").style.overflow = "visible";
+         qs(".header-top__phone").style.height = qs(".header-top__phone").scrollHeight + "px";
+         qs(".header-top__phone").style.overflow = "visible";
+         qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
+         qs(".header-bottom").style.overflow = "visible";
       }
    });
    // window.addEventListener("scroll", function () {
@@ -179,14 +204,14 @@ window.addEventListener("load", () => {
    //    header.style.opacity = "1";
    // }
    // });
-   header.addEventListener("mouseover", function () {
-      header.style.opacity = "1";
-   });
-   header.addEventListener("mouseout", function () {
-      if (window.pageYOffset > qs(".header").scrollHeight) {
-         header.style.opacity = "0.1";
-      }
-   });
+   // header.addEventListener("mouseover", function () {
+   //    header.style.opacity = "1";
+   // });
+   // header.addEventListener("mouseout", function () {
+   //    if (window.pageYOffset > qs(".header").scrollHeight) {
+   //       header.style.opacity = "0.8";
+   //    }
+   // });
 
    // ! Footer
    // Telegram hover
