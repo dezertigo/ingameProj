@@ -395,16 +395,12 @@ main {
 }
 
 .header {
-  position: fixed !important;
+  position: fixed;
   z-index: 10;
   width: 100%;
   top: 0;
   left: 0;
   transition: all 0.3s ease;
-}
-
-.header {
-  position: relative;
 }
 
 .header:before {
@@ -419,6 +415,7 @@ main {
 }
 
 .header-top {
+  transition: all 0.3s ease;
   position: relative;
   z-index: 11;
 }
@@ -515,6 +512,7 @@ main {
 }
 
 .header-bottom {
+  transition: all 0.3s ease;
   position: relative;
   z-index: 11;
 }

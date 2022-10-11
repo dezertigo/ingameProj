@@ -1,5 +1,10 @@
 .header {
-   position: relative;
+   position: fixed;
+   z-index: 10;
+   width: 100%;
+   top: 0;
+   left: 0;
+   transition: all 0.3s ease;
    &:before {
       // Накрывает менюшки с position: fixed
       content: "";
@@ -28,6 +33,7 @@
 }
 
 .header-top {
+   transition: all 0.3s ease;
    position: relative;
    z-index: 11;
    @media (max-width: 1000px) {
@@ -633,6 +639,7 @@
    }
 }
 .header-bottom {
+   transition: all 0.3s ease;
    position: relative;
    z-index: 11;
    // .header-bottom__container
