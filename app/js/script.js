@@ -702,6 +702,40 @@ window.addEventListener("load", () => {
       ) {
          return "mobile";
       }
-      return "desktop";
+      document.body.addEventListener('click', togglePopupForm)
+   function togglePopupForm(e) {
+      if (e.target.closest('.table-column__book') || e.target.closest('.prize__btn') || e.target.closest('.gal-form__btn')) {
+         document.querySelector('.popup-heroes').classList.add('active')
+      }
    }
+   document.body.addEventListener('click', togglePopupFormClose)
+   function togglePopupFormClose(e) {
+      if (e.target.closest('.popup-heroes__btn-close')) {
+         document.querySelector('.popup-heroes').classList.remove('active')
+      }
+   }
+   //  PopUp Select
+   let selection = function () {
+      let selectHeader = document.querySelectorAll('.popup-heroes__select');
+      let selectItem = document.querySelectorAll('.popup-heroes__item')
+
+      selectHeader.forEach(item => {
+         item.addEventListener('click', selectToggle)
+      });
+      selectItem.forEach(item => {
+         item.addEventListener('click', selectChoose)
+      });
+      function selectToggle() {
+         this.classList.toggle('is-active');
+      }
+      function selectChoose() {
+         let text = this.innerText,
+            select = this.closest('.popup-heroes__select'),
+            currentText = select.querySelector('.popup-heroes__select-current');
+         currentText.innerText = text;
+         select.classList.remove('is-active')
+      }
+   };
+
+   selection();
 });
