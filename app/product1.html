@@ -1,18 +1,75 @@
 <!DOCTYPE html>
-<!-- ! Изменить все "Start" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
+<!-- ! Изменить все "product1" на нужные данные, после чего удалить эту строку и переименовать текущий файл-->
 @@include('./components/structure/_head.html', {
 'lang':'en',
-'css': './css/start.min.css',
-'title': 'Start',
+'css': './css/product1.min.css',
+'title': 'Product page',
 'swiper': 'true',
 })
 <!-- todo указать нужное значение дял подключения\отключения свайпера -->
 <!--  -->
 
-<body class="start">
+<body class="product1">
 	<div class="wrapper">
 		@@include('./components/structure/_header.html')
 		<main>
+			<h1>Квест у коробці</h1>
+			<section class="hero">
+				<div class="hero__container">
+					@@include('./components/base/_horizontal-gallery.html')
+					@@include('./components/base/_horizontal-gallery-pop-up.html')
+					<div class="hero__form">
+						@@include('./components/base/_gal-form.html')
+					</div>
+				</div>
+			</section>
+			<section class="text-cards">
+				<div class="text-cards__contaier">
+					<div class="text-cards__swiper-head swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide text-cards-slide-head text-cards-slide-head_green">
+								<p class="text-cards-slide-head__title">ОПИС</p>
+							</div>
+							<div class="swiper-slide text-cards-slide-head text-cards-slide-head_orange">
+								<p class="text-cards-slide-head__title">ЩО У КОРОБЦІ</p>
+							</div>
+							<div class="swiper-slide text-cards-slide-head text-cards-slide-head_green">
+								<p class="text-cards-slide-head__title">ЯК ГРАТИ</p>
+							</div>
+						</div>
+					</div>
+					<div class="text-cards__swiper-body swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide text-cards-slide-body">
+								<p class="text-cards-slide-body__title">Важко знайти щось цікавіше за
+									оналйн-ігри?</p>
+								<p class="text-cards-slide-body__text">Здивуйте дитину, не виходячи з дому.
+									Загадки квесту ваблять та інтригують, а у кінці ви можете
+									запропонувати подарунок в обмін на ключ від таємної кімнати!</p>
+							</div>
+							<div class="swiper-slide text-cards-slide-body">
+								<p class="text-cards-slide-body__title">Дитина знову сидить у смарфоні? А ні
+									руху, а ні розвитку...</p>
+								<p class="text-cards-slide-body__text">Здивуйте дитину, не виходячи з дому.
+									Загадки квесту ваблять та інтригують, а у кінці ви можете
+									запропонувати подарунок в обмін на ключ від таємної кімнати!</p>
+							</div>
+							<div class="swiper-slide text-cards-slide-body">
+								<p class="text-cards-slide-body__title">Де взяти ідею домашноьго свята, яка
+									зацікавить дітей різного віку?</p>
+								<p class="text-cards-slide-body__text">Квест про того самого Гаррі буде
+									цікавий дітям будь-якого віку та батькам. У ньому є і рух, і
+									загадки різного рівня складності.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			@@include('./components/base/_video.html')
+			@@include('./components/base/_comments.html')
+			@@include('./components/base/_faq.html')
+			@@include('./components/base/_ceo.html')
 
 		</main>
 		@@include('./components/structure/_footer.html')

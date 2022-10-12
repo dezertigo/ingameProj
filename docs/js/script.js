@@ -333,6 +333,40 @@ window.addEventListener("load", () => {
       }
    }
 
+   // ! Product cards
+
+   if (qs(".text-cards")) {
+      const swiperCards = new Swiper(".text-cards__swiper-body", {
+         speed: 500,
+         slidesPerView: 1,
+         initialSlide: 1,
+         simulateTouch: true,
+         spaceBetween: 20,
+         breakpoints: {
+            744: {
+               slidesPerView: 2.4,
+               centeredSlides: true,
+            },
+            1000: {
+               slidesPerView: 3,
+               centeredSlides: true,
+            },
+         },
+         thumbs: {
+            swiper: {
+               el: ".text-cards__swiper-head",
+               slidesPerView: 3,
+               // breakpoints: {
+               //    744: {
+               //       slidesPerView: 3.4,
+               //       centeredSlides: true,
+               //    },
+               // },
+            },
+         },
+      });
+   }
+
    // ! Home => Hero
    if (qs("body.home .cards__swiper")) {
       const swiperCards = new Swiper(".cards__swiper", {
