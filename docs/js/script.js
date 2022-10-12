@@ -218,6 +218,26 @@ window.addEventListener("load", () => {
          qs(".order-quest-pop-up").classList.remove("active");
          body.classList.remove("lock");
       }
+
+      // ! Accordeon
+      if (qs(".faq__spoiler")) {
+         if (e.target.closest(".faq__spoiler")) {
+            if (e.target.closest(".faq__spoiler").classList.contains("opened")) {
+               e.target.closest(".faq__spoiler").classList.remove("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height = null;
+            } else if (e.target.closest(".faq__spoiler")) {
+               qa(".faq__spoiler").forEach(function (el) {
+                  el.classList.remove("opened");
+               });
+               qa(".faq__wrapper").forEach(function (el) {
+                  el.style.height = null;
+               });
+               e.target.closest(".faq__spoiler").classList.toggle("opened");
+               e.target.closest(".faq__preview").nextElementSibling.style.height =
+                  e.target.closest(".faq__preview").nextElementSibling.scrollHeight + "px";
+            }
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
