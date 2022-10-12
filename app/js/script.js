@@ -121,7 +121,7 @@ window.addEventListener("load", () => {
          if (e.target.closest(".reviews-popup__close")) {
             popupReviews.classList.remove("active");
             body.classList.remove("lock");
-            qs(".reviews-popup__video video").pause();
+            e.target.closest(".reviews-popup__close").nextElementSibling.children[0].pause();
             if (
                reviewsPopupImg.classList.contains("active") ||
                reviewsPopupText.classList.contains("active") ||
@@ -141,9 +141,12 @@ window.addEventListener("load", () => {
             //    qs(".reviews-popup__video video").requestFullscreen();
             //    qs(".reviews-popup__video video").classList.remove("first-view");
             // }
-            qs(".reviews-popup__poster").style.display = "none";
-            qs(".reviews-popup__video svg").style.display = "none";
-            qs(".reviews-popup__video video").play();
+            // qs(".reviews-popup__poster").style.display = "none";
+            // qs(".reviews-popup__video svg").style.display = "none";
+            // qs(".reviews-popup__video video").play();
+            e.target.closest(".reviews-popup__video").children[1].style.display = "none";
+            e.target.closest(".reviews-popup__video").children[2].style.display = "none";
+            e.target.closest(".reviews-popup__video").children[0].play();
          }
       }
 
