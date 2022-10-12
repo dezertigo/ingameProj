@@ -13,11 +13,17 @@
 @import "./components/structure/footer";
 
 // Подключение стилей базовых компонентов
-@import "./components/base/pop-up";
-@import "./components/base/spoiler";
-
-// Подключение стилей компонентов
-@import "./components/base/btn";
+// @import "./components/base/pop-up";
+// @import "./components/base/spoiler";
+@import "./components/base/_horizontal-gallery";
+@import "./components/base/second-nav";
+@import "./components/base/gallery-form";
+@import "./components/base/video";
+@import "./components/base/reviews";
+@import "./components/base/slider-nav";
+@import "./components/base/feedback";
+@import "./components/base/faq";
+@import "./components/base/ceo";
 
 //Подключение стилей конкретной страницы
 // ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
