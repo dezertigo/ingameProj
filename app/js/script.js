@@ -230,6 +230,8 @@ window.addEventListener("load", () => {
          window.removeEventListener("scroll", closeBurger);
       }
    }
+   // ! CHECKING FSCREEN
+   alert(document.fullscreenEnabled);
 
    // ! <main></main>
    qs("main").style.paddingTop = qs(".header").scrollHeight + "px";
