@@ -67,6 +67,24 @@
 			</section>
 
 			@@include('./components/base/_video.html')
+			<div class="propose">
+				<div class="propose__container">
+					<div class="propose__inner">
+						<div class="propose__pic">
+							<picture>
+								<source type="image/webp" srcset="@img/gallery/form.webp">
+							</picture>
+							<img src="./img/gallery/form.png" alt="game picture">
+						</div>
+						<div class="propose__content">
+							<h2 class="propose__title">
+								Який квест Вас цікавить?
+							</h2>
+							@@include('./components/base/_propose-form.html')
+						</div>
+					</div>
+				</div>
+			</div> 
 			@@include('./components/base/_comments.html')
 			@@include('./components/base/_faq.html')
 			@@include('./components/base/_ceo.html')

@@ -483,6 +483,115 @@ h1 {
       display: none;
    }
 }
+
+.propose {
+   background-color: $dark;
+   @media (max-width: 743px) {
+      padding: 40px 0;
+   }
+   @media (min-width: 744px) and (max-width: 1199px) {
+      padding: 30px 0;
+   }
+   @media (min-width: 1200px) and (max-width: 1399px) {
+      padding: 60px 0;
+   }
+   @media (min-width: 1400px) and (max-width: 1699px) {
+      padding: 90px 0;
+   }
+   @media (min-width: 1700px) {
+      padding: 120px 0;
+   }
+   &__container {
+      padding-left: percent(12,375);
+      padding-right: percent(12,375);
+      @media (min-width: 744px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+      @media (min-width: 1400px) {
+         padding-left: percent(130,1920);
+         padding-right: percent(130,1920);
+      }
+   }
+   &__inner {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 743px) {
+         flex-direction: column;
+      }
+   }
+   &__pic {
+      position: relative;
+      padding-bottom: 100%;
+      width: 100%;
+      overflow: hidden;
+      @media (max-width: 743px) {
+         padding-bottom: 84.901%;
+      }
+      @media (min-width: 744px) and (max-width: 1399px) {
+         padding-bottom: 42.691%;
+         width: 88.033%;
+         align-self: flex-start;
+      }
+      @media (min-width: 1400px) {
+         padding-bottom: 46.627%;
+         width: 54.94%;
+         
+      }
+      img {
+         position: absolute;
+         top:0;
+         left:0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position:center;
+         @media (max-width: 743px) {
+            width: 180%;
+            object-position: -15px 52%;
+         }
+         @media (min-width: 744px) and (max-width: 1399px) {
+            width: 190%;
+            object-position: -30px 50%;
+         }
+         @media (min-width: 1400px) {
+         width: 185%;
+         object-position: -70px 52%;
+         }
+      }
+   }
+   &__content {
+      max-width: 680px;
+      width: 100%;
+   }
+   &__title {
+      text-align: center;
+      font-weight: 700;
+      color: $light;
+      @media (max-width: 799px) {
+         @include fl(16, 20);
+         margin-bottom: 24px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(18, 24);
+         margin-bottom: 30px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(22, 26);
+         margin-bottom: 35px;
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 30);
+         margin-bottom: 40px;
+      }
+   }
+   .propose-form__textarea {
+      display: none;
+   }
+} 
+
 .text-cards {
    margin-top: 50px;
    margin-bottom: 50px;

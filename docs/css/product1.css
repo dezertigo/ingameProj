@@ -1691,6 +1691,57 @@ main {
   margin-bottom: 22px;
 }
 
+.faq__spoiler {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.faq__spoiler.opened {
+  transition: all 0.8s;
+}
+
+.faq__spoiler.opened .faq__preview-icon {
+  transition: all 0.8s;
+  transform: rotate(180deg);
+}
+
+.faq__preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 24px;
+  cursor: pointer;
+}
+
+.faq__preview-head {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.375;
+}
+
+.faq__preview-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s;
+}
+
+.faq__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.8s;
+}
+
+.faq__body {
+  padding-bottom: 24px;
+}
+
+.faq__text {
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+}
+
 .ceo {
   width: 100%;
   max-width: 100%;
@@ -1755,6 +1806,105 @@ main {
 
 .ceo.opened .ceo__decor {
   box-shadow: none;
+}
+
+.propose-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.propose-form__input,
+.propose-form__textarea {
+  background-color: transparent;
+  border: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
+}
+
+.propose-form__input::-moz-placeholder,
+.propose-form__textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.propose-form__input::placeholder,
+.propose-form__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.propose-form__textarea {
+  resize: none;
+}
+
+.propose-form__fieldset {
+  border: 0;
+  position: relative;
+}
+
+.propose-form__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.propose-form__label {
+  color: #fff;
+  padding: 5px 0px 4px 36px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.propose-form__label::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #fff;
+  background-color: #101010;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.propose-form__label::after {
+  content: "";
+  position: absolute;
+  background: url(../../img/icons/check.svg) no-repeat/cover;
+  left: 3px;
+  width: 20px;
+  height: 15px;
+  top: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.propose-form__checkbox:checked + .propose-form__label::after {
+  opacity: 1;
+}
+
+.propose-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #9acf16;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  line-height: 1.3333333333;
+}
+
+.propose-form__btn:hover {
+  box-shadow: 0px 4px 14px rgba(104, 139, 16, 0.6);
+}
+
+.propose-form__btn:active {
+  background: rgba(154, 208, 24, 0.6);
 }
 
 .buy-form {
@@ -1935,6 +2085,56 @@ h1 {
 }
 
 .video-block__text {
+  display: none;
+}
+
+.propose {
+  background-color: #101010;
+}
+
+.propose__container {
+  padding-left: 3.2%;
+  padding-right: 3.2%;
+}
+
+.propose__inner {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.propose__pic {
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.propose__pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.propose__content {
+  max-width: 680px;
+  width: 100%;
+}
+
+.propose__title {
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.propose .propose-form__textarea {
   display: none;
 }
 
@@ -2137,6 +2337,11 @@ h1 {
   .buy-form__subtitle {
     align-self: center;
   }
+
+  .propose__container {
+    padding-left: 4.0322580645%;
+    padding-right: 4.0322580645%;
+  }
 }
 
 @media (min-width: 750px) {
@@ -2166,6 +2371,21 @@ h1 {
   .footer-bottom__copy {
     order: 1;
     transform: translateY(1px);
+  }
+}
+
+@media (min-width: 800px) {
+  .propose-form {
+    max-width: 680px;
+  }
+
+  .propose-form__fieldset {
+    margin-bottom: 20px;
+  }
+
+  .propose-form__label::before {
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -3020,6 +3240,20 @@ h1 {
     line-height: 1.2222222222;
   }
 
+  .faq__preview {
+    padding-bottom: 37px;
+  }
+
+  .faq__preview-head {
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+  }
+
+  .faq__text {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
   .buy-form__sign {
     font-size: 16px;
   }
@@ -3035,6 +3269,22 @@ h1 {
   .hero__container {
     padding-left: 6.7708333333%;
     padding-right: 6.7708333333%;
+  }
+
+  .propose__container {
+    padding-left: 6.7708333333%;
+    padding-right: 6.7708333333%;
+  }
+
+  .propose__pic {
+    padding-bottom: 46.627%;
+    width: 54.94%;
+  }
+
+  .propose__pic img {
+    width: 185%;
+    -o-object-position: -70px 52%;
+    object-position: -70px 52%;
   }
 
   .text-cards-slide-head {
@@ -3096,6 +3346,29 @@ h1 {
     padding: 25px 16px;
   }
 
+  .propose-form__input,
+  .propose-form__textarea {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .propose-form__label {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .propose-form__btn {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    padding: 41px 0;
+  }
+
+  .propose__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 40px;
+  }
+
   .text-cards__contaier {
     padding-left: 14.0625%;
     padding-right: 14.0625%;
@@ -3120,6 +3393,10 @@ h1 {
 
   .feedback-popup__form-btn {
     padding: 41px 0;
+  }
+
+  .propose {
+    padding: 120px 0;
   }
 }
 
@@ -4022,6 +4299,40 @@ h1 {
   .feedback-popup__form-btn {
     padding: 25px 0;
   }
+
+  .propose-form {
+    max-width: 351px;
+  }
+
+  .propose-form__input,
+  .propose-form__textarea {
+    font-size: 0.875rem;
+    line-height: 1.2857142857;
+  }
+
+  .propose-form__fieldset {
+    margin-bottom: 24px;
+  }
+
+  .propose-form__label {
+    font-size: 0.75rem;
+    line-height: 1.3333333333;
+  }
+
+  .propose-form__label::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .propose-form__btn {
+    padding: 10px 0;
+  }
+
+  .propose__title {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4110,6 +4421,24 @@ h1 {
     padding-right: 3.2%;
     padding-top: 23px;
     text-align: center;
+  }
+
+  .propose {
+    padding: 40px 0;
+  }
+
+  .propose__inner {
+    flex-direction: column;
+  }
+
+  .propose__pic {
+    padding-bottom: 84.901%;
+  }
+
+  .propose__pic img {
+    width: 180%;
+    -o-object-position: -15px 52%;
+    object-position: -15px 52%;
   }
 
   .text-cards__swiper-body {
@@ -4711,6 +5040,10 @@ h1 {
     line-height: 1.3333333333;
   }
 
+  .propose {
+    padding: 60px 0;
+  }
+
   .text-cards-slide-head__title {
     font-size: 1.25rem;
     line-height: 1.3;
@@ -5161,6 +5494,18 @@ h1 {
     padding-right: 4.0322580645%;
     padding-top: 2.688172043%;
   }
+
+  .propose__pic {
+    padding-bottom: 42.691%;
+    width: 88.033%;
+    align-self: flex-start;
+  }
+
+  .propose__pic img {
+    width: 190%;
+    -o-object-position: -30px 50%;
+    object-position: -30px 50%;
+  }
 }
 
 @media (min-width: 561px) and (max-width: 999px) {
@@ -5223,6 +5568,10 @@ h1 {
     height: 80px;
     max-width: 590px;
   }
+
+  .propose {
+    padding: 90px 0;
+  }
 }
 
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -5252,6 +5601,27 @@ h1 {
     font-size: 1.125rem;
     line-height: 1.2222222222;
     padding: 16px 16px;
+  }
+
+  .propose-form__input,
+  .propose-form__textarea {
+    font-size: 1.125rem;
+    line-height: 1.2222222222;
+  }
+
+  .propose-form__label {
+    font-size: 0.8125rem;
+    line-height: 1.2307692308;
+  }
+
+  .propose-form__btn {
+    padding: 21px 0;
+  }
+
+  .propose__title {
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+    margin-bottom: 30px;
   }
 }
 
@@ -5288,9 +5658,30 @@ h1 {
     padding: 21px 16px;
   }
 
+  .propose-form__input,
+  .propose-form__textarea {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .propose-form__label {
+    font-size: 0.9375rem;
+    line-height: 1.0666666667;
+  }
+
+  .propose-form__btn {
+    padding: 31px 0;
+  }
+
   .buy-form__main-wrap {
     gap: 2em;
     padding: 80px 2.55%;
+  }
+
+  .propose__title {
+    font-size: 1.375rem;
+    line-height: 1.1818181818;
+    margin-bottom: 35px;
   }
 }
 
@@ -5311,6 +5702,10 @@ h1 {
   .buy-form__main-wrap {
     gap: 1em;
     padding: 60px 2.55%;
+  }
+
+  .propose {
+    padding: 30px 0;
   }
 }
 

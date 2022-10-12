@@ -23,7 +23,10 @@
 @import "./components/base/slider-nav";
 @import "./components/base/feedback";
 @import "./components/base/faq";
+@import "./components/base/faq-spoiler";
 @import "./components/base/ceo";
+@import "./components/base/propose-form";
+
 
 //Подключение стилей конкретной страницы
 // ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
