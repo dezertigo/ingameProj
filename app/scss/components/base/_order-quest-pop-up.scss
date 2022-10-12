@@ -5,10 +5,10 @@
       pointer-events: all;
    }
 
+   background-color: rgba(0, 0, 0, 0.8);
    position: fixed;
    top: 0;
    left: 0;
-   background-color: rgba(255, 255, 255, 1);
    width: 100vw;
    height: 100vh;
    z-index: 100;
@@ -22,15 +22,73 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0; // ! отступы от краев
+
+      // ! отступы от краев
+      @media (min-width: 744px) {
+         padding-top: 30px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+
+      @media (min-width: 1000px) {
+         padding-top: percent(177, 1920);
+      }
+
+      @media (min-width: 1400px) {
+         padding-left: percent(270, 1920);
+         padding-right: percent(270, 1920);
+      }
+
+      // @media (min-width: 1000px) and (max-width: 1199px) {
+      //    padding-left: percent(, 1000);
+      //    padding-right: percent(, 1000);
+      // }
+
+      // @media (min-width: 1200px) and (max-width: 1399px) {
+      //    padding-left: percent(, 1200);
+      //    padding-right: percent(, 1200);
+      // }
+
+      // @media (min-width: 1400px) and (max-width: 1599px) {
+      //    padding-left: percent(, 1400);
+      //    padding-right: percent(, 1400);
+      // }
+
+      // @media (min-width: 1600px) and (max-width: 1799px) {
+      //    padding-left: percent(, 1600);
+      //    padding-right: percent(, 1600);
+      // }
+
+      // @media (min-width: 1800px) and (max-width: 1919px) {
+      //    padding-left: percent(, 1800);
+      //    padding-right: percent(, 1800);
+      // }
+
+      @media (min-width: 1920px) {
+         padding-top: 177px;
+         padding-left: percent(270, 1920);
+         padding-right: percent(270, 1920);
+      }
    }
 
    &__body {
       overflow: auto;
       max-height: 100%; // ! Запрещаем блоку быть большего размера чем задано родителем (padding: 200px)
-      padding-top: 10px;
       padding-left: percent(12, 375);
       padding-right: percent(12, 375);
+      background-color: $light;
+
+      @media (min-width: 744px) {
+         padding-top: 18px;
+         padding-left: percent(11, 375);
+         padding-right: percent(11, 375);
+      }
+
+      @media (min-width: 1920px) {
+         padding-top: 34px;
+         padding-left: 2.1%;
+         padding-right: 2.2%;
+      }
 
       p {
          @include fl(24, 32);
@@ -44,6 +102,17 @@
       padding-right: 7px;
       padding-top: 7px;
       margin-bottom: 18px;
+
+      @media (min-width: 744px) {
+         padding-top: 0;
+         padding-right: 2px;
+         margin-bottom: 0;
+      }
+
+      @media (min-width: 1920px) {
+         margin-bottom: 17px;
+         padding-right: 7px;
+      }
    }
 
    &__btn-close {
@@ -52,6 +121,17 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
+
+      @media (min-width: 744px) {
+         width: 23px;
+         height: 23px;
+         transform: translate(0%, 17%) rotate(45deg);
+      }
+
+      @media (min-width: 1920px) {
+         width: 19px;
+         height: 19px;
+      }
    }
 
    &__btn-close::before {
@@ -65,6 +145,11 @@
       margin: auto;
       top: 0;
       bottom: 0;
+
+      @media (min-width: 744px) {
+         height: 2px;
+         width: 100%;
+      }
    }
 
    &__btn-close::after {
@@ -80,6 +165,11 @@
       margin: auto;
       top: 0;
       bottom: 0;
+
+      @media (min-width: 744px) {
+         width: 100%;
+         height: 2px;
+      }
    }
 
    &__title {
@@ -87,15 +177,39 @@
       font-weight: 700;
       @include fl(22, 28);
       margin-bottom: 24px;
+
+      @media (min-width: 1920px) {
+         @include fl(36, 44);
+      }
    }
 
    &__elem {
       color: $greenHover;
       display: block;
+
+      @media (min-width: 744px) {
+         display: inline;
+         padding-left: 6px;
+      }
+
+      @media (min-width: 1920px) {
+         padding-left: 11px;
+      }
    }
 
    &__form {
       margin-bottom: 10px;
+
+      @media (min-width: 1000px) {
+         display: grid;
+         grid-template-columns: 45.3% 1fr;
+         column-gap: 25px;
+      }
+
+      @media (min-width: 1920px) {
+         margin-bottom: 24px;
+         column-gap: 60px;
+      }
    }
 
    &__field-set {
@@ -112,13 +226,44 @@
       display: none;
    }
 
+   &__label-desk {
+      @media (min-width: 1920px) {
+         display: block;
+         font-weight: 700;
+         color: $dark;
+         @include fl(24, 32);
+         margin-bottom: 10px;
+      }
+   }
+
    &__field {
       position: relative;
       margin-bottom: 5px;
+
+      @media (min-width: 1000px) {
+         width: 67%;
+      }
+   }
+
+   &__field:last-of-type {
+      @media (min-width: 1000px) {
+         width: 100%;
+      }
+   }
+
+   &__field:nth-of-type(1),
+   &__field:nth-of-type(2) {
+      @media (min-width: 1920px) {
+         margin-bottom: 13px;
+      }
    }
 
    &__field:nth-of-type(3) {
       margin-bottom: 13px;
+
+      @media (min-width: 1920px) {
+         margin-bottom: 22px;
+      }
    }
 
    &__field:not(div:last-child)::after {
@@ -145,12 +290,25 @@
       color: rgba(16, 16, 16, 0.6);
       border: 1px solid rgba(0, 0, 0, 0.2);
       padding: 8px 42px;
+      text-align: center;
+
+      @media (min-width: 1920px) {
+         color: rgba(16, 16, 16, 0.2);
+         font-weight: 700;
+         max-width: 260px;
+         width: 100%;
+         padding: 17px 42px;
+      }
    }
 
    &__lea::placeholder {
       color: rgba(16, 16, 16, 0.6);
       font-weight: 400;
       @include fl(14, 18);
+
+      @media (min-width: 1920px) {
+         @include fl(16, 22);
+      }
    }
 
    &__lea-date {
@@ -175,6 +333,10 @@
       user-select: none;
       position: relative;
       padding-left: 32px;
+
+      @media (min-width: 1920px) {
+         @include fz(16);
+      }
    }
 
    &__sign-labe::before {
@@ -187,6 +349,10 @@
       box-sizing: border-box;
       cursor: pointer;
       transform: translate(-201%, 67%);
+
+      @media (min-width: 744px) {
+         transform: translate(-201%, 18%);
+      }
    }
 
    &__sign-labe-link {
@@ -194,9 +360,11 @@
       display: block;
       padding-left: 32px;
       text-decoration: underline;
-   }
 
-   &__label-hide {
+      @media (min-width: 744px) {
+         display: inline;
+         padding-left: 0;
+      }
    }
 
    &__field2 {
@@ -205,6 +373,10 @@
       align-items: center;
       padding-bottom: 13px;
       position: relative;
+
+      @media (min-width: 1920px) {
+         padding-bottom: 17px;
+      }
 
       p {
          font-weight: 700;
@@ -216,26 +388,48 @@
    }
 
    &__field2:nth-of-type(1) {
-      margin-bottom: 17px;
+      margin-bottom: 15px;
    }
 
    &__field2:nth-of-type(2) {
-      padding-bottom: 14px;
+      padding-bottom: 12px;
+
+      @media (min-width: 1920px) {
+         padding-bottom: 16px;
+      }
    }
 
    &__field2:nth-of-type(3) {
-      padding-top: 17px;
-      padding-bottom: 14px;
+      padding-top: 15px;
+      padding-bottom: 12px;
+
+      @media (min-width: 1920px) {
+         padding-bottom: 18px;
+      }
+
+      .order-quest-pop-up__select-current {
+         @media (min-width: 1920px) {
+            padding-left: 48px;
+         }
+      }
    }
 
    &__field2:nth-of-type(4) {
-      padding-top: 15px;
-      padding-bottom: 12px;
+      padding-top: 16px;
+      padding-bottom: 13px;
+
+      @media (min-width: 1920px) {
+         padding-bottom: 16px;
+      }
    }
 
    &__field2:nth-of-type(5) {
-      padding-top: 1px;
-      padding-bottom: 0;
+      padding-top: 16px;
+      padding-bottom: 13px;
+
+      @media (min-width: 1920px) {
+         padding-bottom: 18px;
+      }
    }
 
    &__field2:nth-of-type(6) {
@@ -256,6 +450,10 @@
       font-weight: 400;
       color: $dark;
       @include fl(12, 16);
+
+      @media (min-width: 1920px) {
+         @include fl(18, 24);
+      }
    }
 
    &__select {
@@ -263,6 +461,10 @@
       width: 100%;
       position: relative;
       user-select: none;
+
+      @media (min-width: 1920px) {
+         max-width: 260px;
+      }
    }
 
    &__select.is-active {
@@ -280,6 +482,14 @@
 
    &__select-current {
       padding: 8px 12px;
+      font-weight: 500;
+      @include fl(16, 24);
+
+      @media (min-width: 1920px) {
+         padding: 15px 12px 17px 53px;
+         font-weight: 700;
+         @include fz(18);
+      }
    }
 
    &__select-icon {
@@ -289,6 +499,10 @@
       align-items: center;
       padding: 5px;
       padding-right: 11px;
+
+      @media (min-width: 1920px) {
+         padding-right: 24px;
+      }
    }
 
    &__select-body {
@@ -320,6 +534,8 @@
    }
 
    &__btn-book {
+      font-family: inherit;
+      font-weight: 700;
       max-width: 351px;
       width: 100%;
       background-color: $greenHover;
@@ -327,11 +543,24 @@
       @include fl(24, 32);
       color: $light;
       margin-bottom: 24px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 1920px) {
+         height: 112px;
+         max-width: 914px;
+         margin-bottom: 20px;
+      }
    }
 
    &__btn-back {
+      font-family: inherit;
       color: $greenItem;
       font-weight: 700;
       @include fl(12, 16);
+
+      @media (min-width: 1920px) {
+         @include fl(18, 24);
+      }
    }
 }

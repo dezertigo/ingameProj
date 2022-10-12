@@ -813,10 +813,10 @@ main {
 }
 
 .order-quest-pop-up {
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -837,15 +837,14 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 0;
 }
 
 .order-quest-pop-up__body {
   overflow: auto;
   max-height: 100%;
-  padding-top: 10px;
   padding-left: 3.2%;
   padding-right: 3.2%;
+  background-color: #fff;
 }
 
 .order-quest-pop-up__body p {
@@ -963,6 +962,7 @@ main {
   color: rgba(16, 16, 16, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px 42px;
+  text-align: center;
 }
 
 .order-quest-pop-up__lea::-moz-placeholder {
@@ -1044,26 +1044,26 @@ main {
 }
 
 .order-quest-pop-up__field2:nth-of-type(1) {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 .order-quest-pop-up__field2:nth-of-type(2) {
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 }
 
 .order-quest-pop-up__field2:nth-of-type(3) {
-  padding-top: 17px;
-  padding-bottom: 14px;
-}
-
-.order-quest-pop-up__field2:nth-of-type(4) {
   padding-top: 15px;
   padding-bottom: 12px;
 }
 
+.order-quest-pop-up__field2:nth-of-type(4) {
+  padding-top: 16px;
+  padding-bottom: 13px;
+}
+
 .order-quest-pop-up__field2:nth-of-type(5) {
-  padding-top: 1px;
-  padding-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 13px;
 }
 
 .order-quest-pop-up__field2:nth-of-type(6) {
@@ -1109,6 +1109,9 @@ main {
 
 .order-quest-pop-up__select-current {
   padding: 8px 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .order-quest-pop-up__select-icon {
@@ -1150,6 +1153,8 @@ main {
 }
 
 .order-quest-pop-up__btn-book {
+  font-family: inherit;
+  font-weight: 700;
   max-width: 351px;
   width: 100%;
   background-color: #9acf16;
@@ -1158,9 +1163,12 @@ main {
   line-height: 1.3333333333;
   color: #fff;
   margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .order-quest-pop-up__btn-back {
+  font-family: inherit;
   color: #90c75e;
   font-weight: 700;
   font-size: 0.75rem;
@@ -2983,6 +2991,54 @@ main {
 }
 
 @media (min-width: 744px) {
+  .order-quest-pop-up__container {
+    padding-top: 30px;
+    padding-left: 4.0322580645%;
+    padding-right: 4.0322580645%;
+  }
+
+  .order-quest-pop-up__body {
+    padding-top: 18px;
+    padding-left: 2.9333333333%;
+    padding-right: 2.9333333333%;
+  }
+
+  .order-quest-pop-up__btn-close-wrap {
+    padding-top: 0;
+    padding-right: 2px;
+    margin-bottom: 0;
+  }
+
+  .order-quest-pop-up__btn-close {
+    width: 23px;
+    height: 23px;
+    transform: translate(0%, 17%) rotate(45deg);
+  }
+
+  .order-quest-pop-up__btn-close::before {
+    height: 2px;
+    width: 100%;
+  }
+
+  .order-quest-pop-up__btn-close::after {
+    width: 100%;
+    height: 2px;
+  }
+
+  .order-quest-pop-up__elem {
+    display: inline;
+    padding-left: 6px;
+  }
+
+  .order-quest-pop-up__sign-labe::before {
+    transform: translate(-201%, 18%);
+  }
+
+  .order-quest-pop-up__sign-labe-link {
+    display: inline;
+    padding-left: 0;
+  }
+
   .show__container {
     min-height: 560px;
   }
@@ -3293,6 +3349,25 @@ main {
   .footer-bottom__copy {
     font-size: 0.875rem;
     line-height: 1.2857142857;
+  }
+
+  .order-quest-pop-up__container {
+    padding-top: 9.21875%;
+  }
+
+  .order-quest-pop-up__form {
+    display: grid;
+    grid-template-columns: 45.3% 1fr;
+    -moz-column-gap: 25px;
+    column-gap: 25px;
+  }
+
+  .order-quest-pop-up__field {
+    width: 67%;
+  }
+
+  .order-quest-pop-up__field:last-of-type {
+    width: 100%;
   }
 
   .second-slider__nav .swiper-pagination-bullet {
@@ -4087,6 +4162,11 @@ main {
     margin-bottom: 14px;
   }
 
+  .order-quest-pop-up__container {
+    padding-left: 14.0625%;
+    padding-right: 14.0625%;
+  }
+
   .show__tile {
     font-size: 72px;
     line-height: 86.4px;
@@ -4403,6 +4483,137 @@ main {
 }
 
 @media (min-width: 1920px) {
+  .order-quest-pop-up__container {
+    padding-top: 177px;
+    padding-left: 14.0625%;
+    padding-right: 14.0625%;
+  }
+
+  .order-quest-pop-up__body {
+    padding-top: 34px;
+    padding-left: 2.1%;
+    padding-right: 2.2%;
+  }
+
+  .order-quest-pop-up__btn-close-wrap {
+    margin-bottom: 17px;
+    padding-right: 7px;
+  }
+
+  .order-quest-pop-up__btn-close {
+    width: 19px;
+    height: 19px;
+  }
+
+  .order-quest-pop-up__title {
+    font-size: 2.25rem;
+    line-height: 1.2222222222;
+  }
+
+  .order-quest-pop-up__elem {
+    padding-left: 11px;
+  }
+
+  .order-quest-pop-up__form {
+    margin-bottom: 24px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+
+  .order-quest-pop-up__label-desk {
+    display: block;
+    font-weight: 700;
+    color: #101010;
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+    margin-bottom: 10px;
+  }
+
+  .order-quest-pop-up__field:nth-of-type(1),
+  .order-quest-pop-up__field:nth-of-type(2) {
+    margin-bottom: 13px;
+  }
+
+  .order-quest-pop-up__field:nth-of-type(3) {
+    margin-bottom: 22px;
+  }
+
+  .order-quest-pop-up__lea-add {
+    color: rgba(16, 16, 16, 0.2);
+    font-weight: 700;
+    max-width: 260px;
+    width: 100%;
+    padding: 17px 42px;
+  }
+
+  .order-quest-pop-up__lea::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+
+  .order-quest-pop-up__lea::placeholder {
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+
+  .order-quest-pop-up__sign-labe {
+    font-size: 1rem;
+  }
+
+  .order-quest-pop-up__field2 {
+    padding-bottom: 17px;
+  }
+
+  .order-quest-pop-up__field2:nth-of-type(2) {
+    padding-bottom: 16px;
+  }
+
+  .order-quest-pop-up__field2:nth-of-type(3) {
+    padding-bottom: 18px;
+  }
+
+  .order-quest-pop-up__field2:nth-of-type(3) .order-quest-pop-up__select-current {
+    padding-left: 48px;
+  }
+
+  .order-quest-pop-up__field2:nth-of-type(4) {
+    padding-bottom: 16px;
+  }
+
+  .order-quest-pop-up__field2:nth-of-type(5) {
+    padding-bottom: 18px;
+  }
+
+  .order-quest-pop-up__sign {
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+  }
+
+  .order-quest-pop-up__select {
+    max-width: 260px;
+  }
+
+  .order-quest-pop-up__select-current {
+    padding: 15px 12px 17px 53px;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .order-quest-pop-up__select-icon {
+    padding-right: 24px;
+  }
+
+  .order-quest-pop-up__btn-book {
+    height: 112px;
+    max-width: 914px;
+    margin-bottom: 20px;
+  }
+
+  .order-quest-pop-up__btn-back {
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+  }
+
   .show {
     min-height: 680px;
   }
