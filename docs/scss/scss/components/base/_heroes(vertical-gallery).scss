@@ -1,0 +1,70 @@
+.heroes {
+   // .heroes__container
+   &__container {
+      @extend %container;
+
+      @media (max-width: 739px) {
+         padding-top: 60px;
+         padding-bottom: 70px;
+      }
+
+      @media (min-width: 740px) and (max-width: 1399px) {
+         padding-top: 60px;
+         padding-bottom: 70px;
+      }
+      @media (min-width: 1000px) {
+         padding-top: percent(120, 1920);
+         padding-bottom: percent(120, 1920);
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+   }
+
+   // .heroes__title
+   &__title {
+      color: $dark;
+      font-weight: 700;
+
+      @media (max-width: 739px) {
+         margin-bottom: 16px;
+         text-align: center;
+      }
+
+      @media (min-width: 740px) and (max-width: 999px) {
+         margin-bottom: 12px;
+      }
+
+      @media (max-width: 999px) {
+         @include fl(24, 30);
+      }
+
+      @media (min-width: 1000px) {
+         text-align: center;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fl(26, 34);
+         margin-bottom: 40px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(28, 36);
+         margin-bottom: 50px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(31, 39);
+         margin-bottom: 60px;
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fl(34, 42);
+         margin-bottom: 70px;
+      }
+
+      @media (min-width: 1800px) {
+         margin-bottom: 80px;
+         @include fl(36, 44);
+      }
+   }
+}

@@ -90,6 +90,11 @@ function htmlComponents() {
    return gulp.src(paths.html.components).pipe(browsersync.stream());
 }
 
+// Clone scss
+function scssClone() {
+   return gulp.src("app/**/*.scss").pipe(gulp.dest("docs/scss/"));
+}
+
 // Обработка scss
 function scss() {
    return gulp
@@ -206,7 +211,8 @@ exports.js = js;
 exports.img = img;
 exports.fonts = fonts;
 exports.watcher = watcher;
+exports.scssClone = scssClone;
 
 exports.default = gulp.series(cleanSoft, gulp.parallel(html, scss, js), watcher);
-exports.build = gulp.series(clean, gulp.parallel(html, fonts, scss, js, img), watcher);
+exports.build = gulp.series(clean, gulp.parallel(html, fonts, scss, js, img, scssClone), watcher);
 exports.prod = gulp.series(clean, gulp.parallel(htmlMin, fonts, scss, js, img));

@@ -1,0 +1,29 @@
+// Подлкючение базовых стилей
+@import "./default/variables";
+@import "./default/null";
+@import "./default/mixins";
+@import "./default/function";
+@import "./default/patterns";
+@import "./default/fonts";
+@import "./default/global";
+@import "./default/text";
+
+// Header / Footer
+@import "./components/structure/header";
+@import "./components/structure/footer";
+
+// Подключение стилей базовых компонентов
+@import "./components/base/pop-up";
+@import "./components/base/spoiler";
+@import "./components/base/ceo";
+@import "./components/base/city-pop-up";
+
+// Подключение стилей компонентов
+@import "./components/base/btn";
+@import "./components/base/cards";
+@import "./components/base/difficulty";
+@import "./components/base/fear";
+@import "./components/base/slider-nav";
+
+//Подключение стилей конкретной страницы
+@import "./pages/home";

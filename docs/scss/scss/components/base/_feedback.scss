@@ -1,0 +1,219 @@
+.feedback-popup {
+   transition: right 0.8s 0.3s, background-color 0.3s, z-index 1s 1s;
+   position: fixed;
+   top: 0;
+   right: -100%;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0);
+   overflow-y: auto;
+   z-index: 0;
+   &.active {
+      pointer-events: all;
+      opacity: 1;
+      overflow-y: scroll;
+      z-index: 20;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
+   }
+   &__fixed {
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translate(-50%, 0);
+      max-width: 100%;
+      width: 100%;
+   }
+   &__wrapper {
+      @media (min-width: 744px) {
+         padding: 30px;
+      }
+   }
+   &__body {
+      max-width: 880px;
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      margin: 0 auto;
+      @media (max-width: 743px) {
+         padding: 54px 0 60px;
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+      }
+      @media (min-width: 744px) and (max-width: 1399px) {
+         padding-top: 40px;
+         padding-left: percent(20, 684);
+         padding-right: percent(20, 684);
+         padding-bottom: 60px;
+      }
+
+      @media (min-width: 1400px) {
+         padding: 60px;
+      }
+   }
+   &__close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+   }
+   &__title {
+      font-weight: 700;
+      @media (max-width: 799px) {
+         @include fl(22, 28);
+         margin-bottom: 40px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(26, 32);
+         margin-bottom: 45px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(30, 37);
+         margin-bottom: 55px;
+      }
+      @media (min-width: 1600px) {
+         @include fl(36, 44);
+         margin-bottom: 60px;
+      }
+   }
+   &__form {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 799px) {
+         gap: 24px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         gap: 32px;
+      }
+      @media (min-width: 1600px) {
+         gap: 40px;
+      }
+   }
+   &__form-input {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #10101033;
+      color: #707070;
+      @media (max-width: 799px) {
+         @include fl(14, 18);
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(18, 22);
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(22, 26);
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 30);
+      }
+      &::placeholder {
+         color: #707070;
+      }
+   }
+   &__select-box {
+      position: relative;
+      &::before {
+         content: "";
+         display: block;
+         position: absolute;
+         background: url(../../img/icons/arrow-bottom.svg) no-repeat / cover;
+         width: 16px;
+         height: 8px;
+         top: 50%;
+         right: 20px;
+         transform: translateY(-50%);
+      }
+   }
+   &__form-select {
+      max-width: 100%;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid rgba(16, 16, 16, 0.2);
+      appearance: none;
+      font-family: inherit;
+      color: #707070;
+      cursor: pointer;
+      font-family: inherit;
+      @media (max-width: 799px) {
+         @include fl(14, 18);
+         padding: 21px 40px 21px 16px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(18, 22);
+         padding: 22px 40px 22px 16px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(22, 26);
+         padding: 24px 40px 24px 16px;
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 30);
+         padding: 25px 40px 25px 16px;
+      }
+   }
+   &__form-option {
+      @media (max-width: 799px) {
+         @include fl(14, 18);
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(18, 22);
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(22, 26);
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 30);
+      }
+   }
+   &__form-textarea {
+      background: #ffffff;
+      border: 1px solid rgba(16, 16, 16, 0.2);
+      min-height: 120px;
+      resize: none;
+      @media (max-width: 799px) {
+         @include fl(14, 18);
+         padding: 12px 16px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         @include fl(18, 22);
+         padding: 16px 16px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         @include fl(22, 26);
+         padding: 21px 16px;
+      }
+      @media (min-width: 1600px) {
+         @include fl(24, 30);
+         padding: 25px 16px;
+      }
+   }
+   &__form-btn {
+      font-weight: 700;
+      @include fl(24, 30);
+      background-color: $greenHover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      color: $light;
+      font-family: inherit;
+      cursor: pointer;
+      @media (max-width: 799px) {
+         padding: 25px 0;
+      }
+      @media (min-width: 800px) and (max-width: 1399px) {
+         padding: 30px 0;
+      }
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         padding: 35px 0;
+      }
+      @media (min-width: 1700px) {
+         padding: 41px 0;
+      }
+   }
+}

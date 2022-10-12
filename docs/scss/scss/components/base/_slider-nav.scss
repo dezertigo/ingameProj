@@ -1,0 +1,53 @@
+.slider {
+   &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      max-width: 192px;
+      margin: 0 auto;
+      margin-top: 24px;
+      @media (min-width: 1400px) {
+         margin-top: 42px;
+      }
+   }
+   &__prev,
+   &__next {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+         svg {
+            path {
+               transition: all 0.5s;
+               stroke: #9acf16;
+            }
+         }
+      }
+   }
+   &__pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: $greenHover;
+      opacity: 0.2;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+         background-color: $orangeHover;
+         opacity: 0.4;
+      }
+      &-active {
+         background-color: $greenHover;
+         opacity: 1;
+      }
+   }
+}

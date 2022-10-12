@@ -1,0 +1,444 @@
+.gal-form {
+   display: flex;
+   flex-direction: column;
+
+   &__list {
+      @media (max-width: 743px) {
+         display: flex;
+         flex-direction: column;
+      }
+
+      @media (min-width: 744px) and (max-width: 999px) {
+         display: grid;
+         grid-template-columns: repeat(6, 1fr);
+         column-gap: 65px;
+      }
+
+      @media (min-width: 1000px) {
+         display: flex;
+         flex-direction: column;
+      }
+
+      @media (max-width: 1919px) {
+         margin-bottom: 11px;
+      }
+
+      @media (min-width: 1920px) {
+         margin-bottom: 39px;
+      }
+   }
+
+   &__item {
+      position: relative;
+
+      @media (min-width: 744px) {
+         grid-column: span 3;
+      }
+
+      @media (min-width: 1920px) {
+         padding: 30px 0 29px 0;
+      }
+
+      i {
+         color: rgba(16, 16, 16, 0.8);
+
+         @media (max-width: 999px) {
+            @include fz(21);
+         }
+
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            @include fz(29);
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            @include fz(31);
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            @include fz(33);
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            @include fz(35);
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            @include fz(37);
+         }
+
+         @media (min-width: 1920px) {
+            @include fz(39);
+         }
+      }
+   }
+
+   &__item:not(li:last-child):after {
+      content: "";
+      position: absolute;
+      background-color: rgba(16, 16, 16, 0.2);
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+   }
+
+   @media (min-width: 744px) and (max-width: 999px) {
+      &__item:nth-child(2)::after {
+         display: none;
+      }
+   }
+
+   @media (min-width: 1000px) {
+      &__item:nth-child(2)::after {
+         display: block;
+      }
+   }
+
+   &__item:first-child {
+      @media (max-width: 999px) {
+         padding: 29px 0 12px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1499px) {
+         padding: 0 0 16px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         padding: 0 0 18px;
+      }
+
+      @media (min-width: 1920px) {
+         padding: 0 0 21px;
+      }
+
+      svg {
+         @media (max-width: 999px) {
+            width: 24px;
+            height: 24px;
+         }
+
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            width: 31px;
+            height: 31px;
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            width: 34px;
+            height: 34px;
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            width: 37px;
+            height: 37px;
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            width: 40px;
+            height: 40px;
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            width: 43px;
+            height: 43px;
+         }
+
+         @media (min-width: 1920px) {
+            width: 47px;
+            height: 47px;
+            transform: translate(-6%, 0%);
+         }
+
+         ellipse {
+            stroke: rgba(16, 16, 16, 0.8);
+         }
+
+         circle {
+            stroke: rgba(16, 16, 16, 0.8);
+         }
+      }
+
+      .gal-form__item-wrap {
+         @media (min-width: 1920px) {
+            column-gap: 16px;
+         }
+      }
+   }
+
+   &__item:nth-child(2) {
+      @media (min-width: 744px) and (max-width: 1919px) {
+         order: 2;
+      }
+
+      @media (max-width: 999px) {
+         padding: 25px 0 12px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1499px) {
+         padding: 27px 0 20px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         padding: 29px 0 25px;
+      }
+
+      @media (min-width: 1920px) {
+         order: 0;
+         padding: 30px 0 31px;
+      }
+
+      svg {
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            width: 38px;
+            height: 31px;
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            width: 41px;
+            height: 34px;
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            width: 44px;
+            height: 37px;
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            width: 47px;
+            height: 40px;
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            width: 50px;
+            height: 43px;
+         }
+
+         @media (min-width: 1920px) {
+            width: 53px;
+            height: 46px;
+            transform: translate(-11%, 0%);
+         }
+
+         ellipse {
+            stroke: rgba(16, 16, 16, 0.8);
+         }
+
+         path {
+            fill: rgba(16, 16, 16, 0.8);
+         }
+      }
+
+      .gal-form__item-wrap {
+         @media (min-width: 1920px) {
+            column-gap: 11px;
+         }
+      }
+   }
+
+   &__item:nth-child(3) {
+      @media (max-width: 743px) {
+         padding: 25px 0 14px 3px;
+      }
+
+      @media (min-width: 744px) and (max-width: 1919px) {
+         order: 1;
+      }
+
+      @media (min-width: 744px) and (max-width: 999px) {
+         padding: 29px 0 14px 3px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1499px) {
+         padding: 31px 0 22px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         padding: 32px 0 28px;
+      }
+
+      @media (min-width: 1920px) {
+         order: 0;
+         padding: 33px 0 34px;
+      }
+
+      .gal-form__item-wrap {
+         @media (min-width: 1920px) {
+            column-gap: 25px;
+         }
+      }
+   }
+
+   &__item:nth-child(4) {
+      @media (max-width: 999px) {
+         padding-left: 3px;
+      }
+
+      @media (min-width: 744px) and (max-width: 1919px) {
+         order: 4;
+      }
+
+      @media (max-width: 999px) {
+         padding: 25px 0 14px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1499px) {
+         padding: 28px 0 22px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         padding: 32px 0 28px;
+      }
+
+      @media (min-width: 1920px) {
+         padding: 35px 0 35px;
+         order: 0;
+      }
+   }
+
+   &__item-wrap {
+      display: flex;
+      position: relative;
+      padding-right: 1px;
+
+      @media (max-width: 1919px) {
+         column-gap: 12px;
+      }
+
+      @media (min-width: 1000px) {
+         align-items: center;
+      }
+
+      @media (min-width: 1920px) {
+         column-gap: 25px;
+      }
+   }
+
+   &__par {
+      font-weight: 700;
+      color: $dark;
+
+      @media (max-width: 999px) {
+         @include fl(14, 18);
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fl(18, 22);
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(20, 24);
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(21, 25);
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fl(22, 26);
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         @include fl(23, 27);
+      }
+
+      @media (max-width: 1919px) {
+         padding-top: 2px;
+      }
+
+      @media (min-width: 1920px) {
+         @include fl(24, 28.8);
+         padding-top: 0;
+      }
+   }
+
+   &__number {
+      color: $dark;
+      font-weight: 700;
+      line-height: 22px;
+      margin-left: auto;
+
+      @media (max-width: 999px) {
+         @include fz(18);
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fz(19);
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fz(20);
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fz(21);
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fz(22);
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         @include fz(23);
+      }
+
+      @media (min-width: 1920px) {
+         @include fz(24);
+         padding-top: 5px;
+      }
+   }
+
+   &__btn-wrap {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__btn {
+      transition: all 0.3s ease 0s;
+      background-color: $green;
+      color: $light;
+      font-weight: 700;
+      @include fl(24, 32);
+      width: 100%;
+      letter-spacing: 1.3px;
+      cursor: pointer;
+
+      @media (max-width: 999px) {
+         max-width: 433px;
+      }
+
+      @media (max-width: 999px) {
+         height: 52px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         height: 60px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         height: 70px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         height: 80px;
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         height: 90px;
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         height: 100px;
+      }
+
+      @media (min-width: 1920px) {
+         height: 112px;
+      }
+   }
+
+   &__btn:hover {
+      filter: drop-shadow(0px 4px 14px rgba(104, 139, 16, 0.6));
+   }
+
+   &__btn:active {
+      background-color: rgba(154, 207, 22, 0.6);
+      filter: none;
+   }
+}

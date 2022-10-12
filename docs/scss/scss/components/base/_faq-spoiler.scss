@@ -1,0 +1,119 @@
+.faq {
+   //   &__spoiler {
+   //     border-bottom: 1px solid #d9d9d9;
+   //     &.opened {
+   //        transition: all 0.8s;
+   //        .faq__preview-icon {
+   //           transition: all 0.8s;
+   //           transform: rotate(180deg);
+   //        }
+   //     }
+   //  }
+   //  &__preview {
+   //     display: flex;
+   //     align-items: center;
+   //     justify-content: space-between;
+   //     padding: 12px 0 16px;
+   //     cursor: pointer;
+   //     @media (min-width: 1400px) {
+   //       padding-bottom: 24px;
+   //     }
+   //  }
+   //  &__preview-head {
+   //     font-weight: 700;
+   //     @include fl(16, 22);
+   //     @media (min-width: 1400px) {
+   //       @include fl(24, 32);
+   //     }
+   //  }
+   //  &__preview-icon {
+   //     width: 34px;
+   //     height: 34px;
+   //     display: flex;
+   //     align-items: center;
+   //     justify-content: center;
+   //     transition: all 0.8s;
+   //  }
+   //  &__wrapper {
+   //     height: 0;
+   //     overflow: hidden;
+   //     transition: all 0.8s;
+   //  }
+   //  &__body {
+   //     padding-bottom: 24px;
+   //  }
+   //  &__text {
+   //    @include fl(14,20);
+   //    @media (min-width: 1400px) {
+   //       @include fl(24, 30);
+   //    }
+   //  }
+
+   &__wrap {
+      padding: 13px 0 2px;
+      border-bottom: 1px solid #d9d9d9;
+      cursor: pointer;
+      transition: all 0.8s ease;
+      &[open] {
+         .faq__head {
+            &::after {
+               transform: rotate(0deg);
+            }
+         }
+      }
+   }
+   &__head {
+      @include fl(16, 22);
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 22px;
+      list-style: none;
+      @media (min-width: 800px) and (max-width: 999) {
+         @include fl(18, 24);
+      }
+      @media (min-width: 1000px) and (max-width: 1399px) {
+         @include fl(20, 26);
+      }
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         @include fl(22, 30);
+      }
+      @media (min-width: 1700px) {
+         @include fl(24, 32);
+      }
+      &::after {
+         position: absolute;
+         content: "";
+         width: 16px;
+         height: 8px;
+         background: url(../../img/icons/arrow-top.svg) no-repeat / cover;
+         right: 0;
+         top: 8px;
+         transform: rotate(180deg);
+         transition: all 0.5s ease;
+      }
+   }
+   &__content {
+      @include fl(14, 20);
+      transition: all 0.5s ease;
+      margin-bottom: 22px;
+      @media (min-width: 800px) and (max-width: 999) {
+         @include fl(18, 24);
+      }
+      @media (min-width: 1000px) and (max-width: 1399px) {
+         @include fl(20, 26);
+      }
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         @include fl(22, 28);
+      }
+      @media (min-width: 1700px) {
+         @include fl(24, 30);
+      }
+   }
+}
+.faq {
+   &__to-hide {
+      height: 0;
+      transition: all 0.3s ease;
+      overflow: hidden;
+   }
+}

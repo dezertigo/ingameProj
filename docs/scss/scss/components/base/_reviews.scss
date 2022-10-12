@@ -1,0 +1,618 @@
+.reviews {
+   position: relative;
+
+   &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+   .swiper-slide {
+      height: auto;
+   }
+   // background-image: url(../../img/reviews-bg.png);
+   // background-repeat: no-repeat;
+   // background-size: cover;
+
+   &__container {
+      margin: 0 auto;
+      @media (max-width: 743px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+         padding-top: 16px;
+      }
+      @media (min-width: 744px) and (max-width: 1399px) {
+         padding-top: 36px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+      @media (max-width: 999px) {
+         padding-bottom: 36px;
+      }
+      @media (min-width: 1000px) {
+         padding-top: percent(80, 1920);
+         padding-bottom: percent(80, 1920);
+      }
+      @media (min-width: 1400px) {
+         padding-left: percent(130, 1920);
+         padding-right: percent(130, 1920);
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      @include fl(24, 30);
+      color: $light;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+      @media (max-width: 743px) {
+         text-align: center;
+      }
+      @media (min-width: 744px) and (max-width: 999px) {
+         text-align: left;
+      }
+      @media (min-width: 1000px) {
+         text-align: center;
+      }
+      @media (min-width: 1400px) {
+         margin-bottom: 10px;
+         @include fl(36, 44);
+      }
+   }
+
+   &__slider {
+      position: relative;
+
+      @media (min-width: 1100px) {
+         overflow: hidden;
+         padding-top: 30px;
+      }
+   }
+
+   &__slide {
+      background-color: $light;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+      &:hover {
+         transform: scale(1.15);
+         z-index: 10;
+         filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.4));
+      }
+   }
+
+   &__head {
+      padding: 30.5px percent(22, 351);
+      border-bottom: 1px solid #d9d9d9;
+
+      @media (min-width: 1400px) {
+         padding: 20px percent(30, 540) 8px;
+      }
+   }
+
+   &__head-suptitle {
+      font-weight: 700;
+      @include fl(12, 18);
+      color: $dark;
+      margin-bottom: 10px;
+
+      @media (min-width: 1400px) {
+         @include fl(16, 20);
+      }
+   }
+
+   &__head-title {
+      font-weight: 700;
+      @include fl(14, 20);
+      color: $dark;
+      max-width: 370px;
+      width: 100%;
+
+      @media (min-width: 1400px) {
+         @include fl(24, 28);
+      }
+   }
+
+   &__wrap {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+
+      .reviews__body {
+         padding: 12px 0 24px 22px;
+         max-width: 58.4%;
+      }
+
+      .reviews__body-name {
+         @include fl(16, 20);
+
+         @media (min-width: 1400px) {
+            @include fl(24, 29);
+         }
+      }
+
+      .reviews__body-text {
+         @include fl(14, 20);
+         font-weight: 400;
+         font-style: italic;
+
+         @media (min-width: 1400px) {
+            @include fl(16, 22);
+         }
+      }
+   }
+
+   &__body {
+      padding: 12px 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 auto;
+
+      &--video {
+         padding: 0;
+         position: relative;
+         width: 100%;
+         padding-bottom: 271px;
+         display: block;
+         cursor: pointer;
+         &::before {
+            position: absolute;
+            content: "";
+            width: 66px;
+            height: 66px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            background-image: url(../../img/icons/play.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+
+         &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(10, 10, 10, 0.2);
+            z-index: 2;
+         }
+
+         @media (min-width: 350px) {
+            padding-bottom: 250px;
+         }
+
+         @media (min-width: 1400px) {
+            padding-bottom: 245px;
+         }
+
+         img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+         }
+
+         .reviews__body-name {
+            color: $light;
+            position: absolute;
+            left: 22px;
+            top: 24px;
+            z-index: 3;
+            @include fl(18, 22);
+
+            @media (min-width: 1400px) {
+               @include fl(24, 29);
+            }
+         }
+
+         .reviews__footer {
+            position: absolute;
+            bottom: 24px;
+            left: 22px;
+            z-index: 3;
+         }
+
+         .reviews__footer-date {
+            color: $light;
+            opacity: 0.6;
+         }
+      }
+   }
+
+   &__body-name {
+      font-weight: 700;
+      @include fl(24, 29);
+      color: $dark;
+      margin-bottom: 12px;
+   }
+
+   &__body-text {
+      font-weight: 500;
+      @include fl(16, 22);
+
+      &--margin {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+   }
+
+   &__footer-date {
+      font-weight: 500;
+      @include fl(14, 20);
+      color: $dark;
+      opacity: 0.4;
+      margin-top: auto;
+   }
+
+   &__footer-btn {
+      font-weight: 700;
+      @include fl(16, 22);
+      color: $greenItem;
+      cursor: pointer;
+   }
+
+   &__img {
+      position: relative;
+      width: 100%;
+      padding-bottom: 271px;
+      cursor: pointer;
+      @media (min-width: 350px) {
+         padding-bottom: 250px;
+      }
+
+      @media (min-width: 1400px) {
+         padding-bottom: 245px;
+      }
+
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center center;
+      }
+   }
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      margin-top: 24px;
+      @media (max-width: 699px) {
+         flex-direction: column;
+      }
+      @media (min-width: 700px) {
+         flex-direction: row;
+         margin-top: 40px;
+      }
+      .slider__nav {
+         margin: 0;
+      }
+   }
+   &__feedback {
+      color: $greenItem;
+      font-weight: 700;
+      @include fl(18, 24);
+      cursor: pointer;
+      transition: color 0.5s ease;
+      &:hover {
+         color: $greenHover;
+      }
+   }
+}
+
+.reviews-popup {
+   transition: right 0.8s ease 0.3s, background-color 0.3s ease 0s, z-index 1s ease 1s;
+   position: fixed;
+   top: 0;
+   right: -100%;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0);
+   overflow-y: auto;
+   z-index: 0;
+
+   &.active {
+      pointer-events: all;
+      opacity: 1;
+      overflow-y: scroll;
+      z-index: 20;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      transition: right 0.8s ease 0s, background-color 0.3s ease 0.8s, z-index 0s ease 0s;
+   }
+
+   &__fixed {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: 320px) {
+         min-width: 90%;
+         top: 15%;
+      }
+
+      @media (min-width: 1200px) {
+         top: 50%;
+         min-width: 1040px;
+         min-height: 762px;
+      }
+   }
+
+   &__view {
+      box-shadow: 0 2px 24px rgb(0 0 0 / 4%);
+      position: absolute;
+      width: 100%;
+   }
+
+   &__wrapper {
+      background-color: $light;
+   }
+   &__item {
+      padding: 10px;
+      display: none;
+      @media (min-width: 800px) and (max-width: 1399px) {
+         padding: 20px;
+      }
+      @media (min-width: 1400px) {
+         padding: 30px;
+      }
+      &.active {
+         display: block;
+      }
+   }
+   &__close {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      cursor: pointer;
+      margin-bottom: 10px;
+      @media (min-width: 800px) and (max-width: 1399px) {
+         margin-bottom: 20px;
+      }
+      @media (min-width: 1400px) {
+         margin-bottom: 30px;
+      }
+   }
+   &__video {
+      position: relative;
+      max-width: 100%;
+      padding-bottom: 60%;
+      video {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         -o-object-fit: contain;
+         object-fit: contain;
+         z-index: 0;
+      }
+      svg {
+         cursor: pointer;
+         transition: 0.3s;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 2;
+      }
+   }
+   &__poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 60%;
+      z-index: 1;
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+   &__text {
+      @include fl(16, 22);
+      width: 100%;
+      color: $dark;
+      font-weight: 500;
+      @media (min-width: 800px) and (max-width: 999px) {
+         @include fl(18, 24);
+      }
+      @media (min-width: 1000px) and (max-width: 1399px) {
+         @include fl(20, 26);
+      }
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         @include fl(22, 28);
+      }
+      @media (min-width: 1700px) {
+         @include fl(24, 30);
+      }
+   }
+   &__screen {
+      position: relative;
+      width: 100%;
+      padding-bottom: 150%;
+      @media (min-width: 600px) {
+         padding-bottom: 100%;
+      }
+      @media (min-width: 850px) {
+         padding-bottom: 83%;
+      }
+      @media (min-width: 1100px) {
+         padding-bottom: 51%;
+      }
+      img {
+         position: absolute;
+         width: 80%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center center;
+         left: 50%;
+         transform: translateX(-50%);
+         @media (min-width: 600px) {
+            width: 50%;
+         }
+         @media (min-width: 850px) {
+            width: 45%;
+         }
+         @media (min-width: 1100px) {
+            width: 27%;
+         }
+      }
+   }
+
+   // &__slide {
+   //    @media (min-width: 320px) {
+   //       min-height: 560px;
+   //    }
+   //    @media (min-width: 1400px) {
+   //       min-height: 762px;
+   //       padding: 25px 30px 30px;
+   //    }
+   //    padding: 5px 10px 10px;
+   //    display: flex;
+   //    flex-direction: column;
+   // }
+
+   // &__head {
+   //    display: flex;
+   //    justify-content: space-between;
+   //    align-items: center;
+   //    border-bottom: 1px solid #d9d9d9;
+   //    gap: 20px;
+   //    padding: 5px 0px;
+   //    @media (min-width: 350px) {
+   //       padding: 10px 0;
+   //    }
+   //    @media (min-width: 1400px) {
+   //       padding: 20px 0px;
+   //    }
+   // }
+
+   // &__description {
+   //    max-width: 100%;
+   //    width: 100%;
+   // }
+
+   // &__head-title {
+   //    max-width: 100%;
+   // }
+
+   // &__date {
+   //    @include fl(14, 20);
+   //    font-weight: 500;
+   //    color: $dark;
+   //    opacity: 0.4;
+   //    @media (min-width: 1000px) {
+   //       @include fl(16, 22);
+   //    }
+   // }
+
+   // &__author {
+   //    @include fl(24, 29);
+   //    color: $dark;
+   //    margin: 16px 0;
+   //    font-weight: 700;
+   // }
+   // &__wrap {
+   //    .reviews-popup__body {
+   //       padding: 0;
+   //       max-width: 35%;
+   //       @media (min-width: 600px) {
+   //          max-width: 55%;
+   //       }
+   //    }
+   // }
+   // &__body {
+   //    padding: 0;
+   //    justify-content: start;
+   //    &--video {
+   //       @media (min-width: 350px) {
+   //          padding-bottom: 33.777%;
+   //       }
+   //       @media (min-width: 1400px) {
+   //          padding-bottom: 0;
+   //       }
+
+   //       &::after {
+   //          content: none;
+   //       }
+   //    }
+   // }
+
+   // &__body-name {
+   //    margin: 16px 0;
+   // }
+
+   // &__body-text {
+   //    margin-bottom: 0;
+   //    max-width: 882px;
+   //    width: 100%;
+   //    color: $dark;
+   //    font-weight: 500;
+   // }
+
+   // &__img {
+   //    @media (min-width: 350px) {
+   //       padding-bottom: 40%;
+   //       img {
+   //          width: 100%;
+   //          right: 0;
+   //          object-position: 114%;
+   //          @media (min-width: 500px) {
+   //             object-position: 50% 20%;
+   //          }
+   //          @media (min-width: 700px) {
+   //             width: 70%;
+   //          }
+   //          @media (min-width: 800px) {
+   //             object-position: 50% 5%;
+   //          }
+   //          @media (min-width: 900px) {
+   //             width: 60%;
+   //          }
+   //       }
+   //    }
+   //    @media (min-width: 1400px) {
+   //       padding-bottom: 57.5%;
+   //       img {
+   //          width: 64%;
+   //       }
+   //    }
+   // }
+
+   // &__nav {
+   //    @media (min-width: 1400px) {
+   //       margin-top: 24px;
+   //    }
+   // }
+}

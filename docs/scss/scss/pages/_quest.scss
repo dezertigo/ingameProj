@@ -1,0 +1,1118 @@
+.fear {
+   .fear__icons {
+      display: flex;
+   }
+
+   img {
+      width: 18px;
+      height: 16px;
+
+      @media (min-width: 1920px) {
+         width: 26px;
+         height: 24px;
+      }
+   }
+}
+
+.difficulty {
+   img {
+      width: 12px;
+      height: 20px;
+      transform: scale(1.2);
+
+      @media (min-width: 1920px) {
+         width: 20px;
+         height: 17px;
+      }
+   }
+}
+
+// ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
+// ! Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero === Hero
+.hero {
+   // .hero__container
+   &__container {
+      @media (max-width: 739px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+         padding-top: 40px;
+      }
+
+      @media (min-width: 740px) and (max-width: 1399px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+         padding-top: 60px;
+      }
+
+      @media (min-width: 1000px) {
+         display: flex;
+         column-gap: 20px;
+         padding-top: percent(130, 1920);
+
+         > :first-child {
+            flex: 0 0 58%;
+         }
+
+         > :last-child {
+            flex: 0 0 calc(42% - 20px);
+         }
+      }
+
+      @media (min-width: 1400px) {
+         padding-left: percent(130, 1920);
+         padding-right: percent(130, 1920);
+      }
+   }
+}
+
+// ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
+// ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
+// ! Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize === Prize
+
+.prize {
+   width: 100%;
+   background-color: $dark;
+
+   &__container {
+      @media (max-width: 743px) {
+         display: flex;
+         flex-direction: column;
+         padding-top: 31px;
+         padding-bottom: 50px;
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+      }
+
+      @media (min-width: 744px) {
+         display: grid;
+         overflow: hidden;
+      }
+
+      @media (min-width: 744px) and (max-width: 999px) {
+         column-gap: 24px;
+         row-gap: 8px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         column-gap: 30px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         column-gap: 45px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         column-gap: 65px;
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         column-gap: 80px;
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         column-gap: 100px;
+      }
+
+      @media (min-width: 744px) and (max-width: 1919px) {
+         padding-top: 31px;
+         padding-bottom: 50px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+         grid-template-columns: 45.2% 1fr;
+      }
+
+      @media (min-width: 1920px) {
+         grid-template-columns: 49.4% 1fr;
+         padding-top: 105px;
+         padding-bottom: 100px;
+         padding-left: percent(130, 1920);
+         padding-right: percent(130, 1920);
+         column-gap: 160px;
+      }
+   }
+
+   &__block-text {
+      @media (min-width: 744px) {
+         grid-column: span 2;
+      }
+
+      @media (max-width: 743px) {
+         margin-bottom: 23px;
+         display: flex;
+         flex-direction: column;
+      }
+
+      @media (min-width: 744px) and (max-width: 1399px) {
+         margin-bottom: 15px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1919px) {
+         margin-bottom: 20px;
+      }
+
+      @media (min-width: 1000px) {
+         grid-column: 2 / 3;
+      }
+
+      @media (min-width: 1920px) {
+         padding-top: 16px;
+         margin-bottom: 31px;
+      }
+   }
+
+   &__text {
+      font-weight: 400;
+      color: $light;
+
+      @media (max-width: 999px) {
+         @include fl(16, 22);
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fl(17, 25);
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(18, 26);
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(19, 27);
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fl(20, 28);
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         @include fl(22, 29);
+      }
+
+      @media (max-width: 1919px) {
+         margin-bottom: 16px;
+      }
+
+      @media (min-width: 1920px) {
+         @include fl(24, 30);
+         margin-bottom: 30px;
+      }
+   }
+
+   &__text:nth-child(2) {
+      margin: 0;
+   }
+
+   &__block-picture {
+      position: relative;
+
+      @media (max-width: 743px) {
+         margin-bottom: 9px;
+         padding-bottom: 93.9%;
+      }
+
+      @media (min-width: 744px) and (max-width: 1919px) {
+         padding-bottom: 89.9%;
+      }
+
+      @media (min-width: 744px) and (max-width: 999px) {
+         padding-top: 15px;
+      }
+
+      @media (max-width: 999px) {
+         grid-row: 2 / 3;
+      }
+
+      @media (min-width: 1000px) {
+         grid-row: 1 / 3;
+         position: relative;
+         overflow: hidden;
+      }
+
+      @media (min-width: 1920px) {
+         padding-top: 15px;
+         padding-bottom: 94.3%;
+      }
+
+      img {
+         position: absolute;
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+      }
+   }
+
+   &__block-content {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 1000px) {
+         grid-column: 2 / 3;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 1499px) {
+         margin-bottom: 8px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         margin-bottom: 30px;
+      }
+
+      @media (min-width: 1920px) {
+         margin-bottom: 60px;
+      }
+   }
+
+   &__item {
+      padding: 14px 0;
+      position: relative;
+   }
+
+   &__item:first-child {
+      @media (min-width: 744px) and (max-width: 999px) {
+         padding-top: 0;
+      }
+
+      @media (max-width: 999px) {
+         padding: 14px 0 11px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1919px) {
+         padding: 20px 0 17px;
+      }
+
+      @media (min-width: 1920px) {
+         order: 2;
+         padding: 30px 0 32px;
+      }
+
+      svg {
+         padding-top: 1px;
+
+         @media (max-width: 999px) {
+            width: 24px;
+            height: 24px;
+         }
+
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            width: 25px;
+            height: 25px;
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            width: 26px;
+            height: 26px;
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            width: 27px;
+            height: 27px;
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            width: 28px;
+            height: 28px;
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            width: 29px;
+            height: 29px;
+         }
+
+         @media (min-width: 1920px) {
+            width: 45px;
+            height: 45px;
+         }
+
+         ellipse {
+            stroke: $light;
+         }
+
+         circle {
+            stroke: $light;
+         }
+      }
+
+      .prize__number-desk {
+         padding-top: 6px;
+      }
+   }
+
+   &__item:nth-child(2) {
+      @media (max-width: 999px) {
+         padding: 23px 0 11px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1919px) {
+         padding: 30px 0 24px;
+      }
+
+      @media (min-width: 1920px) {
+         order: 1;
+         padding: 40px 0 31px;
+      }
+
+      svg {
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            width: 25px;
+            height: 25px;
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            width: 26px;
+            height: 26px;
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            width: 27px;
+            height: 27px;
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            width: 28px;
+            height: 28px;
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            width: 29px;
+            height: 29px;
+         }
+
+         @media (min-width: 1920px) {
+            width: 45px;
+            height: 45px;
+         }
+
+         ellipse {
+            stroke: $light;
+         }
+
+         path {
+            fill: $light;
+         }
+      }
+   }
+
+   &__item:nth-child(3) {
+      @media (max-width: 999px) {
+         padding: 23px 0 14px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1919px) {
+         padding: 30px 0 24px;
+      }
+
+      @media (min-width: 1920px) {
+         order: 3;
+         padding: 32px 0 31px;
+      }
+
+      .prize__item-wrap {
+         padding-left: 2px;
+      }
+
+      i {
+         color: $light;
+         @include fz(21);
+         padding-top: 2px;
+
+         @media (min-width: 1000px) and (max-width: 1199px) {
+            @include fz(22);
+         }
+
+         @media (min-width: 1200px) and (max-width: 1399px) {
+            @include fz(23);
+         }
+
+         @media (min-width: 1400px) and (max-width: 1599px) {
+            @include fz(24);
+         }
+
+         @media (min-width: 1600px) and (max-width: 1799px) {
+            @include fz(25);
+         }
+
+         @media (min-width: 1800px) and (max-width: 1919px) {
+            @include fz(26);
+         }
+
+         @media (min-width: 1920px) {
+            @include fz(41);
+         }
+      }
+   }
+
+   &__item:not(li:last-child)::after {
+      content: "";
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+   }
+
+   @media (min-width: 1920px) {
+      &__item::after {
+         content: "";
+         position: absolute;
+         background-color: rgba(255, 255, 255, 0.2);
+         width: 100%;
+         height: 1px;
+         bottom: 0;
+      }
+
+      &__item:nth-child(2)::before {
+         content: "";
+         position: absolute;
+         background-color: rgba(255, 255, 255, 0.2);
+         width: 100%;
+         height: 1px;
+         top: 0;
+      }
+   }
+
+   &__item-wrap {
+      display: flex;
+      padding-right: 1px;
+
+      @media (max-width: 1919px) {
+         gap: 12px;
+      }
+
+      @media (min-width: 1920px) {
+         align-items: center;
+         gap: 21px;
+      }
+   }
+
+   &__par {
+      font-weight: 700;
+      color: $light;
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fl(19, 22);
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(20, 23);
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(21, 24);
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fl(22, 25);
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         @include fl(23, 26);
+      }
+
+      @media (max-width: 1919px) {
+         @include fl(14, 27);
+      }
+
+      @media (min-width: 1920px) {
+         @include fl(24, 28.8);
+      }
+   }
+
+   &__number {
+      font-weight: 700;
+      color: $light;
+      @include fl(18, 22);
+      margin-left: auto;
+      padding-top: 2px;
+
+      @media (max-width: 999px) {
+         @include fl(18, 22);
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         @include fz(19);
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fz(20);
+      }
+
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fz(21);
+      }
+
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fz(22);
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         @include fz(23);
+      }
+
+      @media (max-width: 1919px) {
+         display: inline-block;
+      }
+
+      @media (min-width: 1920px) {
+         display: none;
+      }
+   }
+
+   &__number-desk {
+      @media (max-width: 1919px) {
+         display: none;
+      }
+
+      @media (min-width: 1920px) {
+         display: inline-block;
+         margin-left: auto;
+         color: $light;
+         font-weight: 700;
+         @include fl(24, 22);
+      }
+   }
+
+   &__btn {
+      color: $light;
+      font-weight: 700;
+      @include fl(24, 32);
+      background-color: rgba(154, 208, 24, 1);
+      width: 100%;
+      cursor: pointer;
+      letter-spacing: 1.3px;
+
+      @media (max-width: 999px) {
+         height: 52px;
+      }
+
+      @media (min-width: 1000px) and (max-width: 1199px) {
+         height: 60px;
+      }
+
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         height: 70px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1699px) {
+         height: 80px;
+      }
+
+      @media (min-width: 1600px) and (max-width: 1899px) {
+         height: 90px;
+      }
+
+      @media (min-width: 1800px) and (max-width: 1919px) {
+         height: 100px;
+      }
+
+      @media (min-width: 1920px) {
+         height: 112px;
+      }
+   }
+
+   &__btn:hover {
+      filter: drop-shadow(0px 4px 14px rgba(104, 139, 16, 0.6));
+   }
+
+   &__btn:active {
+      background-color: rgba(154, 207, 22, 0.6);
+      filter: none;
+   }
+}
+
+// ! STEP-TITLE
+.step-title {
+   text-align: center;
+
+   @media (max-width: 999px) {
+      @include fl(24, 30);
+   }
+
+   @media (min-width: 1000px) and (max-width: 1199px) {
+      @include fl(26, 34);
+   }
+
+   @media (min-width: 1200px) and (max-width: 1399px) {
+      @include fl(29, 37);
+   }
+
+   @media (min-width: 1400px) and (max-width: 1599px) {
+      @include fl(32, 40);
+   }
+
+   @media (min-width: 1600px) {
+      @include fl(34, 42);
+   }
+
+   span {
+      font-weight: 500;
+
+      @media (max-width: 1399px) {
+         margin-right: 13px;
+      }
+
+      @media (min-width: 1400px) {
+         margin-right: 20px;
+      }
+   }
+}
+
+//
+// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
+// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
+// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
+.step1 {
+   &__container {
+      @media (max-width: 739px) {
+         padding-top: 60px;
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-top: 73px;
+      }
+      @media (min-width: 1000px) {
+         padding-top: percent(120, 1920);
+         padding-left: percent(130, 1920);
+         padding-right: percent(130, 1920);
+      }
+   }
+   &__head {
+      @media (max-width: 743px) {
+         text-align: center;
+      }
+      @media (min-width: 744px) and (max-width: 999px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+      @media (min-width: 1000px) {
+         text-align: center;
+      }
+      p {
+         &:first-child {
+            font-weight: 700;
+            @media (max-width: 999px) {
+               @include fl(24, 30);
+               margin-bottom: 12px;
+            }
+            @media (min-width: 1000px) {
+               @include fl(28, 36);
+               margin-bottom: 24px;
+            }
+            @media (min-width: 1200px) {
+               @include fl(30, 38);
+            }
+            @media (min-width: 1400px) {
+               @include fl(32, 40);
+            }
+            @media (min-width: 1600px) {
+               @include fl(34, 42);
+            }
+            @media (min-width: 1800px) {
+               @include fl(36, 44);
+            }
+         }
+         &:last-child {
+            margin-bottom: 60px;
+            @media (max-width: 999px) {
+               @include fl(18, 24);
+            }
+            @media (min-width: 1000px) {
+               @include fl(24, 30);
+            }
+         }
+      }
+   }
+   &__title {
+      @media (max-width: 999px) {
+         margin-bottom: 16px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
+   }
+   &__swiper {
+      width: 100%;
+      overflow: unset;
+   }
+   &__prev,
+   &__next {
+      svg {
+         fill: transparent;
+         path {
+            stroke: #000000;
+         }
+      }
+   }
+   &__nav {
+      @media (min-width: 1400px) {
+         display: none;
+      }
+   }
+}
+
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+.step2 {
+   &__container {
+      padding-top: 60px;
+      padding-left: percent(12, 375);
+      padding-right: percent(12, 375);
+   }
+   &__title {
+      @media (max-width: 999px) {
+         max-width: 300px;
+         margin: 0 auto 16px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
+   }
+   &__spoiler {
+      @media (max-width: 799px) {
+         border-radius: 2px;
+      }
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      width: 100%;
+      margin: 0 auto;
+      @media (max-width: 799px) {
+         max-width: 351px;
+      }
+      @media (min-width: 800px) {
+         max-width: 680px;
+         border-radius: 10px;
+      }
+   }
+   &__preview {
+      // padding: 27px 37px;
+
+      @include fl(24, 30);
+      border: 3px solid $greenHover;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 799px) {
+         padding: 8px 16px;
+         border-radius: 2px;
+      }
+      @media (min-width: 800px) {
+         border-radius: 12px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         padding: 14px 20px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         padding: 20px 26px;
+      }
+      @media (min-width: 1600px) {
+         padding: 27px;
+      }
+   }
+   &__wrapper {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 799px) {
+         gap: 30px;
+         padding: 15px;
+      }
+      @media (min-width: 800px) and (max-width: 1399px) {
+         gap: 30px 50px;
+         padding: 22px;
+      }
+      @media (min-width: 1400px) {
+         gap: 30px 60px;
+         padding: 30px;
+      }
+   }
+   &__input {
+      appearance: none;
+      display: none;
+   }
+   &__label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      padding-left: 20px;
+      max-width: 28px;
+      width: 100%;
+      text-align: right;
+      @include fl(24, 30);
+      &:last-child {
+         max-width: 128px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         width: 18px;
+         height: 18px;
+         border-radius: 100%;
+         border: 1px solid $greenItem;
+         background-color: #f5f5f5;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         width: 12px;
+         height: 12px;
+         border-radius: 100%;
+         position: absolute;
+         top: 50%;
+         left: 4px;
+         transform: translate(0, -50%);
+         background-color: $greenItem;
+         opacity: 0;
+         transition: all 0.5s ease;
+      }
+      p {
+      }
+      span {
+         @include fl(14, 30);
+      }
+   }
+   &__input:checked + &__label {
+      &::after {
+         opacity: 1;
+      }
+   }
+}
+.select {
+   &.opened {
+      .select__icon {
+         transform: rotate(180deg);
+      }
+   }
+   &__current {
+      br {
+         display: none;
+      }
+   }
+   &__icon {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid $greenItem;
+      transition: all 0.5s ease;
+   }
+}
+
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+// ! Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3 === Step 3
+.step3 {
+   &__container {
+      @media (max-width: 739px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+         padding-top: 34px;
+      }
+
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+         padding-top: 40px;
+      }
+      @media (max-width: 999px) {
+         padding-bottom: 60px;
+      }
+      @media (min-width: 1000px) {
+         padding-left: 15px;
+         padding-right: 15px;
+         max-width: 990px;
+         margin: 0 auto;
+         padding-top: percent(60, 1920);
+         padding-bottom: percent(130, 1920);
+      }
+   }
+
+   &__title {
+      @media (max-width: 999px) {
+         margin-bottom: 15px;
+      }
+
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
+   }
+   &__prev,
+   &__next {
+      svg {
+         fill: transparent;
+         path {
+            stroke: #000000;
+         }
+      }
+   }
+   @media (max-width: 743px) {
+      &__block-btn {
+         position: relative;
+      }
+
+      &__btn {
+         z-index: 10;
+         position: absolute;
+         width: 25px;
+         height: 25px;
+         top: 13px;
+         cursor: pointer;
+
+         svg {
+            cursor: pointer;
+
+            path {
+               stroke: rgba(16, 16, 16, 1);
+            }
+         }
+      }
+
+      &__btn-left {
+         left: -8px;
+      }
+
+      &__btn-right {
+         right: -7px;
+      }
+   }
+   @media (min-width: 744px) {
+      &__block-btn {
+         display: none;
+      }
+   }
+   &__nav {
+      @media (max-width: 743px) {
+         display: none;
+      }
+      @media (min-width: 744px) {
+         padding-top: 40px;
+         justify-content: center;
+         path {
+            stroke: $dark;
+         }
+         .swiper-pagination-horizontal {
+            width: auto;
+         }
+         .swiper-pagination-bullet {
+            background-color: $greenItem !important;
+            opacity: 0.2 !important;
+            &-active {
+               background: $greenItem;
+               opacity: 1 !important;
+            }
+         }
+      }
+   }
+}
+
+// ! Map-block === Map-block === Map-block === Map-block === Map-block
+// ! Map-block === Map-block === Map-block === Map-block === Map-block
+// ! Map-block === Map-block === Map-block === Map-block === Map-block
+
+.map-block {
+   @media (max-width: 743px) {
+      margin-bottom: -5px;
+   }
+   @media (min-width: 744px) and (max-width: 999px) {
+      margin-bottom: 30px;
+   }
+   &__container {
+      @extend %container;
+
+      @media (max-width: 999px) {
+         padding-top: 60px;
+      }
+      @media (min-width: 1000px) {
+         padding-top: percent(120, 1920);
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+   }
+   &__title {
+      font-weight: 700;
+      @media (max-width: 560px) {
+         text-align: center;
+      }
+      @media (max-width: 999px) {
+         margin-bottom: 24px;
+         @include fl(24, 30);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(50, 1920);
+         @include fl(26);
+      }
+      @media (min-width: 1200px) and (max-width: 1399px) {
+         @include fl(28);
+      }
+      @media (min-width: 1400px) and (max-width: 1599px) {
+         @include fl(30);
+      }
+      @media (min-width: 1600px) and (max-width: 1799px) {
+         @include fl(32);
+      }
+      @media (min-width: 1800px) {
+         @include fl(36);
+      }
+   }
+   &__map {
+      position: relative;
+      @media (max-width: 739px) {
+         padding-bottom: percent(176, 351);
+      }
+      @media (min-width: 740px) {
+         padding-bottom: percent(342, 684);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(833, 1660);
+      }
+      iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+         &:active {
+            iframe + i {
+               display: none;
+            }
+         }
+      }
+      i {
+         display: none; // todo
+         position: absolute;
+         z-index: 1;
+         pointer-events: none;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         @media (max-width: 739px) {
+            @include fz(23);
+         }
+         @media (min-width: 740px) and (max-width: 999px) {
+            @include fz(46);
+         }
+         @media (min-width: 1000px) {
+            @include fz(50);
+         }
+         @media (min-width: 1800px) {
+            @include fz(55);
+         }
+      }
+   }
+}

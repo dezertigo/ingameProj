@@ -1,0 +1,275 @@
+// @import "slider-nav";
+
+.horizontal-gallery {
+   @media (min-width: 1000px) {
+      // ! Сделать адаптивную ширину
+      max-width: auto;
+      // height: 540px;
+      height: 50%;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      .horizontal-gallery__big-wrap {
+         grid-column: span 7;
+         order: 2;
+         width: 100%;
+         position: relative;
+         padding-left: 20px;
+         > .swiper {
+            height: 100%;
+         }
+      }
+      .horizontal-gallery__small-wrap {
+         order: 1;
+         display: block;
+         position: relative;
+      }
+   }
+
+   // .horizontal-gallery__swiper-big
+   &__swiper-big {
+      @media (max-width: 739px) {
+         margin-bottom: 12px;
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         margin-bottom: 10px;
+      }
+      @media (min-width: 1000px) {
+         width: 100%;
+         // ! Сделать адаптивную ширину
+         img {
+            cursor: pointer;
+         }
+      }
+   }
+   @media (min-width: 1000px) {
+      &__swiper-big-pop-up {
+         width: 100%;
+      }
+   }
+
+   // .horizontal-gallery__slide-big
+   &__slide-big {
+   }
+
+   // .horizontal-gallery__image-big
+   &__image-big {
+      position: relative;
+      @media (max-width: 739px) {
+         padding-bottom: percent(232, 351);
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-bottom: percent(450, 684);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(540, 760);
+      }
+      @media (min-width: 1200px) {
+         padding-bottom: percent(540, 820);
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   .horizontal-gallery__small-wrap {
+      max-height: 317px;
+   }
+   // .horizontal-gallery__swiper-small
+   &__swiper-small {
+      @media (min-width: 1000px) {
+         height: 100%;
+         width: 100%;
+      }
+      // margin-right: percent(-13, 375);
+   }
+   &__swiper-small-pop-up {
+      @media (min-width: 1000px) {
+         height: 100%;
+         width: 100%;
+      }
+   }
+
+   // .horizontal-gallery__slide-small
+   &__slide-small {
+      // height: 79px !important;
+   }
+
+   .swiper-slide-thumb-active {
+      .horizontal-gallery__image-small {
+         position: relative;
+         &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 4px solid $green;
+         }
+      }
+   }
+   // .horizontal-gallery__image-small
+   &__image-small {
+      position: relative;
+      @media (max-width: 739px) {
+         padding-bottom: calc(percent(79, 132));
+      }
+      @media (min-width: 740px) and (max-width: 999px) {
+         padding-bottom: percent(69, 105);
+      }
+      @media (min-width: 1000px) {
+         padding-bottom: percent(79, 120);
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+}
+.horizontal-gallery {
+   position: relative;
+   @media (max-width: 743px) {
+      padding-bottom: 50px;
+      margin-bottom: 23px;
+   }
+   @media (min-width: 744px) and (max-width: 999px) {
+      margin-bottom: 14px;
+   }
+   &__big-wrap {
+      @media (min-width: 1000px) {
+         position: relative;
+      }
+   }
+   &__nav {
+      z-index: 5;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      @media (min-width: 1000px) {
+         bottom: 20px;
+      }
+      @media (min-width: 1400px) {
+         bottom: 30px;
+      }
+      @media (min-width: 1800px) {
+         bottom: 50px;
+      }
+      @media (max-width: 743px) {
+         bottom: 0px;
+      }
+      @media (min-width: 744px) and (max-width: 999px) {
+         display: none;
+      }
+   }
+   @media (min-width: 1000px) {
+      &__nav-pop-up {
+         z-index: 5;
+         left: 50%;
+         transform: translateX(-50%);
+         position: absolute;
+         @media (min-width: 1000px) {
+            bottom: 20px;
+         }
+         @media (min-width: 1400px) {
+            bottom: 30px;
+         }
+         @media (min-width: 1800px) {
+            bottom: 50px;
+         }
+         @media (max-width: 743px) {
+            bottom: 0px;
+         }
+         @media (min-width: 744px) and (max-width: 999px) {
+            display: none;
+         }
+      }
+   }
+}
+// ! pop-up
+
+.horizontal-gallery-pop-up {
+   @media (max-width: 999px) {
+      display: none;
+   }
+   @media (min-width: 1000px) {
+      &.active {
+         z-index: 100;
+         opacity: 1;
+         pointer-events: all;
+      }
+      position: fixed;
+      transition: all 0.5s ease;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      opacity: 0;
+      pointer-events: none;
+      &__wrapper {
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         overflow-y: auto;
+         padding-left: percent(230, 1920);
+         padding-right: percent(230, 1920);
+         padding-top: percent(112, 1920);
+         padding-bottom: percent(112, 1920);
+      }
+      &__body {
+         overflow-y: auto;
+         // max-height: 100%; // ! Запрещаем блоку быть большего размера чем задано родителем (padding: 200px)
+         height: max-content;
+      }
+      // .horizontal-gallery-pop-up__icon-wrapper
+      &__icon-wrapper {
+         width: 40px;
+         height: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+         position: absolute;
+         top: percent(94, 1920);
+         right: percent(84, 1920);
+      }
+
+      // .horizontal-gallery-pop-up__icon
+      &__icon {
+         position: relative;
+         width: 24px;
+         height: 24px;
+         span {
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 1px;
+            &:first-child {
+               transform: translate(-50%, -50%) rotate(45deg);
+            }
+            &:last-child {
+               transform: translate(-50%, -50%) rotate(-45deg);
+            }
+         }
+      }
+   }
+}
