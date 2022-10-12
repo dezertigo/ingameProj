@@ -71,52 +71,53 @@
 
 .prize {
    width: 100%;
-   max-width: 100%;
-   background-color: rgba(16, 16, 16, 1);
+   background-color: $dark;
 
    &__container {
-      margin: 0 auto;
-      max-width: 1750px;
-   }
-
-   &__wrap {
       @media (max-width: 743px) {
          display: flex;
          flex-direction: column;
-         padding: 31px 3.1% 50px;
+         padding-top: 31px;
+         padding-bottom: 50px;
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
       }
 
       @media (min-width: 744px) {
          display: grid;
-         gap: 0.5em;
+         overflow: hidden;
       }
 
       @media (min-width: 744px) and (max-width: 999px) {
-         column-gap: 1.47em;
+         column-gap: 24px;
+         row-gap: 8px;
       }
 
       @media (min-width: 1000px) and (max-width: 1199px) {
-         column-gap: 2.5em;
+         column-gap: 30px;
       }
 
       @media (min-width: 1200px) and (max-width: 1399px) {
-         column-gap: 4em;
+         column-gap: 45px;
       }
 
       @media (min-width: 1400px) and (max-width: 1599px) {
-         column-gap: 5em;
+         column-gap: 65px;
       }
 
       @media (min-width: 1600px) and (max-width: 1799px) {
-         column-gap: 6em;
+         column-gap: 80px;
       }
 
       @media (min-width: 1800px) and (max-width: 1919px) {
-         column-gap: 8em;
+         column-gap: 100px;
       }
 
       @media (min-width: 744px) and (max-width: 1919px) {
-         padding: 31px 4% 50px;
+         padding-top: 31px;
+         padding-bottom: 50px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
          grid-template-columns: 45.2% 1fr;
       }
 
@@ -131,16 +132,22 @@
    }
 
    &__block-text {
-      display: flex;
-      flex-direction: column;
-      grid-column: span 2;
+      @media (min-width: 744px) {
+         grid-column: span 2;
+      }
 
       @media (max-width: 743px) {
          margin-bottom: 23px;
+         display: flex;
+         flex-direction: column;
       }
 
-      @media (min-width: 744px) and (max-width: 1919px) {
-         margin-bottom: 0;
+      @media (min-width: 744px) and (max-width: 1399px) {
+         margin-bottom: 15px;
+      }
+
+      @media (min-width: 1400px) and (max-width: 1919px) {
+         margin-bottom: 20px;
       }
 
       @media (min-width: 1000px) {
@@ -155,20 +162,22 @@
 
    &__text {
       font-weight: 400;
-      color: rgba(255, 255, 255, 1);
+      color: $light;
+
+      @media (max-width: 999px) {
+         @include fl(16, 22);
+      }
 
       @media (min-width: 1000px) and (max-width: 1199px) {
          @include fl(17, 25);
       }
 
       @media (min-width: 1200px) and (max-width: 1399px) {
-         font-size: 18px;
-         line-height: 26px;
+         @include fl(18, 26);
       }
 
       @media (min-width: 1400px) and (max-width: 1599px) {
-         font-size: 19px;
-         line-height: 27px;
+         @include fl(19, 27);
       }
 
       @media (min-width: 1600px) and (max-width: 1799px) {
@@ -181,13 +190,10 @@
 
       @media (max-width: 1919px) {
          margin-bottom: 16px;
-         font-size: 16px;
-         line-height: 22px;
       }
 
       @media (min-width: 1920px) {
-         font-size: 24px;
-         line-height: 30px;
+         @include fl(24, 30);
          margin-bottom: 30px;
       }
    }
@@ -197,9 +203,18 @@
    }
 
    &__block-picture {
-      margin-bottom: 9px;
+      position: relative;
 
-      @media (min-width: 744px) and (max-width: 1099px) {
+      @media (max-width: 743px) {
+         margin-bottom: 9px;
+         padding-bottom: 93.9%;
+      }
+
+      @media (min-width: 744px) and (max-width: 1919px) {
+         padding-bottom: 89.9%;
+      }
+
+      @media (min-width: 744px) and (max-width: 999px) {
          padding-top: 15px;
       }
 
@@ -208,22 +223,13 @@
       }
 
       @media (min-width: 1000px) {
-         grid-row: 1 / 4;
-      }
-   }
-
-   &__picture {
-      position: relative;
-
-      @media (max-width: 743px) {
-         padding-bottom: 93.7%;
-      }
-
-      @media (min-width: 744px) and (max-width: 1919px) {
-         padding-bottom: 94.5%;
+         grid-row: 1 / 3;
+         position: relative;
+         overflow: hidden;
       }
 
       @media (min-width: 1920px) {
+         padding-top: 15px;
          padding-bottom: 94.3%;
       }
 
@@ -240,24 +246,31 @@
    &__block-content {
       display: flex;
       flex-direction: column;
-      align-items: stretch;
-      justify-content: stretch;
-      grid-column: 2 / 3;
-      width: 100%;
+
+      @media (min-width: 1000px) {
+         grid-column: 2 / 3;
+      }
    }
 
    &__list {
       display: flex;
       flex-direction: column;
-      margin-bottom: 11px;
+
+      @media (max-width: 1499px) {
+         margin-bottom: 8px;
+      }
+
+      @media (min-width: 1500px) and (max-width: 1919px) {
+         margin-bottom: 30px;
+      }
 
       @media (min-width: 1920px) {
-         margin-bottom: 65px;
+         margin-bottom: 60px;
       }
    }
 
    &__item {
-      padding: 16px 0;
+      padding: 14px 0;
       position: relative;
    }
 
@@ -276,7 +289,7 @@
 
       @media (min-width: 1920px) {
          order: 2;
-         padding: 37px 0 39px;
+         padding: 30px 0 32px;
       }
 
       svg {
@@ -318,11 +331,11 @@
          }
 
          ellipse {
-            stroke: rgba(255, 255, 255, 1);
+            stroke: $light;
          }
 
          circle {
-            stroke: rgba(255, 255, 255, 1);
+            stroke: $light;
          }
       }
 
@@ -342,7 +355,7 @@
 
       @media (min-width: 1920px) {
          order: 1;
-         padding: 37px 0 40px;
+         padding: 40px 0 31px;
       }
 
       svg {
@@ -377,16 +390,12 @@
          }
 
          ellipse {
-            stroke: rgba(255, 255, 255, 1);
+            stroke: $light;
          }
 
          path {
-            fill: rgba(255, 255, 255, 1);
+            fill: $light;
          }
-      }
-
-      .prize__number-desk {
-         padding-top: 7px;
       }
    }
 
@@ -401,43 +410,41 @@
 
       @media (min-width: 1920px) {
          order: 3;
-         padding: 37px 0 35px;
+         padding: 32px 0 31px;
+      }
+
+      .prize__item-wrap {
+         padding-left: 2px;
       }
 
       i {
-         color: rgba(255, 255, 255, 1);
-         font-size: 21px;
-         top: 0;
-         left: 2px;
+         color: $light;
+         @include fz(21);
+         padding-top: 2px;
 
          @media (min-width: 1000px) and (max-width: 1199px) {
-            font-size: 22px;
+            @include fz(22);
          }
 
          @media (min-width: 1200px) and (max-width: 1399px) {
-            font-size: 23px;
+            @include fz(23);
          }
 
          @media (min-width: 1400px) and (max-width: 1599px) {
-            font-size: 24px;
+            @include fz(24);
          }
 
          @media (min-width: 1600px) and (max-width: 1799px) {
-            font-size: 25px;
+            @include fz(25);
          }
 
          @media (min-width: 1800px) and (max-width: 1919px) {
-            font-size: 26px;
+            @include fz(26);
          }
 
          @media (min-width: 1920px) {
-            font-size: 41px;
-            top: -4px;
+            @include fz(41);
          }
-      }
-
-      .prize__number-desk {
-         padding-top: 6px;
       }
    }
 
@@ -472,20 +479,21 @@
 
    &__item-wrap {
       display: flex;
-      justify-content: space-between;
-      padding-left: 36px;
       padding-right: 1px;
-      position: relative;
+
+      @media (max-width: 1919px) {
+         gap: 12px;
+      }
 
       @media (min-width: 1920px) {
-         padding-left: 65px;
+         align-items: center;
+         gap: 21px;
       }
    }
 
    &__par {
       font-weight: 700;
-      color: rgba(255, 255, 255, 1);
-      padding-top: 2px;
+      color: $light;
 
       @media (min-width: 1000px) and (max-width: 1199px) {
          @include fl(19, 22);
@@ -496,8 +504,7 @@
       }
 
       @media (min-width: 1400px) and (max-width: 1599px) {
-         font-size: 21px;
-         line-height: 24px;
+         @include fl(21, 24);
       }
 
       @media (min-width: 1600px) and (max-width: 1799px) {
@@ -519,26 +526,33 @@
 
    &__number {
       font-weight: 700;
-      color: rgba(255, 255, 255, 1);
+      color: $light;
+      @include fl(18, 22);
+      margin-left: auto;
+      padding-top: 2px;
+
+      @media (max-width: 999px) {
+         @include fl(18, 22);
+      }
 
       @media (min-width: 1000px) and (max-width: 1199px) {
-         font-size: 19px;
+         @include fz(19);
       }
 
       @media (min-width: 1200px) and (max-width: 1399px) {
-         font-size: 20px;
+         @include fz(20);
       }
 
       @media (min-width: 1400px) and (max-width: 1599px) {
-         font-size: 21px;
+         @include fz(21);
       }
 
       @media (min-width: 1600px) and (max-width: 1799px) {
-         font-size: 22px;
+         @include fz(22);
       }
 
       @media (min-width: 1800px) and (max-width: 1919px) {
-         font-size: 23px;
+         @include fz(23);
       }
 
       @media (max-width: 1919px) {
@@ -546,8 +560,6 @@
       }
 
       @media (min-width: 1920px) {
-         font-size: 24px;
-         line-height: 22px;
          display: none;
       }
    }
@@ -559,17 +571,17 @@
 
       @media (min-width: 1920px) {
          display: inline-block;
-         color: rgba(255, 255, 255, 1);
+         margin-left: auto;
+         color: $light;
          font-weight: 700;
          @include fl(24, 22);
       }
    }
 
    &__btn {
-      color: rgba(255, 255, 255, 1);
+      color: $light;
       font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
+      @include fl(24, 32);
       background-color: rgba(154, 208, 24, 1);
       width: 100%;
       cursor: pointer;
@@ -577,36 +589,29 @@
 
       @media (max-width: 999px) {
          height: 52px;
-         max-width: 351px;
       }
 
       @media (min-width: 1000px) and (max-width: 1199px) {
          height: 60px;
-         max-width: 530px;
       }
 
       @media (min-width: 1200px) and (max-width: 1399px) {
          height: 70px;
-         max-width: 560px;
       }
 
       @media (min-width: 1400px) and (max-width: 1699px) {
          height: 80px;
-         max-width: 590px;
       }
 
       @media (min-width: 1600px) and (max-width: 1899px) {
          height: 90px;
-         max-width: 620px;
       }
 
       @media (min-width: 1800px) and (max-width: 1919px) {
          height: 100px;
-         max-width: 650px;
       }
 
       @media (min-width: 1920px) {
-         max-width: 680px;
          height: 112px;
       }
    }
@@ -682,6 +687,10 @@
       @media (max-width: 743px) {
          text-align: center;
       }
+      @media (min-width: 744px) and (max-width: 999px) {
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
       @media (min-width: 1000px) {
          text-align: center;
       }
@@ -690,11 +699,11 @@
             font-weight: 700;
             @media (max-width: 999px) {
                @include fl(24, 30);
-               margin-bottom: 8px;
+               margin-bottom: 12px;
             }
             @media (min-width: 1000px) {
                @include fl(28, 36);
-               margin-bottom: 16px;
+               margin-bottom: 24px;
             }
             @media (min-width: 1200px) {
                @include fl(30, 38);
@@ -710,7 +719,7 @@
             }
          }
          &:last-child {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             @media (max-width: 999px) {
                @include fl(18, 24);
             }
@@ -721,7 +730,12 @@
       }
    }
    &__title {
-      margin-bottom: 16px;
+      @media (max-width: 999px) {
+         margin-bottom: 16px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
    }
    &__swiper {
       width: 100%;
@@ -736,6 +750,11 @@
          }
       }
    }
+   &__nav {
+      @media (min-width: 1400px) {
+         display: none;
+      }
+   }
 }
 
 // ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
@@ -748,10 +767,18 @@
       padding-right: percent(12, 375);
    }
    &__title {
-      margin-bottom: 16px;
+      @media (max-width: 999px) {
+         max-width: 300px;
+         margin: 0 auto 16px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: 24px;
+      }
    }
    &__spoiler {
-      border-radius: 10px;
+      @media (max-width: 799px) {
+         border-radius: 2px;
+      }
       box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
       cursor: pointer;
       width: 100%;
@@ -761,6 +788,7 @@
       }
       @media (min-width: 800px) {
          max-width: 680px;
+         border-radius: 10px;
       }
    }
    &__preview {
@@ -768,12 +796,15 @@
 
       @include fl(24, 30);
       border: 3px solid $greenHover;
-      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       @media (max-width: 799px) {
          padding: 8px 16px;
+         border-radius: 2px;
+      }
+      @media (min-width: 800px) {
+         border-radius: 12px;
       }
       @media (min-width: 800px) and (max-width: 1199px) {
          padding: 14px 20px;
@@ -901,8 +932,8 @@
          padding-bottom: 60px;
       }
       @media (min-width: 1000px) {
-         padding-left: 15;
-         padding-right: 15;
+         padding-left: 15px;
+         padding-right: 15px;
          max-width: 990px;
          margin: 0 auto;
          padding-top: percent(60, 1920);
@@ -968,7 +999,7 @@
          display: none;
       }
       @media (min-width: 744px) {
-         padding-top: 50px;
+         padding-top: 40px;
          justify-content: center;
          path {
             stroke: $dark;
@@ -993,6 +1024,12 @@
 // ! Map-block === Map-block === Map-block === Map-block === Map-block
 
 .map-block {
+   @media (max-width: 743px) {
+      margin-bottom: -5px;
+   }
+   @media (min-width: 744px) and (max-width: 999px) {
+      margin-bottom: 30px;
+   }
    &__container {
       @extend %container;
 

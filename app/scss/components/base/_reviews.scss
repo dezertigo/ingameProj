@@ -20,16 +20,29 @@
    .swiper-slide {
       height: auto;
    }
-   padding: 80px 0;
    // background-image: url(../../img/reviews-bg.png);
    // background-repeat: no-repeat;
    // background-size: cover;
 
    &__container {
       margin: 0 auto;
-      padding-left: percent(12, 375);
-      padding-right: percent(12, 375);
-
+      @media (max-width: 743px) {
+         padding-left: percent(12, 375);
+         padding-right: percent(12, 375);
+         padding-top: 16px;
+      }
+      @media (min-width: 744px) and (max-width: 1399px) {
+         padding-top: 36px;
+         padding-left: percent(30, 744);
+         padding-right: percent(30, 744);
+      }
+      @media (max-width: 999px) {
+         padding-bottom: 36px;
+      }
+      @media (min-width: 1000px) {
+         padding-top: percent(80, 1920);
+         padding-bottom: percent(80, 1920);
+      }
       @media (min-width: 1400px) {
          padding-left: percent(130, 1920);
          padding-right: percent(130, 1920);
@@ -40,9 +53,18 @@
       font-weight: 700;
       @include fl(24, 30);
       color: $light;
-      text-align: center;
       margin-bottom: 24px;
-
+      position: relative;
+      z-index: 2;
+      @media (max-width: 743px) {
+         text-align: center;
+      }
+      @media (min-width: 744px) and (max-width: 999px) {
+         text-align: left;
+      }
+      @media (min-width: 1000px) {
+         text-align: center;
+      }
       @media (min-width: 1400px) {
          margin-bottom: 10px;
          @include fl(36, 44);

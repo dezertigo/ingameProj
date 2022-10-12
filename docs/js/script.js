@@ -527,12 +527,9 @@ window.addEventListener("load", () => {
                slidesPerView: 3,
                spaceBetween: 12,
                breakpoints: {
-                  500: {
+                  600: {
                      slidesPerView: 4,
                      spaceBetween: 14,
-                  },
-                  600: {
-                     slidesPerView: 5,
                   },
                   1000: {
                      spaceBetween: 20,

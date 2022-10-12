@@ -1,13 +1,6 @@
 .gal-form {
    display: flex;
-
-   @media (max-width: 1919px) {
-      flex-direction: column;
-   }
-
-   @media (min-width: 1920px) {
-      flex-direction: row;
-   }
+   flex-direction: column;
 
    &__list {
       @media (max-width: 743px) {
