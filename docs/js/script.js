@@ -189,6 +189,20 @@ window.addEventListener("load", () => {
             qs("#city-2.pop-up-city").classList.remove("active");
          }
       }
+
+      // ! Order pop-up
+      if (
+         e.target.closest(".table-column__book") ||
+         e.target.closest(".prize__btn") ||
+         e.target.closest(".gal-form__btn")
+      ) {
+         qs(".order-quest-pop-up").classList.add("active");
+         body.classList.add("lock");
+      }
+      if (e.target.closest(".order-quest-pop-up__btn-close")) {
+         qs(".order-quest-pop-up").classList.remove("active");
+         body.classList.remove("lock");
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
@@ -702,6 +716,5 @@ window.addEventListener("load", () => {
       ) {
          return "mobile";
       }
-      return "desktop";
    }
 });

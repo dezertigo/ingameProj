@@ -11,28 +11,14 @@
 // Header / Footer
 @import "./components/structure/header";
 @import "./components/structure/footer";
-@import "./components/base/ceo";
 
 // Подключение стилей базовых компонентов
-// @import "./components/base/pop-up";
-// @import "./components/base/spoiler";
+@import "./components/base/pop-up";
+@import "./components/base/spoiler";
 
-@import "./components/base/order-quest-pop-up";
-@import "./components/base/second-nav";
-@import "./components/base/show";
-@import "./components/base/slider-nav";
-@import "./components/base/horizontal-gallery";
-@import "./components/base/gallery-form";
-@import "./components/base/pack-cards";
-@import "./components/base/_heroes(vertical-gallery)";
-@import "./components/base/vertical-gallery";
-@import "./components/base/table-column";
-@import "./components/base/video";
-@import "./components/base/feedback";
-@import "./components/base/reviews";
-// @import "./components/base/faq-spoiler";
-@import "./components/base/faq";
+// Подключение стилей компонентов
+@import "./components/base/btn";
 
 //Подключение стилей конкретной страницы
 // ! Переменовать текущий файл и файл подлючающий стили страницы ниже(renameMe) в нужное имя (имеется ввиду файл который нужно создать в папке app/scss/pages), после чего удалить эту строку
-@import "./pages/quest";
+@import "./pages/renameMe";
