@@ -1,95 +1,186 @@
 <section class="order-quest-pop-up">
-  <div class="order-quest-pop-up__container">
-    <div class="order-quest-pop-up__body">
-      <div class="order-quest-pop-up__btn-close-wrap">
-        <button class="order-quest-pop-up__btn-close"></button>
-      </div>
-      <h2 class="order-quest-pop-up__title"><span>Бронювання</span><span class="order-quest-pop-up__elem">“Назва
-          квест-кімнати”</span>
-      </h2>
-      <form class="order-quest-pop-up__form">
-        <fieldset class="order-quest-pop-up__field-set">
-          <label class="order-quest-pop-up__label order-quest-pop-up__label-desk">Особисті дані замовніка</label>
-          <div class="order-quest-pop-up__field">
-            <input class="order-quest-pop-up__lea" type="text" name="naming" value="" placeholder="Ім’я та призвище">
-          </div>
-          <div class="order-quest-pop-up__field">
-            <input class="order-quest-pop-up__lea" type="email" name="emailing" value="" placeholder="E-mail *">
-          </div>
-          <div class="order-quest-pop-up__field">
-            <input class="order-quest-pop-up__lea" type="tel" name="teling" value="" placeholder="Ваш номер телефону *">
-          </div>
-          <div class="order-quest-pop-up__field">
-            <input class="order-quest-pop-up__check" type="checkbox" name="checkbox" value="" id="checks">
-            <label class="order-quest-pop-up__sign-labe" for="checks">Згода на обробку
-              персональних
-              данних <a href="#" class="order-quest-pop-up__sign-labe-link">Політика
-                конфіденційності</a></label>
-          </div>
-        </fieldset>
-        <fieldset class="order-quest-pop-up__field-set">
-          <label class="order-quest-pop-up__label order-quest-pop-up__label-hide">Особисті дані
-            замовніка</label>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign">Адреса:</span>
-            <p class="order-quest-pop-up__par">Дніпро, Лівий берег,пр. Слобожанський, 125
-            </p>
-          </div>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign">Кількість гравців</span>
-            <div class="order-quest-pop-up__select">
-              <div class="order-quest-pop-up__select-header">
-                <span class="order-quest-pop-up__select-current">4</span>
-                <div class="order-quest-pop-up__select-icon">
-                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-              </div>
-              <div class="order-quest-pop-up__select-body">
-                <span class="order-quest-pop-up__item">4</span>
-                <span class="order-quest-pop-up__item">5</span>
-                <span class="order-quest-pop-up__item">6</span>
-              </div>
-            </div>
-          </div>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign">Пакет</span>
-            <div class="order-quest-pop-up__select">
-              <div class="order-quest-pop-up__select-header">
-                <span class="order-quest-pop-up__select-current">Стандарт</span>
-                <div class="order-quest-pop-up__select-icon">
-                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665" stroke="#101010" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-              </div>
-              <div class="order-quest-pop-up__select-body">
-                <span class="order-quest-pop-up__item">Эконом</span>
-                <span class="order-quest-pop-up__item">Премиум</span>
-              </div>
-            </div>
-          </div>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign" for="date">Дата</span>
-            <span class="order-quest-pop-up__lea-date">20.07.2022</span>
-          </div>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign" for="date">Час</span>
-            <span class="order-quest-pop-up__lea-date" for="date">13:00</span>
-          </div>
-          <div class="order-quest-pop-up__field2">
-            <span class="order-quest-pop-up__sign">Промокод:</span>
-            <span class="order-quest-pop-up__lea-add">32648</span>
-          </div>
-        </fieldset>
-      </form>
-      <div class="order-quest-pop-up__btn-wrap">
-        <button class="order-quest-pop-up__btn-book">Забронювати</button>
-        <button class="order-quest-pop-up__btn-back">Повернутися до вибору квестів</button>
-      </div>
-    </div>
-  </div>
+	<div class="order-quest-pop-up__container">
+		<div class="order-quest-pop-up__body">
+			<div class="order-quest-pop-up__btn-close-wrap">
+				<button class="order-quest-pop-up__btn-close"></button>
+			</div>
+			<h2 class="order-quest-pop-up__title"><span>Бронювання</span><span
+					class="order-quest-pop-up__elem">“Назва
+					квест-кімнати”</span>
+			</h2>
+			<form class="order-quest-pop-up__form">
+				<fieldset class="order-quest-pop-up__field-set">
+					<label class="order-quest-pop-up__label order-quest-pop-up__label-desk">Особисті дані
+						замовніка</label>
+					<div class="order-quest-pop-up__field">
+						<input class="order-quest-pop-up__lea" type="text" name="naming" value=""
+							placeholder="Ім’я та призвище">
+					</div>
+					<div class="order-quest-pop-up__field">
+						<input class="order-quest-pop-up__lea" type="email" name="emailing" value=""
+							placeholder="E-mail *">
+					</div>
+					<div class="order-quest-pop-up__field">
+						<input class="order-quest-pop-up__lea" type="tel" name="teling" value=""
+							placeholder="Ваш номер телефону *">
+					</div>
+					<div class="order-quest-pop-up__field">
+						<div class="order-quest-pop-up__sign-par">
+							<input class="order-quest-pop-up__check" type="checkbox" name="checkbox"
+								value="" id="checks">
+							<label class="order-quest-pop-up__sign-labe" for="checks">Згода на обробку
+								персональних
+								данних <a href="#" class="order-quest-pop-up__sign-labe-link">Політика
+									конфіденційності</a></label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset class="order-quest-pop-up__field-set">
+					<label class="order-quest-pop-up__label order-quest-pop-up__label-hide">Особисті дані
+						замовніка</label>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign">Адреса:</span>
+						<p class="order-quest-pop-up__par">Дніпро, Лівий берег,пр. Слобожанський, 125
+						</p>
+					</div>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign">Кількість гравців</span>
+						<div class="order-quest-pop-up__select">
+							<div class="order-quest-pop-up__select-header">
+								<span class="order-quest-pop-up__select-current">4</span>
+								<div class="order-quest-pop-up__select-icon">
+									<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+							</div>
+							<div class="order-quest-pop-up__select-wrapper">
+								<div class="order-quest-pop-up__select-body">
+									<span class="order-quest-pop-up__item">4</span>
+									<span class="order-quest-pop-up__item">5</span>
+									<span class="order-quest-pop-up__item">6</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign">Пакет</span>
+						<div class="order-quest-pop-up__select">
+							<div class="order-quest-pop-up__select-header">
+								<span class="order-quest-pop-up__select-current">Стандарт</span>
+								<div class="order-quest-pop-up__select-icon">
+									<svg width="16" height="8" viewBox="0 0 16 8" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.082 1.1665L7.9987 6.83317L0.915363 1.1665"
+											stroke="#101010" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+									</svg>
+								</div>
+							</div>
+							<div class="order-quest-pop-up__select-wrapper">
+								<div class="order-quest-pop-up__select-body">
+									<span class="order-quest-pop-up__item">Эконом</span><span
+										class="order-quest-pop-up__item">Премиум</span><span
+										class="order-quest-pop-up__item">Стандарт</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign" for="date">Дата</span>
+						<span class="order-quest-pop-up__lea-date">20.07.2022</span>
+					</div>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign" for="date">Час</span>
+						<span class="order-quest-pop-up__lea-date" for="date">13:00</span>
+					</div>
+					<div class="order-quest-pop-up__field2">
+						<span class="order-quest-pop-up__sign">Промокод:</span>
+						<input type="text" class="order-quest-pop-up__lea-add" placeholder="32648">
+					</div>
+				</fieldset>
+			</form>
+			<div class="order-quest-pop-up__btn-wrap">
+				<button class="order-quest-pop-up__btn-book">Забронювати</button>
+				<button class="order-quest-pop-up__btn-back">Повернутися до вибору квестів</button>
+			</div>
+			<div class="order-quest-pop-up__bottom">
+				<p class="order-quest-pop-up__subtitle">Вас може зацікавити</p>
+
+				<div class="order-quest-pop-up__swiper swiper cards">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide cards__slide">
+							@@include('./_card.html', {
+							'img': '1',
+							'title': 'Майнкрафт',
+							'age': '16+',
+							})
+							@@include('./_card.html', {
+							'img': '2',
+							'title': 'День народження в стилі',
+							'age': '6+'
+							})
+						</div>
+						<div class="swiper-slide cards__slide">
+							@@include('./_card.html', {
+							'img': '1',
+							'title': 'Майнкрафт',
+							'age': '16+',
+							})
+							@@include('./_card.html', {
+							'img': '2',
+							'title': 'День народження в стилі',
+							'age': '6+'
+							})
+						</div>
+						<div class="swiper-slide cards__slide">
+							@@include('./_card.html', {
+							'img': '1',
+							'title': 'Майнкрафт',
+							'age': '16+',
+							})
+							@@include('./_card.html', {
+							'img': '2',
+							'title': 'День народження в стилі',
+							'age': '6+'
+							})
+						</div>
+						<div class="swiper-slide cards__slide">
+							@@include('./_card.html', {
+							'img': '1',
+							'title': 'Майнкрафт',
+							'age': '16+',
+							})
+							@@include('./_card.html', {
+							'img': '2',
+							'title': 'День народження в стилі',
+							'age': '6+'
+							})
+						</div>
+						<div class="swiper-slide cards__slide">
+							@@include('./_card.html', {
+							'img': '1',
+							'title': 'Майнкрафт',
+							'age': '16+',
+							})
+							@@include('./_card.html', {
+							'img': '2',
+							'title': 'День народження в стилі',
+							'age': '6+'
+							})
+						</div>
+					</div>
+					@@include('./_second-nav.html', {
+					'class': 'order-quest-pop-up__nav',
+					'prev': 'order-quest-pop-up__prev',
+					'next': 'order-quest-pop-up__next',
+					'pagination': 'order-quest-pop-up__pagination',
+					})
+				</div>
+			</div>
+		</div>
+	</div>
 </section>

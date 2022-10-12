@@ -238,6 +238,34 @@ window.addEventListener("load", () => {
             }
          }
       }
+
+      // ! Select order-quest-pop-up
+      if (qs(".order-quest-pop-up__select-header")) {
+         if (e.target.closest(".order-quest-pop-up__select-header")) {
+            if (e.target.closest(".order-quest-pop-up__select").classList.contains("opened")) {
+               e.target.closest(".order-quest-pop-up__select").classList.remove("opened");
+               e.target.closest(".order-quest-pop-up__select-header").nextElementSibling.style.height = null;
+            } else if (e.target.closest(".order-quest-pop-up__select")) {
+               qa(".order-quest-pop-up__select").forEach(function (el) {
+                  el.classList.remove("opened");
+               });
+               qa(".order-quest-pop-up__select-wrapper").forEach(function (el) {
+                  el.style.height = null;
+               });
+               e.target.closest(".order-quest-pop-up__select").classList.toggle("opened");
+               e.target.closest(".order-quest-pop-up__select-header").nextElementSibling.style.height =
+                  e.target.closest(".order-quest-pop-up__select-header").nextElementSibling.scrollHeight + "px";
+            }
+         }
+         if (e.target.closest(".order-quest-pop-up__item")) {
+            e.target.closest(
+               ".order-quest-pop-up__item"
+            ).parentElement.parentElement.parentElement.firstElementChild.firstElementChild.textContent =
+               e.target.closest(".order-quest-pop-up__item").textContent;
+            e.target.closest(".order-quest-pop-up__select").classList.remove("opened");
+            e.target.closest(".order-quest-pop-up__select-wrapper").style.height = null;
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
@@ -402,6 +430,25 @@ window.addEventListener("load", () => {
       });
    }
 
+   // ! Order-quest-pop-up
+   if (qs(".order-quest-pop-up__swiper")) {
+      const swiperCardsPopUp = new Swiper(".order-quest-pop-up__swiper", {
+         speed: 500,
+         slidesPerView: 1,
+         initialSlide: 2,
+         simulateTouch: true,
+         spaceBetween: 20,
+         pagination: {
+            el: ".order-quest-pop-up__pagination",
+            clickable: true,
+         },
+         navigation: {
+            nextEl: ".order-quest-pop-up__next",
+            prevEl: ".order-quest-pop-up__prev",
+         },
+      });
+   }
+
    // ! Home => Hero
    if (qs("body.home .cards__swiper")) {
       const swiperCards = new Swiper(".cards__swiper", {
@@ -511,18 +558,6 @@ window.addEventListener("load", () => {
          },
       });
    }
-
-   // todo FIX VIDEO PLAY()
-   // body.addEventListener("click", clickVideo);
-
-   // function clickVideo(e) {
-   //    if (e.target.closest(".reviews-popup__video svg") || e.target.closest(".reviews-popup__poster")) {
-   //       qs("video").style.zIndex = "5";
-   //       qs("video").setAttribute("controls", "true");
-   //       qs("video").play();
-   //       qs(".reviews-popup__poster").style.opacity = "0";
-   //    }
-   // }
 
    //! Table swiper (step 3)
    if (qs(".step3__swiper")) {
