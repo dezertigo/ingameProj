@@ -1,5 +1,10 @@
 .header {
-   position: relative;
+   position: fixed;
+   z-index: 10;
+   width: 100%;
+   top: 0;
+   left: 0;
+   transition: all 0.3s ease;
    &:before {
       // Накрывает менюшки с position: fixed
       content: "";
@@ -28,6 +33,7 @@
 }
 
 .header-top {
+   transition: all 0.3s ease;
    position: relative;
    z-index: 11;
    @media (max-width: 1000px) {
@@ -160,6 +166,8 @@
    &__lists {
       display: flex;
       align-items: center;
+      transition: all 0.3s ease;
+
       @media (max-width: 1399px) {
          column-gap: 12px;
       }
@@ -232,6 +240,8 @@
       flex-direction: column;
       align-items: flex-end;
       row-gap: 2px;
+      transition: all 0.3s ease;
+
       @media (max-width: 369px) {
          align-items: center;
          grid-column: span 2;
@@ -328,7 +338,7 @@
                   margin-left: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  margin-left: percent(30, 1438);
+                  margin-left: percent(25, 1438);
                }
             }
             &:not(:last-child) {
@@ -337,7 +347,7 @@
                   padding-right: percent(20, 1438);
                }
                @media (min-width: 1920px) {
-                  padding-right: percent(30, 1438);
+                  padding-right: percent(25, 1438);
                }
             }
             cursor: pointer;
@@ -629,6 +639,7 @@
    }
 }
 .header-bottom {
+   transition: all 0.3s ease;
    position: relative;
    z-index: 11;
    // .header-bottom__container

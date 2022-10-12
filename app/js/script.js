@@ -24,11 +24,27 @@ window.addEventListener("load", () => {
             header.classList.remove("active");
             menu.classList.remove("active");
             body.classList.remove("lock");
+            if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+               setTimeout(() => {
+                  qs(".header-top__lists").style.height = "0px";
+                  qs(".header-top__lists").style.overflow = "hidden";
+                  qs(".header-top__phone").style.height = "0px";
+                  qs(".header-top__phone").style.overflow = "hidden";
+                  qs(".header-bottom").style.height = "0px";
+                  qs(".header-bottom").style.overflow = "hidden";
+               }, 800);
+            }
          } else {
             burger.classList.add("active");
             header.classList.add("active");
             body.classList.add("lock");
             menu.classList.add("active");
+            qs(".header-top__lists").style.height = qs(".header-top__lists").scrollHeight + "px";
+            qs(".header-top__lists").style.overflow = "visible";
+            qs(".header-top__phone").style.height = qs(".header-top__phone").scrollHeight + "px";
+            qs(".header-top__phone").style.overflow = "visible";
+            qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
+            qs(".header-bottom").style.overflow = "visible";
             window.addEventListener("scroll", closeBurger); // Закрывает бургер при скролле в том случае, когда для Body не задан класс 'lock'
          }
       } else if (
@@ -116,6 +132,46 @@ window.addEventListener("load", () => {
             }
          }
       }
+
+      // ! Video-block {
+      if (qs(".video-block")) {
+         if (e.target.closest(".video-block__preview")) {
+            // if (
+            //    (devType() == "mobile" || devType() == "tablet") &&
+            //    qs(".video-block__video video").classList.contains("first-view")
+            // ) {
+            //    qs(".video-block__video video").requestFullscreen();
+            //    qs(".video-block__video video").classList.remove("first-view");
+            // }
+            e.target.closest(".video-block__preview").style.display = "none";
+            e.target.closest(".video-block__preview").nextElementSibling.style.zIndex = "5";
+            e.target.closest(".video-block__preview").nextElementSibling.play();
+         }
+      }
+
+      // ! Horizontal-gallery-pop-up
+      if (qs(".horizontal-gallery")) {
+         if (
+            qs(".horizontal-gallery-pop-up").classList.contains("active") &&
+            (e.target.closest(".horizontal-gallery-pop-up__icon-wrapper") ||
+               !e.target.closest(".horizontal-gallery-pop-up__body"))
+         ) {
+            qs(".horizontal-gallery-pop-up").classList.remove("active");
+            body.classList.remove("lock");
+         } else if (e.target.closest(".horizontal-gallery__swiper-big img")) {
+            qs(".horizontal-gallery-pop-up").classList.add("active");
+            body.classList.add("lock");
+         }
+      }
+
+      // ! Choose City
+      if (qs(".pop-up-city__btn")) {
+         if (e.target.closest("#city-1 .pop-up-city__btn")) {
+            qs("#city-1.pop-up-city").classList.remove("active");
+         } else if (e.target.closest("#city-2 .pop-up-city__btn")) {
+            qs("#city-2.pop-up-city").classList.remove("active");
+         }
+      }
    }
    function closeBurger() {
       //Необязательная дополнительная проверка
@@ -128,6 +184,9 @@ window.addEventListener("load", () => {
       }
    }
 
+   // ! <main></main>
+   qs("main").style.paddingTop = qs(".header").scrollHeight + "px";
+
    // ! Header
    // window.addEventListener("resize", moveCart); // todo написать не при ресайзе, а при перевороте мобилки в другое положение (горизонталь\вертикаль)
    moveCart();
@@ -137,6 +196,46 @@ window.addEventListener("load", () => {
       } else {
          qs(".header-menu__container").append(qs("#cart"));
       }
+   }
+
+   //fixed header
+   if (window.innerWidth < 1000) {
+      qs(".header-menu__container").style.paddingTop =
+         qs(".header-top").scrollHeight + qs(".header-bottom").scrollHeight + 20 + "px";
+      window.addEventListener("scroll", () => {
+         if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+            // alert("more");
+            qs(".header-top__lists").style.height = "0px";
+            qs(".header-top__lists").style.overflow = "hidden";
+            qs(".header-top__phone").style.height = "0px";
+            qs(".header-top__phone").style.overflow = "hidden";
+            qs(".header-bottom").style.height = "0px";
+            qs(".header-bottom").style.overflow = "hidden";
+            // header.style.opacity = "0.8";
+         } else if (window.pageYOffset < qs(".header").scrollHeight) {
+            // header.style.opacity = "1";
+            qs(".header-top__lists").style.height = qs(".header-top__lists").scrollHeight + "px";
+            qs(".header-top__lists").style.overflow = "visible";
+            qs(".header-top__phone").style.height = qs(".header-top__phone").scrollHeight + "px";
+            qs(".header-top__phone").style.overflow = "visible";
+            qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
+            qs(".header-bottom").style.overflow = "visible";
+         }
+      });
+   } else {
+      window.addEventListener("scroll", () => {
+         if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+            qs(".header-top").style.height = "0px";
+            qs(".header-top").style.overflow = "hidden";
+            qs(".header-bottom").style.height = "0px";
+            qs(".header-bottom").style.overflow = "hidden";
+         } else if (window.pageYOffset < qs(".header").scrollHeight) {
+            qs(".header-top").style.height = qs(".header-top").scrollHeight + "px";
+            qs(".header-top").style.overflow = "visible";
+            qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
+            qs(".header-bottom").style.overflow = "visible";
+         }
+      });
    }
 
    // ! Footer
@@ -227,22 +326,29 @@ window.addEventListener("load", () => {
       cardsPreview.forEach((el) => {
          cardsPreviewHeight.push(el.scrollHeight);
       });
+      // console.log("Preview All Before");
+      // console.log(cardsPreviewHeight);
+
       // Узнаем макисмальную высоту превьюшки карточки квеста
       let maxPreviewHeight = Math.max(...cardsPreviewHeight);
+      // console.log("Preview Max = " + maxPreviewHeight);
 
       let cardBody = qa(".cards .card__body");
       let cardsBodyHeight = [];
       cardBody.forEach((el) => {
          cardsBodyHeight.push(el.scrollHeight);
       });
+      // console.log("Body all");
+      // console.log(cardsBodyHeight);
       // Узнаем макисмальную высоту спрятанной части карточки квеста
       let maxBodyHeight = Math.max(...cardsBodyHeight);
+      // console.log("Body max = " + maxBodyHeight);
 
       // В эту переменную передадим высоту превьюшки после увелечения шрифта
       let finalHeight = maxPreviewHeight;
       function resizeLayout(e) {
          if (e.target.closest(".card")) {
-            let newPreviewHeight = e.target.closest(".card").children[1].firstElementChild.scrollHeight;
+            let newPreviewHeight = e.target.closest(".card").children[2].firstElementChild.scrollHeight;
             // Проверяем стала ли высота превьюшки больше чем любая другая на странице
             if (newPreviewHeight > finalHeight) {
                cards.forEach((el) => {
@@ -345,6 +451,18 @@ window.addEventListener("load", () => {
                slidesPerView: 7,
                slidesPerGroup: 7,
             },
+            1000: {
+               slidesPerView: 7,
+               slidesPerGroup: 7,
+               pagination: {
+                  el: ".step3__pagination",
+                  clickable: true,
+               },
+               navigation: {
+                  nextEl: ".step3__next",
+                  prevEl: ".step3__prev",
+               },
+            },
          },
          navigation: {
             nextEl: ".step3__btn-right",
@@ -406,8 +524,6 @@ window.addEventListener("load", () => {
          pagination: {
             el: ".horizontal-gallery__pagination",
             clickable: true,
-            // dynamicBullets: true,
-            // dynamicMainBullets: 5,
          },
          navigation: {
             nextEl: ".horizontal-gallery__next",
@@ -443,13 +559,44 @@ window.addEventListener("load", () => {
             },
          },
       });
+      if (window.innerWidth >= 1000) {
+         const swiperHorizontalBigPopUp = new Swiper(".horizontal-gallery__swiper-big-pop-up", {
+            speed: 500,
+            slidesPerView: 1,
+            simulateTouch: true,
+            spaceBetween: 20,
+            sliderPerColumn: 1,
+            pagination: {
+               el: ".horizontal-gallery__pagination-pop-up",
+               clickable: true,
+            },
+            navigation: {
+               nextEl: ".horizontal-gallery__next-pop-up",
+               prevEl: ".horizontal-gallery__prev-pop-up",
+            },
+            thumbs: {
+               swiper: {
+                  el: ".horizontal-gallery__swiper-small-pop-up",
+                  spaceBetween: 20,
+                  slidesPerView: 6,
+                  direction: "vertical",
+               },
+            },
+         });
+         swiperHorizontalBigPopUp.controller.control = swiperHorizontalBig; // Закомментировать, если не надо прокручивать слайды вне поп-апа
+         swiperHorizontalBig.controller.control = swiperHorizontalBigPopUp;
+      }
       window.addEventListener("resize", fixSlider);
       fixSlider();
       function fixSlider() {
          if (window.innerWidth >= 1000) {
-            let bugSlider = qs(".horizontal-gallery__small-wrap");
-            let normalSlider = qs(".horizontal-gallery__image-big").getBoundingClientRect().height;
-            bugSlider.style.maxHeight = normalSlider + "px";
+            let bugSlider1 = qs(".horizontal-gallery__small-wrap");
+            let normalSlider1 = qs(".horizontal-gallery__image-big").getBoundingClientRect().height;
+            bugSlider1.style.maxHeight = normalSlider1 + "px";
+
+            let bugSlider2 = qs(".horizontal-gallery__small-wrap-pop-up");
+            let normalSlider2 = qs(".horizontal-gallery__image-big-pop-up").getBoundingClientRect().height;
+            bugSlider2.style.maxHeight = normalSlider2 + "px";
          }
       }
    }
@@ -491,5 +638,18 @@ window.addEventListener("load", () => {
             },
          },
       });
+   }
+
+   // ! Check device Type
+   function devType() {
+      const ua = navigator.userAgent;
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+         return "tablet";
+      } else if (
+         /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
+      ) {
+         return "mobile";
+      }
+      return "desktop";
    }
 });
