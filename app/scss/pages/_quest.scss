@@ -1,407 +1,3 @@
-.form {
-   width: 100%;
-   max-width: 100%;
-   background-color: rgba(16, 16, 16, 1);
-
-   &__container {
-      margin: 0 auto;
-      max-width: 1750px;
-   }
-
-   &__main-wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 40px 3.1% 40px;
-
-      @media (min-width: 744px) {
-         display: flex;
-      }
-
-      @media (min-width: 744px) and (max-width: 1199px) {
-         gap: 1em;
-         padding: 60px 2.55%;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1599px) {
-         gap: 2em;
-         padding: 80px 2.55%;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1919px) {
-         gap: 3em;
-         padding: 100px 2.55%;
-      }
-
-      @media (min-width: 1920px) {
-         padding: 120px 2.55%;
-         gap: 4em;
-      }
-   }
-
-   &__block-picture {
-      margin-bottom: 26px;
-
-      @media (min-width: 744px) and (max-width: 999px) {
-         flex: 1 1 50%;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         flex: 1 1 53%;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         flex: 1 1 56%;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         flex: 1 1 59%;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         flex: 1 1 62%;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         flex: 1 1 64%;
-      }
-
-      @media (min-width: 1920px) {
-         flex: 1 1 66.6%;
-      }
-   }
-
-   &__picture {
-      position: relative;
-      padding-bottom: 84.5%;
-      overflow: hidden;
-
-      img {
-         position: absolute;
-         object-fit: cover;
-         width: 185%;
-         height: 185%;
-         top: 0;
-         left: 0;
-         object-position: 50% 57%;
-         transform: translate(-31%, -50%);
-         top: 50%;
-         left: 50%;
-      }
-   }
-
-   &__block-content {
-      display: grid;
-      grid-template-columns: 1fr;
-
-      @media (min-width: 744px) {
-         flex: 1 1 50%;
-         display: flex;
-         flex-direction: column;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         padding-top: 15px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         padding-top: 30px;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         padding-top: 60px;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         padding-top: 90px;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         padding-top: 120px;
-      }
-
-      @media (min-width: 1920px) {
-         padding-top: 146px;
-      }
-   }
-
-   &__subtitle {
-      font-weight: 700;
-      color: rgba(255, 255, 255, 1);
-      justify-self: center;
-
-      @media (min-width: 744px) {
-         align-self: center;
-      }
-
-      @media (max-width: 999px) {
-         font-size: 16px;
-         line-height: 20px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         font-size: 19px;
-         line-height: 22px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         font-size: 20px;
-         line-height: 24px;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         font-size: 21px;
-         line-height: 26px;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         font-size: 22px;
-         line-height: 28px;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         font-size: 23px;
-         line-height: 29px;
-      }
-
-      @media (min-width: 1920px) {
-         font-size: 24px;
-         line-height: 30px;
-         padding-left: 5px;
-         margin-bottom: 30px;
-      }
-   }
-
-   &__wrap {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding-top: 4px;
-
-      @media (min-width: 1920px) {
-         padding-left: 4px;
-      }
-   }
-
-   &__field {
-      position: relative;
-      min-height: 45px;
-      width: 100%;
-      margin-bottom: 21px;
-
-      @media (min-width: 1920px) {
-         margin-bottom: 35px;
-      }
-   }
-
-   &__field:hover {
-      .form__field::before {
-         background-color: rgba(0, 0, 0, 0.6);
-      }
-
-      .form__lea::placeholder {
-         color: rgba(255, 255, 255, 0.8);
-      }
-   }
-
-   &__field:nth-child(3) {
-      margin-bottom: 41px;
-
-      @media (min-width: 1920px) {
-         margin-bottom: 44px;
-      }
-   }
-
-   &__field:nth-child(4) {
-      margin-bottom: 2px;
-
-      @media (min-width: 1920px) {
-         min-height: max-content;
-         margin-bottom: 22px;
-      }
-   }
-
-   &__field:not(div:nth-last-of-type(2))::before {
-      content: "";
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.4);
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-   }
-
-   &__lea {
-      border: none;
-      background: transparent;
-      width: 100%;
-      height: 50px;
-      padding-top: 4px;
-      caret-color: rgba(144, 199, 94, 1);
-
-      @media (min-width: 1920px) {
-         padding-top: 0;
-         padding-bottom: 3px;
-      }
-   }
-
-   &__lea-check {
-      display: none;
-   }
-
-   &__lea::placeholder {
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.6);
-
-      @media (max-width: 999px) {
-         font-size: 14px;
-         line-height: 18px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         font-size: 15px;
-         line-height: 20px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         font-size: 16px;
-         line-height: 22px;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         font-size: 18px;
-         line-height: 24px;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         font-size: 20px;
-         line-height: 26px;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         font-size: 22px;
-         line-height: 28px;
-      }
-
-      @media (min-width: 1920px) {
-         font-size: 24px;
-         line-height: 30px;
-      }
-   }
-
-   &__lea[value] {
-      color: rgba(255, 255, 255, 0.4);
-   }
-
-   &__sign {
-      color: rgba(255, 255, 255, 1);
-      user-select: none;
-      font-weight: 400;
-      line-height: 16px;
-      position: relative;
-      display: inline-block;
-      padding-left: 36px;
-      cursor: pointer;
-
-      @media (max-width: 999px) {
-         font-size: 12px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         font-size: 14px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         font-size: 15px;
-      }
-
-      @media (min-width: 1400px) {
-         font-size: 16px;
-      }
-
-      @media (min-width: 1920px) {
-         padding-left: 40px;
-      }
-   }
-
-   &__sign::before {
-      content: "";
-      position: absolute;
-      background-color: transparent;
-      width: 24px;
-      height: 24px;
-      border: 1px solid rgba(255, 255, 255, 1);
-      box-sizing: border-box;
-      left: 0;
-      top: -4px;
-      cursor: pointer;
-
-      @media (min-width: 1920px) {
-         width: 26px;
-         height: 26px;
-         top: -6px;
-      }
-   }
-
-   &__lea-check:checked + &__sign:before {
-      background: url("@img/icons/check.svg") no-repeat center;
-      border: 1px solid rgba(144, 199, 94, 1);
-   }
-
-   .form__sign:hover:before {
-      border: 1px solid rgba(144, 199, 94, 1);
-   }
-
-   &__btn-wrap {
-      display: flex;
-      justify-content: center;
-   }
-
-   &__btn {
-      color: rgba(255, 255, 255, 1);
-      width: 100%;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 32px;
-      background-color: rgba(154, 207, 22, 1);
-      letter-spacing: 1.3px;
-      cursor: pointer;
-
-      @media (max-width: 999px) {
-         height: 52px;
-         max-width: 351px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         height: 60px;
-         max-width: 530px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         height: 70px;
-         max-width: 560px;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1699px) {
-         height: 80px;
-         max-width: 590px;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1899px) {
-         height: 90px;
-         max-width: 620px;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         height: 100px;
-         max-width: 650px;
-      }
-
-      @media (min-width: 1920px) {
-         line-height: 30px;
-         max-width: 680px;
-         height: 112px;
-      }
-   }
-}
-
 .fear {
    .fear__icons {
       display: flex;
@@ -466,348 +62,6 @@
          padding-left: percent(130, 1920);
          padding-right: percent(130, 1920);
       }
-   }
-}
-
-// ! Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero
-// ! Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero
-// ! Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero === Pop up Hero
-
-.popup-heroes {
-   &.active {
-      z-index: 100;
-      opacity: 1;
-      pointer-events: all;
-   }
-
-   position: fixed;
-   top: 0;
-   left: 0;
-   background-color: rgba(255, 255, 255, 1);
-   width: 100vw;
-   height: 100vh;
-   z-index: 100;
-   z-index: 0;
-   opacity: 0;
-   pointer-events: none;
-
-   &__container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 0; // ! отступы от краев
-   }
-
-   &__body {
-      overflow: auto;
-      max-height: 100%; // ! Запрещаем блоку быть большего размера чем задано родителем (padding: 200px)
-      padding-top: 10px;
-      padding-left: percent(12, 375);
-      padding-right: percent(12, 375);
-
-      p {
-         @include fl(24, 32);
-         color: $light;
-      }
-   }
-
-   &__btn-close-wrap {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 7px;
-      padding-top: 7px;
-      margin-bottom: 18px;
-   }
-
-   &__btn-close {
-      position: relative;
-      transform: rotate(45deg);
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-   }
-
-   &__btn-close::before {
-      content: "";
-      position: absolute;
-      background-color: rgba(40, 48, 63, 1);
-      width: 15px;
-      height: 1.5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-   }
-
-   &__btn-close::after {
-      content: "";
-      position: absolute;
-      background-color: rgba(40, 48, 63, 1);
-      border-radius: 15px;
-      width: 15px;
-      height: 1.5px;
-      transform: rotate(90deg);
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-   }
-
-   &__title {
-      color: $dark;
-      font-weight: 700;
-      @include fl(22, 28);
-      margin-bottom: 24px;
-   }
-
-   &__elem {
-      color: $greenHover;
-      display: block;
-   }
-
-   &__form {
-      margin-bottom: 10px;
-   }
-
-   &__field-set {
-      border: none;
-      margin: 0;
-      padding: 0;
-   }
-
-   &__field-set:nth-of-type(1) {
-      margin-bottom: 34px;
-   }
-
-   &__label {
-      display: none;
-   }
-
-   &__field {
-      position: relative;
-      margin-bottom: 5px;
-   }
-
-   &__field:nth-of-type(3) {
-      margin-bottom: 13px;
-   }
-
-   &__field:not(div:last-child)::after {
-      content: "";
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.2);
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-   }
-
-   &__lea {
-      padding: 14px 0 12px;
-      width: 100%;
-   }
-
-   &__lea-add {
-      display: block;
-      font-weight: 400;
-      @include fl(18, 24);
-      color: rgba(16, 16, 16, 0.6);
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 8px 42px;
-   }
-
-   &__lea::placeholder {
-      color: rgba(16, 16, 16, 0.6);
-      font-weight: 400;
-      @include fl(14, 18);
-   }
-
-   &__lea-date {
-      color: $dark;
-      font-weight: 700;
-      @include fl(18, 24);
-   }
-
-   &__check {
-      display: none;
-   }
-
-   &__check:checked + &__sign-labe:before {
-      background: url("@img/icons/check.svg") no-repeat center;
-      border: 1px solid $greenItem;
-   }
-
-   &__sign-labe {
-      color: $dark;
-      font-weight: 400;
-      @include fl(12, 16);
-      user-select: none;
-      position: relative;
-      padding-left: 32px;
-   }
-
-   &__sign-labe::before {
-      content: "";
-      position: absolute;
-      background-color: transparent;
-      width: 16px;
-      height: 16px;
-      border: 1px solid $dark;
-      box-sizing: border-box;
-      cursor: pointer;
-      transform: translate(-201%, 67%);
-   }
-
-   &__sign-labe-link {
-      color: $greenHover;
-      display: block;
-      padding-left: 32px;
-      text-decoration: underline;
-   }
-
-   &__label-hide {
-   }
-
-   &__field2 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 13px;
-      position: relative;
-
-      p {
-         font-weight: 700;
-         color: $dark;
-         @include fl(18, 24);
-         text-align: right;
-         width: 70%;
-      }
-   }
-
-   &__field2:nth-of-type(1) {
-      margin-bottom: 17px;
-   }
-
-   &__field2:nth-of-type(2) {
-      padding-bottom: 14px;
-   }
-
-   &__field2:nth-of-type(3) {
-      padding-top: 17px;
-      padding-bottom: 14px;
-   }
-
-   &__field2:nth-of-type(4) {
-      padding-top: 15px;
-      padding-bottom: 12px;
-   }
-
-   &__field2:nth-of-type(5) {
-      padding-top: 1px;
-      padding-bottom: 0;
-   }
-
-   &__field2:nth-of-type(6) {
-      padding-top: 15px;
-   }
-
-   &__field2:not(div:last-child):after {
-      content: "";
-      position: absolute;
-      background-color: rgba(16, 16, 16, 0.2);
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-   }
-
-   &__sign {
-      display: block;
-      font-weight: 400;
-      color: $dark;
-      @include fl(12, 16);
-   }
-
-   &__select {
-      max-width: 140px;
-      width: 100%;
-      position: relative;
-      user-select: none;
-   }
-
-   &__select.is-active {
-      .popup-heroes__select-body {
-         display: initial;
-      }
-   }
-
-   &__select-header {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      display: flex;
-      cursor: pointer;
-      box-sizing: border-box;
-   }
-
-   &__select-current {
-      padding: 8px 12px;
-   }
-
-   &__select-icon {
-      margin-left: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px;
-      padding-right: 11px;
-   }
-
-   &__select-body {
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-top: 0;
-      display: none;
-   }
-
-   &__item {
-      display: block;
-      color: $dark;
-      font-weight: 500;
-      @include fl(16, 24);
-      cursor: pointer;
-      padding: 8px 12px;
-   }
-
-   &__item:hover {
-      background-color: rgba(16, 16, 16, 0.1);
-   }
-
-   &__item2 {
-      display: block;
-   }
-
-   &__btn-wrap {
-      display: flex;
-      flex-direction: column;
-   }
-
-   &__btn-book {
-      max-width: 351px;
-      width: 100%;
-      background-color: $greenHover;
-      height: 52px;
-      @include fl(24, 32);
-      color: $light;
-      margin-bottom: 24px;
-   }
-
-   &__btn-back {
-      color: $greenItem;
-      font-weight: 700;
-      @include fl(12, 16);
    }
 }
 
@@ -1372,462 +626,6 @@
    }
 }
 
-// !  Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form
-// !  Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form
-// !  Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form === Gallery-Form
-
-.gal-form {
-   display: flex;
-
-   @media (max-width: 1919px) {
-      flex-direction: column;
-   }
-
-   @media (min-width: 1920px) {
-      flex-direction: row;
-   }
-
-   &__list {
-      @media (max-width: 743px) {
-         display: flex;
-         flex-direction: column;
-      }
-
-      @media (min-width: 744px) and (max-width: 999px) {
-         display: grid;
-         grid-template-columns: repeat(6, 1fr);
-         column-gap: 65px;
-      }
-
-      @media (min-width: 1000px) {
-         display: flex;
-         flex-direction: column;
-      }
-
-      @media (max-width: 1919px) {
-         margin-bottom: 11px;
-      }
-
-      @media (min-width: 1920px) {
-         margin-bottom: 39px;
-      }
-   }
-
-   &__item {
-      position: relative;
-
-      @media (min-width: 744px) {
-         grid-column: span 3;
-      }
-
-      @media (min-width: 1920px) {
-         padding: 30px 0 29px 0;
-      }
-
-      i {
-         color: rgba(16, 16, 16, 0.8);
-
-         @media (max-width: 999px) {
-            @include fz(21);
-         }
-
-         @media (min-width: 1000px) and (max-width: 1199px) {
-            @include fz(29);
-         }
-
-         @media (min-width: 1200px) and (max-width: 1399px) {
-            @include fz(31);
-         }
-
-         @media (min-width: 1400px) and (max-width: 1599px) {
-            @include fz(33);
-         }
-
-         @media (min-width: 1600px) and (max-width: 1799px) {
-            @include fz(35);
-         }
-
-         @media (min-width: 1800px) and (max-width: 1919px) {
-            @include fz(37);
-         }
-
-         @media (min-width: 1920px) {
-            @include fz(39);
-         }
-      }
-   }
-
-   &__item:not(li:last-child):after {
-      content: "";
-      position: absolute;
-      background-color: rgba(16, 16, 16, 0.2);
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-   }
-
-   @media (min-width: 744px) and (max-width: 999px) {
-      &__item:nth-child(2)::after {
-         display: none;
-      }
-   }
-
-   @media (min-width: 1000px) {
-      &__item:nth-child(2)::after {
-         display: block;
-      }
-   }
-
-   &__item:first-child {
-      @media (max-width: 999px) {
-         padding: 29px 0 12px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1499px) {
-         padding: 0 0 16px;
-      }
-
-      @media (min-width: 1500px) and (max-width: 1919px) {
-         padding: 0 0 18px;
-      }
-
-      @media (min-width: 1920px) {
-         padding: 0 0 21px;
-      }
-
-      svg {
-         @media (max-width: 999px) {
-            width: 24px;
-            height: 24px;
-         }
-
-         @media (min-width: 1000px) and (max-width: 1199px) {
-            width: 31px;
-            height: 31px;
-         }
-
-         @media (min-width: 1200px) and (max-width: 1399px) {
-            width: 34px;
-            height: 34px;
-         }
-
-         @media (min-width: 1400px) and (max-width: 1599px) {
-            width: 37px;
-            height: 37px;
-         }
-
-         @media (min-width: 1600px) and (max-width: 1799px) {
-            width: 40px;
-            height: 40px;
-         }
-
-         @media (min-width: 1800px) and (max-width: 1919px) {
-            width: 43px;
-            height: 43px;
-         }
-
-         @media (min-width: 1920px) {
-            width: 47px;
-            height: 47px;
-            transform: translate(-6%, 0%);
-         }
-
-         ellipse {
-            stroke: rgba(16, 16, 16, 0.8);
-         }
-
-         circle {
-            stroke: rgba(16, 16, 16, 0.8);
-         }
-      }
-
-      .gal-form__item-wrap {
-         @media (min-width: 1920px) {
-            column-gap: 16px;
-         }
-      }
-   }
-
-   &__item:nth-child(2) {
-      @media (min-width: 744px) and (max-width: 1919px) {
-         order: 2;
-      }
-
-      @media (max-width: 999px) {
-         padding: 25px 0 12px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1499px) {
-         padding: 27px 0 20px;
-      }
-
-      @media (min-width: 1500px) and (max-width: 1919px) {
-         padding: 29px 0 25px;
-      }
-
-      @media (min-width: 1920px) {
-         order: 0;
-         padding: 30px 0 31px;
-      }
-
-      svg {
-         @media (min-width: 1000px) and (max-width: 1199px) {
-            width: 38px;
-            height: 31px;
-         }
-
-         @media (min-width: 1200px) and (max-width: 1399px) {
-            width: 41px;
-            height: 34px;
-         }
-
-         @media (min-width: 1400px) and (max-width: 1599px) {
-            width: 44px;
-            height: 37px;
-         }
-
-         @media (min-width: 1600px) and (max-width: 1799px) {
-            width: 47px;
-            height: 40px;
-         }
-
-         @media (min-width: 1800px) and (max-width: 1919px) {
-            width: 50px;
-            height: 43px;
-         }
-
-         @media (min-width: 1920px) {
-            width: 53px;
-            height: 46px;
-            transform: translate(-11%, 0%);
-         }
-
-         ellipse {
-            stroke: rgba(16, 16, 16, 0.8);
-         }
-
-         path {
-            fill: rgba(16, 16, 16, 0.8);
-         }
-      }
-
-      .gal-form__item-wrap {
-         @media (min-width: 1920px) {
-            column-gap: 11px;
-         }
-      }
-   }
-
-   &__item:nth-child(3) {
-      @media (max-width: 743px) {
-         padding: 25px 0 14px 3px;
-      }
-
-      @media (min-width: 744px) and (max-width: 1919px) {
-         order: 1;
-      }
-
-      @media (min-width: 744px) and (max-width: 999px) {
-         padding: 29px 0 14px 3px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1499px) {
-         padding: 31px 0 22px;
-      }
-
-      @media (min-width: 1500px) and (max-width: 1919px) {
-         padding: 32px 0 28px;
-      }
-
-      @media (min-width: 1920px) {
-         order: 0;
-         padding: 33px 0 34px;
-      }
-
-      .gal-form__item-wrap {
-         @media (min-width: 1920px) {
-            column-gap: 25px;
-         }
-      }
-   }
-
-   &__item:nth-child(4) {
-      @media (max-width: 999px) {
-         padding-left: 3px;
-      }
-
-      @media (min-width: 744px) and (max-width: 1919px) {
-         order: 4;
-      }
-
-      @media (max-width: 999px) {
-         padding: 25px 0 14px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1499px) {
-         padding: 28px 0 22px;
-      }
-
-      @media (min-width: 1500px) and (max-width: 1919px) {
-         padding: 32px 0 28px;
-      }
-
-      @media (min-width: 1920px) {
-         padding: 35px 0 35px;
-         order: 0;
-      }
-   }
-
-   &__item-wrap {
-      display: flex;
-      position: relative;
-      padding-right: 1px;
-
-      @media (max-width: 1919px) {
-         column-gap: 12px;
-      }
-
-      @media (min-width: 1000px) {
-         align-items: center;
-      }
-
-      @media (min-width: 1920px) {
-         column-gap: 25px;
-      }
-   }
-
-   &__par {
-      font-weight: 700;
-      color: $dark;
-
-      @media (max-width: 999px) {
-         @include fl(14, 18);
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         @include fl(18, 22);
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         @include fl(20, 24);
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         @include fl(21, 25);
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         @include fl(22, 26);
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         @include fl(23, 27);
-      }
-
-      @media (max-width: 1919px) {
-         padding-top: 2px;
-      }
-
-      @media (min-width: 1920px) {
-         @include fl(24, 28.8);
-         padding-top: 0;
-      }
-   }
-
-   &__number {
-      color: $dark;
-      font-weight: 700;
-      line-height: 22px;
-      margin-left: auto;
-
-      @media (max-width: 999px) {
-         @include fz(18);
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         @include fz(19);
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         @include fz(20);
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         @include fz(21);
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         @include fz(22);
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         @include fz(23);
-      }
-
-      @media (min-width: 1920px) {
-         @include fz(24);
-         padding-top: 5px;
-      }
-   }
-
-   &__btn-wrap {
-      display: flex;
-      justify-content: center;
-   }
-
-   &__btn {
-      transition: all 0.3s ease 0s;
-      background-color: $green;
-      color: $light;
-      font-weight: 700;
-      @include fl(24, 32);
-      width: 100%;
-      letter-spacing: 1.3px;
-      cursor: pointer;
-
-      @media (max-width: 999px) {
-         max-width: 433px;
-      }
-
-      @media (max-width: 999px) {
-         height: 52px;
-      }
-
-      @media (min-width: 1000px) and (max-width: 1199px) {
-         height: 60px;
-      }
-
-      @media (min-width: 1200px) and (max-width: 1399px) {
-         height: 70px;
-      }
-
-      @media (min-width: 1400px) and (max-width: 1599px) {
-         height: 80px;
-      }
-
-      @media (min-width: 1600px) and (max-width: 1799px) {
-         height: 90px;
-      }
-
-      @media (min-width: 1800px) and (max-width: 1919px) {
-         height: 100px;
-      }
-
-      @media (min-width: 1920px) {
-         height: 112px;
-      }
-   }
-
-   &__btn:hover {
-      filter: drop-shadow(0px 4px 14px rgba(104, 139, 16, 0.6));
-   }
-
-   &__btn:active {
-      background-color: rgba(154, 207, 22, 0.6);
-      filter: none;
-   }
-}
-
 // ! STEP-TITLE
 .step-title {
    text-align: center;
@@ -1864,6 +662,7 @@
       }
    }
 }
+
 //
 // ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
 // ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
@@ -1943,83 +742,147 @@
       }
    }
 }
-//
-// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
-// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
-// ! Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1 === Step 1
-.step1 {
+
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+// ! Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2 === Step 2
+.step2 {
    &__container {
-      @media (max-width: 739px) {
-         padding-top: 60px;
-         padding-left: percent(12, 375);
-         padding-right: percent(12, 375);
-      }
-      @media (min-width: 740px) and (max-width: 999px) {
-         padding-top: 73px;
-      }
-      @media (min-width: 1000px) {
-         padding-top: percent(120, 1920);
-         padding-left: percent(130, 1920);
-         padding-right: percent(130, 1920);
-      }
-   }
-   &__head {
-      @media (max-width: 743px) {
-         text-align: center;
-      }
-      @media (min-width: 1000px) {
-         text-align: center;
-      }
-      p {
-         &:first-child {
-            font-weight: 700;
-            @media (max-width: 999px) {
-               @include fl(24, 30);
-               margin-bottom: 8px;
-            }
-            @media (min-width: 1000px) {
-               @include fl(28, 36);
-               margin-bottom: 16px;
-            }
-            @media (min-width: 1200px) {
-               @include fl(30, 38);
-            }
-            @media (min-width: 1400px) {
-               @include fl(32, 40);
-            }
-            @media (min-width: 1600px) {
-               @include fl(34, 42);
-            }
-            @media (min-width: 1800px) {
-               @include fl(36, 44);
-            }
-         }
-         &:last-child {
-            margin-bottom: 50px;
-            @media (max-width: 999px) {
-               @include fl(18, 24);
-            }
-            @media (min-width: 1000px) {
-               @include fl(24, 30);
-            }
-         }
-      }
+      padding-top: 60px;
+      padding-left: percent(12, 375);
+      padding-right: percent(12, 375);
    }
    &__title {
       margin-bottom: 16px;
    }
-   &__swiper {
+   &__spoiler {
+      border-radius: 10px;
+      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
       width: 100%;
-      overflow: unset;
-   }
-   &__prev,
-   &__next {
-      svg {
-         fill: transparent;
-         path {
-            stroke: #000000;
-         }
+      margin: 0 auto;
+      @media (max-width: 799px) {
+         max-width: 351px;
       }
+      @media (min-width: 800px) {
+         max-width: 680px;
+      }
+   }
+   &__preview {
+      // padding: 27px 37px;
+
+      @include fl(24, 30);
+      border: 3px solid $greenHover;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 799px) {
+         padding: 8px 16px;
+      }
+      @media (min-width: 800px) and (max-width: 1199px) {
+         padding: 14px 20px;
+      }
+      @media (min-width: 1200px) and (max-width: 1599px) {
+         padding: 20px 26px;
+      }
+      @media (min-width: 1600px) {
+         padding: 27px;
+      }
+   }
+   &__wrapper {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+   }
+   &__body {
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: 799px) {
+         gap: 30px;
+         padding: 15px;
+      }
+      @media (min-width: 800px) and (max-width: 1399px) {
+         gap: 30px 50px;
+         padding: 22px;
+      }
+      @media (min-width: 1400px) {
+         gap: 30px 60px;
+         padding: 30px;
+      }
+   }
+   &__input {
+      appearance: none;
+      display: none;
+   }
+   &__label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      padding-left: 20px;
+      max-width: 28px;
+      width: 100%;
+      text-align: right;
+      @include fl(24, 30);
+      &:last-child {
+         max-width: 128px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         width: 18px;
+         height: 18px;
+         border-radius: 100%;
+         border: 1px solid $greenItem;
+         background-color: #f5f5f5;
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         width: 12px;
+         height: 12px;
+         border-radius: 100%;
+         position: absolute;
+         top: 50%;
+         left: 4px;
+         transform: translate(0, -50%);
+         background-color: $greenItem;
+         opacity: 0;
+         transition: all 0.5s ease;
+      }
+      p {
+      }
+      span {
+         @include fl(14, 30);
+      }
+   }
+   &__input:checked + &__label {
+      &::after {
+         opacity: 1;
+      }
+   }
+}
+.select {
+   &.opened {
+      .select__icon {
+         transform: rotate(180deg);
+      }
+   }
+   &__current {
+      br {
+         display: none;
+      }
+   }
+   &__icon {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid $greenItem;
+      transition: all 0.5s ease;
    }
 }
 
