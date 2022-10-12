@@ -163,6 +163,20 @@ window.addEventListener("load", () => {
             body.classList.add("lock");
          }
       }
+      // ! Vertical-gallery-pop-up
+      if (qs(".vertical-gallery")) {
+         if (
+            qs(".vertical-gallery-pop-up").classList.contains("active") &&
+            (e.target.closest(".vertical-gallery-pop-up__icon-wrapper") ||
+               !e.target.closest(".vertical-gallery-pop-up__body"))
+         ) {
+            qs(".vertical-gallery-pop-up").classList.remove("active");
+            body.classList.remove("lock");
+         } else if (e.target.closest(".vertical-gallery__swiper-big img")) {
+            qs(".vertical-gallery-pop-up").classList.add("active");
+            body.classList.add("lock");
+         }
+      }
 
       // ! Choose City
       if (qs(".pop-up-city__btn")) {
@@ -511,6 +525,38 @@ window.addEventListener("load", () => {
             },
          },
       });
+
+      if (window.innerWidth >= 1000) {
+         const swiperVerticalBigPopUp = new Swiper(".vertical-gallery__swiper-big-pop-up", {
+            speed: 500,
+            slidesPerView: 1,
+            simulateTouch: true,
+            spaceBetween: 12,
+            sliderPerColumn: 1,
+            pagination: {
+               el: ".vertical-gallery__pagination-pop-up",
+               clickable: true,
+            },
+            navigation: {
+               nextEl: ".vertical-gallery__next-pop-up",
+               prevEl: ".vertical-gallery__prev-pop-up",
+            },
+            thumbs: {
+               swiper: {
+                  el: ".vertical-gallery__swiper-small-pop-up",
+                  spaceBetween: 20,
+                  slidesPerView: 5,
+                  breakpoints: {
+                     1200: {
+                        slidesPerView: 6,
+                     },
+                  },
+               },
+            },
+         });
+         swiperVerticalBigPopUp.controller.control = swiperVerticalBig; // Закомментировать, если не надо прокручивать слайды вне поп-апа
+         swiperVerticalBig.controller.control = swiperVerticalBigPopUp;
+      }
    }
 
    // ! Gallery-horizontal
