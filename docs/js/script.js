@@ -137,13 +137,12 @@ window.addEventListener("load", () => {
       // reviews-popup__video
       if (qs(".reviews-popup__video")) {
          if (e.target.closest(".reviews-popup__video") || e.target.closest(".reviews-popup__video svg")) {
-            // if (window.innerWidth < 769 && qs(".reviews-popup__video video").classList.contains("first-view")) {
-            //    qs(".reviews-popup__video video").requestFullscreen();
-            //    qs(".reviews-popup__video video").classList.remove("first-view");
-            // }
-            // qs(".reviews-popup__poster").style.display = "none";
-            // qs(".reviews-popup__video svg").style.display = "none";
-            // qs(".reviews-popup__video video").play();
+            if (window.innerWidth < 769 && qs(".reviews-popup__video video").classList.contains("first-view")) {
+               if (document.fullscreenEnabled) {
+                  qs(".reviews-popup__video video").requestFullscreen();
+                  qs(".reviews-popup__video video").classList.remove("first-view");
+               }
+            }
             e.target.closest(".reviews-popup__video").children[1].style.display = "none";
             e.target.closest(".reviews-popup__video").children[2].style.display = "none";
             e.target.closest(".reviews-popup__video").children[0].play();
@@ -153,12 +152,12 @@ window.addEventListener("load", () => {
       if (qs(".video-block")) {
          // ! Video-block {
          if (e.target.closest(".video-block__preview")) {
-            // if (
-            //    (devType() == "mobile" || devType() == "desktop") &&
-            // if (window.innerWidth < 769 && qs(".video-block__video video").classList.contains("first-view")) {
-            //    qs(".video-block__video video").requestFullscreen();
-            //    qs(".video-block__video video").classList.remove("first-view");
-            // }
+            if (window.innerWidth < 769 && qs(".video-block__video video").classList.contains("first-view")) {
+               if (document.fullscreenEnabled) {
+                  qs(".video-block__video video").requestFullscreen();
+                  qs(".video-block__video video").classList.remove("first-view");
+               }
+            }
             e.target.closest(".video-block__preview").style.display = "none";
             e.target.closest(".video-block__preview").nextElementSibling.style.zIndex = "5";
             e.target.closest(".video-block__preview").nextElementSibling.play();
