@@ -2444,6 +2444,57 @@ main {
   margin-bottom: 22px;
 }
 
+.faq__spoiler {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.faq__spoiler.opened {
+  transition: all 0.8s;
+}
+
+.faq__spoiler.opened .faq__preview-icon {
+  transition: all 0.8s;
+  transform: rotate(180deg);
+}
+
+.faq__preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 16px;
+  cursor: pointer;
+}
+
+.faq__preview-head {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.375;
+}
+
+.faq__preview-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s;
+}
+
+.faq__wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.8s;
+}
+
+.faq__body {
+  padding-bottom: 24px;
+}
+
+.faq__text {
+  font-size: 0.875rem;
+  line-height: 1.4285714286;
+}
+
 .ceo {
   width: 100%;
   max-width: 100%;
@@ -4156,6 +4207,20 @@ main {
   .faq__title {
     font-size: 2.25rem;
     line-height: 1.2222222222;
+  }
+
+  .faq__preview {
+    padding-bottom: 24px;
+  }
+
+  .faq__preview-head {
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+  }
+
+  .faq__text {
+    font-size: 1.5rem;
+    line-height: 1.25;
   }
 
   .hero__container {
