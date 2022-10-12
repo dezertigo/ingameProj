@@ -2402,7 +2402,6 @@ main {
   line-height: 1.25;
   color: #101010;
   text-align: center;
-  padding-bottom: 24px;
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -2461,7 +2460,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0 16px;
+  padding: 12px 0 24px;
   cursor: pointer;
 }
 
@@ -2940,10 +2939,6 @@ main {
 
   .reviews-popup__screen img {
     width: 50%;
-  }
-
-  .faq__title {
-    text-align: left;
   }
 }
 
@@ -3672,7 +3667,7 @@ main {
   }
 
   .faq__title {
-    padding-bottom: 7.2727272727%;
+    padding-bottom: 8.6363636364%;
     text-align: center;
   }
 
@@ -4210,7 +4205,7 @@ main {
   }
 
   .faq__preview {
-    padding-bottom: 24px;
+    padding-bottom: 37px;
   }
 
   .faq__preview-head {
@@ -5892,6 +5887,12 @@ main {
   }
 }
 
+@media (max-width: 599px) {
+  .faq__title {
+    padding-bottom: 24px;
+  }
+}
+
 @media (max-width: 580px) {
   .header-bottom__image:first-child {
     margin-bottom: 12px;
@@ -7131,6 +7132,13 @@ main {
 
   .step2__preview {
     padding: 20px 26px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .faq__title {
+    padding-bottom: 17px;
+    text-align: left;
   }
 }
 
