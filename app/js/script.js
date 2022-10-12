@@ -136,12 +136,12 @@ window.addEventListener("load", () => {
       // ! Reviews video
       // reviews-popup__video
       if (qs(".reviews-popup__video")) {
-         if (e.target.closest(".reviews-popup__video")) {
+         if (e.target.closest(".reviews-popup__video") || e.target.closest(".reviews-popup__video svg")) {
             // if (window.innerWidth < 769 && qs(".reviews-popup__video video").classList.contains("first-view")) {
             //    qs(".reviews-popup__video video").requestFullscreen();
             //    qs(".reviews-popup__video video").classList.remove("first-view");
             // }
-            e.target.closest(".reviews-popup__poster").style.display = "none";
+            qs(".reviews-popup__poster").style.display = "none";
             qs(".reviews-popup__video svg").style.display = "none";
             qs(".reviews-popup__video video").play();
          }
