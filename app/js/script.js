@@ -121,6 +121,7 @@ window.addEventListener("load", () => {
          if (e.target.closest(".reviews-popup__close")) {
             popupReviews.classList.remove("active");
             body.classList.remove("lock");
+            qs(".reviews-popup__video video").pause();
             if (
                reviewsPopupImg.classList.contains("active") ||
                reviewsPopupText.classList.contains("active") ||
@@ -132,17 +133,26 @@ window.addEventListener("load", () => {
             }
          }
       }
+      // ! Reviews video
+      // reviews-popup__video
+      if (qs(".reviews-popup__video")) {
+         if (e.target.closest(".reviews-popup__video")) {
+            e.target.closest(".reviews-popup__poster").style.display = "none";
+            qs(".reviews-popup__video svg").style.display = "none";
+            qs(".reviews-popup__video video").play();
+         }
+      }
 
-      // ! Video-block {
       if (qs(".video-block")) {
+         // ! Video-block {
          if (e.target.closest(".video-block__preview")) {
-            // if (
-            //    (devType() == "mobile" || devType() == "tablet") &&
-            //    qs(".video-block__video video").classList.contains("first-view")
-            // ) {
-            //    qs(".video-block__video video").requestFullscreen();
-            //    qs(".video-block__video video").classList.remove("first-view");
-            // }
+            if (
+               (devType() == "mobile" || devType() == "desktop") &&
+               qs(".video-block__video video").classList.contains("first-view")
+            ) {
+               qs(".video-block__video video").requestFullscreen();
+               qs(".video-block__video video").classList.remove("first-view");
+            }
             e.target.closest(".video-block__preview").style.display = "none";
             e.target.closest(".video-block__preview").nextElementSibling.style.zIndex = "5";
             e.target.closest(".video-block__preview").nextElementSibling.play();
