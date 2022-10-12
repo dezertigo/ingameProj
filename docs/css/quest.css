@@ -2694,8 +2694,12 @@ main {
   font-weight: 500;
 }
 
-.step1__head {
-  text-align: center;
+.step1__head p:first-child {
+  font-weight: 700;
+}
+
+.step1__head p:last-child {
+  margin-bottom: 50px;
 }
 
 .step1__title {
@@ -2752,6 +2756,7 @@ main {
 }
 
 .map-block__map i {
+  display: none;
   position: absolute;
   z-index: 1;
   pointer-events: none;
@@ -3578,6 +3583,21 @@ main {
     padding-right: 6.7708333333%;
   }
 
+  .step1__head {
+    text-align: center;
+  }
+
+  .step1__head p:first-child {
+    font-size: 1.75rem;
+    line-height: 1.2857142857;
+    margin-bottom: 16px;
+  }
+
+  .step1__head p:last-child {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
   .step3__container {
     padding-left: 15;
     padding-right: 15;
@@ -3765,6 +3785,11 @@ main {
     top: 50%;
     min-width: 1040px;
     min-height: 762px;
+  }
+
+  .step1__head p:first-child {
+    font-size: 1.875rem;
+    line-height: 1.2666666667;
   }
 }
 
@@ -4048,6 +4073,11 @@ main {
   .step-title span {
     margin-right: 20px;
   }
+
+  .step1__head p:first-child {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -4113,6 +4143,11 @@ main {
   }
 
   .step-title {
+    font-size: 2.125rem;
+    line-height: 1.2352941176;
+  }
+
+  .step1__head p:first-child {
     font-size: 2.125rem;
     line-height: 1.2352941176;
   }
@@ -4188,6 +4223,11 @@ main {
   .video-block__icon svg {
     width: 140px;
     height: 160px;
+  }
+
+  .step1__head p:first-child {
+    font-size: 2.25rem;
+    line-height: 1.2222222222;
   }
 
   .map-block__title {
@@ -5265,6 +5305,17 @@ main {
     line-height: 1.25;
   }
 
+  .step1__head p:first-child {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .step1__head p:last-child {
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+  }
+
   .step3__container {
     padding-bottom: 60px;
   }
@@ -5480,6 +5531,10 @@ main {
 
   .prize__picture {
     padding-bottom: 93.7%;
+  }
+
+  .step1__head {
+    text-align: center;
   }
 
   .step3__block-btn {
