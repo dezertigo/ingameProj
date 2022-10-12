@@ -146,10 +146,9 @@ window.addEventListener("load", () => {
       if (qs(".video-block")) {
          // ! Video-block {
          if (e.target.closest(".video-block__preview")) {
-            if (
-               (devType() == "mobile" || devType() == "desktop") &&
-               qs(".video-block__video video").classList.contains("first-view")
-            ) {
+            // if (
+            //    (devType() == "mobile" || devType() == "desktop") &&
+            if (window.innerWidth < 769 && qs(".video-block__video video").classList.contains("first-view")) {
                qs(".video-block__video video").requestFullscreen();
                qs(".video-block__video video").classList.remove("first-view");
             }
