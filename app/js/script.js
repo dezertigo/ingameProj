@@ -149,32 +149,35 @@ window.addEventListener("load", () => {
          }
       }
 
-      // ! Horizontal-gallery-pop-up
-      if (qs(".horizontal-gallery")) {
-         if (
-            qs(".horizontal-gallery-pop-up").classList.contains("active") &&
-            (e.target.closest(".horizontal-gallery-pop-up__icon-wrapper") ||
-               !e.target.closest(".horizontal-gallery-pop-up__body"))
-         ) {
-            qs(".horizontal-gallery-pop-up").classList.remove("active");
-            body.classList.remove("lock");
-         } else if (e.target.closest(".horizontal-gallery__swiper-big img")) {
-            qs(".horizontal-gallery-pop-up").classList.add("active");
-            body.classList.add("lock");
+      // ! Gallery
+      if (window.innerWidth >= 1000) {
+         // ? Horizontal-gallery-pop-up
+         if (qs(".horizontal-gallery")) {
+            if (
+               qs(".horizontal-gallery-pop-up").classList.contains("active") &&
+               (e.target.closest(".horizontal-gallery-pop-up__icon-wrapper") ||
+                  !e.target.closest(".horizontal-gallery-pop-up__body"))
+            ) {
+               qs(".horizontal-gallery-pop-up").classList.remove("active");
+               body.classList.remove("lock");
+            } else if (e.target.closest(".horizontal-gallery__swiper-big img")) {
+               qs(".horizontal-gallery-pop-up").classList.add("active");
+               body.classList.add("lock");
+            }
          }
-      }
-      // ! Vertical-gallery-pop-up
-      if (qs(".vertical-gallery")) {
-         if (
-            qs(".vertical-gallery-pop-up").classList.contains("active") &&
-            (e.target.closest(".vertical-gallery-pop-up__icon-wrapper") ||
-               !e.target.closest(".vertical-gallery-pop-up__body"))
-         ) {
-            qs(".vertical-gallery-pop-up").classList.remove("active");
-            body.classList.remove("lock");
-         } else if (e.target.closest(".vertical-gallery__swiper-big img")) {
-            qs(".vertical-gallery-pop-up").classList.add("active");
-            body.classList.add("lock");
+         // ? Vertical-gallery-pop-up
+         if (qs(".vertical-gallery")) {
+            if (
+               qs(".vertical-gallery-pop-up").classList.contains("active") &&
+               (e.target.closest(".vertical-gallery-pop-up__icon-wrapper") ||
+                  !e.target.closest(".vertical-gallery-pop-up__body"))
+            ) {
+               qs(".vertical-gallery-pop-up").classList.remove("active");
+               body.classList.remove("lock");
+            } else if (e.target.closest(".vertical-gallery__swiper-big img")) {
+               qs(".vertical-gallery-pop-up").classList.add("active");
+               body.classList.add("lock");
+            }
          }
       }
 
@@ -238,12 +241,15 @@ window.addEventListener("load", () => {
       });
    } else {
       window.addEventListener("scroll", () => {
-         if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+         // console.log("scroll = " + window.pageYOffset);
+         // if (window.pageYOffset > qs(".header").scrollHeight / 2) {
+         if (window.pageYOffset > 100) {
             qs(".header-top").style.height = "0px";
             qs(".header-top").style.overflow = "hidden";
             qs(".header-bottom").style.height = "0px";
             qs(".header-bottom").style.overflow = "hidden";
-         } else if (window.pageYOffset < qs(".header").scrollHeight) {
+            // } else if (window.pageYOffset < qs(".header").scrollHeight) {
+         } else if (window.pageYOffset < 100) {
             qs(".header-top").style.height = qs(".header-top").scrollHeight + "px";
             qs(".header-top").style.overflow = "visible";
             qs(".header-bottom").style.height = qs(".header-bottom").scrollHeight + "px";
